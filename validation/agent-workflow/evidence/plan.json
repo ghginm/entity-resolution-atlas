@@ -1,0 +1,191 @@
+{
+  "arm_documents_available_not_retrieved": {
+    "A": 0,
+    "B": 52,
+    "C": 79,
+    "D": 130
+  },
+  "blockers": [
+    "No compatible existing trusted executor bound to AW snapshots/protocol is attested. Legacy bridge Session/contract bind AU-v2 arms/settings and exclude guides; do not patch globals or copy executor.",
+    "Independent evaluator actual identity/version, non-authorship/conflict declaration, settings and external operator trust not attested; current author/subagent cannot independently score own package.",
+    "No provider/subprocess runner or score admission API in this package. Real runs unavailable; 0 genuine runs and 0 scores."
+  ],
+  "budgets": {
+    "evaluator_wall_seconds": 600,
+    "final_characters": 12000,
+    "read_attempts": 24,
+    "read_chunk_characters": 8000,
+    "retrieved_characters": 48000,
+    "solver_wall_seconds": 240,
+    "stdout_line_bytes": 65536,
+    "successful_reads": 16
+  },
+  "cells": [
+    {
+      "arm": "A",
+      "scenario_id": "AW-01",
+      "status": "unexecuted"
+    },
+    {
+      "arm": "B",
+      "scenario_id": "AW-01",
+      "status": "unexecuted"
+    },
+    {
+      "arm": "C",
+      "scenario_id": "AW-01",
+      "status": "unexecuted"
+    },
+    {
+      "arm": "D",
+      "scenario_id": "AW-01",
+      "status": "unexecuted"
+    },
+    {
+      "arm": "B",
+      "scenario_id": "AW-02",
+      "status": "unexecuted"
+    },
+    {
+      "arm": "C",
+      "scenario_id": "AW-02",
+      "status": "unexecuted"
+    },
+    {
+      "arm": "D",
+      "scenario_id": "AW-02",
+      "status": "unexecuted"
+    },
+    {
+      "arm": "A",
+      "scenario_id": "AW-02",
+      "status": "unexecuted"
+    },
+    {
+      "arm": "C",
+      "scenario_id": "AW-03",
+      "status": "unexecuted"
+    },
+    {
+      "arm": "D",
+      "scenario_id": "AW-03",
+      "status": "unexecuted"
+    },
+    {
+      "arm": "A",
+      "scenario_id": "AW-03",
+      "status": "unexecuted"
+    },
+    {
+      "arm": "B",
+      "scenario_id": "AW-03",
+      "status": "unexecuted"
+    },
+    {
+      "arm": "D",
+      "scenario_id": "AW-04",
+      "status": "unexecuted"
+    },
+    {
+      "arm": "A",
+      "scenario_id": "AW-04",
+      "status": "unexecuted"
+    },
+    {
+      "arm": "B",
+      "scenario_id": "AW-04",
+      "status": "unexecuted"
+    },
+    {
+      "arm": "C",
+      "scenario_id": "AW-04",
+      "status": "unexecuted"
+    },
+    {
+      "arm": "A",
+      "scenario_id": "AW-05",
+      "status": "unexecuted"
+    },
+    {
+      "arm": "B",
+      "scenario_id": "AW-05",
+      "status": "unexecuted"
+    },
+    {
+      "arm": "C",
+      "scenario_id": "AW-05",
+      "status": "unexecuted"
+    },
+    {
+      "arm": "D",
+      "scenario_id": "AW-05",
+      "status": "unexecuted"
+    },
+    {
+      "arm": "B",
+      "scenario_id": "AW-06",
+      "status": "unexecuted"
+    },
+    {
+      "arm": "C",
+      "scenario_id": "AW-06",
+      "status": "unexecuted"
+    },
+    {
+      "arm": "D",
+      "scenario_id": "AW-06",
+      "status": "unexecuted"
+    },
+    {
+      "arm": "A",
+      "scenario_id": "AW-06",
+      "status": "unexecuted"
+    },
+    {
+      "arm": "C",
+      "scenario_id": "AW-07",
+      "status": "unexecuted"
+    },
+    {
+      "arm": "D",
+      "scenario_id": "AW-07",
+      "status": "unexecuted"
+    },
+    {
+      "arm": "A",
+      "scenario_id": "AW-07",
+      "status": "unexecuted"
+    },
+    {
+      "arm": "B",
+      "scenario_id": "AW-07",
+      "status": "unexecuted"
+    },
+    {
+      "arm": "D",
+      "scenario_id": "AW-08",
+      "status": "unexecuted"
+    },
+    {
+      "arm": "A",
+      "scenario_id": "AW-08",
+      "status": "unexecuted"
+    },
+    {
+      "arm": "B",
+      "scenario_id": "AW-08",
+      "status": "unexecuted"
+    },
+    {
+      "arm": "C",
+      "scenario_id": "AW-08",
+      "status": "unexecuted"
+    }
+  ],
+  "execution_eligibility": "unavailable",
+  "freeze_manifest_sha256": "132fef9b963a68c87faae045f1e2ef96201827f1f70a445616464fdb728011e8",
+  "genuine_runs": 0,
+  "genuine_scores": 0,
+  "kind": "offline-plan-not-results",
+  "navigation_confound": "E omitted. C versus D confounds navigation, guides, public normative/reference context and packaging; same 57-card knowledge is not a navigation-only control. Never attribute C/D differences solely to navigation."
+}

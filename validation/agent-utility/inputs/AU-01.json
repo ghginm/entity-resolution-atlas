@@ -1,0 +1,35 @@
+{
+  "scenario_id": "AU-01",
+  "title": "The shared emergency-contact bridge",
+  "fictional": true,
+  "known_project_facts": {
+    "project": "A disaster-relief intake service wants to deduplicate adult beneficiaries across mobile outreach and shelter registrations. Linking changes eligibility decisions; this is a design exercise, not deployment authorization.",
+    "identity": "Same natural person, not household, caregiver, or emergency contact.",
+    "current_pipeline": "Name + birth-year and phone blocks; hand-weighted pair scores; above-threshold links are closed transitively into one beneficiary.",
+    "observations": [
+      {
+        "pair": "R14–R27",
+        "score": 0.93,
+        "evidence": "same contact phone; similar abbreviated name"
+      },
+      {
+        "pair": "R27–R88",
+        "score": 0.91,
+        "evidence": "same contact phone; same temporary shelter"
+      },
+      {
+        "pair": "R14–R88",
+        "score": 0.12,
+        "evidence": "different verified adult birth dates; distinct intake photographs reviewed by staff"
+      }
+    ],
+    "data_notes": "The phone belongs to a volunteer helping multiple adults; a verified birth date may still have transcription errors. Scores are uncalibrated, not probabilities.",
+    "constraints": "A false merge can suppress aid to an individual. Staff can review 40 ambiguous groups daily. Membership must be reversible. No ground-truth entity partition is yet available."
+  },
+  "explicitly_unknown": [
+    "How independently reliable are birth-date contradictions?",
+    "How many beneficiary groups are affected and how representative are reviewed cases?",
+    "What evidence and authorization permit irreversible identity decisions?"
+  ],
+  "task": "Produce a defensible project-specific ER experiment/design recommendation using selectively retrieved Atlas knowledge if available. Do not implement ER or change production. Separate facts, assumptions, uncertainties, mechanisms and proposed evidence."
+}

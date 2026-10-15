@@ -1,0 +1,75 @@
+{
+  "version": "v1.1",
+  "recorded_at": "2026-10-13T15:12:46.626730+00:00",
+  "status": "structural checks passed; scientific correctness not certified",
+  "documentation_lint": {
+    "errors": [],
+    "warnings": [
+      "architectures/collective-consistency.md: keyword hint missing for failure/limitations; inspect manually, not a semantic verdict"
+    ],
+    "counts": {
+      "decision": 6,
+      "solution": 13,
+      "architecture": 6,
+      "hypothesis": 2,
+      "evaluation": 4
+    }
+  },
+  "test_suites": {
+    "tool_tests": {
+      "executed": 45,
+      "exit_code": 0,
+      "passed": true
+    },
+    "benchmark_tests": {
+      "executed": 39,
+      "exit_code": 0,
+      "passed": true
+    }
+  },
+  "test_warnings": "Benchmark tests emit unclosed-file ResourceWarning messages; suite still passes. These are not content-quality verdicts.",
+  "integrity": {
+    "originals": {
+      "checked": 22,
+      "changed": []
+    },
+    "dev_docs": {
+      "checked": 6,
+      "changed": []
+    }
+  },
+  "freeze": {
+    "benchmark_id": "AU-v1",
+    "frozen_files": 24,
+    "manifest_sha256": "bd2e57dc2d96f40fb65a6fd4ac2d9a5e6000411b91a5dc1ca47071a8bed3104c"
+  },
+  "corpora": {
+    "corpus_v1": {
+      "cards": 21,
+      "corpus_sha256": "e1ade517e405ac79fa93bc700dfe098848a1517dcbecf81080e307d2b30b8772",
+      "files": 42,
+      "label": "v1"
+    },
+    "corpus_v1.1": {
+      "cards": 31,
+      "corpus_sha256": "4a2c25e42a90d768d6b4417c4c2f8d5060428940ac787e7347fa484a05283f3e",
+      "files": 52,
+      "label": "v1.1"
+    },
+    "corpus_no-atlas-01": {
+      "cards": 0,
+      "corpus_sha256": "0a95698694bc12a6aa00c5393781a2a581fadaa816e7f7f8ffe91994229c82ca",
+      "files": 0,
+      "label": "no-atlas"
+    }
+  },
+  "generated_indexes": "Catalog plus fourteen domain indexes rebuilt; freshness checked by lint.",
+  "agent_utility": {
+    "completed_and_scored": 33,
+    "paired_failures_retained": 7,
+    "comparison": "../validation/agent-utility/results/comparison-2026-10-13.json",
+    "findings": "../validation/agent-utility/results/COMPARISON-2026-10-13.md",
+    "judgment": "Mixed exploratory per-dimension findings; no weighted total, significance or universal superiority claim."
+  },
+  "limits": "Single tested model, unpinned evaluator default, unattested effective sampling, noninterleaved no-Atlas, no human adjudication. No empirical ER experiment."
+}

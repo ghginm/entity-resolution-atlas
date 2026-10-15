@@ -1,0 +1,18 @@
+{
+  "cohort": "AU-v2",
+  "scenario_id": "AUv2-05",
+  "fictional": true,
+  "title": "Field instrument service history",
+  "background": "A fictional laboratory consortium links service events to the same physical measurement instrument. Serial text is only meaningful together with the manufacturer namespace; parts can be exchanged without making two instruments the same.",
+  "observations": [
+    "The store maintains a union structure of accepted matches and a latest-value summary. An update handler receives both event time and ingestion time but currently chooses the last arrival.",
+    "Messages can be repeated or arrive late. A service-center correction withdraws an earlier serial observation; the resulting deletion event can arrive before the original event is replayed.",
+    "An imported workshop bundle includes a common loaner contact and can connect instruments previously kept separate. Some source observations must be purged under an authorized retention request.",
+    "The engineering proposal is to remove the deleted source row and leave existing cluster IDs and summaries untouched. A periodic rebuild from active observations is also feasible, but its cost has not been estimated."
+  ],
+  "constraints": [
+    "Downstream calibration notices use stable public instrument IDs. Incorrect notices and resurrected purged data are unacceptable.",
+    "Only design work is authorized. Required deletion semantics and retained audit metadata need approval from the responsible data owner."
+  ],
+  "request": "Compare maintenance designs and propose a bounded replay and deletion acceptance plan covering externally visible behavior, operational cost, and unresolved authorization questions."
+}

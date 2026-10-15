@@ -1,0 +1,53 @@
+{
+  "verified_at": "2026-10-13T02:35:34.318296+00:00",
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "validation/agent-utility/tests",
+    "-v"
+  ],
+  "exit_code": 0,
+  "tests": 26,
+  "test_output": "test_agent_start_excludes_keys_and_version (test_harness.BrokerTests.test_agent_start_excludes_keys_and_version) ... ok\ntest_broker_denies_keys_traversal_and_repeated_reads_count (test_harness.BrokerTests.test_broker_denies_keys_traversal_and_repeated_reads_count) ... ok\ntest_read_budget_fails_closed (test_harness.BrokerTests.test_read_budget_fails_closed) ... ok\ntest_real_process_fixture_is_fresh_and_failures_recorded (test_harness.BrokerTests.test_real_process_fixture_is_fresh_and_failures_recorded) ... ok\ntest_cli_prepare_dry_run_and_unexecuted (test_harness.CliTests.test_cli_prepare_dry_run_and_unexecuted) ... ok\ntest_paired_order_equivalent_settings_and_failed_runs_retained (test_harness.CliTests.test_paired_order_equivalent_settings_and_failed_runs_retained) ... ok\ntest_allowlist_uses_only_supported_layers (test_harness.CorpusTests.test_allowlist_uses_only_supported_layers) ... ok\ntest_prepare_verify_and_tamper (test_harness.CorpusTests.test_prepare_verify_and_tamper) ... ok\ntest_frozen_manifest_verified_before_use (test_harness.FreezeTests.test_frozen_manifest_verified_before_use) ... ok\ntest_baseline_corpus_manifest_cannot_bless_tampering (test_harness.HardeningTests.test_baseline_corpus_manifest_cannot_bless_tampering) ... ok\ntest_chunk_attempt_and_character_budgets (test_harness.HardeningTests.test_chunk_attempt_and_character_budgets) ... ok\ntest_degenerate_and_traversal_paths_are_denied (test_harness.HardeningTests.test_degenerate_and_traversal_paths_are_denied) ... ok\ntest_folded_metadata_does_not_swallow_relations (test_harness.HardeningTests.test_folded_metadata_does_not_swallow_relations) ... ok\ntest_freeze_rejects_changed_manifest_or_input (test_harness.HardeningTests.test_freeze_rejects_changed_manifest_or_input) ... ok\ntest_initial_context_budget_is_a_recorded_failure (test_harness.HardeningTests.test_initial_context_budget_is_a_recorded_failure) ... ok\ntest_layer_selection_and_symlink_rejection (test_harness.HardeningTests.test_layer_selection_and_symlink_rejection) ... ok\ntest_pinned_settings_disallow_budget_tuning (test_harness.HardeningTests.test_pinned_settings_disallow_budget_tuning) ... ok\ntest_timeout_also_bounds_adapter_not_reading_stdin (test_harness.HardeningTests.test_timeout_also_bounds_adapter_not_reading_stdin) ... ok\ntest_timeout_kills_real_fixture_and_missing_command_fails (test_harness.HardeningTests.test_timeout_kills_real_fixture_and_missing_command_fails) ... ok\ntest_all_scenarios_validate (test_harness.SchemaTests.test_all_scenarios_validate) ... ok\ntest_schema_rejects_bool_as_integer_and_extra_fields (test_harness.SchemaTests.test_schema_rejects_bool_as_integer_and_extra_fields) ... ok\ntest_caps_preserve_other_dimensions_no_aggregate (test_harness.ScoringTests.test_caps_preserve_other_dimensions_no_aggregate) ... ok\ntest_cli_score_and_report_provenance (test_harness.ScoringTests.test_cli_score_and_report_provenance) ... ok\ntest_global_cap_and_no_atlas_null_retrieval (test_harness.ScoringTests.test_global_cap_and_no_atlas_null_retrieval) ... ok\ntest_invalid_scoring_rejected (test_harness.ScoringTests.test_invalid_scoring_rejected) ... ok\ntest_packet_blinds_arm_and_refuses_nonresults (test_harness.ScoringTests.test_packet_blinds_arm_and_refuses_nonresults) ... ok\n\n----------------------------------------------------------------------\nRan 26 tests in 1.850s\n\nOK\n",
+  "frozen_checks": {
+    "baseline/atlas-v1-baseline-hashes.json": true,
+    "evaluator-only/keys/AU-01.json": true,
+    "evaluator-only/keys/AU-02.json": true,
+    "evaluator-only/keys/AU-03.json": true,
+    "evaluator-only/keys/AU-04.json": true,
+    "evaluator-only/keys/AU-05.json": true,
+    "evaluator-only/keys/AU-06.json": true,
+    "evaluator-only/keys/AU-07.json": true,
+    "evaluator-only/keys/AU-08.json": true,
+    "evaluator-only/rubric.json": true,
+    "inputs/AU-01.json": true,
+    "inputs/AU-02.json": true,
+    "inputs/AU-03.json": true,
+    "inputs/AU-04.json": true,
+    "inputs/AU-05.json": true,
+    "inputs/AU-06.json": true,
+    "inputs/AU-07.json": true,
+    "inputs/AU-08.json": true,
+    "prompt.txt": true,
+    "protocol.md": true,
+    "schemas/result.schema.json": true,
+    "schemas/scenario.schema.json": true,
+    "schemas/score.schema.json": true,
+    "settings.json": true
+  },
+  "manifest_sha256": "bd2e57dc2d96f40fb65a6fd4ac2d9a5e6000411b91a5dc1ca47071a8bed3104c",
+  "harness_sha256": "f1a835f7d934616a40371c03df0923eccebd7a1f8871f5b41da14c585aaf9cd4",
+  "corpus_sha256": "e1ade517e405ac79fa93bc700dfe098848a1517dcbecf81080e307d2b30b8772",
+  "corpus_layers": {
+    "L0": 1,
+    "L1": 17,
+    "L2": 21,
+    "L3": 3
+  },
+  "real_model_runs": 0,
+  "independent_model_scores": 0,
+  "status": "Harness verified; model utility comparison remains unexecuted."
+}

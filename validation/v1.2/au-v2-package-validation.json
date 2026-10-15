@@ -1,0 +1,49 @@
+{
+  "prepared_only": true,
+  "verified_at": "2026-10-14T20:01:12.965222+00:00",
+  "manifest_sha256": "22d2527c35b39e1f22a0ac5815c833924815b63cbd1704a958989f124c798f49",
+  "file_count": 37,
+  "original_verify_before": {
+    "output": "{\"actual_runs\": 0, \"actual_scores\": 0, \"benchmark_id\": \"AU-v2\", \"critical_failure_rules\": 17, \"dimensions\": 8, \"frozen_files\": 36, \"integrity\": \"verified\", \"json_files_excluding_manifest\": 30, \"keys\": 8, \"planned_cells\": 24, \"preparation_status\": \"prepared_data_only\", \"runtime_integration\": \"unimplemented\", \"scenarios\": 8, \"schemas\": 10, \"semantic_findings\": 48}",
+    "exit_code": 0,
+    "error": null
+  },
+  "integrity_tests_in_exact_scratch_copy": {
+    "output": "Exact frozen-byte mirror in configured scratch; no repository fixture writes.\n\ntest_absolute_manifest_path_is_rejected (test_integrity.IntegrityTests.test_absolute_manifest_path_is_rejected) ... ok\ntest_anchor_argument_is_mandatory (test_integrity.IntegrityTests.test_anchor_argument_is_mandatory) ... ok\ntest_cross_case_reference_is_rejected (test_integrity.IntegrityTests.test_cross_case_reference_is_rejected) ... ok\ntest_duplicate_json_keys_are_rejected (test_integrity.IntegrityTests.test_duplicate_json_keys_are_rejected) ... ok\ntest_duplicate_rubric_dimension_is_rejected (test_integrity.IntegrityTests.test_duplicate_rubric_dimension_is_rejected) ... ok\ntest_false_manifest_count_is_rejected (test_integrity.IntegrityTests.test_false_manifest_count_is_rejected) ... ok\ntest_nonfinite_json_is_rejected (test_integrity.IntegrityTests.test_nonfinite_json_is_rejected) ... ok\ntest_pristine_package_is_accepted (test_integrity.IntegrityTests.test_pristine_package_is_accepted) ... ok\ntest_schema_engine_constraints (test_integrity.IntegrityTests.test_schema_engine_constraints) ... ok\ntest_schema_invalid_but_rehashed_input_is_rejected (test_integrity.IntegrityTests.test_schema_invalid_but_rehashed_input_is_rejected) ... ok\ntest_substantive_score_null_is_invalid (test_integrity.IntegrityTests.test_substantive_score_null_is_invalid) ... ok\ntest_symlinked_directory_is_rejected (test_integrity.IntegrityTests.test_symlinked_directory_is_rejected) ... ok\ntest_symlinked_file_is_rejected (test_integrity.IntegrityTests.test_symlinked_file_is_rejected) ... ok\ntest_tampered_file_is_rejected (test_integrity.IntegrityTests.test_tampered_file_is_rejected) ... ok\ntest_traversal_in_manifest_is_rejected (test_integrity.IntegrityTests.test_traversal_in_manifest_is_rejected) ... ok\ntest_unlisted_file_is_rejected (test_integrity.IntegrityTests.test_unlisted_file_is_rejected) ... ok\ntest_wrong_anchor_is_rejected (test_integrity.IntegrityTests.test_wrong_anchor_is_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 17 tests in 1.146s\n\nOK",
+    "exit_code": 0,
+    "error": null,
+    "approval": "Command was flagged (Security scan \u2014 [HIGH] Inline interpreter with suspicious payload: python3: An inline interpreter invocation runs code that spawns a process, opens a socket, or dynamically executes code. Inline payloads hide from file-based review; write the code to a file and inspect it before running.; script execution via -e/-c flag) and auto-approved by smart approval."
+  },
+  "original_verify_after": {
+    "output": "{\"actual_runs\": 0, \"actual_scores\": 0, \"benchmark_id\": \"AU-v2\", \"critical_failure_rules\": 17, \"dimensions\": 8, \"frozen_files\": 36, \"integrity\": \"verified\", \"json_files_excluding_manifest\": 30, \"keys\": 8, \"planned_cells\": 24, \"preparation_status\": \"prepared_data_only\", \"runtime_integration\": \"unimplemented\", \"scenarios\": 8, \"schemas\": 10, \"semantic_findings\": 48}",
+    "exit_code": 0,
+    "error": null
+  },
+  "summary": {
+    "actual_runs": 0,
+    "actual_scores": 0,
+    "benchmark_id": "AU-v2",
+    "critical_failure_rules": 17,
+    "dimensions": 8,
+    "frozen_files": 36,
+    "integrity": "verified",
+    "json_files_excluding_manifest": 30,
+    "keys": 8,
+    "planned_cells": 24,
+    "preparation_status": "prepared_data_only",
+    "runtime_integration": "unimplemented",
+    "scenarios": 8,
+    "schemas": 10,
+    "semantic_findings": 48
+  },
+  "canonical_changes_after_case_design": [],
+  "preexisting_protected_files": 464,
+  "protected_changes": [],
+  "parent_did_not_inspect_scenarios_or_keys": true,
+  "limitations": [
+    "No attested distinct-model designer/evaluator identity",
+    "No runtime integration, corpus snapshots, solver runs or scores",
+    "Tests mirrored to configured scratch because frozen tests create package-local temporary fixtures; frozen test bytes unchanged",
+    "Held out from solutions, not proven fully blind to public historical headlines"
+  ]
+}

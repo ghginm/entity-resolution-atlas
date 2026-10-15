@@ -1,0 +1,99 @@
+{
+  "status": "passed",
+  "documentation_lint": {
+    "errors": [],
+    "warnings": [],
+    "counts": {
+      "decision": 3,
+      "solution": 7,
+      "architecture": 6,
+      "hypothesis": 2,
+      "evaluation": 3
+    },
+    "immutable_inputs": 6
+  },
+  "unit_tests": {
+    "executed": 19,
+    "passed": 19,
+    "failed": 0,
+    "scope": "documentation-tool behavior only"
+  },
+  "citation_verification": {
+    "documents": 23,
+    "failed": 0,
+    "scope": "ledger IDs and rendered source blocks; substantive source scope separately reviewed"
+  },
+  "discovery_summary_words": {
+    "minimum": 64,
+    "maximum": 76
+  },
+  "scenario_routes": [
+    {
+      "scenario": "A",
+      "explicit_alternative_configurations": 2,
+      "architecture_links": [
+        "linear-modular.md",
+        "precision-cascade.md",
+        "recall-multi-pass.md"
+      ],
+      "evaluation_links": [
+        "candidate-recall.md",
+        "entity-resolution-quality.md",
+        "pairwise-calibration.md"
+      ],
+      "hypothesis_links": [
+        "contextual-reliability.md",
+        "frequency-aware-evidence.md"
+      ],
+      "status": "conceptual route verified; not empirical ER validation"
+    },
+    {
+      "scenario": "B",
+      "explicit_alternative_configurations": 2,
+      "architecture_links": [
+        "linear-modular.md",
+        "precision-cascade.md",
+        "recall-multi-pass.md"
+      ],
+      "evaluation_links": [
+        "candidate-recall.md",
+        "entity-resolution-quality.md",
+        "pairwise-calibration.md"
+      ],
+      "hypothesis_links": [
+        "contextual-reliability.md",
+        "frequency-aware-evidence.md"
+      ],
+      "status": "conceptual route verified; not empirical ER validation"
+    },
+    {
+      "scenario": "C",
+      "explicit_alternative_configurations": 2,
+      "architecture_links": [
+        "collective-consistency.md",
+        "incremental-continuous.md",
+        "precision-cascade.md",
+        "recall-multi-pass.md"
+      ],
+      "evaluation_links": [
+        "candidate-recall.md",
+        "entity-resolution-quality.md",
+        "pairwise-calibration.md"
+      ],
+      "hypothesis_links": [
+        "contextual-reliability.md",
+        "frequency-aware-evidence.md"
+      ],
+      "status": "conceptual route verified; not empirical ER validation"
+    }
+  ],
+  "math_delimiter_files_checked": [
+    "deep-dives/selection-and-calibration.md",
+    "solutions/decision-resolution/thresholds-abstention.md",
+    "solutions/matching-scoring/fellegi-sunter.md",
+    "solutions/matching-scoring/additive-soft-matching.md",
+    "solutions/matching-scoring/logistic-regression.md"
+  ],
+  "acceptance": "fourteen domains, six architecture cards, fifteen other pilot cards, five templates, selective catalog/agent guides, three conceptual scenarios, bounded expansion and unchanged six inputs",
+  "limitations": "No empirical ER results, exhaustive solution coverage, production correctness or security guarantee."
+}

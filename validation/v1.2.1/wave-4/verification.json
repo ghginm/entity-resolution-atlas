@@ -1,0 +1,94 @@
+{
+  "observed_at": "2026-10-15T02:56:45.809638+00:00",
+  "checks": [
+    {
+      "check": "au-v2-freeze",
+      "argv": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "validation/agent-utility-v2/verify.py",
+        "--expected-manifest-sha256",
+        "22d2527c35b39e1f22a0ac5815c833924815b63cbd1704a958989f124c798f49"
+      ],
+      "returncode": 0,
+      "stdout": "{\"actual_runs\": 0, \"actual_scores\": 0, \"benchmark_id\": \"AU-v2\", \"critical_failure_rules\": 17, \"dimensions\": 8, \"frozen_files\": 36, \"integrity\": \"verified\", \"json_files_excluding_manifest\": 30, \"keys\": 8, \"planned_cells\": 24, \"preparation_status\": \"prepared_data_only\", \"runtime_integration\": \"unimplemented\", \"scenarios\": 8, \"schemas\": 10, \"semantic_findings\": 48}\n",
+      "stderr": ""
+    },
+    {
+      "check": "workflow-verify",
+      "argv": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "validation/agent-workflow/workflow.py",
+        "verify",
+        "--prepared",
+        "validation/agent-workflow/prepared/initial"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"freeze_manifest_sha256\": \"132fef9b963a68c87faae045f1e2ef96201827f1f70a445616464fdb728011e8\",\n  \"frozen_files\": 14,\n  \"preparation_manifest_sha256\": \"bb8cd3f9d29283eed65b0a5c32d23c635cfdd766a85217711bf827b073994f83\",\n  \"prepared_files\": 278,\n  \"sources_verified\": {\n    \"A\": 0,\n    \"B\": 52,\n    \"C\": 79,\n    \"D\": 130\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "check": "consumer-verify",
+      "argv": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "tools/atlas_consumer.py",
+        "verify",
+        "--output",
+        "dist/atlas-consumer"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"cards\": 57,\n  \"files\": 130,\n  \"bytes\": 1019689,\n  \"manifest_sha256\": \"fc6078f5243355ab19947d1c649ee80aa04ba8c3266dee16200f5d7a7f440bd3\",\n  \"source_verified\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "check": "snapshot-baseline",
+      "argv": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "validation/agent-utility-integration/bridge.py",
+        "verify",
+        "--snapshot",
+        "validation/agent-utility-integration/corpora/2026-10-14-02/baseline",
+        "--expected-sha256",
+        "cb0b01f42b3559290d6d03b1aa20645c5f3afd569ec49f32ca8f8a3bff549b88"
+      ],
+      "returncode": 0,
+      "stdout": "{\"cards\": 31, \"files\": 52, \"integrity\": \"verified\"}\n",
+      "stderr": ""
+    },
+    {
+      "check": "snapshot-expanded",
+      "argv": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "validation/agent-utility-integration/bridge.py",
+        "verify",
+        "--snapshot",
+        "validation/agent-utility-integration/corpora/2026-10-14-02/expanded",
+        "--expected-sha256",
+        "3c69f5e66bfb4a3b517df20611505563dd343fe3164139dd1770596890d889c7"
+      ],
+      "returncode": 0,
+      "stdout": "{\"cards\": 57, \"files\": 79, \"integrity\": \"verified\"}\n",
+      "stderr": ""
+    },
+    {
+      "check": "snapshot-empty",
+      "argv": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "validation/agent-utility-integration/bridge.py",
+        "verify",
+        "--snapshot",
+        "validation/agent-utility-integration/corpora/2026-10-14-02/empty",
+        "--expected-sha256",
+        "c6c12f9277aed75cf41e9727a2cbf042be041d503e189be9f068d8d1d5083542"
+      ],
+      "returncode": 0,
+      "stdout": "{\"cards\": 0, \"files\": 0, \"integrity\": \"verified\"}\n",
+      "stderr": ""
+    }
+  ]
+}

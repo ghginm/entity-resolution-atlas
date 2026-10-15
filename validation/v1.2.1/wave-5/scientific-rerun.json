@@ -1,0 +1,20 @@
+[
+  {
+    "script": "check-incomplete-calibration.py",
+    "returncode": 0,
+    "saved_output": "check-incomplete-calibration-output.json",
+    "output_matches_rerun": true,
+    "script_sha256": "98da5bd96fca58227d01be7c64a37f2cdf410ff12f9f43f213d6a80acf8e5671",
+    "output_sha256": "e2be7f0dd63ab64057120402a5250c862fcb7de9916a705358827bf3b1ca3fba",
+    "check_groups": 14
+  },
+  {
+    "script": "check-graph-lifecycle-review.py",
+    "returncode": 0,
+    "saved_output": "check-graph-lifecycle-review.output.json",
+    "output_matches_rerun": true,
+    "script_sha256": "0eb382a94c824fa37884c8de76374d6717d45a89d29d17b01a4046373869253e",
+    "output_sha256": "cad9deb4219c170f85931f9855349dee4c2f82bdf1dc806b642c2053336d5459",
+    "check_groups": 16
+  }
+]

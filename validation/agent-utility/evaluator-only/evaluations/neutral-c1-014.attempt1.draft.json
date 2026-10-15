@@ -1,0 +1,109 @@
+{
+ "corpus_sha256": "e1ade517e405ac79fa93bc700dfe098848a1517dcbecf81080e307d2b30b8772",
+ "critical_failures": [],
+ "dimensions": {
+  "alternative_quality": {
+   "effective_score": 2,
+   "evidence_quotes": [
+    "Uncapped or intelligently budgeted multi-pass blocking",
+    "Incorporate the proposed broad embedding ANN retrieval as an additional pass within a multi-pass blocking framework.",
+    "route only truly uncertain or high-potential candidates to the costly cross-encoder, instead of \"every pair.\""
+   ],
+   "omitted_findings": [],
+   "rationale": "Compares the current exact-key baseline with broader multi-pass retrieval, ANN augmentation and selective expensive scoring, and explains workload and calibration tradeoffs. This meets the credible baseline/different alternative anchor. However, intelligent budgeting remains unspecified, and there is no concrete corrected exact-key baseline that audits placeholders, identifier namespaces and reuse before adding retrieval. ANN representation prerequisites and cascade routing validation are not developed enough for a mechanism/prerequisite/cost-based selection at level 3.",
+   "raw_score": 2
+  },
+  "efficiency": {
+   "effective_score": 2,
+   "evidence_quotes": [
+    "DEC-05-001: Choose a candidate generation strategy.",
+    "AR-03, not read in detail but identified as complementary in AR-02"
+   ],
+   "omitted_findings": [],
+   "rationale": "The five logged reads progress from discovery to a relevant architecture, decision and two blocking solutions; they are useful and show no hard run-budget violation. The response prioritizes candidate loss and bounded scoring. Nevertheless, the overlapping blocking discussion and repeated pipeline/constraint detail do not resolve the remaining identifier, evaluation and update-replay questions. Stopping without following the available evaluation support or examining cascade prerequisites prevents the strongest targeted-retrieval/actionability anchor.",
+   "raw_score": 2
+  },
+  "evidence_discipline": {
+   "effective_score": 2,
+   "evidence_quotes": [
+    "Missing information (explicitly unknown from scenario):",
+    "AR-03, not read in detail but identified as complementary in AR-02",
+    "The experiment will primarily focus on recovering known missed matches and controlling workload.",
+    "The core problem is missed duplicates due to the candidate capping, indicating a recall issue in candidate generation."
+   ],
+   "omitted_findings": [],
+   "rationale": "The major union/cap/calibration claims are supported by the actual read excerpts, the unread cascade card is explicitly distinguished, and the response does not invent measured throughput or claim execution. It acknowledges limited labels and confines testing away from production. However, the opening causal diagnosis attributes the misses to capping more firmly than the scenario establishes, before later treating that mechanism as a hypothesis. It also does not explicitly preserve the taxonomy-only scope of ANN/adaptive retrieval support, and contains an isolated SOL-05-02 citation typo where SOL-05-002 is otherwise consistently identified. That typo is not treated as fabricated substantive support. These evidence-scope imperfections keep it below level 3.",
+   "raw_score": 2
+  },
+  "experiment_quality": {
+   "effective_score": 2,
+   "evidence_quotes": [
+    "A small, independently created set of known matches (from technician reports or manual review) that were missed by the current system",
+    "Initially, use the current scoring model and thresholds on all candidate sets to isolate the impact of candidate generation changes.",
+    "Evaluate metrics by source, asset type, and attributes",
+    "Implement kill switches if resources are exceeded."
+   ],
+   "omitted_findings": [],
+   "rationale": "Provides a comparator, a fixed-downstream control, independently labeled known misses, candidate and limited entity metrics, source/asset slices, resource monitoring and positive/negative/inconclusive decisions. The truth is not restricted to surviving candidates, and the response acknowledges the limited scope of known-miss recovery. It lacks a representative outside-all-routes audit, entity-disjoint or temporal split details, marginal true-match coverage/leave-one-pass-out controls, and a separate retuning comparison despite recognizing calibration shift. Peak-memory and update dependency-closure/replay verification, quantified safety tolerances and a concrete fallback are also absent. This is an informative but incomplete guarded experiment, not level 3.",
+   "raw_score": 2
+  },
+  "problem_understanding": {
+   "effective_score": 2,
+   "evidence_quotes": [
+    "Assets are not sites or product families.",
+    "18 million rows, 600,000 updates/month, 2-hour batch window, 64 GB RAM, CPU budget only.",
+    "Equipment history must survive updates and correction. No representative missed-match labels."
+   ],
+   "omitted_findings": [],
+   "rationale": "Correctly identifies asset deduplication, input-order truncation, pre-cap scoring, compute limits, label scarcity and history preservation, and lists the main operational unknowns. A material contract gap remains: the scenario's serial reuse across namespaces and refurbished units is not developed into identity/temporal eligibility requirements or an identifier audit. Merely mentioning namespaces as an embedding robustness issue does not establish the asset identity contract. Thus the main task and constraints are understood, but the full semantic distinction required for level 3 is missing.",
+   "raw_score": 2
+  },
+  "retrieval_relevance": {
+   "effective_score": 2,
+   "evidence_quotes": [
+    "This decision card emphasizes that budgets and filtering (like the current 25-candidate cap) can negate the benefits of broader retrieval.",
+    "Such a budgeted composition is not an exhaustive union and inherits no automatic monotonicity guarantee."
+   ],
+   "omitted_findings": [],
+   "rationale": "The logged L0 discovery and full AR-02, DEC-05-001, SOL-05-001 and SOL-05-002 excerpts directly support candidate coverage, alternatives, selection effects, operational costs and some evaluation design. The response links its central claims to those actual reads. However, L0 exposes EVAL-11-001, EVAL-11-002 and EVAL-11-003, and the retrieved cards link evaluation prerequisites that are not followed; neither cascade nor incremental-replay support is examined in detail. This is relevant decision and alternative/evaluation material, but not the strongest available support across the decision chain. No penalty is imposed for the genuine absence of expanded ANN solution cards.",
+   "raw_score": 2
+  },
+  "risk_identification": {
+   "effective_score": 2,
+   "evidence_quotes": [
+    "Changing the candidate distribution (e.g., by adding ANN or removing the cap) changes the \"hard-negative mix\" and can invalidate existing score calibration and thresholds",
+    "potentially exceeding the 2-hour batch window and CPU budget",
+    "Ensure each change can be rolled back without data loss or pipeline instability.",
+    "Do not test in production or impact live processing."
+   ],
+   "omitted_findings": [],
+   "rationale": "Identifies central cap-related missed matches, workload explosion, calibration shift, false-positive/review load and replay risks, with resource limits, selective scoring, nonproduction tests and rollback safeguards. It does not endorse either critical scenario failure. Still, it misses explicit remediation of shared placeholder blocks and namespace/refurbishment ambiguity, and does not connect false merges to damaged equipment history or explain reversible entity membership and update closure. The major risks and useful safeguards meet level 2, but the scenario-specific downstream harm and reversibility mechanisms are insufficient for level 3.",
+   "raw_score": 2
+  },
+  "technical_reasoning": {
+   "effective_score": 2,
+   "evidence_quotes": [
+    "candidate admission is not a match decision",
+    "Versioned representations -> [current exact passes | embedding ANN retrieval] -> eligible union -> optional budget/filter -> evidence -> scoring -> resolution.",
+    "Must produce unique eligible pair keys with complete set of producing passes and referenced observation versions",
+    "This suggests a different topology for handling the \"costly\" aspect, rather than applying it to \"every pair\" immediately."
+   ],
+   "omitted_findings": [],
+   "rationale": "Correctly separates retrieval, deduplicated union, filtering, evidence, scoring and resolution; distinguishes topology/scoring/resolution/lifecycle; explains why caps invalidate uncapped coverage monotonicity and why selection changes calibration. Selective cross-encoder routing is technically defensible and bounded by proposed testing. The mechanism remains incomplete around namespace/validity contracts, unavailable-key handling and skew refinement, safe cascade early exits, final entity construction/history correction, and incremental dependency closure. The response does not assert unconditional exhaustive computation or capped full recall, but lacks the explicit conditional module interactions needed for level 3.",
+   "raw_score": 2
+  }
+ },
+ "evaluated_at": "2026-10-13T13:55:53.687962+00:00",
+ "evaluator": {
+  "blinded": true,
+  "conflicts": "none; fresh automated process distinct from benchmark author, tested agent and corpus authors",
+  "identity": "eval-openai-codex-default-fresh-process",
+  "independent": true,
+  "role": "fresh_model_process"
+ },
+ "manifest_sha256": "bd2e57dc2d96f40fb65a6fd4ac2d9a5e6000411b91a5dc1ca47071a8bed3104c",
+ "run_sha256": "d71eb7e7a3e4c2fdad1ed3a9564c3fe2cef678e1300a7f0bd797267246bf3996",
+ "scenario_id": "AU-07",
+ "schema_version": "1.0",
+ "settings_sha256": "ba133047d7e3acbe9d50ac8fe8d738b24344071c61039ad7162ff05552a8ba66"
+}

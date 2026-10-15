@@ -1,0 +1,996 @@
+# Codex Task: Entity Resolution Atlas v1.2+ — Comprehensive Knowledge & Agent-Utility Expansion
+
+## 0. Mission
+
+Extend the existing Entity Resolution Solution Atlas into a substantially more useful, technically rigorous, agent-friendly external knowledge base.
+
+This is an implementation task, not merely a planning exercise.
+
+You are authorized to implement a substantial expansion across multiple iterations. Do not artificially constrain the scope to a handful of cards if additional coverage is justified.
+
+However, do not mass-generate shallow documents, fill every taxonomy gap, or introduce complexity solely for completeness.
+
+**The objective is quality, coverage of important decisions, and practical utility for AI-assisted development and research.**
+
+The Atlas should help an AI agent:
+
+1. Understand unfamiliar Entity Resolution problems.
+2. Identify relevant architectural and algorithmic choices.
+3. Compare credible alternatives using sound theoretical reasoning.
+4. Design modular, maintainable, reproducible ER pipelines.
+5. Select ML, statistical, NLP, rule-based and graph approaches appropriately.
+6. Work effectively when reliable ground truth is scarce or absent.
+7. Plan controlled experiments and interpret evidence correctly.
+8. Identify failure modes and cross-module interactions.
+9. Produce actionable, testable implementation plans for an external project.
+10. Avoid repeatedly researching the same concepts and rediscovering already-known trade-offs.
+
+The Atlas must remain **project-agnostic**.
+
+The supplied project audits are useful examples of the problems an ER system can encounter. They are not requirements to reproduce the audited project or document its implementation.
+
+---
+
+# 1. Non-negotiable design principles
+
+## 1.1 Preserve the Atlas architecture
+
+Start by inspecting the actual repository.
+
+Relevant contracts include:
+
+- `AGENTS.md`
+- `SCOPE.md`
+- `SCHEMA.md`
+- `README.md`
+- `CATALOG.md`
+- `taxonomy/`
+- `taxonomy/module-contracts.md`
+- `templates/`
+- `guides/`
+- `references/evidence-policy.md`
+- `references/atlas-manifest.json`
+- `validation/agent-utility/`
+
+Preserve the existing five knowledge-object types:
+
+- Decision
+- Solution
+- Architecture
+- Hypothesis
+- Evaluation
+
+Preserve the 14-domain taxonomy, existing stable IDs and the six AR-01–AR-06 architectures.
+
+Do not invent another taxonomy, duplicate knowledge-object system or a parallel navigation framework.
+
+Architectural patterns can be expressed through Decision/Solution Cards, guides, module contracts and deep dives without introducing new architecture IDs.
+
+Existing v1.1 stop/review restrictions are superseded by this explicit authorization for a substantial expansion. Other integrity, provenance and evaluation restrictions remain applicable.
+
+## 1.2 Universal knowledge, not project documentation
+
+Do not introduce specific project tables, source names, functions, directories, thresholds or configuration settings as universal Atlas concepts.
+
+Generalize observed problems into reusable engineering and scientific questions.
+
+For example:
+
+- Hardcoded SQL guards → rule composition and policy-engine design.
+- Source-specific probability weights → source-aware evidence reliability.
+- Large connected components → graph contamination diagnostics.
+- No labeled matches → incomplete-reference evaluation strategies.
+- Expensive pair generation → retrieval cost/recall trade-offs.
+
+A method's behavior may be illustrated with synthetic examples involving persons, organizations or financial entities, but without embedding private project details.
+
+## 1.3 Depth over superficial coverage
+
+Every substantive card must explain:
+
+- What problem it addresses.
+- The mechanism and theoretical reasoning.
+- Why it could improve an outcome.
+- Under which conditions it helps.
+- Under which conditions it fails or hurts.
+- Dependencies and assumptions.
+- Alternatives, including a credible simpler baseline.
+- Computational and operational implications.
+- Interaction with other ER components.
+- How to evaluate it.
+- What evidence would justify adopting or rejecting it.
+
+Avoid statements such as "method X improves precision" without explaining the mechanism and conditions.
+
+Use worked examples and equations where they materially clarify the decision.
+
+An informative 1,200-word card is preferable to an artificial 700-word card missing important theory. Do not inflate documents merely to reach a target length.
+
+## 1.4 Evidence discipline
+
+Distinguish:
+
+- Established mathematical implications.
+- Findings supported by external literature.
+- Empirical results established only in specific contexts.
+- Plausible but untested hypotheses.
+- Open questions or insufficient evidence.
+
+Use the existing source ledger and citation conventions.
+
+Verify primary literature and author-maintained technical documentation where possible.
+
+Never fabricate references, benchmark results or expected improvements.
+
+If external verification is unavailable, record the limitation and avoid presenting an unsupported claim as established evidence.
+
+## 1.5 Agent-friendly, selective retrieval
+
+Preserve:
+
+L0 discovery → L1 comparison → L2 detailed knowledge → L3 specialized depth.
+
+An agent should be able to find relevant knowledge without reading the entire repository.
+
+As the corpus expands, strengthen routing and navigation instead of increasing the default reading volume.
+
+---
+
+# 2. Phase 0 — Repository assessment and expansion design
+
+Before writing substantial content:
+
+1. Inventory existing knowledge objects and their coverage.
+2. Review the current expansion plan and decision-coverage matrix.
+3. Identify existing material that can be improved instead of duplicated.
+4. Inspect the source/evidence ledger.
+5. Inspect current tooling and agent-utility evaluation infrastructure.
+6. Run available baseline validation checks.
+7. Determine whether expected immutable inputs, especially `dev_docs/`, are present. If the supplied archive omitted them, report the packaging issue rather than recreating historical inputs or changing their hashes.
+
+Create an implementation tracker:
+
+`guides/v1.2-expansion-tracker.md`
+
+For each identified topic, classify it as:
+
+- Covered sufficiently.
+- Expand an existing object.
+- Create a new object.
+- Add a guide or deep dive.
+- Cross-reference existing knowledge.
+- Deferred with a substantive reason.
+
+Record dependencies, implementation status and validation results.
+
+This tracker is a development artifact, not another canonical knowledge-object type.
+
+**Continue into implementation rather than stopping after the plan**, unless there is a genuine blocker.
+
+---
+
+# 3. Phase 1 — Evaluation and research without reliable ground truth
+
+This is the highest-priority scientific expansion.
+
+Existing `SOL-10-001`, `EVAL-11-001...004`, and the calibration deep dive form the foundation. Extend them rather than repeating their existing theory.
+
+## 3.1 Ground-truth acquisition
+
+Develop a connected decision/solution family comparing:
+
+- Independent probability sampling.
+- Stratified sampling.
+- Entity-centric adjudication.
+- Uncertainty-based active learning.
+- Disagreement sampling.
+- Cluster-risk sampling.
+- High-confidence silver labels.
+- Weakly supervised labels.
+- Human review and adjudication.
+- Hybrid designs combining independent evaluation samples and targeted training/research samples.
+
+Explain annotation units, sampling populations, inclusion probabilities, class imbalance, review costs, disagreement handling and selection bias.
+
+A particularly important distinction:
+
+**A sample optimized to discover informative cases is not automatically a representative evaluation sample.**
+
+Provide practical designs for gradually building reliable reference evidence while preserving independent evaluation.
+
+## 3.2 Evaluation under incomplete reference coverage
+
+Extend the theoretical and practical treatment of:
+
+- Pair-level precision and recall.
+- Entity-level and cluster-level quality.
+- Overmerge and undermerge errors.
+- False negatives outside candidate generation.
+- Missing labels versus negative labels.
+- Positive-unlabeled evaluation.
+- Partial entity truth.
+- Sampling-weighted estimates.
+- Dependence-aware uncertainty intervals.
+- Rare but high-cost failure modes.
+- Tail-risk diagnostics.
+
+Define estimands, populations and denominators explicitly.
+
+Explain what is identifiable from the available evidence and what is not.
+
+Distinguish quality diagnostics from actual accuracy estimation.
+
+For instance, graph contradictions can indicate suspicious clusters but cannot independently certify population-level precision.
+
+## 3.3 Synthetic, perturbation and metamorphic testing
+
+Develop dedicated reusable guidance for:
+
+- Synthetic ER fixtures.
+- Controlled duplicates.
+- Controlled identity-changing transformations.
+- Invariant-preserving transformations.
+- Metamorphic testing.
+- Counterexample-driven tests.
+- Property-based testing.
+- Regression suites for matching and resolution policies.
+
+Illustrative cases:
+
+- Formatting changes should not cause arbitrary identity changes.
+- Adding irrelevant metadata should not unexpectedly alter a decision.
+- A source's record-processing order should not alter results unless an explicitly documented stateful policy permits it.
+- Reusing an identifier from a different namespace must not establish identity.
+- A company subsidiary must not be merged with its parent merely because names overlap.
+- A weak bridge edge must not automatically be interpreted as reliable cluster-wide identity evidence.
+
+Explain why synthetic success does not establish real-world model accuracy.
+
+## 3.4 Weak supervision and active learning
+
+Cover:
+
+- Labeling functions.
+- Rule agreement and disagreement.
+- Correlated labeling functions.
+- Label-model assumptions.
+- Self-training and pseudo-labeling.
+- Active learning acquisition functions.
+- Source-specific label scarcity.
+- Confidence and abstention.
+- Feedback loops.
+- Circular supervision.
+
+Explicitly address the risk of training a model on labels derived from the same rules later used to evaluate that model.
+
+Separate:
+
+- Rule imitation.
+- Improved discrimination.
+- Independent quality improvement.
+
+## 3.5 Experiment design
+
+Add a dedicated experimentation decision family covering:
+
+- Baseline-controlled experiments.
+- Stage-specific ablations.
+- Fixed candidate-set comparisons.
+- Factorial experiments.
+- Error slicing.
+- Independent holdouts.
+- Entity-disjoint and temporal splits.
+- Data leakage.
+- Statistical uncertainty.
+- Practical significance versus statistical significance.
+- Repeated runs and stability.
+- Negative and inconclusive results.
+
+Every experimental design must explain which competing mechanisms it can distinguish.
+
+Deliverables should include reusable experiment-planning templates and evaluation routes.
+
+---
+
+# 4. Phase 2 — Engineering architecture, modularity and MLOps
+
+This is not a general software-engineering encyclopedia.
+
+Focus on architecture and operational design decisions particularly relevant to ER and hybrid DS systems.
+
+## 4.1 Pipeline architecture
+
+Create or expand decision-level comparisons of:
+
+- Linear modular pipelines.
+- Template-method designs.
+- Strategy/plugin components.
+- Configuration-driven pipelines.
+- Declarative rule systems.
+- Dependency DAGs and workflow orchestration.
+- Batch versus incremental execution.
+- Hybrid architectures.
+
+Explain what changes when a pipeline becomes larger, source-aware, experimental or agent-maintained.
+
+Do not automatically recommend more abstraction.
+
+Compare simplicity, maintainability, debugging, extension cost and migration risk.
+
+## 4.2 Stage contracts and component interfaces
+
+Extend `taxonomy/module-contracts.md` where appropriate.
+
+Provide conceptual contracts for:
+
+- Source ingestion.
+- Normalization.
+- Candidate retrieval.
+- Pair comparison.
+- Scoring.
+- Evidence aggregation.
+- Decision policy.
+- Graph resolution.
+- Assignment.
+- Entity construction.
+- Persistence.
+- Review and correction.
+- Monitoring.
+
+For each stage explain:
+
+- Required input semantics.
+- Output semantics.
+- Artifacts and lineage.
+- Version dependencies.
+- Invariants.
+- Error handling.
+- Optional versus hard prerequisites.
+- Safe substitution boundaries.
+
+Do not prescribe one programming language, cloud platform or framework.
+
+## 4.3 Rule-based and hybrid decision architectures
+
+This deserves a substantial connected knowledge family.
+
+Compare:
+
+- Explicit conditional/CASE ladders.
+- Parameterized rules.
+- Predicate registries.
+- Declarative rule tables.
+- Priority-ordered policies.
+- Decision tables.
+- Hard constraints.
+- Soft evidence.
+- Learned scoring plus guards.
+- Human-review escalation.
+
+Investigate:
+
+- Rule precedence.
+- Shadowed and unreachable rules.
+- Conflicting rules.
+- Contradictions.
+- Default/fallback behavior.
+- Missing values.
+- Auditable rule traces.
+- Rule versioning.
+- Per-source overrides.
+- Pre-merge versus post-merge constraints.
+- Idempotency.
+- Policy regression tests.
+
+Explain when rule modularization genuinely helps and when a simpler explicit implementation is safer.
+
+Include generic rule-testing examples and edge cases.
+
+## 4.4 Experiment-friendly MLOps
+
+Develop guidance on:
+
+- Immutable input snapshots.
+- Versioned intermediate artifacts.
+- Deterministic execution.
+- Reproducible configuration.
+- Dataset and feature lineage.
+- Run manifests.
+- Stage-specific caching.
+- Incremental recomputation.
+- Dependency invalidation.
+- Experiment tracking.
+- Model/rule version compatibility.
+- Reusable evaluation harnesses.
+- Safe rollback.
+- Staged promotion and regression gates.
+
+An agent should understand how to compare one changed retrieval, scoring or resolution component against a controlled baseline without accidentally changing several other stages.
+
+Address subtle dependencies:
+
+- Changing retrieval changes the scoring population.
+- Changing normalization may invalidate blocking keys and features.
+- Changing score distributions may invalidate thresholds.
+- Changing edge admission may change graph-wide assignments.
+- Changing memberships may require revisiting master-attribute selection.
+
+## 4.5 Incremental identity maintenance
+
+Extend the existing AR-06 and master-resolution material.
+
+Cover:
+
+- Stable identity allocation.
+- Merge/split history.
+- Event sourcing versus materialized current state.
+- Reversible membership decisions.
+- ID redirects.
+- Dependency closure.
+- Affected-component recomputation.
+- Full versus partial replay.
+- Out-of-order updates.
+- Deletes and corrections.
+- Temporal validity.
+- Downstream consistency.
+
+Keep identity continuity and attribute continuity conceptually distinct.
+
+## 4.6 Explainability and diagnostics
+
+Develop a conceptual model of decision provenance:
+
+- Candidate-generation path.
+- Comparison evidence.
+- Score semantics.
+- Rule/policy decisions.
+- Cluster transformations.
+- Assignment rationale.
+- Human intervention.
+- Version and lineage.
+
+Distinguish explaining why the system made a decision from proving the decision is correct.
+
+---
+
+# 5. Phase 3 — ML, statistics, NLP and graph-based ER methods
+
+Expand meaningful algorithmic alternatives and their selection criteria.
+
+Prefer connected comparisons over isolated method descriptions.
+
+## 5.1 Source-aware probabilistic scoring
+
+Deepen existing Fellegi–Sunter, additive and logistic-scoring content.
+
+Address:
+
+- Manual m/u parameter specification.
+- EM assumptions and identifiability.
+- Conditional dependence.
+- Class priors.
+- Candidate-selection effects.
+- Score calibration.
+- Sparse and missing fields.
+- Source-specific evidence reliability.
+- Global versus source-specific models.
+- Partial pooling and hierarchical approaches.
+- Domain adaptation.
+- Shift and transfer diagnostics.
+
+An especially important research question:
+
+When does pooling evidence across sources improve statistical efficiency, and when does it hide important heterogeneity?
+
+Include credible simple baselines.
+
+Do not treat unsupervised EM or calibration as automatically preferable to manually specified interpretable weights.
+
+## 5.2 Advanced supervised and semi-supervised scoring
+
+Cover the important practical alternatives:
+
+- Regularized logistic models.
+- Constrained or interpretable GAMs.
+- Gradient-boosted trees.
+- Pairwise learning-to-rank where appropriate.
+- Weakly supervised matching.
+- Hybrid rules plus learned scores.
+- Embedding-based matching.
+- Selective use of neural/LLM comparators.
+
+Explain label demands, interpretability, calibration, distribution shift, deployment cost and failure modes.
+
+Advanced approaches should not receive unjustified preference.
+
+If labels or validation evidence are insufficient, explain what can still be investigated and what conclusions remain unsupported.
+
+## 5.3 NLP and entity-name comparison
+
+Build a substantial reusable decision/solution family for:
+
+- Unicode normalization.
+- Transliteration.
+- Language-aware normalization.
+- Multi-representation names.
+- Tokenization.
+- Edit-distance methods.
+- Jaro–Winkler and related character similarities.
+- Token-set similarities.
+- TF-IDF / frequency-based matching.
+- Phonetic approaches.
+- Organization-specific name structure.
+- Person names and aliases.
+- Multilingual and multiscript comparison.
+- Historical names and name changes.
+
+Pay particular attention to **information loss through normalization**.
+
+For example, removing legal, geographic, organizational or series-specific tokens may increase string similarity while destroying information needed to distinguish entities.
+
+Explain candidate generation versus comparison roles and the cost of more elaborate representations.
+
+## 5.4 Candidate retrieval and blocking
+
+Extend current exact and multi-pass blocking into a broader decision family.
+
+Cover:
+
+- Sorted neighbourhood.
+- Q-gram inverted indexes.
+- Canopy blocking.
+- LSH/minhash.
+- Frequency-aware and adaptive blocking.
+- Block-size management.
+- Candidate budgets and truncation.
+- ANN/vector retrieval.
+- Symbolic and vector retrieval combinations.
+- Learned blocking where justified.
+
+Discuss the recall-versus-cost frontier.
+
+Distinguish new candidates from newly recovered true matches.
+
+Separate candidate-pool coverage, scoring quality and final accepted-match quality.
+
+## 5.5 Evidence engineering
+
+Deepen treatment of:
+
+- Agreement.
+- Disagreement.
+- Contradiction.
+- Missingness.
+- Invalid information.
+- Source authority.
+- Field reliability.
+- Feature dependence.
+- Frequency effects.
+- Temporal evidence.
+- Multi-valued evidence.
+- Corroboration versus copied evidence.
+- Identifier namespaces and validity.
+
+Explain when an apparent hard constraint should instead become soft evidence or an abstention trigger.
+
+## 5.6 Graph resolution and clustering
+
+Extend existing connected-components and constrained-clustering knowledge.
+
+Cover:
+
+- Pairwise decisions versus global consistency.
+- Edge reliability.
+- Bridge-edge detection.
+- Articulation points and graph fragility.
+- Contradiction propagation.
+- Transitive overmerge.
+- Constrained clustering.
+- Must-link and cannot-link semantics.
+- Local versus global decision strategies.
+- Connected components versus optimization-based methods.
+- Typed relations versus strict identity.
+- Cluster repair and reversible assignments.
+- Graph-level quality diagnostics without labels.
+
+Explain why making components smaller, removing weak edges or increasing graph consistency does not necessarily improve identity accuracy.
+
+## 5.7 Research hypotheses
+
+Create substantive Hypothesis Cards only for meaningful, experimentally testable questions.
+
+Potential examples:
+
+- Frequency-aware weighting under high-frequency names.
+- Source-conditioned evidence reliability.
+- Selective graph-edge verification.
+- Hybrid symbolic/vector retrieval.
+- Targeted weak supervision.
+- Adaptive candidate-budget allocation.
+
+Each hypothesis needs:
+
+- Causal/mechanistic rationale.
+- Simple comparator.
+- Observable outcomes.
+- Necessary controls.
+- Alternative explanation.
+- Failure criteria.
+- Negative and inconclusive interpretation.
+- Cost and safety guardrails.
+
+Do not create hypothesis cards merely to inflate inventory.
+
+---
+
+# 6. Phase 4 — Scalability, lifecycle and governance
+
+Cover the most relevant remaining engineering gaps.
+
+## 6.1 Scale and performance
+
+Develop guidance on:
+
+- Large and skewed blocks.
+- Memory and execution budgets.
+- Materialization and caching.
+- Index-build and index-maintenance costs.
+- Batch partitioning.
+- Parallel and distributed execution.
+- SQL/vectorized versus application-layer operations.
+- Candidate and comparison cost accounting.
+- Incremental recomputation.
+- Reproducibility under parallel execution.
+
+Avoid generic performance platitudes. Explain the underlying computational trade-offs.
+
+## 6.2 Monitoring and operational diagnostics
+
+Cover:
+
+- Incoming source-profile drift.
+- Missingness and field-distribution changes.
+- Candidate-yield changes.
+- Score-distribution shift.
+- Threshold and calibration validity.
+- Graph component growth.
+- Rule-trigger distributions.
+- Human-review outcomes.
+- Sudden merge/split changes.
+- Source onboarding.
+- Data corrections.
+- Version incompatibilities.
+
+Distinguish operational anomaly detection from direct measurement of ER accuracy.
+
+## 6.3 Safety and governance
+
+Add practical conceptual guidance on:
+
+- PII and sensitive identifiers.
+- Data minimization.
+- Provenance and audit trails.
+- Human authorization.
+- Reversibility.
+- Access constraints.
+- External model/API restrictions.
+- Privacy risks of embedding or LLM-based matching.
+
+Do not attempt to fully implement an advanced privacy-preserving record-linkage textbook without verified specialist evidence.
+
+Clearly mark deep cryptographic/federated guarantees as incomplete where necessary.
+
+---
+
+# 7. Phase 5 — Agent friendliness and knowledge retrieval
+
+This phase must materially improve how an external coding agent consumes the Atlas.
+
+## 7.1 Decision-oriented navigation
+
+Improve the existing L0/L1 routing without building a second search engine.
+
+An agent beginning with questions such as:
+
+- "How do I improve matching without reliable labels?"
+- "How can I refactor a rule-heavy resolution stage?"
+- "Why are large components merging unexpectedly?"
+- "Should I use learned scoring or explicit rules?"
+- "How can I add another data source without changing existing behavior?"
+- "How should I compare two blocking strategies?"
+- "How do I make my ER experiments reproducible?"
+
+should reach a small relevant subset of knowledge objects.
+
+Extend catalog indexing, applicability metadata and guides only where current navigation demonstrably falls short.
+
+Do not make the agent load a full domain or unrelated cards by default.
+
+## 7.2 Project-Atlas integration contract
+
+Create a small **project-agnostic** guide/template defining how external agents can connect project facts to Atlas knowledge.
+
+It should describe a mapping such as:
+
+Project question → relevant Atlas decisions → alternative solutions → evaluation → implementation plan.
+
+The template may include:
+
+- Problem statement.
+- Observed project facts.
+- Unknowns.
+- Relevant Atlas IDs.
+- Existing implementation approach.
+- Alternative configurations.
+- Affected stage contracts.
+- Risks and assumptions.
+- Required tests.
+- Experiment plan.
+- Rollback criteria.
+- Final decision.
+
+Do not put actual project information into Atlas.
+
+The mapping is an interface for consumers, not another Atlas object type.
+
+## 7.3 Agent task patterns
+
+Add reusable guidance for agents performing:
+
+- New feature or method selection.
+- Architecture reviews.
+- Rule refactoring.
+- Performance investigations.
+- Matching-quality investigations.
+- ML experimentation.
+- New data-source onboarding.
+- Incremental pipeline changes.
+- Debugging graph-level identity errors.
+
+For each task pattern, distinguish:
+
+1. Minimum context to retrieve.
+2. Essential project facts.
+3. Applicable Atlas choices.
+4. Critical checks.
+5. Expected output artifact.
+6. Stop conditions.
+
+Agent guidance should remain concise and operational.
+
+## 7.4 Recommendation quality
+
+Update `AGENTS.md` to reinforce:
+
+- Prefer a simple credible baseline.
+- Distinguish hypothesis from evidence.
+- Consider interaction between stages.
+- Explicitly state uncertainty.
+- Avoid unnecessary rereading.
+- Prefer bounded, reversible experiments.
+- Never infer domain facts from generic Atlas content.
+- Do not recommend a method solely because it appears in the Atlas.
+
+A recommendation should explicitly distinguish:
+
+**Known → Assumed → Proposed → Testable → Proven.**
+
+## 7.5 Prevent knowledge-base bloat
+
+Implement reasonable guardrails for:
+
+- Duplicate concepts.
+- Redundant cards.
+- Orphan cards.
+- Missing evaluation links.
+- Stale generated indexes.
+- Excessive or weak applicability tags.
+- Missing cross-domain relationships.
+- Broken references.
+- Contradictory guidance.
+- Unsupported strength of evidence.
+
+Prefer extending current documentation tooling rather than introducing unrelated services.
+
+---
+
+# 8. Required validation and adversarial review
+
+Each implementation phase must be validated before moving to the next.
+
+## 8.1 Structural validation
+
+Run the existing tests, catalog generator and documentation lint.
+
+Update:
+
+- `references/atlas-manifest.json`
+- Relevant source-ledger entries.
+- Generated `CATALOG.md`.
+- Generated domain indexes.
+- Coverage matrix.
+- Expansion tracker.
+- Change log.
+- Necessary guides and contracts.
+
+Preserve historical IDs and immutable baseline artifacts.
+
+Do not bypass failing lint through relaxed validation rules unless the existing rule is actually incorrect and the correction is tested.
+
+## 8.2 Scientific and conceptual review
+
+Use `guides/content-review-rubric.md`.
+
+Review connected decision/solution/evaluation families together.
+
+Challenge:
+
+- Mechanism correctness.
+- Assumption consistency.
+- Statistical estimands.
+- Selection and sampling bias.
+- Interpretation of probabilities.
+- Identity semantics.
+- Relation semantics.
+- Conditional incompatibilities.
+- False confidence from proxy diagnostics.
+- Project-specific overgeneralization.
+
+Where possible, use a distinct critique pass and record unresolved concerns.
+
+A passing lint suite is not evidence of scientific correctness.
+
+## 8.3 Agent-utility evaluation
+
+Preserve the frozen AU-v1 benchmark and existing results.
+
+Review its known findings, especially:
+
+- Confusing identity continuity with identifier or license changes.
+- Confusing surrogate assignment utility with identity truth.
+- Claiming population recall from candidate-selected references.
+- Incomplete treatment of sampling denominators and uncertainty.
+- Confusion between membership and master-field survivorship.
+- Failure to reason correctly despite retrieving relevant material.
+
+Develop a **new, separately versioned evaluation cohort** where appropriate.
+
+Include scenarios challenging both scientific and architectural reasoning:
+
+- No-label evaluation design.
+- Source distribution shift.
+- Weak supervision circularity.
+- Rule conflicts and shadowing.
+- Graph bridge contamination.
+- Reversible incremental updates.
+- Source-aware scoring.
+- Modularity and stage contracts.
+- Controlled experiments.
+- Cost/recall trade-offs.
+
+Test the agent's actual decision quality, not merely whether it retrieves newly created cards.
+
+Prevent answer-key leakage. Freeze test cases and evaluation criteria before testing the expanded corpus. Avoid writing cards directly to match known new test answers.
+
+Where possible, compare against the current Atlas and a no-Atlas condition using equivalent contexts and models.
+
+Do not fabricate executions, scores or improvements if independent tests cannot run.
+
+---
+
+# 9. Implementation workflow across multiple sessions
+
+This task is intentionally larger than one short coding-agent run.
+
+Implement it in coherent waves:
+
+**Wave 0 — Baseline and implementation tracker**
+
+**Wave 1 — Unlabeled evaluation, research design, annotation and weak supervision**
+
+**Wave 2 — Architecture, modularity, rule engines and experiment-friendly MLOps**
+
+**Wave 3 — NLP, blocking, statistical scoring, source-aware ML and graph methods**
+
+**Wave 4 — Scalability, monitoring, incremental identity and governance**
+
+**Wave 5 — Agent retrieval, integration, benchmark and final quality review**
+
+These are implementation waves, not scope limits.
+
+Within each wave:
+
+1. Review existing relevant objects.
+2. Identify genuine knowledge gaps.
+3. Implement or deepen related objects.
+4. Add meaningful cross-links.
+5. Update navigation and manifests.
+6. Validate structure.
+7. Review scientific substance.
+8. Record completion and unresolved issues.
+
+Do not stop after writing an expansion plan.
+
+Do not ask for review between waves unless a genuine ambiguity or external dependency prevents responsible implementation.
+
+If execution budget or context becomes limited, finish the current coherent wave and create a detailed handoff containing:
+
+- Completed work.
+- Files changed.
+- Validation results.
+- Remaining work.
+- Important design decisions.
+- Known blockers.
+- Exact recommended next action.
+
+Do not silently drop an unfinished wave.
+
+---
+
+# 10. Final acceptance criteria
+
+The expansion is complete when the following conditions hold:
+
+### Knowledge coverage
+
+- Important gaps discussed in this task are implemented or explicitly deferred with technical justification.
+- Evaluation without labels has substantial operational and theoretical coverage.
+- Agent-friendly architecture and modularity choices are covered.
+- Hybrid rule-based/ML architecture is addressed.
+- Relevant ML/statistical/NLP/retrieval/graph alternatives are meaningfully compared.
+- MLOps, lifecycle and scalability knowledge is integrated.
+
+### Knowledge quality
+
+- New material contains meaningful mechanisms, assumptions and counterexamples.
+- Alternatives are compared against baselines.
+- Claims are evidence-aware.
+- Evaluation methods match their estimands.
+- No invented empirical improvements or universal guarantees.
+- No unnecessary duplicate content.
+
+### Agent utility
+
+- Relevant knowledge can be retrieved selectively.
+- Important decisions link to alternatives and evaluations.
+- The Atlas can produce actionable experiment and development plans.
+- Cross-module interactions are discoverable.
+- Project-specific details remain outside the canonical Atlas.
+- Benchmark results and their limitations are reported accurately.
+
+### Engineering integrity
+
+- Existing Atlas contracts remain coherent.
+- Stable IDs and historical artifacts are preserved.
+- Generated indexes are current.
+- Structural tests pass, or any failures are explicitly documented.
+- The expansion is organized into coherent, maintainable knowledge families.
+
+---
+
+# 11. Final deliverables
+
+Provide:
+
+1. Updated Atlas repository.
+2. Updated inventory and navigation.
+3. Updated coverage matrix.
+4. Completed expansion tracker.
+5. Summary of new and substantially expanded knowledge families.
+6. Scientific/content review findings.
+7. Structural test results.
+8. Agent-utility evaluation results, if actually executed.
+9. Remaining worthwhile research areas.
+10. A concise summary of how an external coding agent should use the expanded Atlas.
+
+The final report must distinguish implemented content, validated behavior, theoretical expectations and unresolved questions.
+
+## Success criterion
+
+The expanded Atlas should help a competent coding agent make **more technically defensible, context-aware and testable decisions about an unfamiliar ER system, with less redundant reading and research**.
+
+The goal is not maximal documentation volume.
+
+The goal is a reusable, scientifically grounded and operationally useful external knowledge base for engineering and experimentation in Entity Resolution.
+
+Proceed with Wave 0, then implement the remaining waves sequentially.

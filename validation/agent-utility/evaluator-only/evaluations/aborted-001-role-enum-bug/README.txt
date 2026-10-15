@@ -1,0 +1,1 @@
+Draft aborted because the operator prompt set evaluator.role="model"; the frozen schema requires "fresh_model_process". Score rejected with "$.evaluator.role: invalid enum". No scoring judgment was recorded. Retained for attempt provenance per protocol.

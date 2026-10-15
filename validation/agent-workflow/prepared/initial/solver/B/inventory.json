@@ -1,0 +1,262 @@
+[
+  {
+    "bytes": 7658,
+    "layer": "L2",
+    "path": "architectures/collective-consistency.md.txt"
+  },
+  {
+    "bytes": 7673,
+    "layer": "L2",
+    "path": "architectures/incremental-continuous.md.txt"
+  },
+  {
+    "bytes": 7810,
+    "layer": "L2",
+    "path": "architectures/linear-modular.md.txt"
+  },
+  {
+    "bytes": 7154,
+    "layer": "L2",
+    "path": "architectures/parallel-ensemble.md.txt"
+  },
+  {
+    "bytes": 7210,
+    "layer": "L2",
+    "path": "architectures/precision-cascade.md.txt"
+  },
+  {
+    "bytes": 7370,
+    "layer": "L2",
+    "path": "architectures/recall-multi-pass.md.txt"
+  },
+  {
+    "bytes": 6521,
+    "layer": "L2",
+    "path": "decisions/candidate-strategy.md.txt"
+  },
+  {
+    "bytes": 6952,
+    "layer": "L2",
+    "path": "decisions/comparison-evidence.md.txt"
+  },
+  {
+    "bytes": 7368,
+    "layer": "L2",
+    "path": "decisions/identity-semantics.md.txt"
+  },
+  {
+    "bytes": 6809,
+    "layer": "L2",
+    "path": "decisions/master-representation.md.txt"
+  },
+  {
+    "bytes": 8009,
+    "layer": "L2",
+    "path": "decisions/resolution-strategy.md.txt"
+  },
+  {
+    "bytes": 7759,
+    "layer": "L2",
+    "path": "decisions/scoring-strategy.md.txt"
+  },
+  {
+    "bytes": 8709,
+    "layer": "L3",
+    "path": "deep-dives/selection-and-calibration.md.txt"
+  },
+  {
+    "bytes": 6305,
+    "layer": "L2",
+    "path": "evaluation/candidate-recall.md.txt"
+  },
+  {
+    "bytes": 7007,
+    "layer": "L2",
+    "path": "evaluation/entity-resolution-quality.md.txt"
+  },
+  {
+    "bytes": 6685,
+    "layer": "L2",
+    "path": "evaluation/pairwise-calibration.md.txt"
+  },
+  {
+    "bytes": 7942,
+    "layer": "L2",
+    "path": "evaluation/retrieval-blind-spots.md.txt"
+  },
+  {
+    "bytes": 11266,
+    "layer": "L0",
+    "path": "index/L0.json"
+  },
+  {
+    "bytes": 6801,
+    "layer": "L3",
+    "path": "references/bibliography.md.txt"
+  },
+  {
+    "bytes": 2932,
+    "layer": "L3",
+    "path": "references/evidence-policy.md.txt"
+  },
+  {
+    "bytes": 7380,
+    "layer": "L2",
+    "path": "research/hypotheses/contextual-reliability.md.txt"
+  },
+  {
+    "bytes": 6919,
+    "layer": "L2",
+    "path": "research/hypotheses/frequency-aware-evidence.md.txt"
+  },
+  {
+    "bytes": 6619,
+    "layer": "L2",
+    "path": "solutions/candidate-generation/exact-blocking.md.txt"
+  },
+  {
+    "bytes": 6726,
+    "layer": "L2",
+    "path": "solutions/candidate-generation/multi-pass-blocking.md.txt"
+  },
+  {
+    "bytes": 7176,
+    "layer": "L2",
+    "path": "solutions/comparison-features/evidence-states.md.txt"
+  },
+  {
+    "bytes": 7690,
+    "layer": "L2",
+    "path": "solutions/decision-resolution/connected-components.md.txt"
+  },
+  {
+    "bytes": 8552,
+    "layer": "L2",
+    "path": "solutions/decision-resolution/constrained-clustering.md.txt"
+  },
+  {
+    "bytes": 7619,
+    "layer": "L2",
+    "path": "solutions/decision-resolution/one-to-one-assignment.md.txt"
+  },
+  {
+    "bytes": 7509,
+    "layer": "L2",
+    "path": "solutions/decision-resolution/thresholds-abstention.md.txt"
+  },
+  {
+    "bytes": 8129,
+    "layer": "L2",
+    "path": "solutions/ground-truth/independent-reference.md.txt"
+  },
+  {
+    "bytes": 7998,
+    "layer": "L2",
+    "path": "solutions/identity-semantics/temporal-identity.md.txt"
+  },
+  {
+    "bytes": 7798,
+    "layer": "L2",
+    "path": "solutions/master-records/provenance-survivorship.md.txt"
+  },
+  {
+    "bytes": 7848,
+    "layer": "L2",
+    "path": "solutions/matching-scoring/additive-soft-matching.md.txt"
+  },
+  {
+    "bytes": 7414,
+    "layer": "L2",
+    "path": "solutions/matching-scoring/fellegi-sunter.md.txt"
+  },
+  {
+    "bytes": 7969,
+    "layer": "L2",
+    "path": "solutions/matching-scoring/logistic-regression.md.txt"
+  },
+  {
+    "bytes": 3815,
+    "layer": "L1",
+    "path": "taxonomy/architecture-dimensions.md.txt"
+  },
+  {
+    "bytes": 2088,
+    "layer": "L1",
+    "path": "taxonomy/domains/01-problem-identity.md.txt"
+  },
+  {
+    "bytes": 1730,
+    "layer": "L1",
+    "path": "taxonomy/domains/02-architecture-orchestration.md.txt"
+  },
+  {
+    "bytes": 2049,
+    "layer": "L1",
+    "path": "taxonomy/domains/03-data-integration.md.txt"
+  },
+  {
+    "bytes": 1981,
+    "layer": "L1",
+    "path": "taxonomy/domains/04-normalization-enrichment.md.txt"
+  },
+  {
+    "bytes": 2057,
+    "layer": "L1",
+    "path": "taxonomy/domains/05-candidate-retrieval.md.txt"
+  },
+  {
+    "bytes": 2180,
+    "layer": "L1",
+    "path": "taxonomy/domains/06-comparison-evidence.md.txt"
+  },
+  {
+    "bytes": 2155,
+    "layer": "L1",
+    "path": "taxonomy/domains/07-matching-scoring.md.txt"
+  },
+  {
+    "bytes": 2080,
+    "layer": "L1",
+    "path": "taxonomy/domains/08-decision-resolution.md.txt"
+  },
+  {
+    "bytes": 1994,
+    "layer": "L1",
+    "path": "taxonomy/domains/09-master-maintenance.md.txt"
+  },
+  {
+    "bytes": 2075,
+    "layer": "L1",
+    "path": "taxonomy/domains/10-ground-truth.md.txt"
+  },
+  {
+    "bytes": 2000,
+    "layer": "L1",
+    "path": "taxonomy/domains/11-evaluation-diagnostics.md.txt"
+  },
+  {
+    "bytes": 1936,
+    "layer": "L1",
+    "path": "taxonomy/domains/12-experimentation.md.txt"
+  },
+  {
+    "bytes": 2191,
+    "layer": "L1",
+    "path": "taxonomy/domains/13-scalability-execution.md.txt"
+  },
+  {
+    "bytes": 2134,
+    "layer": "L1",
+    "path": "taxonomy/domains/14-governance-monitoring.md.txt"
+  },
+  {
+    "bytes": 4139,
+    "layer": "L1",
+    "path": "taxonomy/module-contracts.md.txt"
+  },
+  {
+    "bytes": 4237,
+    "layer": "L1",
+    "path": "taxonomy/overview.md.txt"
+  }
+]

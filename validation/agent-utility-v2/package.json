@@ -1,0 +1,70 @@
+{
+  "cohort": "AU-v2",
+  "package_version": "2.0.0",
+  "kind": "held-out-data-package",
+  "status": "prepared_data_only",
+  "scenarios": [
+    "inputs/AUv2-01.json",
+    "inputs/AUv2-02.json",
+    "inputs/AUv2-03.json",
+    "inputs/AUv2-04.json",
+    "inputs/AUv2-05.json",
+    "inputs/AUv2-06.json",
+    "inputs/AUv2-07.json",
+    "inputs/AUv2-08.json"
+  ],
+  "keys": [
+    "evaluator-only/keys/AUv2-01.json",
+    "evaluator-only/keys/AUv2-02.json",
+    "evaluator-only/keys/AUv2-03.json",
+    "evaluator-only/keys/AUv2-04.json",
+    "evaluator-only/keys/AUv2-05.json",
+    "evaluator-only/keys/AUv2-06.json",
+    "evaluator-only/keys/AUv2-07.json",
+    "evaluator-only/keys/AUv2-08.json"
+  ],
+  "common_prompt": "prompt.txt",
+  "settings": "settings.json",
+  "protocol": "protocol.md",
+  "rubric": "evaluator-only/rubric.json",
+  "evaluator_prompt": "evaluator-only/prompt.txt",
+  "scenario_count": 8,
+  "key_count": 8,
+  "dimension_count": 8,
+  "planned_cells": 24,
+  "actual_runs": 0,
+  "actual_scores": 0,
+  "runtime_integration": "unimplemented",
+  "corpus_snapshots": "not_prepared",
+  "registration_status": "unregistered",
+  "tested_identity": null,
+  "evaluator_identity": null,
+  "author_model_identity": null,
+  "author_provider": null,
+  "exclusions": [
+    "all validation artifacts",
+    "all evaluator-only material",
+    "all prior or future runs, scores, packets and reports",
+    "other scenario inputs",
+    "author/implementation notes and coverage maps"
+  ],
+  "source_access": {
+    "permitted_files_read": [
+      "/home/ghgin/projects/entity-resolution-atlas/AGENTS.md",
+      "/home/ghgin/projects/entity-resolution-atlas/validation/agent-utility/README.md"
+    ],
+    "old_inputs_opened": false,
+    "old_keys_opened": false,
+    "score_or_result_files_opened": false,
+    "new_atlas_cards_opened": false,
+    "public_readme_summary_exposure": true
+  },
+  "limitations": [
+    "No empirical utility result or scientific validation.",
+    "No runtime, adapter, corpus export, packet builder or semantic scorer implemented.",
+    "Stdlib structural subset validation is not general JSON Schema validation or attestation verification.",
+    "Model/provider identities and generation settings remain null/unregistered.",
+    "Distinct actual tested/evaluator identities, equivalent immutable arms, actual settings and broker behavior must be attested before execution.",
+    "Held-out against testing, not proof of independence from public AU-v1 README headlines."
+  ]
+}

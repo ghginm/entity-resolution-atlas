@@ -1,0 +1,46 @@
+{
+  "kind": "finite-documentation-counterexamples-not-empirical-results",
+  "checks": 6,
+  "passed": true,
+  "interaction_raw_scale": "0",
+  "interaction_logit_scale": -0.13353139262452246,
+  "conditional_recall_A_B": [
+    "1",
+    "4/5"
+  ],
+  "eligible_truth_recall_A_B": [
+    "1/5",
+    "18/25"
+  ],
+  "edge_marginals_A_B": [
+    [
+      "1/2",
+      "1/2",
+      "1/2"
+    ],
+    [
+      "1/2",
+      "1/2",
+      "1/2"
+    ]
+  ],
+  "connected_probability_A_B": [
+    "1/2",
+    "3/4"
+  ],
+  "missing_required_units": [
+    "pair-b/route-1"
+  ],
+  "independent_mean_variance": "1/16",
+  "cached_mean_variance": "1/4",
+  "interval": [
+    "-3/10",
+    "3/10"
+  ],
+  "equivalence_margin": "1/20",
+  "limits": [
+    "Invented finite mathematical examples only; no observed project data.",
+    "No asymptotic coverage, production correctness or utility claim.",
+    "These challenge prohibited inferences already bounded in the reviewed text."
+  ]
+}

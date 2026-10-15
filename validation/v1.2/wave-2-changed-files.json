@@ -1,0 +1,217 @@
+{
+  "baseline": "validation/v1.2/wave-2-baseline.json",
+  "note": "computed post-remediation at final checkpoint; this report and wave-2-validation.json excluded from self-hashing",
+  "excluded_self_reports": [
+    "validation/v1.2/wave-2-changed-files.json",
+    "validation/v1.2/wave-2-validation.json"
+  ],
+  "modified": [
+    {
+      "path": "AGENTS.md",
+      "before_sha256": "9d454671bc3f8becd532acbc8bf16f5f047ab6c6a37519426c3f6b34277d7210",
+      "after_sha256": "69f820b6968d85417f5da9cfd6a0eb54491c8ab0548f4e1167d609dd25d70af7"
+    },
+    {
+      "path": "CATALOG.md",
+      "before_sha256": "6d35ace41ffd9c0fb961e4e1b964e0ba2d38be1c374d7e9288fe473e515a330d",
+      "after_sha256": "56e3280e18b03776a69dd0c6e49f66865eaaf1438f8f138e3682ed7c8fedc68a"
+    },
+    {
+      "path": "README.md",
+      "before_sha256": "af1f2cc504d638aac86a589ef4ad6748b813c78ab5c94e6fb305a6b7635a43ef",
+      "after_sha256": "448d3c557f9ed622a07d8af9d46d604ba9b54935eabff7ee4a400694231d12c0"
+    },
+    {
+      "path": "SCOPE.md",
+      "before_sha256": "83bbd58d83d920ab274a0d0b58c760226f16b01111b7f9aa7c1bbd26bfd27491",
+      "after_sha256": "1bcf50ed743f951602a81227e87e59cca24e8d0b3bd4b06b54482eeed301973c"
+    },
+    {
+      "path": "architectures/incremental-continuous.md",
+      "before_sha256": "2ed80892ed3d48fd652c0dd62b155843f0a31dd25c86bb3c03ccb679eff5d58a",
+      "after_sha256": "eb6a4848fd8ae673d68c79ff77f96e32156e9d17a9179fa1e767df7c783f8b86"
+    },
+    {
+      "path": "architectures/linear-modular.md",
+      "before_sha256": "aa3fa3cb366a270e775c2f3fd23aa8abe73962535faeb38a41602db18f35c1c6",
+      "after_sha256": "568aab2ae8f307e303174cfe55f14eedff9227f847c114a16fe47c454b174924"
+    },
+    {
+      "path": "decisions/resolution-strategy.md",
+      "before_sha256": "e7bdc8bef697f4ca7cab49488a3903d057b3e0d99a93ac58a86be67394340945",
+      "after_sha256": "0d05628ad06f73b4c77e9983da54ae50df1b1f7d4220b4edb65e50e9289ee6e4"
+    },
+    {
+      "path": "evaluation/synthetic-metamorphic.md",
+      "before_sha256": "fecbbcb40ccb32dd965f48748e5e755dee0d247c32dd812d577087fe4966aba1",
+      "after_sha256": "93bef6ed81cba8c2a8b4cfbd5d808907b6349d382d71cffe2145e1d253dd22c1"
+    },
+    {
+      "path": "guides/change-log.md",
+      "before_sha256": "8c6287ef1e31ca14a2fb0e23ab67b323eb24dbac0c32f1013abca3215f323685",
+      "after_sha256": "3fff4cea52fc12239821755b5452791e712bfa366745e7a3cbf9cd2041ad202d"
+    },
+    {
+      "path": "guides/decision-coverage-matrix.md",
+      "before_sha256": "3b375e6b61e290f1f541061c8e082ef336f86c289b691324e1666d4b044c1aa9",
+      "after_sha256": "521f2f07753d24625e5611c570e9477797f012d0399cd004407cd5af6149307c"
+    },
+    {
+      "path": "guides/v1.2-expansion-tracker.md",
+      "before_sha256": "ce98cd48e23970daee23677696f95a1d401e202ec5398038e3e376b5182d321a",
+      "after_sha256": "4003b48c8795ed3c89978c4012d4685e875ae8821c9d7ae1c79240764b89d921"
+    },
+    {
+      "path": "indexes/domains/02.md",
+      "before_sha256": "55f86b1c8df2b70bb21dd58536fe8b5527075a7469a579050a95a834bbbb5077",
+      "after_sha256": "6d812afdbaa78c9fbc010c90c9c949e307c804a8154d15c91dddd997b0364030"
+    },
+    {
+      "path": "indexes/domains/08.md",
+      "before_sha256": "159604000fc8f7f6cb08f23650f82d7c1094cc91f61109a0bf6e3fe1d8423253",
+      "after_sha256": "d937bd1cbfc41da938e0514beea5a986224a991c653c86c3c596dabcaf427f89"
+    },
+    {
+      "path": "indexes/domains/11.md",
+      "before_sha256": "29c7d2a303505a338f19f33210a5f1611b44b53695d6d27256a8505a729493a2",
+      "after_sha256": "8335acb55e68c0ea9c4583743ab0916ee97bf42da2e49d651fb4e3b3ed25a4a4"
+    },
+    {
+      "path": "references/atlas-manifest.json",
+      "before_sha256": "aaa794e6eca4fd00bb2e27bc404f7bd7274505dd7d0bfdb05728fdbb5bd108a5",
+      "after_sha256": "6cfa18ea779c24d5b0de84e0920df7bc3f159a54a63b29fd6082aecd76e9a705"
+    },
+    {
+      "path": "references/bibliography.md",
+      "before_sha256": "073a85fd276aa06fdea16c0308a2e33d8b447d68190c3ef9efca6f825c4b847d",
+      "after_sha256": "518b344886e3ab4bec320a4a9b70747ac9d7d0f39d33ec175073225c933e76d8"
+    },
+    {
+      "path": "references/retrieval-provenance.json",
+      "before_sha256": "56043a38e27d91652ac915603a90791ea2f13eaade541ef7366ec2a314324e81",
+      "after_sha256": "b08e88877e892d9f6ffb9a1602a9115dbacc6c97b88eb34ab63baa333e7e37a8"
+    },
+    {
+      "path": "references/retrieval-status.json",
+      "before_sha256": "a657a478dcfacac09ec3220864e2dc37e3f2b8b4b73a87dd812ede685964b1d1",
+      "after_sha256": "20b1877f772abfc2be754805844dc81411941afe13b789355ea857f301351446"
+    },
+    {
+      "path": "references/source-ledger.json",
+      "before_sha256": "8c527ac0c22b7aeaecf1070f4dca24841491a15ab4438d0848b76e3c1d705f2f",
+      "after_sha256": "dba1af71ad83550385f61785af93f4a17acd8871b0e8b25aceb470f3e6f0813e"
+    },
+    {
+      "path": "solutions/decision-resolution/thresholds-abstention.md",
+      "before_sha256": "5d08db878516973ed2fc823b7d5e427a2f1ac2d76b8b0477b4c5e07ec4af35ec",
+      "after_sha256": "ea8c552140ff6c9d9d4910cde714b93e9d8bf09840949a8da427174c8e307660"
+    },
+    {
+      "path": "taxonomy/domains/02-architecture-orchestration.md",
+      "before_sha256": "41395405a30bb15c0786811aa32cdba39203590ebe9af62be65813718417ebf7",
+      "after_sha256": "6be4a1b52fdffc4a3fcbd835adc672981f4647910f9f786f0e677c17163b5d58"
+    },
+    {
+      "path": "taxonomy/domains/08-decision-resolution.md",
+      "before_sha256": "b5deaef1d1383fc23905e11a96c2deb22f4729569ba08bf8e2c3c4dbbc4d3f32",
+      "after_sha256": "37b597662e10e28f717ce46b7e95ce94f0e79cb7a4ba31ca6e9c49d22a917337"
+    },
+    {
+      "path": "taxonomy/domains/13-scalability-execution.md",
+      "before_sha256": "7744ae2d3cf130147a8f5eb4edb70656e4b02cde7b1305c2ef4757e09197c632",
+      "after_sha256": "dde4c87828986a9850b4931f10d309ee08efcc711bf9c605960022088235f140"
+    },
+    {
+      "path": "taxonomy/domains/14-governance-monitoring.md",
+      "before_sha256": "8fe73fdd9c5c6519e0bb225c4a5582b7e604704ce60102b45175900683f7b06e",
+      "after_sha256": "34c7b2e667b272091150a2cee598dc271d6a5bbba3f002b1784edaa38bbb760b"
+    },
+    {
+      "path": "taxonomy/module-contracts.md",
+      "before_sha256": "1f5f1b5e406356cf29ea760a353a7a52128fe9529dcf5c458e2214c41ae91783",
+      "after_sha256": "ad6afc60fd567ccf1870696cc8a1fe86a2642e013100df78efb17fd75cf75b6c"
+    }
+  ],
+  "added": [
+    {
+      "path": "decisions/pipeline-modularity.md",
+      "sha256": "cd6da98f2be76d4e1a92be0df7ce51578ca39520cad488d9e45238de97bb43c5"
+    },
+    {
+      "path": "decisions/rule-composition.md",
+      "sha256": "6807926aa0c3c7eeac1595a5dc9b2a1706e7964c71a916217222db9ac8cf359d"
+    },
+    {
+      "path": "guides/decision-provenance.md",
+      "sha256": "e15ae031b759e4460e308a5f5ea7b222ae1e761c6fc12e341e332c691fa12cf9"
+    },
+    {
+      "path": "guides/rule-policy-refactoring.md",
+      "sha256": "f306991c59aac84e969675d38b06a19422ffbfbbc51a22b85d42b6fbad19db00"
+    },
+    {
+      "path": "guides/run-manifest-template.md",
+      "sha256": "a7336d80b06a40224c4bd11a36630ac632b2cf97838584051d50f0ae979df248"
+    },
+    {
+      "path": "guides/v1.2-wave-2-content-review.md",
+      "sha256": "020ca5af5bf93e4b11595c466d4d657670f6c86041679068333c7cbc0c9e8705"
+    },
+    {
+      "path": "guides/v1.2-wave-2-handoff.md",
+      "sha256": "9913e7d465d100a605f627aee1acb092bee265838a4564bf6d832d8b5ecf846f"
+    },
+    {
+      "path": "references/wave-2-evidence-notes.md",
+      "sha256": "1da89e1581e25f6c52d09f5279bb6c92078561b132cef4a01cd15a114a1b141c"
+    },
+    {
+      "path": "solutions/architecture/replaceable-stage-pipelines.md",
+      "sha256": "210f1181a97884f43add30d67ad6cb1fcf34ef6d59656c8f046223c24fcb17ae"
+    },
+    {
+      "path": "solutions/architecture/versioned-artifact-runs.md",
+      "sha256": "f13b046137a419e4081f31f0df7995ce91d99fab976478ceca81c1e9244e2562"
+    },
+    {
+      "path": "solutions/decision-resolution/declarative-decision-tables.md",
+      "sha256": "5e1b441ada78fa032d5aa8d0a2145fd7eeaed61cc65b3a915a4f3b9db542281d"
+    },
+    {
+      "path": "solutions/decision-resolution/ordered-rule-policies.md",
+      "sha256": "b366680debc9d837ad6e4b7c3f9334d213d3402c76c25ba5ae6595a5995c4cbe"
+    },
+    {
+      "path": "validation/v1.2/critique-wave-2-engineering.md",
+      "sha256": "91670a7f0b24cf28054c30a18adb32609c318cf002ff4ce283e76b4999747d0b"
+    },
+    {
+      "path": "validation/v1.2/critique-wave-2-rules.md",
+      "sha256": "16f2187fdd9313b206154cca2d284e5b0f6260000a8e90d5d62ad239f0c84004"
+    },
+    {
+      "path": "validation/v1.2/pre-wave-2-wave-1.tar.gz",
+      "sha256": "8bd4960681d4f2adfd4fea200e85d716ed9cddffdc235e52ea569d1ae1852f99"
+    },
+    {
+      "path": "validation/v1.2/wave-2-baseline.json",
+      "sha256": "5860c126aaaf8d0b881ff629e8c8ddc6dc6be81ccc1e62159daa1ed07f63b5c9"
+    },
+    {
+      "path": "validation/v1.2/wave-2-interim-integrity.json",
+      "sha256": "3cb3202dc6aa6f1d9e6f9371411055883b8c9874a3ab846fa25f14505532d564"
+    },
+    {
+      "path": "validation/v1.2/wave-2-interim-validation.json",
+      "sha256": "623384e57d605a58e8c8e133d5ce0de2f412b686a7b427ce976d238ba1cafff9"
+    },
+    {
+      "path": "validation/v1.2/wave-2-review-dispositions.json",
+      "sha256": "7479af3ac0f68c959daecc62d2a82d79c504440eb67fd670d036fdb070333ecd"
+    }
+  ],
+  "deleted": [],
+  "protected_files_checked": 446,
+  "protected_changes": [],
+  "original_card_paths_preserved": 39
+}

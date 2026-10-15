@@ -1,0 +1,18 @@
+{
+  "scenario_id": "AU-08",
+  "title": "The fashionable graph proposal",
+  "fictional": true,
+  "known_project_facts": {
+    "project": "A cooperative links inventory rows from two depots to canonical industrial-container assets.",
+    "data": "35000 rows; issuer-namespaced serials are validated at ingestion and usually present. Repair logs describe shared jobs and locations, not independently established identity links.",
+    "current_pipeline": "Audited namespace + valid serial equality, with collision/absence cases deferred to review. No independent final-entity evaluation has yet been run.",
+    "proposal": "Replace the baseline with a graph neural network, embed repair-log connectivity, and pseudo-label pairs using clusters produced by that same graph. Advocates predict a 20% accuracy gain without a pilot.",
+    "constraints": "No GPU; 60 expert-label hours available; reversible recommendations only. Issuer validation does not prove absence of reuse or all serial collisions. No production-change authorization."
+  },
+  "explicitly_unknown": [
+    "How reliable are namespace, reuse and collision assumptions?",
+    "Do related repair events carry identity signal independent of pseudo-labels?",
+    "What baseline defects and representative evaluation would justify additional complexity?"
+  ],
+  "task": "Produce a defensible project-specific ER experiment/design recommendation using selectively retrieved Atlas knowledge if available. Do not implement ER or change production. Separate facts, assumptions, uncertainties, mechanisms and proposed evidence."
+}

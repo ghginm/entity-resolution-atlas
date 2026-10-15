@@ -1,0 +1,10 @@
+{
+  "scoring": {"heading": "New method or feature selection", "ids": ["DEC-07-001", "SOL-07-001", "SOL-07-002", "SOL-07-004", "EVAL-11-002"]},
+  "graph": {"heading": "Large components and graph-level identity errors", "ids": ["DEC-08-001", "SOL-08-003", "SOL-08-004", "EVAL-11-003"]},
+  "blocking": {"heading": "Blocking comparison and performance investigation", "ids": ["DEC-05-001", "SOL-05-001", "SOL-05-003", "EVAL-11-001", "EVAL-11-007"]},
+  "no-labels": {"heading": "Matching improvement without reliable labels", "ids": ["DEC-10-001", "SOL-10-002", "SOL-10-003", "EVAL-11-005"]},
+  "rules": {"heading": "Rule-heavy refactoring and conflicts", "ids": ["DEC-08-002", "SOL-08-005", "SOL-08-006", "EVAL-11-006"]},
+  "experiments": {"heading": "ML or statistical experimentation", "ids": ["DEC-12-001", "SOL-02-002", "SOL-12-001", "EVAL-11-007"]},
+  "new-source": {"heading": "New source onboarding and operational monitoring", "ids": ["DEC-14-001", "SOL-06-003", "SOL-07-004", "EVAL-11-002"]},
+  "incremental": {"heading": "Incremental changes, deletions and recovery", "ids": ["AR-06", "DEC-09-001", "SOL-01-001", "EVAL-11-007"]}
+}

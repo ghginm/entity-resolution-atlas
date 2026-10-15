@@ -1,0 +1,65 @@
+# Maintainer instructions: authoring and safeguarding the Atlas
+
+Read this file before authoring or maintaining the Atlas. Consumers start at [START_HERE.md](START_HERE.md); this file is not required consumer context. The full pre-v1.2.1 agent guidance is retained below so shortening the entry point does not discard maintenance or scientific safeguards.
+
+## Scope and authority
+This is a project-agnostic knowledge repository, not an ER implementation or autonomous instruction to change production. User project facts and permissions govern any future implementation outside the Atlas. The repository-local [scope specification](SCOPE.md), [agent instructions](AGENTS.md), [SCHEMA](SCHEMA.md), and [evidence policy](references/evidence-policy.md) are its normative contract. These maintainer instructions preserve that contract, not replace or relax it. Immutable historical drafts explain provenance, not additional requirements. No unavailable original instruction is needed to consume or maintain this repository.
+
+## Selective consumption workflow
+1. Understand the real project's requirements **and current implementation** before choosing Atlas methods. Use [project intake](guides/project-intake.md); identify missing identity semantics, source namespaces, labels, temporal assumptions, error costs, privacy/access, compute and downstream constraints. Do not fabricate any of them.
+2. Identify relevant design decisions. Distinguish retrieval loss, evidence insufficiency, scorer errors, policy errors, inconsistent membership and incorrect master attributes.
+3. **L0 discovery:** search the [compact catalog](CATALOG.md) by question, primary domain or metadata-derived applicability tags. Searching a relevant portion is sufficient; the whole taxonomy/catalog is not mandatory context.
+   For a natural-language task with unclear ownership, use the applicable [task route](indexes/tasks.md). The original [agent task patterns](guides/agent-task-patterns.md) remain canonical route prose: open only the relevant section when needed, then return to canonical L0/L1/L2 routes. Neither is another taxonomy or a required full-context document.
+4. **L1 comparison:** open only applicable [domain indexes](indexes/domains/) to locate choices and differences, then **L2** selected Decision, Solution, Architecture, Hypothesis and Evaluation Cards. Follow related cards only when needed. **L3** [deep dives](deep-dives/) and reference notes resolve remaining technical questions. If only taxonomy coverage exists, state the gap rather than inventing a detailed method card. **Do not read the entire repository or all dev_docs by default.**
+5. Inspect hard prerequisites, optional context, incompatibilities and cross-module interactions. A similar method name or tag does not prove applicability.
+6. Compare at least one simple credible baseline with plausible alternatives. Preserve the four independent [architecture dimensions](taxonomy/architecture-dimensions.md); AR patterns are composable references, not mandatory implementation blueprints.
+7. Retrieve relevant Hypothesis and Evaluation Cards. Prefer a controlled experiment that distinguishes mechanisms to unsupported confidence in a complex method.
+8. Produce a project-specific experiment or implementation plan with explicit assumptions, uncertainty, data needs and authorization requirements. The Atlas alone never authorizes changing another repository or production data.
+
+## Required recommendation output
+- Distinguish **Known → Assumed → Proposed → Testable → Proven**. “Proven” is only the bounded claim supported by actual completed evidence, not metadata maturity, structural validity or a literature result transferred to the project. Use the [integration template](guides/project-atlas-integration.md) for a project-local decision note outside the universal Atlas.
+- Known project facts versus missing information/assumptions.
+- Relevant decision IDs and why each matters.
+- Baseline and at least one alternative, with mechanisms, prerequisites, costs and failure modes.
+- Candidate configurations with topology/scoring/resolution/lifecycle choices and module contracts.
+- Proposed experiment: comparator, controls, split/labels, metrics, uncertainty, practical success/falsification criteria and guardrails.
+- Next decision after positive, negative or inconclusive evidence.
+
+## Rules against misleading recommendations
+Do not recommend something merely because it exists here. Do not automatically prefer newer, neural or more complex methods. Consider actual data quality, label representativeness, runtime cost and asymmetric error costs. Keep theory, externally observed evidence and untested hypotheses distinct. Never invent experimental results, paper metadata or project facts. A raw additive score is not necessarily a probability; calibrated pair probabilities are not automatically cluster confidence. Candidate changes may invalidate calibration; missing edges are not non-match labels. Review performance on relevant source/language/population slices and final entities, not only aggregate pair metrics. Avoid irreversible decisions when information is inadequate.
+
+## Retrieval examples
+- Few labels + noisy names + costly false merges: candidate/evidence decisions → additive/FS alternatives → thresholds/abstention → candidate and pair/entity evaluation → contextual/frequency hypotheses.
+- Reliable structured identifiers: audit namespace/validity → exact blocking/simple rule baseline → ambiguity policy; complex collective inference is optional.
+- Updates and deletion: AR-06 plus the selected retrieval/scoring pattern → dependency closure, reversible membership and stable IDs → replay/quality/cost diagnostics.
+- Rule-heavy refactoring: [composition choice](decisions/rule-composition.md) → applicable ordered-policy or decision-table alternative → [bounded refactor witnesses](guides/rule-policy-refactoring.md); behavioral agreement does not establish identity truth.
+- Reproducible component changes: [modularity choice](decisions/pipeline-modularity.md) → [artifact reuse](solutions/architecture/versioned-artifact-runs.md) → affected [contracts](taxonomy/module-contracts.md), [manifest](guides/run-manifest-template.md) and stage-specific evaluation. A workflow engine is optional.
+- Physical performance: [execution choice](decisions/execution-strategy.md) → [complete-output cost](evaluation/execution-cost-replay.md). Reconcile required comparison units, not only successful tasks; logical candidate caps are separate quality-affecting changes.
+- Source drift/onboarding: [namespace evidence](solutions/comparison-features/identifier-namespaces.md) → [monitoring response](decisions/monitoring-response.md) → independent outcomes. Operational telemetry and targeted incidents cannot substitute for representative evaluation.
+
+## Maintaining this repository
+Consumer-facing `AGENTS.md`, `SCOPE.md` and `SCHEMA.md` intentionally contain no development workflow. Read this file before editing Atlas sources. The scope/schema separation does not remove the following obligations:
+
+- Preserve all six `dev_docs/` inputs against `references/dev-docs-sha256.json` and the original `references/pilot-manifest.json` identity/path baseline. Never rewrite protected benchmark inputs to satisfy current lint or packaging.
+- Use the five templates; register tags in SCHEMA before use, reject duplicate tags, preserve stable IDs and update all links on path changes. Require explicit evaluated_by routes and substantive mechanisms, assumptions, failures, alternatives and distinguishing evaluation. Word counts are advisory, not evidence.
+- Update `references/atlas-manifest.json`, regenerate CATALOG/L1/task navigation and record changes in `guides/change-log.md`; run structural checks and substantive content review separately.
+- The historical v1.1 boundary and its independent evaluation remain historical. The v1.2+ authorization is retained in `validation/v1.2/authorization.txt`; continuation ownership is in `guides/v1.2-expansion-tracker.md`. Wave 3 review was author-only. Wave 4 critique plus integrating-author corrections is not attested distinct-model post-remediation approval. Keep specialist and empirical gaps explicit in `guides/v1.2-final-review.md`.
+
+Keep `dev_docs/` immutable; verify against its hashes. Add objects through one of the five [templates](templates/solution.md), respecting [ownership](taxonomy/overview.md), stable IDs, approved tags and correctly directed relations. Cite verified ledger IDs and mechanically render Sources blocks. Every new method/decision needs an explicit evaluation route and a credible baseline; extend an existing owner when a proposed card repeats it. Update manifests, generated L0/L1 navigation and change log. Run [documentation checks](tools/README.md), then the [content-review rubric](guides/content-review-rubric.md); lint cannot prove scientific accuracy. Do not create new ER algorithms, process datasets or train models here. The user's v1.2+ authorization supersedes the old v1.1 review gate; the [tracker](guides/v1.2-expansion-tracker.md) records the completed documentation waves, review limits and separately deferred utility evaluation. Continue from its latest handoff rather than rereading the repository or reconstructing the task. Unknown production authority, absent identity semantics or unresolved high-harm effects block action; prefer a bounded reversible evidence-collection experiment.
+
+The five primary types, fourteen domains, six architecture IDs, approved relations and existing canonical ownership remain in force. Do not introduce a matching engine, dataset processing, model training, agent framework, vector database, RAG service or parallel taxonomy. Consumer navigation must not require maintainer files, historical inputs or validation infrastructure. This separation is not permission to weaken the normative scope or evidence contract.
+
+## Benchmark separation and frozen-input protections
+The [agent-utility benchmark](validation/agent-utility/) is evaluation infrastructure, not retrieval knowledge. Agents solving benchmark cases must use only the harness-exported corpus and scenario input, never evaluator keys, scores, validation reports or implementation notes. Contributors may inspect keys only before freezing the protocol; do not tune answers or rubric after outcomes are seen. A passing structural suite or conceptual walkthrough is not a measured improvement in agent decision quality.
+
+Keep frozen scenarios, answer keys, rubrics and protocols unchanged. Keep evaluator material, results and implementation notes outside the consumer retrieval corpus; do not expose them through task routes or entry-point links. Do not open frozen keys, scenarios or results to guide coverage authoring. Integrity checks may verify frozen bytes without using their contents as retrieval evidence. Report failed, unexecuted and unscored work honestly. Neither frozen packages, documentation validation nor conceptual walkthroughs establish measured usefulness, ER accuracy or engineering performance; only actual completed, appropriately bounded evidence can support those claims.
+
+## Source-note maintenance and historical review limits
+
+Consumer source notes retain scientific scope, received-byte provenance, excluded evidence and review-independence limits. They must not depend on validation files, development handoffs or authoring-tool incident narratives. Render Sources blocks mechanically from the stable ledger; do not reset IDs mid-iteration or copy placeholder DOIs from manuscript templates. Keep whole copyrighted papers out of the repository.
+
+Wave 3's four delegated authoring tasks failed with HTTP 402 before delivering usable artifacts. The integrating author wrote the final content and performed author-only adversarial passes; partial delegated reading is not independent authorship or review. The [Wave 3 content review](guides/v1.2-wave-3-content-review.md) retains the detailed record. No provider/model configuration was changed to bypass credit controls. Independent review remains unattested, as the consumer evidence note states.
+
+The Wave 1 algebra sanity-check file is maintenance evidence for limited numerical enumeration only. It does not prove estimator coverage, validate ER or measure agent usefulness, and consumers do not need that file to assess the explicit mathematical arguments. No frozen evidence was moved or rewritten during this separation.
+
+Historical retrieval used direct HTTPS and selected-text review when configured extraction was search-only; PDF extraction used an isolated pypdf environment when host pdftotext was unavailable. Failed paths, unrelated arXiv downloads and the unverified exploratory Parnas paper were excluded from cited support. Wave 4's initial extraction-script syntax error was corrected before selected review; a failed extraction was never evidence. Preserve hashes, versions, HTTP/mirror authenticity caveats and readable-scope limits when simplifying these operational histories.

@@ -1,0 +1,479 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:entity-resolution-atlas:AU-v2:score",
+  "type": "object",
+  "properties": {
+    "cohort": {
+      "const": "AU-v2"
+    },
+    "scenario_id": {
+      "type": "string",
+      "pattern": "^AUv2-0[1-8]$"
+    },
+    "run_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "response_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "packet_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "freeze_manifest_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "settings_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "evaluator_identity": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evaluator_role": {
+      "const": "independent_evaluator"
+    },
+    "independence_attested": {
+      "const": true
+    },
+    "blinding_attested": {
+      "const": true
+    },
+    "evaluated_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "dimensions": {
+      "type": "object",
+      "properties": {
+        "evidence_and_scope": {
+          "type": "object",
+          "properties": {
+            "raw": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 3
+            },
+            "effective": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 3
+            },
+            "rationale": {
+              "type": "string",
+              "minLength": 1
+            },
+            "response_quotes": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 0
+            },
+            "omitted_finding_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^AUv2-0[1-8]-F[0-9]{2}$"
+              },
+              "minItems": 0
+            }
+          },
+          "required": [
+            "raw",
+            "effective",
+            "rationale",
+            "response_quotes",
+            "omitted_finding_ids"
+          ],
+          "additionalProperties": false
+        },
+        "mechanism_and_failure_modes": {
+          "type": "object",
+          "properties": {
+            "raw": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 3
+            },
+            "effective": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 3
+            },
+            "rationale": {
+              "type": "string",
+              "minLength": 1
+            },
+            "response_quotes": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 0
+            },
+            "omitted_finding_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^AUv2-0[1-8]-F[0-9]{2}$"
+              },
+              "minItems": 0
+            }
+          },
+          "required": [
+            "raw",
+            "effective",
+            "rationale",
+            "response_quotes",
+            "omitted_finding_ids"
+          ],
+          "additionalProperties": false
+        },
+        "baseline_and_options": {
+          "type": "object",
+          "properties": {
+            "raw": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 3
+            },
+            "effective": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 3
+            },
+            "rationale": {
+              "type": "string",
+              "minLength": 1
+            },
+            "response_quotes": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 0
+            },
+            "omitted_finding_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^AUv2-0[1-8]-F[0-9]{2}$"
+              },
+              "minItems": 0
+            }
+          },
+          "required": [
+            "raw",
+            "effective",
+            "rationale",
+            "response_quotes",
+            "omitted_finding_ids"
+          ],
+          "additionalProperties": false
+        },
+        "evaluation_design": {
+          "type": "object",
+          "properties": {
+            "raw": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 3
+            },
+            "effective": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 3
+            },
+            "rationale": {
+              "type": "string",
+              "minLength": 1
+            },
+            "response_quotes": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 0
+            },
+            "omitted_finding_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^AUv2-0[1-8]-F[0-9]{2}$"
+              },
+              "minItems": 0
+            }
+          },
+          "required": [
+            "raw",
+            "effective",
+            "rationale",
+            "response_quotes",
+            "omitted_finding_ids"
+          ],
+          "additionalProperties": false
+        },
+        "lifecycle_and_safety": {
+          "type": "object",
+          "properties": {
+            "raw": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 3
+            },
+            "effective": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 3
+            },
+            "rationale": {
+              "type": "string",
+              "minLength": 1
+            },
+            "response_quotes": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 0
+            },
+            "omitted_finding_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^AUv2-0[1-8]-F[0-9]{2}$"
+              },
+              "minItems": 0
+            }
+          },
+          "required": [
+            "raw",
+            "effective",
+            "rationale",
+            "response_quotes",
+            "omitted_finding_ids"
+          ],
+          "additionalProperties": false
+        },
+        "contracts_and_reproducibility": {
+          "type": "object",
+          "properties": {
+            "raw": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 3
+            },
+            "effective": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 3
+            },
+            "rationale": {
+              "type": "string",
+              "minLength": 1
+            },
+            "response_quotes": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 0
+            },
+            "omitted_finding_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^AUv2-0[1-8]-F[0-9]{2}$"
+              },
+              "minItems": 0
+            }
+          },
+          "required": [
+            "raw",
+            "effective",
+            "rationale",
+            "response_quotes",
+            "omitted_finding_ids"
+          ],
+          "additionalProperties": false
+        },
+        "quality_cost_separation": {
+          "type": "object",
+          "properties": {
+            "raw": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 3
+            },
+            "effective": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 3
+            },
+            "rationale": {
+              "type": "string",
+              "minLength": 1
+            },
+            "response_quotes": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 0
+            },
+            "omitted_finding_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^AUv2-0[1-8]-F[0-9]{2}$"
+              },
+              "minItems": 0
+            }
+          },
+          "required": [
+            "raw",
+            "effective",
+            "rationale",
+            "response_quotes",
+            "omitted_finding_ids"
+          ],
+          "additionalProperties": false
+        },
+        "retrieval_grounding": {
+          "type": "object",
+          "properties": {
+            "raw": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 3
+            },
+            "effective": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 3
+            },
+            "rationale": {
+              "type": "string",
+              "minLength": 1
+            },
+            "response_quotes": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 0
+            },
+            "omitted_finding_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^AUv2-0[1-8]-F[0-9]{2}$"
+              },
+              "minItems": 0
+            }
+          },
+          "required": [
+            "raw",
+            "effective",
+            "rationale",
+            "response_quotes",
+            "omitted_finding_ids"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "evidence_and_scope",
+        "mechanism_and_failure_modes",
+        "baseline_and_options",
+        "evaluation_design",
+        "lifecycle_and_safety",
+        "contracts_and_reproducibility",
+        "quality_cost_separation",
+        "retrieval_grounding"
+      ],
+      "additionalProperties": false
+    },
+    "critical_failures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "failure_id": {
+            "type": "string",
+            "pattern": "^AUv2-0[1-8]-CF-[0-9]{2}$"
+          },
+          "response_quote": {
+            "type": "string",
+            "minLength": 1
+          },
+          "endorsement_explanation": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "failure_id",
+          "response_quote",
+          "endorsement_explanation"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "alternative_credit": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    }
+  },
+  "required": [
+    "cohort",
+    "scenario_id",
+    "run_sha256",
+    "response_sha256",
+    "packet_sha256",
+    "freeze_manifest_sha256",
+    "settings_sha256",
+    "evaluator_identity",
+    "evaluator_role",
+    "independence_attested",
+    "blinding_attested",
+    "evaluated_at",
+    "dimensions",
+    "critical_failures",
+    "alternative_credit",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

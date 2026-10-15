@@ -1,0 +1,6 @@
+{
+  "external_url_differences": [],
+  "source_pins_differences": [],
+  "pin_comparison_scope": "Recursive URL and SHA256 fields in provenance, retrieval-status and source-ledger; operational prose notes intentionally cleaned.",
+  "sources_blocks_unchanged": true
+}

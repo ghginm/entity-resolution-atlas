@@ -1,0 +1,787 @@
+{
+  "arm": "D",
+  "files": {
+    "AGENTS.md.txt": {
+      "bytes": 865,
+      "layer": "workflow",
+      "sha256": "5ef60b5a81b30c7f8ce8cc77647e7be9b7629ed7c13197b09aad63a0b0983c49",
+      "source_path": "AGENTS.md"
+    },
+    "CATALOG.md.txt": {
+      "bytes": 29349,
+      "layer": "workflow",
+      "sha256": "0ac44c236be8a96f668cae3ad6d9afd5b14b38b807734e298ab52b4284a2dfc4",
+      "source_path": "CATALOG.md"
+    },
+    "README.md.txt": {
+      "bytes": 598,
+      "layer": "workflow",
+      "sha256": "7a542534e765ce7d23d251de88d25b0780c0e68cf65e95be15a15b424af007f6",
+      "source_path": "README.md"
+    },
+    "SCHEMA.md.txt": {
+      "bytes": 8820,
+      "layer": "workflow",
+      "sha256": "7b88187a64fca5a3d67ec373354ef52372481dffb42a88737ce12038b8fbd6a6",
+      "source_path": "SCHEMA.md"
+    },
+    "SCOPE.md.txt": {
+      "bytes": 5392,
+      "layer": "workflow",
+      "sha256": "2c45aa6f24860faba07ae70503e5a8a039afc65bac899b72e514f9080765e9dc",
+      "source_path": "SCOPE.md"
+    },
+    "START_HERE.md.txt": {
+      "bytes": 3522,
+      "layer": "workflow",
+      "sha256": "4e5ac2f782894323d9fb63f0bfc0a3211fbe3af8f480362d421317b776d27af0",
+      "source_path": "START_HERE.md"
+    },
+    "architectures/collective-consistency.md.txt": {
+      "bytes": 7658,
+      "layer": "L2",
+      "sha256": "4eef41b4d72f8fdeb1b00d06cb0d514b7c8724e97b8bb17f324674f78fc644e5",
+      "source_path": "architectures/collective-consistency.md"
+    },
+    "architectures/incremental-continuous.md.txt": {
+      "bytes": 17942,
+      "layer": "L2",
+      "sha256": "e24680c75fe00c0355e8c550ee7cfc6371b51c8b6c71c03d64750419701e10a5",
+      "source_path": "architectures/incremental-continuous.md"
+    },
+    "architectures/linear-modular.md.txt": {
+      "bytes": 8351,
+      "layer": "L2",
+      "sha256": "568aab2ae8f307e303174cfe55f14eedff9227f847c114a16fe47c454b174924",
+      "source_path": "architectures/linear-modular.md"
+    },
+    "architectures/parallel-ensemble.md.txt": {
+      "bytes": 7154,
+      "layer": "L2",
+      "sha256": "f61cf885e2d76bc291bc1447cb512ba66ce85c6cee94efe13b5eabda8c9e9161",
+      "source_path": "architectures/parallel-ensemble.md"
+    },
+    "architectures/precision-cascade.md.txt": {
+      "bytes": 7210,
+      "layer": "L2",
+      "sha256": "7b7b666162ebe3058865ac835e1cb17b7eafc46a7ee989db5cc3508e345c65b8",
+      "source_path": "architectures/precision-cascade.md"
+    },
+    "architectures/recall-multi-pass.md.txt": {
+      "bytes": 7370,
+      "layer": "L2",
+      "sha256": "92c5dbaea662be4da76e7ddface5f249fd9848345d60ef5f09d085cf1aea0fcc",
+      "source_path": "architectures/recall-multi-pass.md"
+    },
+    "decisions/candidate-strategy.md.txt": {
+      "bytes": 6487,
+      "layer": "L2",
+      "sha256": "ea4cd74a9e0c80223f6a3fee66a58b993751296348a558f66a16f15da67ab628",
+      "source_path": "decisions/candidate-strategy.md"
+    },
+    "decisions/comparison-evidence.md.txt": {
+      "bytes": 7562,
+      "layer": "L2",
+      "sha256": "e339b0a04ee6d7c2f4bb79f2e9eac15fcd537c8fbe5655932a48061541ba5422",
+      "source_path": "decisions/comparison-evidence.md"
+    },
+    "decisions/execution-strategy.md.txt": {
+      "bytes": 7246,
+      "layer": "L2",
+      "sha256": "17a0bc3258e89888dd68a98c2695c7ce339640f851f5a02e39ce06cf84a822c7",
+      "source_path": "decisions/execution-strategy.md"
+    },
+    "decisions/experiment-design.md.txt": {
+      "bytes": 8471,
+      "layer": "L2",
+      "sha256": "e2ba7cb2c85991232972c871db7c867d22fd5913893e8df4219d5893f22cf8b4",
+      "source_path": "decisions/experiment-design.md"
+    },
+    "decisions/ground-truth-acquisition.md.txt": {
+      "bytes": 9245,
+      "layer": "L2",
+      "sha256": "217a9b330fc339933907a336101978d828fba81702fd9b7b9169257b21ab2f57",
+      "source_path": "decisions/ground-truth-acquisition.md"
+    },
+    "decisions/identity-semantics.md.txt": {
+      "bytes": 7368,
+      "layer": "L2",
+      "sha256": "87a5a25bd60bf156f18e30e8aa0bad6a9b7fed033c99857e78fd11a9d522b552",
+      "source_path": "decisions/identity-semantics.md"
+    },
+    "decisions/master-representation.md.txt": {
+      "bytes": 6809,
+      "layer": "L2",
+      "sha256": "cec2f284efb2ffc34ac6e723ff0ba01fe1b167c11467dc87fb0317d8bb52d077",
+      "source_path": "decisions/master-representation.md"
+    },
+    "decisions/monitoring-response.md.txt": {
+      "bytes": 7324,
+      "layer": "L2",
+      "sha256": "b3624c18aa0573c6a099542b548edc3ee98b525338a9b804f3ac9bd1adb68f29",
+      "source_path": "decisions/monitoring-response.md"
+    },
+    "decisions/name-representation.md.txt": {
+      "bytes": 8331,
+      "layer": "L2",
+      "sha256": "d1ef5bf12650bf0f2ddd3ddc6bf0adfdb987f047699c0d2949ac9349f3f2caae",
+      "source_path": "decisions/name-representation.md"
+    },
+    "decisions/pipeline-modularity.md.txt": {
+      "bytes": 10406,
+      "layer": "L2",
+      "sha256": "cd6da98f2be76d4e1a92be0df7ce51578ca39520cad488d9e45238de97bb43c5",
+      "source_path": "decisions/pipeline-modularity.md"
+    },
+    "decisions/resolution-strategy.md.txt": {
+      "bytes": 8668,
+      "layer": "L2",
+      "sha256": "9c73cc4144a7e81bcf45cc7ecd742b2916705a4a0d3fb69f365eb34e3bf5a712",
+      "source_path": "decisions/resolution-strategy.md"
+    },
+    "decisions/rule-composition.md.txt": {
+      "bytes": 10775,
+      "layer": "L2",
+      "sha256": "6807926aa0c3c7eeac1595a5dc9b2a1706e7964c71a916217222db9ac8cf359d",
+      "source_path": "decisions/rule-composition.md"
+    },
+    "decisions/scoring-strategy.md.txt": {
+      "bytes": 8468,
+      "layer": "L2",
+      "sha256": "d531581acfffb6b50a76cbd20cbc81a175d4dff16b3ea7761e70f5b35e9ea495",
+      "source_path": "decisions/scoring-strategy.md"
+    },
+    "deep-dives/incomplete-reference-estimation.md.txt": {
+      "bytes": 12878,
+      "layer": "L3",
+      "sha256": "d9cd583548171911eea001010a9bce2ae92ef20d2652fcd5b4d536f9594b1cf3",
+      "source_path": "deep-dives/incomplete-reference-estimation.md"
+    },
+    "deep-dives/selection-and-calibration.md.txt": {
+      "bytes": 9551,
+      "layer": "L3",
+      "sha256": "b8fc1583a92b9cda66880ea1207d7fa507e505407a74142ba1cfd24c18be30b8",
+      "source_path": "deep-dives/selection-and-calibration.md"
+    },
+    "evaluation/candidate-recall.md.txt": {
+      "bytes": 6971,
+      "layer": "L2",
+      "sha256": "126cf55c76c3d6837d0289cd4c3ece82da6e04c44e2bdae8c3b93da74d1c1391",
+      "source_path": "evaluation/candidate-recall.md"
+    },
+    "evaluation/entity-resolution-quality.md.txt": {
+      "bytes": 9768,
+      "layer": "L2",
+      "sha256": "5c670587e596de5e56e618d1ef80fdf7cad1d88d758ead3bbda1ce6b1b487620",
+      "source_path": "evaluation/entity-resolution-quality.md"
+    },
+    "evaluation/execution-cost-replay.md.txt": {
+      "bytes": 8766,
+      "layer": "L2",
+      "sha256": "b943577011db83dc4f4ff66c2ea1bc9f23665e22988789f25dac0c86f58a1590",
+      "source_path": "evaluation/execution-cost-replay.md"
+    },
+    "evaluation/incomplete-reference-quality.md.txt": {
+      "bytes": 8793,
+      "layer": "L2",
+      "sha256": "a6e13f89efcebfbb09c3c73d47236294eefbac9fe4b164808a9d5a6eddfd0850",
+      "source_path": "evaluation/incomplete-reference-quality.md"
+    },
+    "evaluation/pairwise-calibration.md.txt": {
+      "bytes": 7477,
+      "layer": "L2",
+      "sha256": "6cc32a1901d2a4e618d9038fe1bef2c7add5427de72467e8b3aef65e1e950915",
+      "source_path": "evaluation/pairwise-calibration.md"
+    },
+    "evaluation/retrieval-blind-spots.md.txt": {
+      "bytes": 8797,
+      "layer": "L2",
+      "sha256": "587bfb166c73535764972c2a8f1dee47752e6b819e63fbdcd56ef76953147cdc",
+      "source_path": "evaluation/retrieval-blind-spots.md"
+    },
+    "evaluation/synthetic-metamorphic.md.txt": {
+      "bytes": 11596,
+      "layer": "L2",
+      "sha256": "93bef6ed81cba8c2a8b4cfbd5d808907b6349d382d71cffe2145e1d253dd22c1",
+      "source_path": "evaluation/synthetic-metamorphic.md"
+    },
+    "guides/agent-task-patterns.md.txt": {
+      "bytes": 9087,
+      "layer": "workflow",
+      "sha256": "e8a2dd7cd3f33cf2d496e50e05300832361841723a2bc754b7b38a2810b8d016",
+      "source_path": "guides/agent-task-patterns.md"
+    },
+    "guides/compare-and-experiment.md.txt": {
+      "bytes": 5094,
+      "layer": "workflow",
+      "sha256": "56b2aba148acb4c03da38e257fa08568ebb1a0b6cb947ab12d4819268a69f649",
+      "source_path": "guides/compare-and-experiment.md"
+    },
+    "guides/decision-provenance.md.txt": {
+      "bytes": 7525,
+      "layer": "workflow",
+      "sha256": "e15ae031b759e4460e308a5f5ea7b222ae1e761c6fc12e341e332c691fa12cf9",
+      "source_path": "guides/decision-provenance.md"
+    },
+    "guides/er-behavioral-testing.md.txt": {
+      "bytes": 12163,
+      "layer": "workflow",
+      "sha256": "2d3c1fdbfe34b4e3acbe5e2f0b41afb0abdccd9bb43b71851e202c775f2cc5d9",
+      "source_path": "guides/er-behavioral-testing.md"
+    },
+    "guides/er-governance.md.txt": {
+      "bytes": 6136,
+      "layer": "workflow",
+      "sha256": "3d45a34182e7ff421f8f073b57623220e96c744f065dbc007c53a17ccafcf62b",
+      "source_path": "guides/er-governance.md"
+    },
+    "guides/experiment-plan-template.md.txt": {
+      "bytes": 11273,
+      "layer": "workflow",
+      "sha256": "aba4ad405eb77b748c1302fd67984ec8193e3c6ab35802e03351e47ca460d860",
+      "source_path": "guides/experiment-plan-template.md"
+    },
+    "guides/incremental-operations.md.txt": {
+      "bytes": 6780,
+      "layer": "workflow",
+      "sha256": "abc5446e687415dbb5792832dcedc8ddbfedb39c8906eeffd497f7c747cca0d2",
+      "source_path": "guides/incremental-operations.md"
+    },
+    "guides/project-atlas-integration.md.txt": {
+      "bytes": 5042,
+      "layer": "workflow",
+      "sha256": "b4f93bb15116f99d1b4037331d7fd666e39dcf0ecb6dfeaf3f3e32f05f3691fd",
+      "source_path": "guides/project-atlas-integration.md"
+    },
+    "guides/project-intake.md.txt": {
+      "bytes": 3721,
+      "layer": "workflow",
+      "sha256": "21411094e622358a5cf47a7962b79bb31ae96332d7110e1baba5b16ba5a5480a",
+      "source_path": "guides/project-intake.md"
+    },
+    "guides/rule-policy-refactoring.md.txt": {
+      "bytes": 14608,
+      "layer": "workflow",
+      "sha256": "f306991c59aac84e969675d38b06a19422ffbfbbc51a22b85d42b6fbad19db00",
+      "source_path": "guides/rule-policy-refactoring.md"
+    },
+    "guides/run-manifest-template.md.txt": {
+      "bytes": 12973,
+      "layer": "workflow",
+      "sha256": "a7336d80b06a40224c4bd11a36630ac632b2cf97838584051d50f0ae979df248",
+      "source_path": "guides/run-manifest-template.md"
+    },
+    "guides/task-routes.json.txt": {
+      "bytes": 1137,
+      "layer": "workflow",
+      "sha256": "8b4e80092dead208f63ea03e5eb7097017a6bd1303de8fb9b5773edf6585e850",
+      "source_path": "guides/task-routes.json"
+    },
+    "index/L0.json": {
+      "bytes": 21081,
+      "layer": "L0",
+      "sha256": "4c1008dc6260c1d92012d58cbeab969c232e0aaceac60105fadd3d0672b62649",
+      "source_path": null
+    },
+    "indexes/domains/01.md.txt": {
+      "bytes": 4367,
+      "layer": "workflow",
+      "sha256": "0d4e04e7bb67f80550730f9e4dcc3c1959da405d0eda458cbc8e2b4109b0d74e",
+      "source_path": "indexes/domains/01.md"
+    },
+    "indexes/domains/02.md.txt": {
+      "bytes": 19196,
+      "layer": "workflow",
+      "sha256": "78ab85571c5dbdf969c26a96031c718eb688351be3cbaea75e1d2265e93eb74f",
+      "source_path": "indexes/domains/02.md"
+    },
+    "indexes/domains/03.md.txt": {
+      "bytes": 372,
+      "layer": "workflow",
+      "sha256": "1fb13941f91aa977ea2fea1a9be9ba8a87922ff5b4c188339ba651fa3512915e",
+      "source_path": "indexes/domains/03.md"
+    },
+    "indexes/domains/04.md.txt": {
+      "bytes": 4721,
+      "layer": "workflow",
+      "sha256": "d7f124eb21fb5e3b8f4492bc6beed7fa335053477e1354e56db7b45af139d198",
+      "source_path": "indexes/domains/04.md"
+    },
+    "indexes/domains/05.md.txt": {
+      "bytes": 9161,
+      "layer": "workflow",
+      "sha256": "1757037bad7cda8e55e16f141fb4434e78c769f26f31e7699f35126796116d48",
+      "source_path": "indexes/domains/05.md"
+    },
+    "indexes/domains/06.md.txt": {
+      "bytes": 11961,
+      "layer": "workflow",
+      "sha256": "a65b7238dfa539abddb110a24d37c28a3c8414259ee8d2285e3b6dc8b5fc6100",
+      "source_path": "indexes/domains/06.md"
+    },
+    "indexes/domains/07.md.txt": {
+      "bytes": 17369,
+      "layer": "workflow",
+      "sha256": "9ecf21dc79aecbaa9e0ab8a45ef13c1aa84945675a0310a0d2d732bc478003ce",
+      "source_path": "indexes/domains/07.md"
+    },
+    "indexes/domains/08.md.txt": {
+      "bytes": 19204,
+      "layer": "workflow",
+      "sha256": "7cfa616572ab0634505c88f59d73ea83707babfd282942756fa1c41a65a1a365",
+      "source_path": "indexes/domains/08.md"
+    },
+    "indexes/domains/09.md.txt": {
+      "bytes": 4400,
+      "layer": "workflow",
+      "sha256": "92e27932a088eca90d0677edde75dca89553e66cdab0ea53dc5d28d78b285c00",
+      "source_path": "indexes/domains/09.md"
+    },
+    "indexes/domains/10.md.txt": {
+      "bytes": 12588,
+      "layer": "workflow",
+      "sha256": "fec74e31dc43be38dc0b8e6d6a1df531d4a2fb687e4cbdbb409505904ea7ede1",
+      "source_path": "indexes/domains/10.md"
+    },
+    "indexes/domains/11.md.txt": {
+      "bytes": 15120,
+      "layer": "workflow",
+      "sha256": "f1b248290b501390035adfbf17a1f1e4ae0ce9947626106546b85658a77188f9",
+      "source_path": "indexes/domains/11.md"
+    },
+    "indexes/domains/12.md.txt": {
+      "bytes": 4460,
+      "layer": "workflow",
+      "sha256": "098f2061a2caf41fd92c8dbd4142d450a4e204aed0e7ef5e1e66966912cb60f3",
+      "source_path": "indexes/domains/12.md"
+    },
+    "indexes/domains/13.md.txt": {
+      "bytes": 4836,
+      "layer": "workflow",
+      "sha256": "34c7878887fdbbb3f4ac7af61bfd966af616fbeae29cc0ef10a7fdb52f4cbea2",
+      "source_path": "indexes/domains/13.md"
+    },
+    "indexes/domains/14.md.txt": {
+      "bytes": 5044,
+      "layer": "workflow",
+      "sha256": "f4af8e06a9a596b9675fd242c67fcddfb3ecbe876a051efe7b2e3c0edeb02669",
+      "source_path": "indexes/domains/14.md"
+    },
+    "indexes/tasks.md.txt": {
+      "bytes": 1004,
+      "layer": "workflow",
+      "sha256": "08210f548937225c451db16e4d0dce8d671705b0e043d26e0de036a1861c490d",
+      "source_path": "indexes/tasks.md"
+    },
+    "indexes/tasks/blocking.md.txt": {
+      "bytes": 2441,
+      "layer": "workflow",
+      "sha256": "a33f0621c412c8495c3fe290dda35e30650c04916bf4832903e9276b91107851",
+      "source_path": "indexes/tasks/blocking.md"
+    },
+    "indexes/tasks/experiments.md.txt": {
+      "bytes": 2651,
+      "layer": "workflow",
+      "sha256": "cf15e602e3330ab738a08d61bc05d7a2edbaa934737edc8a0e9255cc3735150e",
+      "source_path": "indexes/tasks/experiments.md"
+    },
+    "indexes/tasks/graph.md.txt": {
+      "bytes": 2465,
+      "layer": "workflow",
+      "sha256": "4c0e16412b76447fdc768ef4f074a4828d2cc0b6c7d1d6698781a7ba5add5193",
+      "source_path": "indexes/tasks/graph.md"
+    },
+    "indexes/tasks/incremental.md.txt": {
+      "bytes": 2280,
+      "layer": "workflow",
+      "sha256": "ccf3d0ab68f9200e25f50af0295c0cafb5b9302313d3e3f9dd0d2718626c550e",
+      "source_path": "indexes/tasks/incremental.md"
+    },
+    "indexes/tasks/new-source.md.txt": {
+      "bytes": 2380,
+      "layer": "workflow",
+      "sha256": "08b6743096f14e1c7efc2ac4da4fa8189ccf4de503e164c82b8c631d00e28136",
+      "source_path": "indexes/tasks/new-source.md"
+    },
+    "indexes/tasks/no-labels.md.txt": {
+      "bytes": 2412,
+      "layer": "workflow",
+      "sha256": "6d4fbb6394a473842a61884e6ad0d91500cc9c6f12fc8a303545030efe139113",
+      "source_path": "indexes/tasks/no-labels.md"
+    },
+    "indexes/tasks/rules.md.txt": {
+      "bytes": 2323,
+      "layer": "workflow",
+      "sha256": "4b9373178330d4c7b2eeb42cf1645b0a634160c6bb2a80cf84bbaf676576258b",
+      "source_path": "indexes/tasks/rules.md"
+    },
+    "indexes/tasks/scoring.md.txt": {
+      "bytes": 2422,
+      "layer": "workflow",
+      "sha256": "1e397c5b7599cc4e2b898fbf9fe3e828b3a0f5d216f1f9d2f486fd75c413f959",
+      "source_path": "indexes/tasks/scoring.md"
+    },
+    "references/atlas-manifest.json.txt": {
+      "bytes": 3825,
+      "layer": "workflow",
+      "sha256": "f0e1c1b7bb5c83bfbcfc54c5fe54b0d90c590be05737060af0b9a3d48e49d2b6",
+      "source_path": "references/atlas-manifest.json"
+    },
+    "references/bibliography.md.txt": {
+      "bytes": 17224,
+      "layer": "L3",
+      "sha256": "c41020826cf5e4303187cc2428ab10aada971e61b5a8ff5d2ce40abba715b189",
+      "source_path": "references/bibliography.md"
+    },
+    "references/evidence-policy.md.txt": {
+      "bytes": 2932,
+      "layer": "L3",
+      "sha256": "ecb7731a9b0e83d37657f99f893b88448a351bf070c2e065c7281f475a18aa3c",
+      "source_path": "references/evidence-policy.md"
+    },
+    "references/research-notes.md.txt": {
+      "bytes": 5951,
+      "layer": "workflow",
+      "sha256": "01947f6976972e041f973049c7333b7512b25f39d632b053b05459b2539fd6ea",
+      "source_path": "references/research-notes.md"
+    },
+    "references/retrieval-provenance.json.txt": {
+      "bytes": 20564,
+      "layer": "workflow",
+      "sha256": "a82c68366dfeb9072eac53ecca3653c2ed5be31c29ae0cc1ac4d526d36edb36a",
+      "source_path": "references/retrieval-provenance.json"
+    },
+    "references/retrieval-status.json.txt": {
+      "bytes": 2346,
+      "layer": "workflow",
+      "sha256": "b4fbc799aebc1869c7d0a36b4fc01ec20aa634ad9396c01928c13d3dff5fbdf3",
+      "source_path": "references/retrieval-status.json"
+    },
+    "references/source-ledger.json.txt": {
+      "bytes": 8898,
+      "layer": "workflow",
+      "sha256": "4c4bf82d98d77fd43c52236346dbc00fc1d8feb8eab250ed096498b8cfe2f999",
+      "source_path": "references/source-ledger.json"
+    },
+    "references/wave-1-evidence-notes.md.txt": {
+      "bytes": 6752,
+      "layer": "workflow",
+      "sha256": "e318df74613f85f8585d17e17566300ee2ae315496cbc247aed8166040ddb6d3",
+      "source_path": "references/wave-1-evidence-notes.md"
+    },
+    "references/wave-2-evidence-notes.md.txt": {
+      "bytes": 6343,
+      "layer": "workflow",
+      "sha256": "1da89e1581e25f6c52d09f5279bb6c92078561b132cef4a01cd15a114a1b141c",
+      "source_path": "references/wave-2-evidence-notes.md"
+    },
+    "references/wave-3-evidence-notes.md.txt": {
+      "bytes": 7689,
+      "layer": "workflow",
+      "sha256": "1a074ac0fd38ec7d6df937c821b68062f04aaaa437ad73c7e82ba33d61ad0809",
+      "source_path": "references/wave-3-evidence-notes.md"
+    },
+    "references/wave-4-evidence-notes.md.txt": {
+      "bytes": 1855,
+      "layer": "workflow",
+      "sha256": "d59e7d23561f66773918e0d8900c2ece0a8700a4544345210235d0cc0c1d8b67",
+      "source_path": "references/wave-4-evidence-notes.md"
+    },
+    "research/hypotheses/contextual-reliability.md.txt": {
+      "bytes": 7733,
+      "layer": "L2",
+      "sha256": "125a1359599dba26ec846e2ddb4ba8fbc1cfa76dffaab71c103b3d804efc88fe",
+      "source_path": "research/hypotheses/contextual-reliability.md"
+    },
+    "research/hypotheses/frequency-aware-evidence.md.txt": {
+      "bytes": 6919,
+      "layer": "L2",
+      "sha256": "f53e4033f402358e4648ba62145f31ac20543793bb4b2106f8d3d70d6f7221e2",
+      "source_path": "research/hypotheses/frequency-aware-evidence.md"
+    },
+    "solutions/architecture/replaceable-stage-pipelines.md.txt": {
+      "bytes": 10317,
+      "layer": "L2",
+      "sha256": "210f1181a97884f43add30d67ad6cb1fcf34ef6d59656c8f046223c24fcb17ae",
+      "source_path": "solutions/architecture/replaceable-stage-pipelines.md"
+    },
+    "solutions/architecture/versioned-artifact-runs.md.txt": {
+      "bytes": 12459,
+      "layer": "L2",
+      "sha256": "f13b046137a419e4081f31f0df7995ce91d99fab976478ceca81c1e9244e2562",
+      "source_path": "solutions/architecture/versioned-artifact-runs.md"
+    },
+    "solutions/candidate-generation/approximate-blocking.md.txt": {
+      "bytes": 10806,
+      "layer": "L2",
+      "sha256": "3b57317d424d82554f01ef89f14ba31be1aa452c94de486e806493a1f2ef19c0",
+      "source_path": "solutions/candidate-generation/approximate-blocking.md"
+    },
+    "solutions/candidate-generation/exact-blocking.md.txt": {
+      "bytes": 6631,
+      "layer": "L2",
+      "sha256": "23438f371c444b84ba85e87f64a1c100a738e06e59ed499ea64857d6b746f760",
+      "source_path": "solutions/candidate-generation/exact-blocking.md"
+    },
+    "solutions/candidate-generation/multi-pass-blocking.md.txt": {
+      "bytes": 6791,
+      "layer": "L2",
+      "sha256": "1ae50aaf4c6c0a60d79ca716476bc879a89deefe24e4190367b10138a5e9194c",
+      "source_path": "solutions/candidate-generation/multi-pass-blocking.md"
+    },
+    "solutions/comparison-features/evidence-states.md.txt": {
+      "bytes": 7445,
+      "layer": "L2",
+      "sha256": "2a7c5068a826a8206d1a19abb1bdeee9f1c2d7e4028a44da17e8601871c03794",
+      "source_path": "solutions/comparison-features/evidence-states.md"
+    },
+    "solutions/comparison-features/identifier-namespaces.md.txt": {
+      "bytes": 9682,
+      "layer": "L2",
+      "sha256": "cdcc3c3912b9e4a678092eb4ae3e0c41e8c9982d7acdc3227faf958f09195804",
+      "source_path": "solutions/comparison-features/identifier-namespaces.md"
+    },
+    "solutions/comparison-features/string-comparators.md.txt": {
+      "bytes": 9731,
+      "layer": "L2",
+      "sha256": "4f42a9f6a0892614238b8b23a38626384eaa9a4a2fc8679c44258a5e08573644",
+      "source_path": "solutions/comparison-features/string-comparators.md"
+    },
+    "solutions/decision-resolution/connected-components.md.txt": {
+      "bytes": 10347,
+      "layer": "L2",
+      "sha256": "20ed4658a26240569a7163c1281c9d2fe24f975f8aa65da79d1ccb0824e7360a",
+      "source_path": "solutions/decision-resolution/connected-components.md"
+    },
+    "solutions/decision-resolution/constrained-clustering.md.txt": {
+      "bytes": 10421,
+      "layer": "L2",
+      "sha256": "c84d648a560f3c447bac8126f0c599cfbc6c5eb0613835267791c193caa6db73",
+      "source_path": "solutions/decision-resolution/constrained-clustering.md"
+    },
+    "solutions/decision-resolution/declarative-decision-tables.md.txt": {
+      "bytes": 12602,
+      "layer": "L2",
+      "sha256": "5e1b441ada78fa032d5aa8d0a2145fd7eeaed61cc65b3a915a4f3b9db542281d",
+      "source_path": "solutions/decision-resolution/declarative-decision-tables.md"
+    },
+    "solutions/decision-resolution/one-to-one-assignment.md.txt": {
+      "bytes": 7619,
+      "layer": "L2",
+      "sha256": "c27bd3c0302f92677dc4757be76fda80ad6c9d422d359e024c88e5a2ce5c4f21",
+      "source_path": "solutions/decision-resolution/one-to-one-assignment.md"
+    },
+    "solutions/decision-resolution/ordered-rule-policies.md.txt": {
+      "bytes": 10986,
+      "layer": "L2",
+      "sha256": "b366680debc9d837ad6e4b7c3f9334d213d3402c76c25ba5ae6595a5995c4cbe",
+      "source_path": "solutions/decision-resolution/ordered-rule-policies.md"
+    },
+    "solutions/decision-resolution/thresholds-abstention.md.txt": {
+      "bytes": 7785,
+      "layer": "L2",
+      "sha256": "ea8c552140ff6c9d9d4910cde714b93e9d8bf09840949a8da427174c8e307660",
+      "source_path": "solutions/decision-resolution/thresholds-abstention.md"
+    },
+    "solutions/experimentation/controlled-comparison.md.txt": {
+      "bytes": 10225,
+      "layer": "L2",
+      "sha256": "83481ad7ee74d9731f71a87c7a3de29e5b205a06c50ae93fa11c76a7a5d647c5",
+      "source_path": "solutions/experimentation/controlled-comparison.md"
+    },
+    "solutions/governance/stage-monitoring.md.txt": {
+      "bytes": 9886,
+      "layer": "L2",
+      "sha256": "04fa232acb23b48b57e353fb6789a36a9642f7988bbf9c658e0d7d9f37df737d",
+      "source_path": "solutions/governance/stage-monitoring.md"
+    },
+    "solutions/ground-truth/independent-reference.md.txt": {
+      "bytes": 11222,
+      "layer": "L2",
+      "sha256": "14e4ffba6ffd8327a981196b5e8299802ee61d13e036bcafb322accc0a4f7011",
+      "source_path": "solutions/ground-truth/independent-reference.md"
+    },
+    "solutions/ground-truth/probability-sampled-review.md.txt": {
+      "bytes": 10479,
+      "layer": "L2",
+      "sha256": "6fce991b19ab21563cd9ff6a3f26c25afefed54557110b2c74868db2056f002b",
+      "source_path": "solutions/ground-truth/probability-sampled-review.md"
+    },
+    "solutions/ground-truth/targeted-active-review.md.txt": {
+      "bytes": 10828,
+      "layer": "L2",
+      "sha256": "5c3668755b34eaddc2f2dd14c7a7dfed962e84389cf9dd4922cd4e363a12b824",
+      "source_path": "solutions/ground-truth/targeted-active-review.md"
+    },
+    "solutions/ground-truth/weak-supervision.md.txt": {
+      "bytes": 11664,
+      "layer": "L2",
+      "sha256": "ce3c285eafa562d1fb8c537958d7526595157abe8040a0e06717ae4fdee9fbf4",
+      "source_path": "solutions/ground-truth/weak-supervision.md"
+    },
+    "solutions/identity-semantics/temporal-identity.md.txt": {
+      "bytes": 7998,
+      "layer": "L2",
+      "sha256": "1ec7970997beaa0bdde17d77faa52d50289c729c78b208490e1593f88f966ae7",
+      "source_path": "solutions/identity-semantics/temporal-identity.md"
+    },
+    "solutions/master-records/provenance-survivorship.md.txt": {
+      "bytes": 7798,
+      "layer": "L2",
+      "sha256": "d4a229399586149186c97a91d087b87f974457a5e661380f5db7b4fad922da9f",
+      "source_path": "solutions/master-records/provenance-survivorship.md"
+    },
+    "solutions/matching-scoring/additive-soft-matching.md.txt": {
+      "bytes": 8565,
+      "layer": "L2",
+      "sha256": "51c58237db8519db2a06a5a85cfa448d5271bc0e368f7dabc112111db6f5f294",
+      "source_path": "solutions/matching-scoring/additive-soft-matching.md"
+    },
+    "solutions/matching-scoring/fellegi-sunter.md.txt": {
+      "bytes": 9573,
+      "layer": "L2",
+      "sha256": "8c4dffd6ae0c9d1d096fef97b6d98f4b1af0aca9b2681dc44f97be8f001e7d8c",
+      "source_path": "solutions/matching-scoring/fellegi-sunter.md"
+    },
+    "solutions/matching-scoring/learned-neural-comparators.md.txt": {
+      "bytes": 9720,
+      "layer": "L2",
+      "sha256": "34d855e3220b00f1bc880a98cf06b174d39eb09cc2d99790483c138d70ee3473",
+      "source_path": "solutions/matching-scoring/learned-neural-comparators.md"
+    },
+    "solutions/matching-scoring/logistic-regression.md.txt": {
+      "bytes": 8813,
+      "layer": "L2",
+      "sha256": "70434f79e71f0d872e65144cb097b65fdaa4105164fa7ed484394859527caff6",
+      "source_path": "solutions/matching-scoring/logistic-regression.md"
+    },
+    "solutions/matching-scoring/source-aware-reliability.md.txt": {
+      "bytes": 9127,
+      "layer": "L2",
+      "sha256": "1429888f34f902b29ef06290948c0418e0d87f0e75bfaf2cfa3869d559ceefae",
+      "source_path": "solutions/matching-scoring/source-aware-reliability.md"
+    },
+    "solutions/normalization/name-representations.md.txt": {
+      "bytes": 8948,
+      "layer": "L2",
+      "sha256": "efe024fdf8741b7a3f2b150aa88c3490b50322b1a05b8187a2ac812637e7b641",
+      "source_path": "solutions/normalization/name-representations.md"
+    },
+    "solutions/scalability/skew-aware-execution.md.txt": {
+      "bytes": 9295,
+      "layer": "L2",
+      "sha256": "d9b27bd7a2a2291cd6dbffee5d9f912903288f79881e819ec4276ce84622e06d",
+      "source_path": "solutions/scalability/skew-aware-execution.md"
+    },
+    "taxonomy/architecture-dimensions.md.txt": {
+      "bytes": 3802,
+      "layer": "L1",
+      "sha256": "ec23dcaef88cbf23353e77bfd2db9340f33d01af17ca8c54a3b2defdd04e7ff8",
+      "source_path": "taxonomy/architecture-dimensions.md"
+    },
+    "taxonomy/domain-registry.json.txt": {
+      "bytes": 1694,
+      "layer": "workflow",
+      "sha256": "0348bbf9db8b5e7ab92265ad0a04eb39d705422e4f91610df5307dbac36b66ce",
+      "source_path": "taxonomy/domain-registry.json"
+    },
+    "taxonomy/domains/01-problem-identity.md.txt": {
+      "bytes": 2079,
+      "layer": "L1",
+      "sha256": "a094671fe2368ae1a2282f21b76eceeb4933a25d842db2a94d0da0c141c161e0",
+      "source_path": "taxonomy/domains/01-problem-identity.md"
+    },
+    "taxonomy/domains/02-architecture-orchestration.md.txt": {
+      "bytes": 2452,
+      "layer": "L1",
+      "sha256": "f97537c01130892556a9b49653bcdfe99898aff23ee3949069a0cf051dbc14bb",
+      "source_path": "taxonomy/domains/02-architecture-orchestration.md"
+    },
+    "taxonomy/domains/03-data-integration.md.txt": {
+      "bytes": 2040,
+      "layer": "L1",
+      "sha256": "df44822604d4ecaf51d839fe5e1cd8652f45c6975be81eeff2c718fe1329619e",
+      "source_path": "taxonomy/domains/03-data-integration.md"
+    },
+    "taxonomy/domains/04-normalization-enrichment.md.txt": {
+      "bytes": 2327,
+      "layer": "L1",
+      "sha256": "177d5339903653db54380aa83ef4f16631ec25ce059cf77b357e8041e40146ce",
+      "source_path": "taxonomy/domains/04-normalization-enrichment.md"
+    },
+    "taxonomy/domains/05-candidate-retrieval.md.txt": {
+      "bytes": 2382,
+      "layer": "L1",
+      "sha256": "6e0ba9b396d4803f01b717ab751d7b2faacce84df417c5cb5a5d7a7e70a2461b",
+      "source_path": "taxonomy/domains/05-candidate-retrieval.md"
+    },
+    "taxonomy/domains/06-comparison-evidence.md.txt": {
+      "bytes": 2583,
+      "layer": "L1",
+      "sha256": "548249c3212d182c176200d484bb2a754a29d34c222f75f667e35f9bef8f7895",
+      "source_path": "taxonomy/domains/06-comparison-evidence.md"
+    },
+    "taxonomy/domains/07-matching-scoring.md.txt": {
+      "bytes": 2517,
+      "layer": "L1",
+      "sha256": "1380b0a6b5f893afbc54dc9798d6c0343935e45cbcd009c83dc6809dedc5840a",
+      "source_path": "taxonomy/domains/07-matching-scoring.md"
+    },
+    "taxonomy/domains/08-decision-resolution.md.txt": {
+      "bytes": 2883,
+      "layer": "L1",
+      "sha256": "b3a3d16bb774dbfe52edc579cc6fb87fe98a88aa1602992980a60aa2755af6f4",
+      "source_path": "taxonomy/domains/08-decision-resolution.md"
+    },
+    "taxonomy/domains/09-master-maintenance.md.txt": {
+      "bytes": 1985,
+      "layer": "L1",
+      "sha256": "429d8eac37cde111e56b1df130360fcfd0a4c17d346271224b84a05fd611d4a5",
+      "source_path": "taxonomy/domains/09-master-maintenance.md"
+    },
+    "taxonomy/domains/10-ground-truth.md.txt": {
+      "bytes": 2557,
+      "layer": "L1",
+      "sha256": "31f55d9d2885125f8bcaee54bd323e510844356040394adc14bee388783017d6",
+      "source_path": "taxonomy/domains/10-ground-truth.md"
+    },
+    "taxonomy/domains/11-evaluation-diagnostics.md.txt": {
+      "bytes": 2395,
+      "layer": "L1",
+      "sha256": "57422e14c109a44582377cce41c9103c6ce34c1ca73f862ace3e1138f76d67fb",
+      "source_path": "taxonomy/domains/11-evaluation-diagnostics.md"
+    },
+    "taxonomy/domains/12-experimentation.md.txt": {
+      "bytes": 2304,
+      "layer": "L1",
+      "sha256": "1a59aa73fc1c9a19b739b2134500cf4ea7d916e2c31bf0239758e523994bc462",
+      "source_path": "taxonomy/domains/12-experimentation.md"
+    },
+    "taxonomy/domains/13-scalability-execution.md.txt": {
+      "bytes": 2852,
+      "layer": "L1",
+      "sha256": "5823656cb479e8e7bdaa33d53935be5cf937b712ce778fc57043cba0385fed41",
+      "source_path": "taxonomy/domains/13-scalability-execution.md"
+    },
+    "taxonomy/domains/14-governance-monitoring.md.txt": {
+      "bytes": 2809,
+      "layer": "L1",
+      "sha256": "e62fcda5daab267afc9095a3185579dba3af4b9a7762ec8f90d9e2eb199b1eff",
+      "source_path": "taxonomy/domains/14-governance-monitoring.md"
+    },
+    "taxonomy/module-contracts.md.txt": {
+      "bytes": 19587,
+      "layer": "L1",
+      "sha256": "ad6afc60fd567ccf1870696cc8a1fe86a2642e013100df78efb17fd75cf75b6c",
+      "source_path": "taxonomy/module-contracts.md"
+    },
+    "taxonomy/overview.md.txt": {
+      "bytes": 4218,
+      "layer": "L1",
+      "sha256": "43e7320f8cf0ba05cb498c0bdf12be18d1eb667e7f0d6112b4ad4a980bb09d2b",
+      "source_path": "taxonomy/overview.md"
+    }
+  },
+  "freeze_manifest_sha256": "132fef9b963a68c87faae045f1e2ef96201827f1f70a445616464fdb728011e8",
+  "kind": "AW-snapshot-1"
+}

@@ -1,0 +1,28 @@
+# 05 — Candidate Generation & Retrieval
+
+**Design question:** Which pairs merit scoring under a candidate budget, and which true matches could be missed?
+
+## Decisions and coverage
+- Exact, composite and hierarchical blocking; sorted neighborhood with fixed/adaptive windows.
+- Approximate q-gram, inverted-index and canopy methods; locality-sensitive hashing; embedding-based ANN; learned keys and retrieval. These families overlap and are not mandatory separate stages.
+- Multi-pass union and adaptive blocking/budgets balance unique true-match coverage against duplicate work, candidate explosion and skew.
+- Blocking restricts pair space; similarity filtering uses a specified comparison function and threshold, with exact pruning guarantees only under valid bounds. Retrieval similarity is not identity truth.
+
+## Solution families and useful baselines
+- Single exact/composite key as an interpretable baseline; complementary passes with recorded pass provenance.
+- Sorted or approximate retrieval when key corruption dominates; vector/learned retrieval when representation, labels and cost justify it.
+
+## Ownership and limitations
+Logical retrieval lives here; its indexes, partitioning and distributed execution are owned by 13. Candidate recall must be tested independently of scorer recall.
+
+This is a domain map, not complete L2 method coverage. Unexpanded families are retained for [expansion review](../../guides/expansion-plan.md); mature names are not automatic recommendations.
+
+## Cross-domain dependencies
+- [04 — Normalization & Enrichment](04-normalization-enrichment.md).
+- [06 — Comparison Features & Evidence Engineering](06-comparison-evidence.md).
+- [10 — Ground Truth & Labeling](10-ground-truth.md).
+- [11 — Evaluation & Diagnostics](11-evaluation-diagnostics.md).
+- [13 — Scalability & Execution](13-scalability-execution.md).
+
+## Selective retrieval
+Start from the [catalog](../../CATALOG.md) and [project intake](../../guides/project-intake.md). Compare applicable pilot cards before assuming a family is suitable.

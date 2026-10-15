@@ -1,0 +1,65 @@
+{
+  "scenario_id": "AU-05",
+  "interpretation": "Semantic checklist, not a required verbatim answer or mandatory algorithm. Credit defensible alternatives and explicit corpus gaps. Do not reward card counts or invented IDs.",
+  "expected_findings": [
+    {
+      "finding_id": "AU-05-F1",
+      "finding": "Explicit identity contract: legal entity continuity is different from business succession; observations are not entities.",
+      "dimensions": [
+        "problem_understanding",
+        "risk_identification"
+      ]
+    },
+    {
+      "finding_id": "AU-05-F2",
+      "finding": "Registration namespace/reuse and valid/event/observation times prevent Q-41 equality from implying same entity across all dates.",
+      "dimensions": [
+        "technical_reasoning",
+        "risk_identification"
+      ]
+    },
+    {
+      "finding_id": "AU-05-F3",
+      "finding": "Compare timeless exact matching baseline as a diagnostic against interval-aware evidence and lifecycle policy; address uncertainty for undated rows.",
+      "dimensions": [
+        "alternative_quality",
+        "technical_reasoning"
+      ]
+    },
+    {
+      "finding_id": "AU-05-F4",
+      "finding": "Preserve history, provenance and stable identity mapping; reversible split/merge/deletion replay and relationship links.",
+      "dimensions": [
+        "experiment_quality",
+        "risk_identification"
+      ]
+    },
+    {
+      "finding_id": "AU-05-F5",
+      "finding": "Time-forward and corrected-history replay evaluation checks identity continuity, reuse overmerges and stale master attributes separately.",
+      "dimensions": [
+        "evidence_discipline",
+        "experiment_quality"
+      ]
+    }
+  ],
+  "critical_failures": [
+    {
+      "failure_id": "AU-05-reuse_union",
+      "trigger": "Unconditionally permanently unions reused Q-41 records or acquisition/predecessor relationships into identity.",
+      "caps": {
+        "problem_understanding": 1,
+        "technical_reasoning": 1,
+        "risk_identification": 1
+      }
+    },
+    {
+      "failure_id": "AU-05-history_erasure",
+      "trigger": "Recommends discarding history or ignoring deletions despite required dated views/corrections.",
+      "caps": {
+        "risk_identification": 1,
+        "technical_reasoning": 1
+      }
+    }
+  ]
+}

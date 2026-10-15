@@ -1,0 +1,40 @@
+{
+  "scenario_id": "AU-03",
+  "title": "Two registries, one active contract per license",
+  "fictional": true,
+  "known_project_facts": {
+    "project": "A municipal compliance office links active operating-license entries in one registry to current insurer contract-holder entries in a second registry.",
+    "identity": "The same licensed operating organization during the same reporting month, not its broker, parent, or sister subsidiary.",
+    "constraints": "Within each audited monthly extract each license entity occurs once, and each eligible contract-holder entity occurs once. The agreed task permits at most one link on each side. Some entities have no counterpart. The audit guarantee does not extend to historical months.",
+    "observations": [
+      {
+        "left": "L6",
+        "right": "I3",
+        "rank_score": 8.1
+      },
+      {
+        "left": "L6",
+        "right": "I9",
+        "rank_score": 7.9
+      },
+      {
+        "left": "L12",
+        "right": "I3",
+        "rank_score": 8.0
+      },
+      {
+        "left": "L12",
+        "right": "I9",
+        "rank_score": 1.2
+      }
+    ],
+    "current_pipeline": "Independent best candidate per license; ties and contested contracts go to a queue. Scores are additive evidence, not utilities or calibrated probabilities.",
+    "resources": "Review capacity is 30 conflicts per month; retrieval sometimes fails on legal-name changes."
+  },
+  "explicitly_unknown": [
+    "What match-versus-unmatched loss or objective should global resolution optimize?",
+    "How trustworthy is monthly uniqueness after extract errors?",
+    "Can retrieval omit a competing valid assignment?"
+  ],
+  "task": "Produce a defensible project-specific ER experiment/design recommendation using selectively retrieved Atlas knowledge if available. Do not implement ER or change production. Separate facts, assumptions, uncertainties, mechanisms and proposed evidence."
+}

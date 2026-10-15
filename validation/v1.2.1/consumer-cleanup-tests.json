@@ -1,0 +1,58 @@
+[
+  {
+    "command": "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python -B -m unittest discover -s tools -p 'test_*.py'",
+    "result": {
+      "output": "..............................................................\n----------------------------------------------------------------------\nRan 62 tests in 7.449s\n\nOK",
+      "exit_code": 0,
+      "error": null
+    }
+  },
+  {
+    "command": "env -u TMPDIR TMP=/home/ghgin/.hermes/cache/scratch TEMP=/home/ghgin/.hermes/cache/scratch /home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python -B -m unittest discover -s tools -p 'test_*.py'",
+    "result": {
+      "output": "..............................................................\n----------------------------------------------------------------------\nRan 62 tests in 7.594s\n\nOK",
+      "exit_code": 0,
+      "error": null
+    }
+  },
+  {
+    "command": "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python -B -m unittest discover -s validation/agent-utility/tests",
+    "result": {
+      "output": "/home/ghgin/.hermes/tools/python-3.14.7+202****0901-linux-x64/lib/python3.14/unittest/case.py:615: ResourceWarning: unclosed file <_io.TextIOWrapper name=7 encoding='utf-8'>\n  result = method()\nResourceWarning: Enable tracemalloc to get the object allocation traceback\n/home/ghgin/.hermes/tools/python-3.14.7+202****0901-linux-x64/lib/python3.14/unittest/case.py:615: ResourceWarning: unclosed file <_io.TextIOWrapper name=4 encoding='utf-8'>\n  result = method()\nResourceWarning: Enable tracemalloc to get the object allocation traceback\n/home/ghgin/.hermes/tools/python-3.14.7+202****0901-linux-x64/lib/python3.14/unittest/case.py:615: ResourceWarning: unclosed file <_io.TextIOWrapper name=5 encoding='utf-8'>\n  result = method()\nResourceWarning: Enable tracemalloc to get the object allocation traceback\n.......................................\n----------------------------------------------------------------------\nRan 39 tests in 4.991s\n\nOK",
+      "exit_code": 0,
+      "error": null
+    }
+  },
+  {
+    "command": "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python -B -m unittest discover -s validation/agent-utility-v2/tests",
+    "result": {
+      "output": ".................\n----------------------------------------------------------------------\nRan 17 tests in 0.786s\n\nOK",
+      "exit_code": 0,
+      "error": null
+    }
+  },
+  {
+    "command": "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python -B -m unittest discover -s validation/agent-utility-integration/tests",
+    "result": {
+      "output": ".................................................................\n----------------------------------------------------------------------\nRan 65 tests in 2.688s\n\nOK",
+      "exit_code": 0,
+      "error": null
+    }
+  },
+  {
+    "command": "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python -B -m unittest discover -s validation/agent-workflow -p 'test_workflow.py'",
+    "result": {
+      "output": "............\n----------------------------------------------------------------------\nRan 12 tests in 8.080s\n\nOK",
+      "exit_code": 0,
+      "error": null
+    }
+  },
+  {
+    "command": "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python -B -m unittest discover -s validation/v1.2.1/wave-4 -p 'test_runtime_boundary.py'",
+    "result": {
+      "output": "x...........\n----------------------------------------------------------------------\nRan 12 tests in 0.551s\n\nOK (expected failures=1)",
+      "exit_code": 0,
+      "error": null
+    }
+  }
+]

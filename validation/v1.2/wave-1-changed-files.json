@@ -1,0 +1,252 @@
+{
+  "baseline": "validation/v1.2/wave-0-baseline.json",
+  "scope": "all non-git/non-bytecode files; generated validation and this change report excluded from self-hashing",
+  "excluded_self_reports": [
+    "validation/v1.2/wave-1-changed-files.json",
+    "validation/v1.2/wave-1-validation.json"
+  ],
+  "modified": [
+    {
+      "path": "AGENTS.md",
+      "before_sha256": "86b688db5f99cd7ecd84ef3358c45a9f4429dadb9082f11b2d57156050b84930",
+      "after_sha256": "9d454671bc3f8becd532acbc8bf16f5f047ab6c6a37519426c3f6b34277d7210"
+    },
+    {
+      "path": "CATALOG.md",
+      "before_sha256": "bc961810d07dc6e861a9a7478330669a9629398bd641a01aac5bd641ccc555e7",
+      "after_sha256": "6d35ace41ffd9c0fb961e4e1b964e0ba2d38be1c374d7e9288fe473e515a330d"
+    },
+    {
+      "path": "README.md",
+      "before_sha256": "107f7e95720656c79458964d3b98474cf789948d1f56b5fae234722427eb2b2d",
+      "after_sha256": "af1f2cc504d638aac86a589ef4ad6748b813c78ab5c94e6fb305a6b7635a43ef"
+    },
+    {
+      "path": "SCHEMA.md",
+      "before_sha256": "9482adc24fc0d2c0c4301367e4e705a014349e28461147d4d4e2f684e3979e57",
+      "after_sha256": "9ef36a3f4e0e5995cae5002a63b09e2317cf5b993045cbbdae98970363212c49"
+    },
+    {
+      "path": "SCOPE.md",
+      "before_sha256": "11ece72f9f0030a02707c66aea0c3d7bbb6c8906a52739d8e67ee5c5d30df919",
+      "after_sha256": "83bbd58d83d920ab274a0d0b58c760226f16b01111b7f9aa7c1bbd26bfd27491"
+    },
+    {
+      "path": "evaluation/candidate-recall.md",
+      "before_sha256": "09d8d3d724309a0e6b95a66103ad72d4df04242f9e71ce287d8bb158c1d4a593",
+      "after_sha256": "126cf55c76c3d6837d0289cd4c3ece82da6e04c44e2bdae8c3b93da74d1c1391"
+    },
+    {
+      "path": "evaluation/entity-resolution-quality.md",
+      "before_sha256": "985e65a704dd349d42f65adff98a63984f8b0548794f3aa75781b7500ffb12b4",
+      "after_sha256": "4a66f4206edb1c3831b7d3a8d2881870c73123f44ec4cbd1bea960b0cb618e4c"
+    },
+    {
+      "path": "evaluation/pairwise-calibration.md",
+      "before_sha256": "8b8605dcbba40fd900e71252584c3ff611c8ed7826c3f9d6f0d84f7b9b638797",
+      "after_sha256": "6cc32a1901d2a4e618d9038fe1bef2c7add5427de72467e8b3aef65e1e950915"
+    },
+    {
+      "path": "evaluation/retrieval-blind-spots.md",
+      "before_sha256": "3a72eaa2b029882a2e19d4e1967567278160a4d45b94ae1613b6e8c0882b1279",
+      "after_sha256": "587bfb166c73535764972c2a8f1dee47752e6b819e63fbdcd56ef76953147cdc"
+    },
+    {
+      "path": "guides/change-log.md",
+      "before_sha256": "16b63ac9315636befe5bc7a0269b2684201ec3ccfb040c0b8bcfa16373272305",
+      "after_sha256": "8c6287ef1e31ca14a2fb0e23ab67b323eb24dbac0c32f1013abca3215f323685"
+    },
+    {
+      "path": "guides/compare-and-experiment.md",
+      "before_sha256": "31e3a1ef411a83e21c6dd4a3ae25f9971d06759a449af4b51b69091b5d335019",
+      "after_sha256": "47d166044c9c1f48a6c6ada3e49cb3aead0adf868d02f3d4eb8e7bf87f3202c8"
+    },
+    {
+      "path": "guides/decision-coverage-matrix.md",
+      "before_sha256": "fc6777648768155ad062c3df9f7f3e8ff93cc12a076c0636f24ea655fe3b03cc",
+      "after_sha256": "3b375e6b61e290f1f541061c8e082ef336f86c289b691324e1666d4b044c1aa9"
+    },
+    {
+      "path": "guides/expansion-plan.md",
+      "before_sha256": "066ca000eabf687069aac99ae878d6318d4c5c2374c263bcdb40f885fffb635b",
+      "after_sha256": "e94dab8c63c7783520361b5e527af437e3656fb09ce3e464935cee072a79b4a0"
+    },
+    {
+      "path": "indexes/domains/10.md",
+      "before_sha256": "fc34f3d4cf8fdd5e52d692f6d7ac11cd84687731fea0f53c1b4fa8c7599e1869",
+      "after_sha256": "4cc38924b47e167a89a156692c0ce6b3672d33cab6db07e1d5ec2507f91bab0f"
+    },
+    {
+      "path": "indexes/domains/11.md",
+      "before_sha256": "026ff4ccddbe23e36a80ee31f083291c31305502df9226a35bb847d9d0e873dd",
+      "after_sha256": "29c7d2a303505a338f19f33210a5f1611b44b53695d6d27256a8505a729493a2"
+    },
+    {
+      "path": "indexes/domains/12.md",
+      "before_sha256": "f9c60a72d396ce540eaa66e16f432b4f39cbd34aa72f82d9516d23e37983d5f1",
+      "after_sha256": "6fa88c578ced4a5b53d1f2fabebb4a2518cdc1f8639abebe989a0713aed52b8a"
+    },
+    {
+      "path": "references/atlas-manifest.json",
+      "before_sha256": "e1ba6d7d46d2ae363d6f931f54ac1f2f0f213b1b77fa95f46c1144d44adb4bfe",
+      "after_sha256": "aaa794e6eca4fd00bb2e27bc404f7bd7274505dd7d0bfdb05728fdbb5bd108a5"
+    },
+    {
+      "path": "references/bibliography.md",
+      "before_sha256": "f97295c6d62f09c93d568cbde66f5bc1141e3aecd4d627e9382ed623e8f1412d",
+      "after_sha256": "073a85fd276aa06fdea16c0308a2e33d8b447d68190c3ef9efca6f825c4b847d"
+    },
+    {
+      "path": "references/research-notes.md",
+      "before_sha256": "74d1150db60118be0c3e81ac16892ce94276a0da9ea40876a725a3ea4b12d5dd",
+      "after_sha256": "01947f6976972e041f973049c7333b7512b25f39d632b053b05459b2539fd6ea"
+    },
+    {
+      "path": "references/retrieval-provenance.json",
+      "before_sha256": "4ea46b486864f16b52fb8708057c4d6ecb7298a04b90430dd8b60f768a686662",
+      "after_sha256": "56043a38e27d91652ac915603a90791ea2f13eaade541ef7366ec2a314324e81"
+    },
+    {
+      "path": "references/retrieval-status.json",
+      "before_sha256": "b946cfcda2b680ab760f019395dabe1d9780001f513b07f9727febcbbdedc18a",
+      "after_sha256": "a657a478dcfacac09ec3220864e2dc37e3f2b8b4b73a87dd812ede685964b1d1"
+    },
+    {
+      "path": "references/source-ledger.json",
+      "before_sha256": "0ae778d7b8bdb2707f99c285b418c8df35d42c6e14d185b25023796f60bde681",
+      "after_sha256": "8c527ac0c22b7aeaecf1070f4dca24841491a15ab4438d0848b76e3c1d705f2f"
+    },
+    {
+      "path": "solutions/ground-truth/independent-reference.md",
+      "before_sha256": "147e283e782e726f9e3dc980ce790d8625d394ac51fda82dc81fe7eb33560f3b",
+      "after_sha256": "14e4ffba6ffd8327a981196b5e8299802ee61d13e036bcafb322accc0a4f7011"
+    },
+    {
+      "path": "taxonomy/domains/10-ground-truth.md",
+      "before_sha256": "b4b20d867722aa7cef5552e81bac6f6250177d5d06ea21ab167155600905658d",
+      "after_sha256": "2f0a4b029365c593738b0015a2d9778e6ac0acbe750c06ba323b7a1dce90791b"
+    },
+    {
+      "path": "taxonomy/domains/11-evaluation-diagnostics.md",
+      "before_sha256": "eee7e7687d6a4c97c530e2cde6985da4780d8af2a4528014caf7dc8aee437162",
+      "after_sha256": "abd30ee02d1c8504852b9f3a88ed36dde33e122452309cc39ae55472c6b88e97"
+    },
+    {
+      "path": "taxonomy/domains/12-experimentation.md",
+      "before_sha256": "60f95c5e92d7c32feb1f555cab4bddaaa484a1684116917a9e04cb2066f9fbd5",
+      "after_sha256": "4c444c5a98bcd8bf7c382f50e831f62cdbac8bdfcb14855c08634dc792d452b4"
+    },
+    {
+      "path": "tools/README.md",
+      "before_sha256": "2a9708a7cfe65ed24e5a8588d7c0e488cc84b409bb3f4b95eaadbf6df5ddae50",
+      "after_sha256": "f7f493fda3c7533b320f9c5dc3773a3fff334dd5f5460ab5f1983d7f1c83f60c"
+    },
+    {
+      "path": "tools/atlas_docs.py",
+      "before_sha256": "7d72b97458184e05b0713ffc51f7481e18125dacf30909aa4b5c667d9a551f74",
+      "after_sha256": "6d3dd6036fa4f2fa58eb3c94334de2f347bc3bad052349bb2e0fdea269d20e93"
+    },
+    {
+      "path": "tools/test_atlas_docs.py",
+      "before_sha256": "4f04c71d53ed34b852274a6a0b5ac9df8e310f819ffa188e552e068e5e170214",
+      "after_sha256": "034467da09c1c0ec898a9da1d349786e3aacab72858ed1e8fc2431f575211666"
+    }
+  ],
+  "added": [
+    {
+      "path": "decisions/experiment-design.md",
+      "sha256": "e2ba7cb2c85991232972c871db7c867d22fd5913893e8df4219d5893f22cf8b4"
+    },
+    {
+      "path": "decisions/ground-truth-acquisition.md",
+      "sha256": "217a9b330fc339933907a336101978d828fba81702fd9b7b9169257b21ab2f57"
+    },
+    {
+      "path": "deep-dives/incomplete-reference-estimation.md",
+      "sha256": "d9cd583548171911eea001010a9bce2ae92ef20d2652fcd5b4d536f9594b1cf3"
+    },
+    {
+      "path": "evaluation/incomplete-reference-quality.md",
+      "sha256": "a6e13f89efcebfbb09c3c73d47236294eefbac9fe4b164808a9d5a6eddfd0850"
+    },
+    {
+      "path": "evaluation/synthetic-metamorphic.md",
+      "sha256": "fecbbcb40ccb32dd965f48748e5e755dee0d247c32dd812d577087fe4966aba1"
+    },
+    {
+      "path": "guides/er-behavioral-testing.md",
+      "sha256": "2d3c1fdbfe34b4e3acbe5e2f0b41afb0abdccd9bb43b71851e202c775f2cc5d9"
+    },
+    {
+      "path": "guides/experiment-plan-template.md",
+      "sha256": "aba4ad405eb77b748c1302fd67984ec8193e3c6ab35802e03351e47ca460d860"
+    },
+    {
+      "path": "guides/v1.2-expansion-tracker.md",
+      "sha256": "ce98cd48e23970daee23677696f95a1d401e202ec5398038e3e376b5182d321a"
+    },
+    {
+      "path": "guides/v1.2-wave-1-content-review.md",
+      "sha256": "cadcdd26c61b61cc8818cfbc5a75d3acd7a010a4d49c4bc68670a839a3e66a5e"
+    },
+    {
+      "path": "guides/v1.2-wave-1-handoff.md",
+      "sha256": "7977aec265a9cc92d75e4a06b01c6571447e8e780e761c3fba1d7ed392366159"
+    },
+    {
+      "path": "references/wave-1-evidence-notes.md",
+      "sha256": "e318df74613f85f8585d17e17566300ee2ae315496cbc247aed8166040ddb6d3"
+    },
+    {
+      "path": "solutions/experimentation/controlled-comparison.md",
+      "sha256": "83481ad7ee74d9731f71a87c7a3de29e5b205a06c50ae93fa11c76a7a5d647c5"
+    },
+    {
+      "path": "solutions/ground-truth/probability-sampled-review.md",
+      "sha256": "6fce991b19ab21563cd9ff6a3f26c25afefed54557110b2c74868db2056f002b"
+    },
+    {
+      "path": "solutions/ground-truth/targeted-active-review.md",
+      "sha256": "5c3668755b34eaddc2f2dd14c7a7dfed962e84389cf9dd4922cd4e363a12b824"
+    },
+    {
+      "path": "solutions/ground-truth/weak-supervision.md",
+      "sha256": "ce3c285eafa562d1fb8c537958d7526595157abe8040a0e06717ae4fdee9fbf4"
+    },
+    {
+      "path": "validation/v1.2/algebra-sanity-checks.json",
+      "sha256": "1cdcc424667b674d09a4b64f21e5a5eb6de01432432fe89ad83995fc42c04f94"
+    },
+    {
+      "path": "validation/v1.2/authorization.txt",
+      "sha256": "3ab0491a9de2e062034dd4fbf5549c5471bfea648c0979694ff225b491e2d7ab"
+    },
+    {
+      "path": "validation/v1.2/check_reference_algebra.py",
+      "sha256": "8a4be59f4cc73fd6b6385eea31664a770f271057abc50292683d83ab804aa8e2"
+    },
+    {
+      "path": "validation/v1.2/critique-acquisition-experiments.md",
+      "sha256": "3f7e4cc76fd73750233eb037a42395cb9d64095219878f3efcb5fe88f115cff2"
+    },
+    {
+      "path": "validation/v1.2/critique-estimation.md",
+      "sha256": "9a49b286e3ff37fca1060db88e6ee8d35fafaa19ff54684a2b841d7ff99f47ae"
+    },
+    {
+      "path": "validation/v1.2/pre-wave-1-v1.1.tar.gz",
+      "sha256": "865f6efbd0f807b38d4a092bc08170d5b4dd308076c92548024174213d3ad8bb"
+    },
+    {
+      "path": "validation/v1.2/wave-0-baseline.json",
+      "sha256": "c18e58a57b30c7c78d86e6943b274e3f93037717de7579dfc646f82da623e5f2"
+    }
+  ],
+  "deleted": [],
+  "protected_files_checked": 442,
+  "protected_changes": [],
+  "protected_additions": [],
+  "original_card_paths_preserved": 31,
+  "original_ledger_entries_preserved": 14,
+  "pre_wave_archive_sha256": "865f6efbd0f807b38d4a092bc08170d5b4dd308076c92548024174213d3ad8bb"
+}

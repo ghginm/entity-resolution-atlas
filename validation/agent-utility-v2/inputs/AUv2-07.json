@@ -1,0 +1,18 @@
+{
+  "cohort": "AU-v2",
+  "scenario_id": "AUv2-07",
+  "fictional": true,
+  "title": "Wetland specimen transfer ledger",
+  "background": "A fictional research consortium associates transfer records with the same preserved specimen. Collection lots may contain multiple specimens; a shared site or collector is not an identity guarantee.",
+  "observations": [
+    "The current candidate generator compares records within a source-qualified accession block. A broader proposal adds collector/date blocks that can become very large during annual field campaigns.",
+    "Operations has no general truth set. A small reviewed set contains pairs supplied by the current candidate generator; records without candidates were not sampled.",
+    "The trial report calls the proposal faster because it caps each broad block and reports only completed tasks. Some logical pairs are skipped by the cap, and some uncapped partitions fail with memory errors.",
+    "The team can either partition the same logical work more carefully, narrow candidate rules, or retain the current baseline while commissioning an audit. Storage for durable manifests is available."
+  ],
+  "constraints": [
+    "A false specimen history can invalidate later scientific attribution. Duplicate unresolved records are inconvenient but recoverable.",
+    "The requested deliverable is a plan, not a matching run. The consortium has not selected a permissible recall loss or spending limit."
+  ],
+  "request": "Advise how to make a fair quality/cost comparison and what claims the existing report supports, including an affordable next evidence step and release decision conditions."
+}

@@ -1,0 +1,90 @@
+{
+  "status": "interim-before-review",
+  "citations": [
+    {
+      "path": "architectures/incremental-continuous.md",
+      "exit_code": 0,
+      "diagnostic": ""
+    },
+    {
+      "path": "architectures/linear-modular.md",
+      "exit_code": 0,
+      "diagnostic": ""
+    },
+    {
+      "path": "decisions/pipeline-modularity.md",
+      "exit_code": 0,
+      "diagnostic": ""
+    },
+    {
+      "path": "decisions/resolution-strategy.md",
+      "exit_code": 0,
+      "diagnostic": ""
+    },
+    {
+      "path": "decisions/rule-composition.md",
+      "exit_code": 0,
+      "diagnostic": ""
+    },
+    {
+      "path": "evaluation/synthetic-metamorphic.md",
+      "exit_code": 0,
+      "diagnostic": ""
+    },
+    {
+      "path": "guides/decision-provenance.md",
+      "exit_code": 0,
+      "diagnostic": ""
+    },
+    {
+      "path": "guides/rule-policy-refactoring.md",
+      "exit_code": 0,
+      "diagnostic": ""
+    },
+    {
+      "path": "guides/run-manifest-template.md",
+      "exit_code": 0,
+      "diagnostic": ""
+    },
+    {
+      "path": "references/bibliography.md",
+      "exit_code": 0,
+      "diagnostic": ""
+    },
+    {
+      "path": "references/wave-2-evidence-notes.md",
+      "exit_code": 0,
+      "diagnostic": ""
+    },
+    {
+      "path": "solutions/architecture/replaceable-stage-pipelines.md",
+      "exit_code": 0,
+      "diagnostic": ""
+    },
+    {
+      "path": "solutions/architecture/versioned-artifact-runs.md",
+      "exit_code": 0,
+      "diagnostic": ""
+    },
+    {
+      "path": "solutions/decision-resolution/declarative-decision-tables.md",
+      "exit_code": 0,
+      "diagnostic": ""
+    },
+    {
+      "path": "solutions/decision-resolution/ordered-rule-policies.md",
+      "exit_code": 0,
+      "diagnostic": ""
+    },
+    {
+      "path": "solutions/decision-resolution/thresholds-abstention.md",
+      "exit_code": 0,
+      "diagnostic": ""
+    }
+  ],
+  "protected_files_checked": 451,
+  "protected_changes": [],
+  "historical_ID_paths_preserved": 39,
+  "historical_ledger_entries_preserved": 22,
+  "snapshot_sha256": "8bd4960681d4f2adfd4fea200e85d716ed9cddffdc235e52ea569d1ae1852f99"
+}

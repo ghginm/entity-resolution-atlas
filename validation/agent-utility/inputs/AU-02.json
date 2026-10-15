@@ -1,0 +1,17 @@
+{
+  "scenario_id": "AU-02",
+  "title": "The recall dashboard with invisible pairs",
+  "fictional": true,
+  "known_project_facts": {
+    "project": "A spare-parts distributor links vendor catalog rows to stocked physical part specifications, not interchangeable substitutes.",
+    "current_pipeline": "Pairs sharing a normalized manufacturer code enter scoring. Reviewers label 2400 pairs drawn only from this pool; a pair-random split reports 96% recall.",
+    "observations": "Acquired vendors often omit manufacturer codes, and some write package-size codes in that field. Support tickets identify valid links outside the candidate pool but are not systematically labeled.",
+    "constraints": "A new retrieval pass might expose many new negatives. Labeling budget is 250 entity-centered investigations. Large exhaustive cross-products are infeasible. Final deliverable is a link table; downstream substitution rules are separate."
+  },
+  "explicitly_unknown": [
+    "How representative are stock items and vendors in the labels?",
+    "What is the operational match definition for package variants?",
+    "What are recall, workload and cost targets outside the selected pool?"
+  ],
+  "task": "Produce a defensible project-specific ER experiment/design recommendation using selectively retrieved Atlas knowledge if available. Do not implement ER or change production. Separate facts, assumptions, uncertainties, mechanisms and proposed evidence."
+}

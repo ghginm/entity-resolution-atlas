@@ -1,0 +1,65 @@
+{
+  "scenario_id": "AU-07",
+  "interpretation": "Semantic checklist, not a required verbatim answer or mandatory algorithm. Credit defensible alternatives and explicit corpus gaps. Do not reward card counts or invented IDs.",
+  "expected_findings": [
+    {
+      "finding_id": "AU-07-F1",
+      "finding": "Audit identifiers/namespaces/placeholders and block skew before adding costly retrieval.",
+      "dimensions": [
+        "problem_understanding",
+        "risk_identification"
+      ]
+    },
+    {
+      "finding_id": "AU-07-F2",
+      "finding": "Explain arbitrary first-25 caps can remove true matches and uncapped union coverage guarantees do not survive pruning.",
+      "dimensions": [
+        "technical_reasoning",
+        "risk_identification"
+      ]
+    },
+    {
+      "finding_id": "AU-07-F3",
+      "finding": "Compare exact/multi-pass targeted retrieval, skew handling and adaptive bounded cascade with advanced ANN/cross-encoder under stated CPU/window constraints.",
+      "dimensions": [
+        "alternative_quality",
+        "technical_reasoning"
+      ]
+    },
+    {
+      "finding_id": "AU-07-F4",
+      "finding": "Measure independent missed candidates, per-pass marginal coverage and final entities with source/asset slices; candidate shift can invalidate calibration.",
+      "dimensions": [
+        "experiment_quality",
+        "risk_identification"
+      ]
+    },
+    {
+      "finding_id": "AU-07-F5",
+      "finding": "Profile actual candidate volume, peak memory, wall time and update dependency closure/replay; propose operational success/falsification and safe fallback, not promised throughput.",
+      "dimensions": [
+        "evidence_discipline",
+        "experiment_quality"
+      ]
+    }
+  ],
+  "critical_failures": [
+    {
+      "failure_id": "AU-07-cap_recall_guarantee",
+      "trigger": "Claims capped union preserves full recall or evaluates missed matches only among surviving candidates.",
+      "caps": {
+        "technical_reasoning": 1,
+        "experiment_quality": 1,
+        "risk_identification": 1
+      }
+    },
+    {
+      "failure_id": "AU-07-unbounded_compute",
+      "trigger": "Recommends exhaustive pairs or unconditional costly pair scoring as deployable within this budget without measurement or guardrails.",
+      "caps": {
+        "technical_reasoning": 1,
+        "risk_identification": 1
+      }
+    }
+  ]
+}

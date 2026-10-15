@@ -1,0 +1,44 @@
+{
+  "cohort": "AU-v2",
+  "access": "evaluator-only",
+  "purpose": "Authoring coverage map only; never a solver hint or score aggregate. Created before any response or evaluation.",
+  "cases": {
+    "AUv2-01": [
+      "incomplete/no-label denominators",
+      "cost/recall versus physical completion"
+    ],
+    "AUv2-02": [
+      "source shift/source-aware scoring",
+      "weak-label circularity"
+    ],
+    "AUv2-03": [
+      "rule conflicts/shadowing",
+      "weak-label circularity"
+    ],
+    "AUv2-04": [
+      "graph bridge contamination",
+      "source shift/source-aware scoring",
+      "incomplete denominators"
+    ],
+    "AUv2-05": [
+      "reversible out-of-order/delete maintenance",
+      "graph bridge contamination"
+    ],
+    "AUv2-06": [
+      "modular stage contracts/reproducible comparisons",
+      "cost/recall versus physical completion",
+      "incomplete denominators"
+    ],
+    "AUv2-07": [
+      "incomplete/no-label denominators",
+      "cost/recall versus physical completion"
+    ],
+    "AUv2-08": [
+      "source shift/source-aware scoring",
+      "weak-label circularity",
+      "rule conflicts/shadowing",
+      "reversible out-of-order/delete maintenance",
+      "modular stage contracts/reproducible comparisons"
+    ]
+  }
+}

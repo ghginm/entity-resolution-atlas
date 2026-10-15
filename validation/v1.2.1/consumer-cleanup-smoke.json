@@ -1,0 +1,938 @@
+{
+  "scope": "Observed subagent navigation smoke tests, not empirical utility benchmark, independent scientific review or model-isolation certification. Tools were instructed but not sandbox-restricted. Inherited system/project context and tool wrappers are not included in text-cost counts.",
+  "metric": "Exact returned file-content UTF8 bytes and whitespace words; not model input/billed tokens. Entry and route included.",
+  "initial_attempts": [
+    {
+      "reads": [
+        {
+          "path": "START_HERE.md",
+          "start_line": 1,
+          "end_line": 38,
+          "bytes": 3522,
+          "words": 408,
+          "sha256": "4e5ac2f782894323d9fb63f0bfc0a3211fbe3af8f480362d421317b776d27af0",
+          "identical_to_final_release": true
+        },
+        {
+          "path": "indexes/tasks/no-labels.md",
+          "start_line": 1,
+          "end_line": 25,
+          "bytes": 2412,
+          "words": 213,
+          "sha256": "6d4fbb6394a473842a61884e6ad0d91500cc9c6f12fc8a303545030efe139113",
+          "identical_to_final_release": true
+        },
+        {
+          "path": "decisions/ground-truth-acquisition.md",
+          "start_line": 1,
+          "end_line": 87,
+          "bytes": 9245,
+          "words": 1105,
+          "sha256": "217a9b330fc339933907a336101978d828fba81702fd9b7b9169257b21ab2f57",
+          "identical_to_final_release": true
+        },
+        {
+          "path": "evaluation/incomplete-reference-quality.md",
+          "start_line": 1,
+          "end_line": 86,
+          "bytes": 8793,
+          "words": 1051,
+          "sha256": "a6e13f89efcebfbb09c3c73d47236294eefbac9fe4b164808a9d5a6eddfd0850",
+          "identical_to_final_release": true
+        },
+        {
+          "path": "solutions/ground-truth/probability-sampled-review.md",
+          "start_line": 1,
+          "end_line": 89,
+          "bytes": 10479,
+          "words": 1295,
+          "sha256": "6fce991b19ab21563cd9ff6a3f26c25afefed54557110b2c74868db2056f002b",
+          "identical_to_final_release": true
+        },
+        {
+          "path": "solutions/ground-truth/targeted-active-review.md",
+          "start_line": 1,
+          "end_line": 91,
+          "bytes": 10828,
+          "words": 1321,
+          "sha256": "5c3668755b34eaddc2f2dd14c7a7dfed962e84389cf9dd4922cd4e363a12b824",
+          "identical_to_final_release": true
+        },
+        {
+          "path": "solutions/experimentation/controlled-comparison.md",
+          "start_line": 1,
+          "end_line": 89,
+          "bytes": 10225,
+          "words": 1166,
+          "sha256": "83481ad7ee74d9731f71a87c7a3de29e5b205a06c50ae93fa11c76a7a5d647c5",
+          "identical_to_final_release": true
+        },
+        {
+          "path": "guides/project-atlas-integration.md",
+          "start_line": 1,
+          "end_line": 92,
+          "bytes": 5210,
+          "words": 627,
+          "sha256": "6aa1d18635d2aef1c389fb0ee8ba05c7ba83ba093cddc0626ce6b511b9e1119c",
+          "identical_to_final_release": true
+        }
+      ],
+      "selected_ids": [
+        {
+          "id": "DEC-10-001",
+          "path": "decisions/ground-truth-acquisition.md",
+          "role": "Choose evidence acquisition for an identifiable quality claim, not just label yield."
+        },
+        {
+          "id": "SOL-10-002",
+          "path": "solutions/ground-truth/probability-sampled-review.md",
+          "role": "Independent probability-review baseline and protected evaluation reserve."
+        },
+        {
+          "id": "SOL-10-003",
+          "path": "solutions/ground-truth/targeted-active-review.md",
+          "role": "Separate targeted diagnostic alternative under limited review capacity."
+        },
+        {
+          "id": "EVAL-11-005",
+          "path": "evaluation/incomplete-reference-quality.md",
+          "role": "Constrain estimates, bounds and diagnostics to actual evidence support."
+        },
+        {
+          "id": "SOL-12-001",
+          "path": "solutions/experimentation/controlled-comparison.md",
+          "role": "Frozen, paired onboarding comparison with independent evidence."
+        }
+      ],
+      "recommendation": {
+        "decision": "Use DEC-10-001 with SOL-10-002 and EVAL-11-005: reserve scarce authorized review for a small, reproducible probability audit before claiming onboarding worsened organization ER. Supplement, rather than replace, that audit with SOL-10-003 disagreement/risk reviews. Current evidence cannot establish a quality change.",
+        "known": "Hypothetical supplied facts only: organization ER uses exact registration IDs plus name/address candidates; no representative labeled sample; limited authorized manual review; question concerns deterioration after source onboarding.",
+        "assumed": "No identity authority, calibration, namespace validity, complete entity truth or reproducible historical configuration is assumed. Any replay is conditional on authorized snapshots and settled semantics.",
+        "proposed": "Keep candidate topology, existing scoring, resolution policy and lifecycle behavior unchanged except the declared source-onboarding intervention. Freeze their versions separately; review evidence is not permission to retrain, merge, publish or roll back production.",
+        "testable": "A paired shadow comparison under SOL-12-001 becomes testable after the population, reproducible configurations, semantics and review design are confirmed.",
+        "proven": "No ER accuracy, deterioration, improvement or measured review efficiency is proven; this is navigation smoke evidence only."
+      },
+      "baseline": {
+        "system": "Frozen pre-onboarding configuration/state, if reproducible; compare on a common old-record population for the effect on existing organizations. Old-only operation is not a comparator for new-source matching capability.",
+        "acquisition": "SOL-10-002: probability-sampled independent review from declared frames, with written match/nonmatch/unknown rules, logged positive inclusion probabilities, evidence provenance and a prespecified second-review subsample. Protect evaluation from later learning.",
+        "costs_and_failures": "Uniform/proportional review is transparent but may exhaust limited review on easy nonmatches; rare matches, unresolved evidence, extreme weights or omitted strata can make conclusions inconclusive."
+      },
+      "alternative": {
+        "system": "Frozen post-onboarding configuration on the same supported old-record units, plus a separately scoped audit of new-source outputs.",
+        "acquisition": "SOL-10-003: use a separate diagnostic allocation for registration-ID versus name/address disagreements, new-source conflicts and consequential membership changes if such outputs exist. Compare targeted versus uniform acquisition only at matched evidence access and total review cost, using a protected audit rather than targeted labels as truth.",
+        "prerequisites_and_failures": "Requires authorized resolvable evidence and stable identity rules. Count search, abstention, re-review and adjudication costs. Selective yield cannot estimate prevalence; agreement can hide shared blind spots, and registration-ID agreement is not independent gold truth. No active-learning benefit is claimed."
+      },
+      "evaluation": {
+        "owner": "EVAL-11-005; comparison protocol SOL-12-001.",
+        "contrast_and_controls": "Freeze record/source/reference snapshots, namespaces, eligibility and time scope; version candidate generation, ID rules, scoring, resolution and lifecycle state. Use the same independently reviewed units for supported pre/post contrasts. Separate source-mix change from within-old-population deterioration; do not compare unadjusted aggregate pre/post rates with different denominators. Do not force identical candidate pools when measuring the full onboarding intervention.",
+        "frames_and_denominators": "Define semantic pairspace U and each arm's asserted pairs A intersected with U. For partition outputs, A includes induced co-memberships, not just scored edges. Sample across the union of arms' accepted outputs with known support to estimate each arm's precision. Population recall requires review support throughout U, including outside both candidate pools and a residual stratum; candidate-only review cannot identify it. Report new-source slices separately. Entity-quality claims require independently complete membership evidence and are deferred here.",
+        "review_and_split": "Declare strata before final annotation, covering old/old and new-source interactions, ID/name-address disagreements, missingness and candidate status as applicable. Preserve all selection and response dispositions, unknowns and reviewer evidence; blind system predictions where feasible. Audit entity/context leakage; keep final review inaccessible to tuning and targeted acquisition.",
+        "metrics_and_uncertainty": "Report weighted false-assertion/precision estimates only where design and outcomes support them, paired differences, slice coverage, unresolved mass, review cost and diagnostic error discoveries. Recall remains unsupported unless its wider frame is feasible. Follow actual strata/stages and paired sampling design for uncertainty; assess reviewer error and unresolved-outcome sensitivity separately. No observed errors is not zero risk; no numeric results or thresholds are invented.",
+        "criteria_and_next_decision": "Owner must predeclare practical deterioration margins, decision-precision targets and high-harm/cost limits. Supported deterioration beyond the margin or unacceptable harm warrants an authorized mitigation investigation, not an automatic rollback. Supported non-deterioration within declared guardrails can support only the scoped continuation decision, not universal safety. Wide intervals, zero-support slices or conclusions reversible by unresolved labels are inconclusive: collect the smallest additional authorized evidence or narrow the claim. Current outcome is inconclusive; no experiment was executed."
+      },
+      "unknowns": [
+        {
+          "question": "What organization identity, registration-ID namespace/authority and temporal validity rules define a match?",
+          "owner": "Domain/data owner",
+          "collection": "Written semantic contract and authorized examples",
+          "stop_consequence": "Do not adjudicate or assert a quality estimate until hard semantics are settled."
+        },
+        {
+          "question": "Are reproducible pre/post outputs, historical state and comparable snapshots available, and are outputs links or partitions?",
+          "owner": "ER implementation owner",
+          "collection": "Authorized version/snapshot inventory outside this smoke test",
+          "stop_consequence": "No attributable pre/post comparison or final-entity claim without the required artifacts."
+        },
+        {
+          "question": "What review hours, evidence access, response process and source-slice support are feasible?",
+          "owner": "Review/access owner",
+          "collection": "Bounded authorized sampling feasibility check",
+          "stop_consequence": "Retain unknowns; narrow the estimand or remain diagnostic-only when support is absent."
+        },
+        {
+          "question": "What deterioration margin, false-merge harm and downstream lifecycle/rollback constraints matter?",
+          "owner": "Decision/risk owner",
+          "collection": "Predeclared acceptance and safety contract",
+          "stop_consequence": "No adoption or production recommendation before guardrails and authority are confirmed."
+        }
+      ],
+      "stop_reason": "The no-labels route resolved the decision, credible baseline, targeted alternative, prerequisites, failure modes and incomplete-reference evaluation. Controlled-comparison and integration cards supplied the onboarding contrast and output contract. Further cards would not change this bounded acquisition-first recommendation; interval formulas and complete entity evaluation are deferred until a feasible design is chosen.",
+      "limitations": [
+        "Consumer navigation smoke test only, not benchmark or quality evaluation; no corpus scan, project implementation inspection, external references, tests, metrics or production actions.",
+        "All tool-backed evidence reads were confined to fresh-a and are listed above with exact whole-file ranges. No AGENTS file was read with tools; the parent supplied an AGENTS excerpt as binding context, not as inspected consumer evidence.",
+        "Canonical paths in selected_ids are relative to .",
+        "The supplied scenario is hypothetical, not an actual user project; implementation facts and measurements remain unavailable.",
+        "Only this JSON output was created; Atlas literature support is not project validation."
+      ],
+      "case": "no-labels",
+      "attempt": "initial",
+      "file_reads": 8,
+      "distinct_files": 8,
+      "retrieved_bytes": 60714,
+      "retrieved_words": 7186,
+      "observed_read_calls_reconciled": true,
+      "tool_log_sha256": "72b4d4d2c5370bdd7de00ec4d61c1384c1e714ffe1297a9e2e21da93f77daf48",
+      "retrieval_content_matches_final_release": true
+    },
+    {
+      "reads": [
+        {
+          "path": "START_HERE.md",
+          "start_line": 1,
+          "end_line": 38,
+          "bytes": 3522,
+          "words": 408,
+          "sha256": "4e5ac2f782894323d9fb63f0bfc0a3211fbe3af8f480362d421317b776d27af0",
+          "identical_to_final_release": true
+        },
+        {
+          "path": "indexes/tasks/graph.md",
+          "start_line": 1,
+          "end_line": 26,
+          "bytes": 2465,
+          "words": 223,
+          "sha256": "4c0e16412b76447fdc768ef4f074a4828d2cc0b6c7d1d6698781a7ba5add5193",
+          "identical_to_final_release": true
+        },
+        {
+          "path": "decisions/resolution-strategy.md",
+          "start_line": 1,
+          "end_line": 90,
+          "bytes": 8668,
+          "words": 1007,
+          "sha256": "9c73cc4144a7e81bcf45cc7ecd742b2916705a4a0d3fb69f365eb34e3bf5a712",
+          "identical_to_final_release": true
+        },
+        {
+          "path": "solutions/decision-resolution/connected-components.md",
+          "start_line": 1,
+          "end_line": 98,
+          "bytes": 10347,
+          "words": 1300,
+          "sha256": "20ed4658a26240569a7163c1281c9d2fe24f975f8aa65da79d1ccb0824e7360a",
+          "identical_to_final_release": true
+        },
+        {
+          "path": "solutions/decision-resolution/constrained-clustering.md",
+          "start_line": 1,
+          "end_line": 92,
+          "bytes": 10972,
+          "words": 1327,
+          "sha256": "abe552afb59d62e51b7db48174e071b34051458c68525ce21042b7dc9c997217",
+          "identical_to_final_release": true
+        },
+        {
+          "path": "evaluation/entity-resolution-quality.md",
+          "start_line": 1,
+          "end_line": 75,
+          "bytes": 9768,
+          "words": 1161,
+          "sha256": "5c670587e596de5e56e618d1ef80fdf7cad1d88d758ead3bbda1ce6b1b487620",
+          "identical_to_final_release": true
+        },
+        {
+          "path": "decisions/identity-semantics.md",
+          "start_line": 1,
+          "end_line": 84,
+          "bytes": 7368,
+          "words": 895,
+          "sha256": "87a5a25bd60bf156f18e30e8aa0bad6a9b7fed033c99857e78fd11a9d522b552",
+          "identical_to_final_release": true
+        },
+        {
+          "path": "guides/project-atlas-integration.md",
+          "start_line": 1,
+          "end_line": 92,
+          "bytes": 5210,
+          "words": 627,
+          "sha256": "6aa1d18635d2aef1c389fb0ee8ba05c7ba83ba093cddc0626ce6b511b9e1119c",
+          "identical_to_final_release": true
+        }
+      ],
+      "selected_ids": [
+        {
+          "id": "DEC-08-001",
+          "path": "decisions/resolution-strategy.md",
+          "role": "Choose edge admission separately from entity membership; prioritize entity-level false-merge harm."
+        },
+        {
+          "id": "SOL-08-003",
+          "path": "solutions/decision-resolution/connected-components.md",
+          "role": "Current closure baseline, bridge diagnostics, selective verification and bounded repair."
+        },
+        {
+          "id": "SOL-08-004",
+          "path": "solutions/decision-resolution/constrained-clustering.md",
+          "role": "Conditional fixed-edge whole-union constrained-membership alternative."
+        },
+        {
+          "id": "EVAL-11-003",
+          "path": "evaluation/entity-resolution-quality.md",
+          "role": "Unlabeled diagnostics now; independent entity-quality evaluation when references exist."
+        },
+        {
+          "id": "DEC-01-001",
+          "path": "decisions/identity-semantics.md",
+          "role": "Required semantic prerequisite for treating person links and constraints as strict same-as."
+        }
+      ],
+      "recommendation": {
+        "decision": "Under DEC-08-001 (decisions/resolution-strategy.md), retain SOL-08-003 (solutions/decision-resolution/connected-components.md) as the comparator, not a demonstrated accurate policy. Propose reversible shadow diagnosis and independent adjudication of high-exposure new-source links before selecting an edge-admission change. Consider SOL-08-004 (solutions/decision-resolution/constrained-clustering.md) only after trustworthy whole-union restrictions are established through DEC-01-001 (decisions/identity-semantics.md). Evaluate using EVAL-11-003 (evaluation/entity-resolution-quality.md). Do not select a production winner without evidence.",
+        "contamination_hypothesis": "The new source may introduce erroneous accepted links whose transitive closure joins different people. Giant entities and bridges locate suspicious decisions but cannot establish this mechanism: legitimate sparse chains have bridges, and dense erroneous unions need not have any.",
+        "evidence_states": {
+          "known": "Scenario inputs only: person ER currently uses connected components of accepted pair links; a new source creates giant entities and bridges; no verified cluster labels exist; false merges have high harm; reversible shadow analysis is authorized and production mutations are not. No project implementation or dataset was inspected.",
+          "assumed": "Strict same-person equivalence, eligible records, source namespaces and temporal scope remain provisional until a domain owner confirms them. No unique-within-source, calibrated-probability, cannot-link or must-link premise is assumed.",
+          "proposed": "Versioned shadow comparison with independent record/candidate/score controls and distinct admission and membership experiments.",
+          "testable": "Graph topology and sensitivity can be diagnosed on authorized snapshots; entity accuracy becomes testable only with appropriate independently adjudicated references and sampling design. These analyses were not executed in this navigation smoke test.",
+          "proven": "Only consumer navigation and this bounded decision note were completed. No ER improvement, operating point or production suitability is proven."
+        },
+        "independent_choices": {
+          "topology": "Freeze eligible records and candidate topology for controlled resolver comparisons. Treat changed candidate retrieval as a separate experiment; missing pairs stay unknown.",
+          "scoring": "Freeze score artifacts, provenance and score meanings. Do not reinterpret score margins as probabilities or cluster confidence.",
+          "resolution": "Separate changing admitted edges followed by unchanged closure from keeping admitted edges fixed and changing the membership policy.",
+          "lifecycle": "Preserve baseline edge and membership versions and separate persistent entity IDs from component labels. Production publication, master-field recomputation and live replay are outside authority. Any later authorized repair must recompute affected connectivity across all remaining paths, check memberships and downstream fields, and preserve history rather than deleting a convenient spanning-tree edge."
+        },
+        "smallest_next_step": "Subject to existing evidence-access permission and confirmed semantics, make a reversible shadow snapshot with source and acceptance provenance; summarize size tails, bridge exposure and new-source growth; queue a bounded, independently adjudicated review sample including true-chain and dense-union counterexamples. Review requiring additional data access needs separate permission."
+      },
+      "baseline": {
+        "id": "SOL-08-003",
+        "path": "solutions/decision-resolution/connected-components.md",
+        "configuration": "Existing accepted-edge policy followed by connected components on a fixed eligible record universe, including isolated records; preserve unresolved status where appropriate.",
+        "mechanism": "Every accepted path induces co-membership, even for unscored endpoints. Closure cannot use contrary evidence once links are accepted.",
+        "prerequisites": "Audited same-as semantics and time scope, stable identifiers and edge provenance, no ignored mandatory restrictions.",
+        "costs_and_failures": "Transparent fixed-graph traversal but potentially large false-merge amplification; missing paths can fragment people. Edge deletion may not split a component because alternate paths remain; union-only state cannot undo merges."
+      },
+      "alternative": [
+        {
+          "name": "Selective verification and conservative edge admission followed by unchanged connected components",
+          "basis_id": "SOL-08-003",
+          "path": "solutions/decision-resolution/connected-components.md",
+          "intervention": "Change admission only: under a predeclared review budget, independently verify high-exposure links and defer unresolved admissions in shadow. Keep records, candidates, scores and closure rule fixed. Any threshold sensitivity arm is a separate admission-policy comparison.",
+          "prerequisites": "Edge provenance, score semantics, independent adjudication, review budget and explicit unresolved-state policy.",
+          "costs_and_failures": "Review cost and added latency; false deferrals can break legitimate chains. Targeted review yield is not population precision. Smaller components, fewer bridges or fewer contradictions are not evidence of improved accuracy."
+        },
+        {
+          "name": "Conservative sorted feasible merging with audited whole-union constraints",
+          "basis_id": "SOL-08-004",
+          "path": "solutions/decision-resolution/constrained-clustering.md",
+          "intervention": "Change membership only on the same fixed admitted-edge evidence and scores. Initialize audited must-link closure, reject infeasible initial groups, then process optional merges with declared ordering and tie rules; veto a proposed union if any whole-cluster hard restriction fails. This is not connected components on a pruned-edge graph and not merely an admission threshold change.",
+          "prerequisites": "Confirmed DEC-01-001 identity contract; independently validated restrictions with owners, provenance and time scope. No such restrictions are established by the scenario, so this arm is conditional, not ready for deployment.",
+          "costs_and_failures": "Constraint auditing and whole-union checks add work; greedy order affects results; bad restrictions systematically undermerge. Same-source membership, weak identifier mismatches, absent candidates and low scores do not automatically establish cannot-links. Constraint satisfaction alone is not accuracy. A soft partition objective is a further possible comparison, not justified complexity at this stage."
+        }
+      ],
+      "evaluation": {
+        "id": "EVAL-11-003",
+        "path": "evaluation/entity-resolution-quality.md",
+        "status": "Plan only; no graph computation, adjudication, benchmark or quality evaluation was run.",
+        "controls": "Use identical eligible records, identity/time semantics, candidate and score versions. Run the admission intervention separately from fixed-edge membership intervention; freeze audited constraints within membership comparisons. Log configuration, deterministic ties, resource use and review budget. Do not tune thresholds on the final holdout.",
+        "without_labels": "Report component-size tails, bridge/articulation exposure, source mixtures, growth, contradictions, score-margin sensitivity, refusal attribution, review coverage and cost with explicit denominators. These diagnose fragility, not identity precision/recall. Compare true sparse-chain and dense-incorrect-union witnesses as behavioral checks only, not population evidence.",
+        "label_acquisition_and_split": "Seek independent adjudication that distinguishes same, different and unknown within the declared person/time scope. Keep risk-targeted cases for mechanism diagnosis separate from a probability-based acquisition design for population claims. For accuracy estimates obtain a complete reference partition on a bounded universe or fully resolved sampled entities with design-aware estimators, inspecting predicted-cluster intersections and omissions. Split whole entities from tuning for new-identity transfer, or use later observations with admissible historical state for continuation. If labels remain partial, report only supported bounds or case-specific outcomes; do not label unknown cross-boundary pairs negative.",
+        "metrics": "When supported by reference coverage: induced-pair precision/recall, record-averaged B-cubed with stated denominators, fragmentation, foreign-record contamination, largest supported erroneous merge, affected records, application-weighted harm, review cost and membership churn. Count distinct swallowed identities only if foreign membership is adjudicated or bounded. Include source/new-source and component-risk slices rather than averages alone.",
+        "uncertainty": "Use paired design-aware comparisons respecting entity/cluster dependence, strata and weights; not an iid pair bootstrap. Explicitly report reference coverage, unknowns and limited support for rare catastrophic events.",
+        "success_and_falsification": "Before outcome inspection, domain owners must set practical false-merge-harm improvement margins, catastrophic-error limits and denominators, acceptable fragmentation/recall loss and review cost. Do not invent numerical thresholds. Improvement requires independently supported reduced entity harm with guardrails met, not just smaller graphs. Increased fragmentation, persistent verified contamination or gains disappearing under representative adjudication falsify the corresponding benefit claim.",
+        "next_decisions": "Positive evidence supports only the measured shadow scope and a request for explicit further authorization, never automatic production mutation. Negative evidence favors retaining the comparator or revising the mechanism. Inconclusive evidence requires targeted evidence acquisition or a narrower bounded claim, not a complex resolver winner.",
+        "guardrails": "No live edge removals, entity splits, ID changes, master-field changes or publication. Quarantine unresolved hard-constraint conflicts in shadow; stop before high-harm or irreversible effects."
+      },
+      "unknowns": [
+        {
+          "question": "What exact person identity, source-row roles, namespaces, identifier reuse and time scope apply?",
+          "owner": "Domain and source owners",
+          "collection": "Obtain adjudication examples and semantic contracts",
+          "consequence": "Do not promote constraints or identity-policy changes before this is settled."
+        },
+        {
+          "question": "Which admitted edges and source mechanisms cause suspect unions, and what do their scores mean?",
+          "owner": "Pipeline and source owners",
+          "collection": "Authorized versioned snapshot, edge provenance and independent case review",
+          "consequence": "No causal or accuracy claim from graph growth alone."
+        },
+        {
+          "question": "Are any must/cannot-links or source/type/time restrictions genuinely mandatory?",
+          "owner": "Constraint/domain owner",
+          "collection": "Audit provenance and whole-union consistency",
+          "consequence": "Fixed-edge constrained membership remains conditional; conflicts require diagnosis, not silently dropped restrictions."
+        },
+        {
+          "question": "What label design, review budget, harm margins and catastrophic-error denominator are feasible?",
+          "owner": "Evaluation and downstream risk owners",
+          "collection": "Predeclare acquisition, costs and guardrails",
+          "consequence": "No population precision/recall or winner selection without adequate reference support."
+        },
+        {
+          "question": "How are persistent IDs, downstream masters and correction replay versioned?",
+          "owner": "Lifecycle and downstream owners",
+          "collection": "Obtain consumer and rollback contracts before any later implementation",
+          "consequence": "Production repair remains blocked regardless of shadow diagnostic results."
+        }
+      ],
+      "stop_reason": {
+        "discovery": "Stopped after the graph task route, resolution decision, baseline, conditional membership alternative, evaluation, required identity prerequisite and integration template supplied the bounded decision, comparison, failure modes and explicit unknowns. Skipped catalog, domain indexes, unrelated routes and deep dives; additional technical documents would not resolve missing project facts or labels.",
+        "action": "Stop at this recommendation. Only reversible shadow analysis is hypothetically authorized; this task authorizes navigation and one JSON output, not actual project analysis or production changes. Stop any later policy promotion on unsettled semantics, unaudited or conflicting constraints, unavailable evidence access, unverified correction closure or unresolved irreversible harm."
+      },
+      "limitations": [
+        "Navigation smoke test only, not a benchmark or Atlas quality/utility evaluation.",
+        "All evidence reads were restricted to the fresh-a consumer package and are enumerated above; no Atlas source repository, validators, tests, keys, evaluator or historical reports were accessed.",
+        "Project behavior and authorization are hypothetical scenario inputs, not verified real-project facts. No project source or data was inspected.",
+        "Canonical paths in selected_ids are relative to <consumer-package>; read-trace paths are absolute.",
+        "No verified cluster labels, measured quality results, calibrated probabilities, proven constraints or production repair readiness are available.",
+        "Literature and Atlas mechanisms inform proposals but do not establish transferable project accuracy. The only created artifact is this JSON recommendation."
+      ],
+      "case": "graph",
+      "attempt": "initial",
+      "file_reads": 8,
+      "distinct_files": 8,
+      "retrieved_bytes": 58320,
+      "retrieved_words": 6948,
+      "observed_read_calls_reconciled": true,
+      "tool_log_sha256": "664bc3586865efb79454ca47ac267991626d725d49a5efbb53ffe9d19fe16c79",
+      "retrieval_content_matches_final_release": true
+    },
+    {
+      "reads": [
+        {
+          "path": "START_HERE.md",
+          "start_line": 1,
+          "end_line": 38,
+          "bytes": 3522,
+          "words": 408,
+          "sha256": "4e5ac2f782894323d9fb63f0bfc0a3211fbe3af8f480362d421317b776d27af0",
+          "identical_to_final_release": true
+        },
+        {
+          "path": "indexes/tasks/blocking.md",
+          "start_line": 1,
+          "end_line": 26,
+          "bytes": 2441,
+          "words": 212,
+          "sha256": "a33f0621c412c8495c3fe290dda35e30650c04916bf4832903e9276b91107851",
+          "identical_to_final_release": true
+        },
+        {
+          "path": "decisions/candidate-strategy.md",
+          "start_line": 1,
+          "end_line": 63,
+          "bytes": 6487,
+          "words": 782,
+          "sha256": "ea4cd74a9e0c80223f6a3fee66a58b993751296348a558f66a16f15da67ab628",
+          "identical_to_final_release": true
+        },
+        {
+          "path": "decisions/execution-strategy.md",
+          "start_line": 1,
+          "end_line": 132,
+          "bytes": 7246,
+          "words": 872,
+          "sha256": "17a0bc3258e89888dd68a98c2695c7ce339640f851f5a02e39ce06cf84a822c7",
+          "identical_to_final_release": true
+        },
+        {
+          "path": "guides/project-atlas-integration.md",
+          "start_line": 1,
+          "end_line": 92,
+          "bytes": 5210,
+          "words": 627,
+          "sha256": "6aa1d18635d2aef1c389fb0ee8ba05c7ba83ba093cddc0626ce6b511b9e1119c",
+          "identical_to_final_release": true
+        },
+        {
+          "path": "solutions/scalability/skew-aware-execution.md",
+          "start_line": 1,
+          "end_line": 172,
+          "bytes": 9295,
+          "words": 1134,
+          "sha256": "d9b27bd7a2a2291cd6dbffee5d9f912903288f79881e819ec4276ce84622e06d",
+          "identical_to_final_release": true
+        },
+        {
+          "path": "evaluation/execution-cost-replay.md",
+          "start_line": 1,
+          "end_line": 161,
+          "bytes": 8766,
+          "words": 1034,
+          "sha256": "b943577011db83dc4f4ff66c2ea1bc9f23665e22988789f25dac0c86f58a1590",
+          "identical_to_final_release": true
+        },
+        {
+          "path": "evaluation/candidate-recall.md",
+          "start_line": 1,
+          "end_line": 59,
+          "bytes": 6971,
+          "words": 861,
+          "sha256": "126cf55c76c3d6837d0289cd4c3ece82da6e04c44e2bdae8c3b93da74d1c1391",
+          "identical_to_final_release": false
+        },
+        {
+          "path": "solutions/candidate-generation/exact-blocking.md",
+          "start_line": 1,
+          "end_line": 72,
+          "bytes": 6631,
+          "words": 809,
+          "sha256": "23438f371c444b84ba85e87f64a1c100a738e06e59ed499ea64857d6b746f760",
+          "identical_to_final_release": true
+        },
+        {
+          "path": "solutions/candidate-generation/multi-pass-blocking.md",
+          "start_line": 1,
+          "end_line": 69,
+          "bytes": 6791,
+          "words": 851,
+          "sha256": "1ae50aaf4c6c0a60d79ca716476bc879a89deefe24e4190367b10138a5e9194c",
+          "identical_to_final_release": true
+        }
+      ],
+      "read_root": "<consumer-package>",
+      "selected_ids": [
+        {
+          "id": "DEC-05-001",
+          "path": "decisions/candidate-strategy.md",
+          "relevance": "Candidate admission choice; distinguishes exhaustive union from lossy budgets."
+        },
+        {
+          "id": "DEC-13-001",
+          "path": "decisions/execution-strategy.md",
+          "relevance": "Physical execution choice for the observed hypothetical hot-block bottleneck."
+        },
+        {
+          "id": "SOL-05-001",
+          "path": "solutions/candidate-generation/exact-blocking.md",
+          "relevance": "Exact-key baseline and risks of conjunctive key refinement."
+        },
+        {
+          "id": "SOL-05-002",
+          "path": "solutions/candidate-generation/multi-pass-blocking.md",
+          "relevance": "Existing hypothetical multi-pass union, deduplication and marginal-pass accounting."
+        },
+        {
+          "id": "SOL-13-001",
+          "path": "solutions/scalability/skew-aware-execution.md",
+          "relevance": "Coverage-preserving tiling, batching, spill and complete logical-unit reconciliation."
+        },
+        {
+          "id": "EVAL-11-007",
+          "path": "evaluation/execution-cost-replay.md",
+          "relevance": "Fixed-output cost, completion, replay, uncertainty and adoption criteria."
+        },
+        {
+          "id": "EVAL-11-001",
+          "path": "evaluation/candidate-recall.md",
+          "relevance": "Separate retrieval-loss diagnostics and independent-truth requirements for any later cap/refinement experiment."
+        }
+      ],
+      "recommendation": {
+        "decision": "First test a coverage-preserving physical optimization of the existing multi-pass exact-key organization linker, not a common-name cap or dropped pass. Use bounded resident-data batching, canonical-pair deduplication and complete hot-block tiling; consider distribution only if measured local capacity is insufficient.",
+        "basis": [
+          "DEC-13-001:decisions/execution-strategy.md",
+          "SOL-13-001:solutions/scalability/skew-aware-execution.md",
+          "DEC-05-001:decisions/candidate-strategy.md"
+        ],
+        "known": {
+          "provenance": "Hypothetical scenario supplied in the task, not inspected project implementation.",
+          "facts": [
+            "Organization linkage currently uses multiple exact-key passes and candidate union/deduplication.",
+            "One common-name pass produces huge blocks and exceeds batch runtime.",
+            "Record/skew and candidate counts are observable.",
+            "Recall labels are incomplete.",
+            "The initial experiment must not change the pair scorer."
+          ]
+        },
+        "assumed": [
+          "A fixed, lawfully accessible snapshot and isolated replay could be authorized later; neither access nor execution permission is granted by this navigation task.",
+          "An equivalent-output reference or independently justified coverage oracle can be constructed for an explicitly bounded workload; otherwise equivalence remains unresolved."
+        ],
+        "proposed": "Profile per-pass block and degree tails, emitted versus deduplicated pairs and stage costs. Preserve every eligible comparison while splitting hot work into memory-bounded tasks. Cross-source tiling must include all required chunk cross-products; within-source tiling must include off-diagonal chunk pairs and distinct unordered diagonal pairs. Retain admission provenance without treating repeated admissions as independent match evidence.",
+        "testable": "Under fixed inputs, candidates, comparison routes and scorer, compare complete logical outputs and total cost against current physical execution on declared bounded workloads, including hot-block stress cases. This is a proposed experiment, not an executed benchmark.",
+        "proven": "Only selective consumer navigation and artifact creation were performed. No runtime improvement, recall, identity accuracy or production capacity has been established.",
+        "contracts": {
+          "topology": "Keep all existing exact-key passes, eligibility, normalization, missing-key behavior and uncapped candidate union unchanged; change only physical placement/batching.",
+          "scoring": "Freeze scorer version, features, required feature routes, configuration and context; do not introduce a cheap-first filter.",
+          "resolution": "Keep current policy, tie semantics and required global resolution scope unchanged; do not resolve tiles independently.",
+          "lifecycle": "Use a consistent snapshot, versioned pair/task identity, declared cache validity, replayable completion manifest and explicit retry/failure accounting; no production publication or incremental-policy change."
+        },
+        "authorization_boundary": "Read-only package navigation and this JSON output only. No implementation, production data access, profiling run or external action performed."
+      },
+      "baseline": {
+        "ids": [
+          "SOL-05-001",
+          "SOL-05-002"
+        ],
+        "configuration": "Existing hypothetical exact-key multi-pass candidate union/deduplication and unchanged scorer/resolver on a fixed eligible population; retain current physical plan as comparator.",
+        "prerequisites": [
+          "Actual pass definitions, source eligibility, namespaces, normalization, pair orientation and missing-key contracts must be confirmed before implementation.",
+          "Need stable source-scoped pair identity, pass provenance and declared output-equivalence objects."
+        ],
+        "costs_and_failures": [
+          "Common-name enumeration, duplicate emission and deduplication may dominate; scorer or global resolver may instead be the measured bottleneck.",
+          "The existing overrun is an incomplete run, not a valid faster/slower complete-output reference.",
+          "For bounded replay, declare the workload scope and independently reconcile all required units; do not silently exclude hot work to make the baseline finish."
+        ]
+      },
+      "alternative": {
+        "primary": {
+          "id": "SOL-13-001",
+          "path": "solutions/scalability/skew-aware-execution.md",
+          "mechanism": "Bounded streaming/batching and full-coverage hot-block tiling in the resident engine, with stable pair deduplication, spill, manifests, retry reconciliation and unchanged global resolution.",
+          "prerequisites": [
+            "Consistent accessible inputs, sufficient spill storage, capacity limits and stable pair/task/version keys.",
+            "Complete required logical-unit frame including routes, revisions and context, not just candidate counts.",
+            "Explicit output equality or predeclared justified equivalence margins."
+          ],
+          "costs_and_failures": [
+            "Tiling bounds resident memory, not inherent pair count; it may still miss the batch deadline.",
+            "Excessively small tiles add scheduling/I/O; excessive tile size retains stragglers.",
+            "Same-tile-only comparisons omit cross-tile pairs; equal totals or successful task status do not prove coverage.",
+            "Optional distribution adds shuffle, replication, retry, access and global reconciliation costs; it is not the default recommendation."
+          ]
+        },
+        "separate_lossy_option": {
+          "status": "Deferred quality-budget experiment, not physical optimization or deployment recommendation.",
+          "basis": [
+            "DEC-05-001",
+            "SOL-05-001",
+            "SOL-05-002",
+            "EVAL-11-001"
+          ],
+          "configuration": "If complete execution remains unaffordable, separately compare an explicitly authorized common-name composite-key refinement, dropped-pass ablation or candidate cap against the exhaustive union. Do not assume locality or any other extra attribute exists or is stable.",
+          "failure": "Any refinement, top-k cap, sampling, dropped hot block or timeout-as-empty may remove genuine candidates and alter scorer calibration and downstream membership even with scorer code frozen.",
+          "evidence_requirement": "Evaluate the actual post-budget candidate set, independently adjudicate excluded neighborhoods and final entity effects before any quality claim. Current incomplete labels alone cannot justify population recall preservation."
+        }
+      },
+      "evaluation": {
+        "primary": "EVAL-11-007:evaluation/execution-cost-replay.md",
+        "candidate_change_route": "EVAL-11-001:evaluation/candidate-recall.md",
+        "comparison": "Current physical execution versus the bounded batched/tiled plan on the same realized candidate and required-comparison workload. Include explicitly bounded hot-block and overlap cases; characterize workload scope rather than extrapolating to a whole production batch.",
+        "controls": [
+          "Freeze records, eligibility, normalization, pass definitions, realized candidates, scorer/features/context, resolution policy, output contracts, hardware/runtime and allowed cache state.",
+          "Counterbalance arm order and repeat complete runs; distinguish cold-build from warm execution, and include update/recovery regimes only if those claims are in scope.",
+          "Retain failed attempts, retries and incomplete work; do not choose only the fastest successful runs."
+        ],
+        "completion_and_equivalence": [
+          "Reconcile required logical units against valid completed or explicitly permitted reused units using set-level reconciliation or a justified independent coverage argument; detect missing routes as well as missing tiles.",
+          "Compare named joint candidate/evidence/disposition outputs and downstream assignments/memberships, IDs and master views where produced. Equal candidate counts alone are insufficient.",
+          "Check timeout, missing/duplicate/conflicting task output and cross-tile omissions as proposed behavioral witnesses; these are not executed tests or accuracy evidence."
+        ],
+        "metrics": [
+          "Per-pass emitted and unique candidates, union overlap, leave-one-pass-out unique contribution and block/degree tails.",
+          "End-to-end complete-output latency, task tail latency, peak memory, spill/storage/network bytes and total build/run/retention/recovery resource costs within a stated horizon.",
+          "Required/completed/unresolved logical units, physical attempts, retries and external calls separately."
+        ],
+        "labels_and_split": "Execution equivalence does not require recall labels. For a later candidate-changing arm, acquire independent entity-centric or probability-sampled evidence extending outside both old and proposed candidates, document adjudication/search boundaries and sampling weights, and keep evaluation entities or deployment-appropriate time periods separate from tuning. Known-positive retention is a scoped diagnostic, not population recall; unlabeled pairs are not negatives.",
+        "uncertainty": "Prespecify repetitions and paired run-level comparisons with uncertainty intervals appropriate to workload sampling; disclose shared caches/contention. Candidate quality inference must follow actual entity/pair sampling design rather than an unjustified iid pair bootstrap.",
+        "success": "Adopt only after authorized complete replay establishes the declared output equivalence and meets project-set batch deadline, memory/storage and worthwhile total-cost margins on the declared workload. Numeric thresholds remain unset because the task supplies none.",
+        "falsification": "Reject an execution-only claim if eligible pairs/routes are omitted, global outputs diverge outside allowed margins, tasks remain unreconciled or apparent savings come from truncation. Reject practical adoption if complete execution still violates required resource/runtime limits.",
+        "next_decisions": {
+          "positive": "Request authorization for a bounded shadow pilot preserving the same contracts; no automatic production rollout.",
+          "negative": "Retain semantics and profile the surviving bottleneck; consider distribution only with measured parallel slack or seek explicit authorization for a separate retrieval-budget experiment.",
+          "inconclusive": "Do not claim speedup or recall; obtain missing completion/equivalence evidence, resource constraints or independent excluded-pair labels with the smallest authorized reversible collection step."
+        },
+        "executed": "None. This task is consumer navigation smoke testing only, not benchmark, code validation or measured utility evaluation."
+      },
+      "unknowns": [
+        {
+          "item": "Identity granularity, source-pair eligibility, cardinality, namespaces and temporal meaning",
+          "owner": "Hypothetical project/domain owner",
+          "collection": "Confirm current contracts under separate authorization",
+          "consequence": "Stop implementation if hard semantics are missing or conflicting."
+        },
+        {
+          "item": "Actual keys, normalization, null handling, hidden caps, canonical pair format and comparison routes",
+          "owner": "Hypothetical pipeline maintainer",
+          "collection": "Later authorized targeted implementation inspection; none performed here",
+          "consequence": "Cannot assert the proposed plan preserves current behavior yet."
+        },
+        {
+          "item": "Batch deadline, hardware, memory/spill capacity, per-stage cost and realized skew",
+          "owner": "Hypothetical operations owner",
+          "collection": "Authorized bounded profiling of observable counts and stage timings",
+          "consequence": "Cannot choose tile size, distribution or promise runtime gains."
+        },
+        {
+          "item": "Complete reference workload, global output semantics, tie behavior, replay and cache validity",
+          "owner": "Hypothetical pipeline maintainer",
+          "collection": "Independent small oracle or justified full coverage argument and isolated replay",
+          "consequence": "Missing completion/reference semantics makes equivalent-output claims inconclusive."
+        },
+        {
+          "item": "Independent positive coverage outside existing and proposed candidate sets, affected entity harms",
+          "owner": "Hypothetical evaluation/domain owner",
+          "collection": "Authorized outside-set/entity-centric adjudication with documented sampling and search scope",
+          "consequence": "No invented population recall, precision or safe cap; defer quality-affecting adoption."
+        },
+        {
+          "item": "Permission, lawful data placement and retention constraints",
+          "owner": "Hypothetical data/governance owner",
+          "collection": "Explicit approval before project access or execution",
+          "consequence": "No profiling, distribution, external calls or production changes without authorization."
+        }
+      ],
+      "stop_reason": "The blocking task route directly exposed the candidate and execution decisions, the exact/multi-pass baseline, a coverage-preserving alternative, prerequisites/failures and complete-output plus candidate-quality evaluation routes. Further catalog/domain/deep-dive browsing would not change this bounded initial recommendation. Remaining gaps are project facts and authorization, not a reason to read the corpus.",
+      "limitations": [
+        "Only the listed consumer-package files were read; no source implementation, validation suite, tests, keys, reports or full-corpus inspection was performed.",
+        "Read paths are relative to read_root; line ranges are actual returned content, including entry and navigation documents. Parallel batches are listed in request order, not asserted completion-time order.",
+        "Scenario facts are hypothetical and user supplied, not facts about the live workspace or a real organization-linkage deployment.",
+        "This navigation smoke test does not establish documentation completeness, benchmark quality, measured utility, identity accuracy or operational performance.",
+        "Candidate and execution cards are Atlas guidance, not authorization or project evidence; no external references were fetched.",
+        "The candidate-recall card contains an older statement describing approximate families as unexpanded; no approximate-family recommendation is inferred from that sentence, and no approximate card was needed for this physical-execution contrast.",
+        "No recall figures, speedups, record counts, candidate totals, runtime budgets or acceptance thresholds were fabricated."
+      ],
+      "case": "blocking",
+      "attempt": "initial",
+      "file_reads": 10,
+      "distinct_files": 10,
+      "retrieved_bytes": 63360,
+      "retrieved_words": 7590,
+      "observed_read_calls_reconciled": true,
+      "tool_log_sha256": "c5344374e1fe2571b87764a41b95b81ef85572db690ccaea10e7946a7c211450",
+      "retrieval_content_matches_final_release": false
+    }
+  ],
+  "note": "Initial blocking attempt found a stale scope sentence in EVAL-11-001. It was corrected in source and rebuilt. A fresh blocking agent successfully navigated the final package. No-labels and graph returned texts are byte-identical to final-release texts.",
+  "final_blocking_attempt": {
+    "reads": [
+      {
+        "path": "START_HERE.md",
+        "start_line": 1,
+        "end_line": 38,
+        "bytes": 3522,
+        "words": 408,
+        "sha256": "4e5ac2f782894323d9fb63f0bfc0a3211fbe3af8f480362d421317b776d27af0",
+        "identical_to_final_release": true
+      },
+      {
+        "path": "indexes/tasks/blocking.md",
+        "start_line": 1,
+        "end_line": 26,
+        "bytes": 2441,
+        "words": 212,
+        "sha256": "a33f0621c412c8495c3fe290dda35e30650c04916bf4832903e9276b91107851",
+        "identical_to_final_release": true
+      },
+      {
+        "path": "decisions/candidate-strategy.md",
+        "start_line": 1,
+        "end_line": 63,
+        "bytes": 6487,
+        "words": 782,
+        "sha256": "ea4cd74a9e0c80223f6a3fee66a58b993751296348a558f66a16f15da67ab628",
+        "identical_to_final_release": true
+      },
+      {
+        "path": "decisions/execution-strategy.md",
+        "start_line": 1,
+        "end_line": 132,
+        "bytes": 7246,
+        "words": 872,
+        "sha256": "17a0bc3258e89888dd68a98c2695c7ce339640f851f5a02e39ce06cf84a822c7",
+        "identical_to_final_release": true
+      },
+      {
+        "path": "solutions/scalability/skew-aware-execution.md",
+        "start_line": 1,
+        "end_line": 172,
+        "bytes": 9295,
+        "words": 1134,
+        "sha256": "d9b27bd7a2a2291cd6dbffee5d9f912903288f79881e819ec4276ce84622e06d",
+        "identical_to_final_release": true
+      },
+      {
+        "path": "evaluation/execution-cost-replay.md",
+        "start_line": 1,
+        "end_line": 161,
+        "bytes": 8766,
+        "words": 1034,
+        "sha256": "b943577011db83dc4f4ff66c2ea1bc9f23665e22988789f25dac0c86f58a1590",
+        "identical_to_final_release": true
+      },
+      {
+        "path": "evaluation/candidate-recall.md",
+        "start_line": 1,
+        "end_line": 59,
+        "bytes": 7050,
+        "words": 865,
+        "sha256": "8c8321ddd93210f150b7daadf22987b8272dd59d53c57abeab3eb4ff93e9f4fa",
+        "identical_to_final_release": true
+      },
+      {
+        "path": "guides/project-atlas-integration.md",
+        "start_line": 1,
+        "end_line": 92,
+        "bytes": 5210,
+        "words": 627,
+        "sha256": "6aa1d18635d2aef1c389fb0ee8ba05c7ba83ba093cddc0626ce6b511b9e1119c",
+        "identical_to_final_release": true
+      },
+      {
+        "path": "solutions/candidate-generation/exact-blocking.md",
+        "start_line": 1,
+        "end_line": 72,
+        "bytes": 6631,
+        "words": 809,
+        "sha256": "23438f371c444b84ba85e87f64a1c100a738e06e59ed499ea64857d6b746f760",
+        "identical_to_final_release": true
+      },
+      {
+        "path": "solutions/candidate-generation/multi-pass-blocking.md",
+        "start_line": 1,
+        "end_line": 69,
+        "bytes": 6791,
+        "words": 851,
+        "sha256": "1ae50aaf4c6c0a60d79ca716476bc879a89deefe24e4190367b10138a5e9194c",
+        "identical_to_final_release": true
+      }
+    ],
+    "selected_ids": [
+      {
+        "id": "DEC-05-001",
+        "path": "decisions/candidate-strategy.md"
+      },
+      {
+        "id": "DEC-13-001",
+        "path": "decisions/execution-strategy.md"
+      },
+      {
+        "id": "SOL-05-001",
+        "path": "solutions/candidate-generation/exact-blocking.md"
+      },
+      {
+        "id": "SOL-05-002",
+        "path": "solutions/candidate-generation/multi-pass-blocking.md"
+      },
+      {
+        "id": "SOL-13-001",
+        "path": "solutions/scalability/skew-aware-execution.md"
+      },
+      {
+        "id": "EVAL-11-007",
+        "path": "evaluation/execution-cost-replay.md"
+      },
+      {
+        "id": "EVAL-11-001",
+        "path": "evaluation/candidate-recall.md"
+      }
+    ],
+    "recommendation": {
+      "known": "Hypothetical supplied facts only: organization linkage uses multiple exact-key passes with union and deduplication; a common-name pass produces huge blocks and misses the batch deadline; record, candidate and skew counts are observable; reference labels are incomplete; the initial test must leave the scorer unchanged.",
+      "assumed": "The first useful contrast is physical execution on the same logical workload, not removal of the common-name pass. This is a test priority, not evidence that batching or tiling will meet the deadline. No organization identity semantics, source eligibility or production authority are assumed.",
+      "proposed": "Use DEC-13-001 (decisions/execution-strategy.md) with SOL-13-001 (solutions/scalability/skew-aware-execution.md) to compare the existing execution against bounded resident-data batching and complete hot-block tiling. Retain the exact multi-pass admission and union/dedup contracts described by SOL-05-001 and SOL-05-002. DEC-05-001 (decisions/candidate-strategy.md) owns any later candidate-budget change; do not call dropped keys, caps, smaller windows, composite-key refinement or deadline truncation equivalent execution.",
+      "contracts": "Freeze input snapshot, normalization, source-pair eligibility, namespaces, missing-key behavior, realized candidates, pass provenance, canonical pair identity, required feature routes, scorer/configuration, downstream global resolution, membership/master/ID policies and publication boundary. Keep lifecycle behavior unchanged in the initial batch contrast; measure cold build separately from valid warm reuse. Deduplicate redundant physical emissions without dropping distinct required comparison routes. Do not treat pass count as independent match evidence.",
+      "testable": "A reversible isolated or shadow comparison under EVAL-11-007 can establish bounded completion, output equivalence and execution cost without complete truth labels. Actual project semantics and access must be confirmed before running it.",
+      "proven": "No runtime, capacity, recall, precision, equivalence or quality improvement has been demonstrated. This artifact records consumer navigation and a proposed bounded experiment only."
+    },
+    "baseline": {
+      "ids": [
+        "SOL-05-001",
+        "SOL-05-002",
+        "DEC-13-001"
+      ],
+      "configuration": "The current exact-key multi-pass organization linkage union plus canonical deduplication on its current resident engine. Retain the broad common-name pass and all eligible candidates for the equivalent-output comparator. If the current run times out, record it as incomplete rather than a completed negative result. A bounded chunked local replay is an additional diagnostic capacity reference only if authorized and feasible.",
+      "mechanism": "Equality-based passes emit eligible pairs; union retains complementary admission routes; stable pair deduplication avoids scoring the same logical unit repeatedly while retaining provenance.",
+      "prerequisites": "Inspect the real pass definitions, caps, eligibility, source namespaces, normalization, pair orientation, missing-key rules, completion behavior and required routes before translating this hypothetical note into a real experiment.",
+      "costs_and_failures": "Common-name skew can dominate pair enumeration, deduplication, spill and expensive feature work. Overlapping passes may add emissions without useful new candidates. Missing or corrupted exact keys can exclude matches, while equal names are not proof of organizational identity."
+    },
+    "alternative": {
+      "ids": [
+        "DEC-13-001",
+        "SOL-13-001"
+      ],
+      "configuration": "First batch comparison calls or use resident SQL/vectorized operations only where their semantics match the baseline. Stream and spill bounded keyed products; tile the hot common-name workload with complete coverage. Consider partitioned workers only after measuring a local/resident bottleneck and coordination cost.",
+      "coverage": "For cross-source hot blocks, schedule every eligible left-chunk/right-chunk combination. For within-source work, cover all off-diagonal chunk combinations and unordered distinct pairs inside each diagonal chunk. Manifest required comparison units, not only tile counts; reconcile valid completed units and conflicts before global resolution.",
+      "prerequisites": "Consistent snapshots, stable source-scoped pair and task keys, explicit feature-route/version contracts, enough spill capacity, lawful placement, retry/commit ownership and a global reconciliation boundary.",
+      "costs_and_failures": "Tiling bounds resident work but does not reduce inherent pair count or guarantee the deadline. Excessively small tiles add scheduling and I/O; large tiles retain stragglers. Same-shard-only comparison loses cross-shard pairs; successful tiles may still omit required feature routes. Retries, replication, floating-point order, null/collation differences and local-only resolution can invalidate the claimed equivalence.",
+      "lossy_boundary": "A later name-plus-locality refinement or hot-key cap would be a separately authorized DEC-05-001 candidate experiment, not the initial alternative. It can remove genuine matches and change candidate composition/calibration even with an unchanged scorer. Incomplete labels do not justify deploying it."
+    },
+    "evaluation": {
+      "initial_route": "EVAL-11-007 (evaluation/execution-cost-replay.md), with EVAL-11-001 (evaluation/candidate-recall.md) for candidate accounting and any separately authorized retrieval changes.",
+      "comparator_and_controls": "Compare the current execution and bounded batching/tiling on the same declared logical workload. Freeze representations, records, eligibility, union/dedup, required routes, scorer, resolution and policies. Freeze realized stochastic outputs if applicable. Counterbalance run order, disclose resource contention/profiling overhead, separate cold build from warm reuse, and retain all failed attempts under prespecified retry rules.",
+      "completion_and_outputs": "Name and compare joint candidate sets, route-specific evidence/dispositions and applicable assignments/memberships, master views and IDs. Require set-level required-unit reconciliation or an independently justified coverage argument; equal counts or successful task status alone are insufficient. Report unresolved, failed and pending units, duplicate/conflicting products and physical retries separately. Define the exact semantic or byte-level equivalence promise and permitted numerical/order variation in advance.",
+      "cost_metrics": "Measure input scan/index build, emitted versus unique candidates, overlap by pass, block/degree tails, required and completed logical units, end-to-end latency through consistent committed output, task tails and maximum, peak memory, spill/storage/network, external calls and total resource cost. Keep throughput credit conditional on valid completion and promised equivalence; no numeric targets are supplied here.",
+      "labels_and_split": "Incomplete labels do not block physical output-equivalence tests, but they block unsupported population-recall or precision claims. For a later candidate change, obtain independent positives or defensible entity-centric/outside-candidate review with a declared search boundary, sampling frame and inclusion probabilities. Unknown pairs remain unknown. If retrieval is tuned, separate evaluation entities for new-identity transfer, or use deployment-admissible later observations for continuation without future-label feedback.",
+      "candidate_diagnostics": "Under EVAL-11-001, report eligible pair universe, final unique scored candidate set, reduction, known-positive yield with its limited scope, deduplicated marginal pass contribution and leave-one-pass-out diagnostics. Slice by source pair, key frequency/common-name blocks and missingness; add other slices only if relevant and observable. Use independent outside-candidate truth for recall denominators. Do not infer population recall from labels collected only inside the old union.",
+      "uncertainty": "Prespecify repeated complete-run design and practical equivalence/cost/freshness margins. Use matched run comparisons where valid and distinguish workload-conditional runtime variability from generalization. Candidate-quality intervals must follow the actual entity/pair sampling design; do not default to independent-pair resampling. Insufficient precision or unknown completion semantics is inconclusive, not equivalence.",
+      "decision_rules": "Positive: consider the physical alternative only if complete reconciled outputs meet predeclared equivalence and the actual batch deadline/resource margins at worthwhile total cost. Negative: retain the baseline and investigate the measured remaining bottleneck if complete equivalence holds but cost/deadline does not improve; reject omissions or divergent global decisions. Inconclusive: acquire missing manifests, semantic contracts, repeated-run evidence or outside-candidate truth rather than declare a winner. Missing authority or unsafe publication stops action.",
+      "execution_status": "No implementation, workload execution, synthetic test or quality evaluation performed. No outcomes or numerical margins invented."
+    },
+    "unknowns": [
+      {
+        "question": "What organizational identity granularity, temporal meaning, source eligibility and identifier namespaces are intended?",
+        "owner": "Project/domain owner",
+        "collection": "Confirm the existing contract and relevant implementation before testing.",
+        "consequence": "Missing hard semantics stop an equivalence or retrieval claim."
+      },
+      {
+        "question": "Does the operational union already contain caps, hidden filters, unavailable-key placeholders, deadline skips or omitted routes?",
+        "owner": "Pipeline owner",
+        "collection": "Inspect actual pass configuration and completion/route manifests under authorization.",
+        "consequence": "Do not mistake an incomplete operational result for exhaustive-union truth."
+      },
+      {
+        "question": "Which stage dominates, and what are actual deadline, resource, spill and capacity limits?",
+        "owner": "Execution owner",
+        "collection": "Authorized stage profiling and observed block/degree tails, emitted/unique counts, feature-route work and cold/warm timing.",
+        "consequence": "Tiling and distribution remain hypotheses; no speedup or deadline promise."
+      },
+      {
+        "question": "Which outputs require exact equality, and which numerical/order variations are allowed?",
+        "owner": "Scoring/resolution and downstream owners",
+        "collection": "Declare comparison-unit contracts and joint candidate/evidence/membership/master/ID projections with acceptance margins.",
+        "consequence": "Unverified output or global reconciliation semantics make adoption inconclusive."
+      },
+      {
+        "question": "How were incomplete labels acquired, and can missed identities outside every pass be investigated?",
+        "owner": "Evaluation/data steward",
+        "collection": "Document provenance/search scope and obtain authorized independent positives or probability-sampled outside-candidate review.",
+        "consequence": "Do not report population recall, precision or safe lossy pruning without defensible evidence."
+      },
+      {
+        "question": "Are isolated replay, protected data, spills, worker placement and external calls authorized?",
+        "owner": "Project/data-access owner",
+        "collection": "Confirm permitted read-only/shadow scope, retention and rollback boundaries.",
+        "consequence": "No production change or implementation is authorized by this consumer note."
+      }
+    ],
+    "stop_reason": "START_HERE.md's selective discovery stop is met: the blocking route led directly to candidate and physical execution decisions, the exact/multi-pass baseline, coverage-preserving batching/tiling alternative, prerequisites/failures and execution/candidate evaluation. Another general navigation layer or approximate-retrieval catalog would not change the initial unchanged-scorer, same-candidate recommendation. Stop discovery here; stop real action until project semantics, completion contracts and authority are confirmed.",
+    "limitations": [
+      "Consumer-only navigation smoke, not an ER quality benchmark or measured navigation-utility result.",
+      "All knowledge reads are listed with actual returned inclusive line ranges relative to final-a; parallel reads are listed in request order, not claimed chronological completion order.",
+      "Read only selected files within the final-a consumer package; no source repository, validation, tests, keys, reports, other smoke outputs, corpus scans or external literature were inspected.",
+      "The task supplied hypothetical facts, not real project implementation or data. Proposed implementation inspection and profiling were not performed.",
+      "Canonical card evidence states and literature references are not project results; the Atlas grants no production authorization.",
+      "The initial comparison is physical execution only. Candidate-loss alternatives require independent candidate and relevant final-output evaluation before adoption; that later experiment is not designed or executed in full here.",
+      "Only the requested smoke-blocking-final.json output is written; no source edits or implementation performed."
+    ],
+    "case": "blocking",
+    "attempt": "final-release",
+    "file_reads": 10,
+    "distinct_files": 10,
+    "retrieved_bytes": 63439,
+    "retrieved_words": 7594,
+    "observed_read_calls_reconciled": true,
+    "tool_log_sha256": "b62c55531f427f07468bbf2a79082ae1ddd8a9ea39cc45e3f4d8781d15b27ab4",
+    "retrieval_content_matches_final_release": true
+  },
+  "final_release_manifest_sha256": "5462892dd6a250afda86df17b25f80159b782826c0a326a601a78472939b2485",
+  "final_cases": [
+    {
+      "case": "no-labels",
+      "file_reads": 8,
+      "distinct_files": 8,
+      "retrieved_bytes": 60714,
+      "retrieved_words": 7186,
+      "retrieval_content_matches_final_release": true
+    },
+    {
+      "case": "graph",
+      "file_reads": 8,
+      "distinct_files": 8,
+      "retrieved_bytes": 58320,
+      "retrieved_words": 6948,
+      "retrieval_content_matches_final_release": true
+    },
+    {
+      "case": "blocking",
+      "file_reads": 10,
+      "distinct_files": 10,
+      "retrieved_bytes": 63439,
+      "retrieved_words": 7594,
+      "retrieval_content_matches_final_release": true
+    }
+  ]
+}

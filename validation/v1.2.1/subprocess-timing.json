@@ -1,0 +1,116 @@
+{
+  "kind": "synthetic-legacy-subprocess-diagnostic-not-model-results",
+  "python": "3.14.7 (main, Sep  1 2026, 14:18:09) [Clang 22.1.3 ]",
+  "executable": "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+  "trials": [
+    {
+      "deadline_seconds": 0.5,
+      "repetition": 0,
+      "elapsed_seconds": 0.028399,
+      "status": "completed",
+      "error": null,
+      "read_attempts": 1,
+      "successful_reads": 1,
+      "adapter_exit_code": 0
+    },
+    {
+      "deadline_seconds": 0.5,
+      "repetition": 1,
+      "elapsed_seconds": 0.0242,
+      "status": "completed",
+      "error": null,
+      "read_attempts": 1,
+      "successful_reads": 1,
+      "adapter_exit_code": 0
+    },
+    {
+      "deadline_seconds": 0.5,
+      "repetition": 2,
+      "elapsed_seconds": 0.025178,
+      "status": "completed",
+      "error": null,
+      "read_attempts": 1,
+      "successful_reads": 1,
+      "adapter_exit_code": 0
+    },
+    {
+      "deadline_seconds": 0.5,
+      "repetition": 3,
+      "elapsed_seconds": 0.02475,
+      "status": "completed",
+      "error": null,
+      "read_attempts": 1,
+      "successful_reads": 1,
+      "adapter_exit_code": 0
+    },
+    {
+      "deadline_seconds": 0.5,
+      "repetition": 4,
+      "elapsed_seconds": 0.025336,
+      "status": "completed",
+      "error": null,
+      "read_attempts": 1,
+      "successful_reads": 1,
+      "adapter_exit_code": 0
+    },
+    {
+      "deadline_seconds": 2.0,
+      "repetition": 0,
+      "elapsed_seconds": 0.023995,
+      "status": "completed",
+      "error": null,
+      "read_attempts": 1,
+      "successful_reads": 1,
+      "adapter_exit_code": 0
+    },
+    {
+      "deadline_seconds": 2.0,
+      "repetition": 1,
+      "elapsed_seconds": 0.024095,
+      "status": "completed",
+      "error": null,
+      "read_attempts": 1,
+      "successful_reads": 1,
+      "adapter_exit_code": 0
+    },
+    {
+      "deadline_seconds": 2.0,
+      "repetition": 2,
+      "elapsed_seconds": 0.026553,
+      "status": "completed",
+      "error": null,
+      "read_attempts": 1,
+      "successful_reads": 1,
+      "adapter_exit_code": 0
+    },
+    {
+      "deadline_seconds": 2.0,
+      "repetition": 3,
+      "elapsed_seconds": 0.023601,
+      "status": "completed",
+      "error": null,
+      "read_attempts": 1,
+      "successful_reads": 1,
+      "adapter_exit_code": 0
+    },
+    {
+      "deadline_seconds": 2.0,
+      "repetition": 4,
+      "elapsed_seconds": 0.024876,
+      "status": "completed",
+      "error": null,
+      "read_attempts": 1,
+      "successful_reads": 1,
+      "adapter_exit_code": 0
+    }
+  ],
+  "harness_sha256": "f1a835f7d934616a40371c03df0923eccebd7a1f8871f5b41da14c585aaf9cd4",
+  "test_sha256": "ef499578fbb3437dd50d0f60aaa57afe938379b7d5bd05ca6b5a839f54afea6f",
+  "fixture_sha256": "ac861e7a470648475ba6304a8b0289601c9fb3950c6464e595f6017f2a76eaf9",
+  "protected_files_modified": false,
+  "limits": [
+    "Elapsed includes freeze/corpus/setup overhead, not merely child startup.",
+    "Passing bounded trials cannot exclude scheduler-dependent flakiness.",
+    "Two seconds is a diagnostic comparator only; protected 0.5-second assertion remains unchanged."
+  ]
+}

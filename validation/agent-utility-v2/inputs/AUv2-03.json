@@ -1,0 +1,18 @@
+{
+  "cohort": "AU-v2",
+  "scenario_id": "AUv2-03",
+  "fictional": true,
+  "title": "Regional makerspace access list",
+  "background": "A fictional network wants one access identity per member, while allowing shared household contact details and distinct memberships at different sites. Membership numbers are issued locally by each site.",
+  "observations": [
+    "An ordered policy accepts an equal member number first, sends conflicting verified birth years to review second, accepts equal email third, and otherwise leaves entries separate. The first applicable row wins.",
+    "A proposed declarative table evaluates all rows together and selects the highest numeric action code. Its author has not specified whether action codes represent priority or severity.",
+    "Regression fixtures were created by replaying decisions from the ordered policy. The only manual observations are a few lockout complaints. Some sites omit birth year and households may share email.",
+    "Staff want to simplify policy maintenance and describe a passing regression suite as evidence that the new table improves member accuracy."
+  ],
+  "constraints": [
+    "Unauthorized access from a false association is more harmful than an extra manual badge check.",
+    "The planning team may propose synthetic witnesses and a human review study, but cannot change access decisions or obtain private member records."
+  ],
+  "request": "Write a refactoring decision note that compares an implementable low-complexity option with the table proposal and specifies how to assess behavioral change and member-level effects."
+}

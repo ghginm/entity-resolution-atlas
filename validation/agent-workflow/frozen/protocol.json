@@ -1,0 +1,87 @@
+{
+  "ablation": "E omitted. C versus D confounds navigation, guides, public normative/reference context and packaging; same 57-card knowledge is not a navigation-only control. Never attribute C/D differences solely to navigation.",
+  "arms": {
+    "A": "noAtlas; no retrieval documents",
+    "B": "v1.1 knowledge; immutable shared-eligibility baseline snapshot",
+    "C": "v1.2 knowledge; immutable shared-eligibility expanded snapshot",
+    "D": "v1.2.1 consumer workflow; new guides/routes plus public consumer context"
+  },
+  "budgets": {
+    "evaluator_wall_seconds": 600,
+    "final_characters": 12000,
+    "read_attempts": 24,
+    "read_chunk_characters": 8000,
+    "retrieved_characters": 48000,
+    "solver_wall_seconds": 240,
+    "stdout_line_bytes": 65536,
+    "successful_reads": 16
+  },
+  "comparison": [
+    "Same scenario/prompt/budgets and attested model/provider/version/effective generation settings in every arm.",
+    "Fresh process and conversation per cell, broker-only reads, zero callable model tools, no memory/network/side channels; existing executor must prove these before dispatch.",
+    "No retries inside a cell. Retain failures; recovery means a new full 32-cell cohort with earliest completed attempt rule predeclared.",
+    "Record unsupported generation controls honestly; block comparability unless independent operator accepts equivalent effective settings and explicit limitations.",
+    "NoAtlas text cost is zero and retrieval relevance is not applicable, not a superior quality result.",
+    "One repetition is exploratory; no statistical/significance/general gains claim."
+  ],
+  "execution_gate": [
+    "No compatible existing trusted executor bound to AW snapshots/protocol is attested. Legacy bridge Session/contract bind AU-v2 arms/settings and exclude guides; do not patch globals or copy executor.",
+    "Independent evaluator actual identity/version, non-authorship/conflict declaration, settings and external operator trust not attested; current author/subagent cannot independently score own package.",
+    "No provider/subprocess runner or score admission API in this package. Real runs unavailable; 0 genuine runs and 0 scores."
+  ],
+  "freeze_rule": "All scenario/prompt/protocol/evaluator/export-policy inputs and external input bindings hashed before solver output. Refuse every action on any input/dependency hash, inventory or symlink mismatch; no re-freeze command.",
+  "frontier": "Per task dimensionwise non-dominated observations among quality-passing completed independently scored runs using retrieved bytes (tokens only when consistently measured). No weighted winner; missing/failed/scored-incomparable results not frontier.",
+  "id": "AW-offline-1",
+  "order_cycle": [
+    [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    [
+      "B",
+      "C",
+      "D",
+      "A"
+    ],
+    [
+      "C",
+      "D",
+      "A",
+      "B"
+    ],
+    [
+      "D",
+      "A",
+      "B",
+      "C"
+    ]
+  ],
+  "read_contract": {
+    "attempt_accounting": "Count all invocations including invalid/denied/fatal/post-failure attempts; retain exact requests, returned UTF-8 bytes, characters, sha256 and optional text tokens. Repeated excerpts count again. Fail closed after fatal budget/tamper error.",
+    "cost_boundary": "Returned content only; inventory/scenario/prompt bytes disclosed separately. Input/output provider tokens, wall and money nullable without transport evidence. Returned bytes are not billing.",
+    "fields": [
+      "type",
+      "request_id",
+      "path",
+      "offset",
+      "length"
+    ],
+    "offset_and_length": "zero-based Unicode code points; integer not bool",
+    "text_tokens": "null unless optional offline tiktoken 0.12.0 cl100k_base asset is preinstalled and hash checked; never download. No bytes-to-token proxy.",
+    "type": "read_file"
+  },
+  "repetitions": 1,
+  "scenario_order": [
+    "AW-01",
+    "AW-02",
+    "AW-03",
+    "AW-04",
+    "AW-05",
+    "AW-06",
+    "AW-07",
+    "AW-08"
+  ],
+  "scope": "New fictional inputs and new workflow-enabled export policy; never changes AU-v1/AU-v2. Offline preparation only."
+}

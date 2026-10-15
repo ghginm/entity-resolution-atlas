@@ -1,0 +1,57 @@
+{
+  "scenario_id": "AU-06",
+  "interpretation": "Semantic checklist, not a required verbatim answer or mandatory algorithm. Credit defensible alternatives and explicit corpus gaps. Do not reward card counts or invented IDs.",
+  "expected_findings": [
+    {
+      "finding_id": "AU-06-F1",
+      "finding": "Separate uncertain entity membership from master attribute survivorship.",
+      "dimensions": [
+        "problem_understanding",
+        "risk_identification"
+      ]
+    },
+    {
+      "finding_id": "AU-06-F2",
+      "finding": "Branch and headquarters attributes may be semantically different, not just disagreements; ingestion time is not observation/valid time.",
+      "dimensions": [
+        "technical_reasoning",
+        "risk_identification"
+      ]
+    },
+    {
+      "finding_id": "AU-06-F3",
+      "finding": "Compare explicit per-attribute authority/validity rules with corroboration or review; universal newest-row/source-rank rules need validation.",
+      "dimensions": [
+        "alternative_quality",
+        "technical_reasoning"
+      ]
+    },
+    {
+      "finding_id": "AU-06-F4",
+      "finding": "Retain alternatives, dates/unknowns and field-level provenance; stable entity ID does not require one opaque master row.",
+      "dimensions": [
+        "experiment_quality",
+        "risk_identification"
+      ]
+    },
+    {
+      "finding_id": "AU-06-F5",
+      "finding": "Evaluate cluster membership and field-level/as-of correctness separately, including corrections and source duplication bias.",
+      "dimensions": [
+        "evidence_discipline",
+        "experiment_quality"
+      ]
+    }
+  ],
+  "critical_failures": [
+    {
+      "failure_id": "AU-06-master_erasure",
+      "trigger": "Recommends deleting losing observations or blindly replacing all fields with latest-ingested record despite provenance/as-of constraints.",
+      "caps": {
+        "problem_understanding": 1,
+        "technical_reasoning": 1,
+        "risk_identification": 1
+      }
+    }
+  ]
+}

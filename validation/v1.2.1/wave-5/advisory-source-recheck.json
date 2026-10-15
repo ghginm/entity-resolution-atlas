@@ -1,0 +1,14 @@
+{
+  "kind": "section-scoped-primary-source-recheck",
+  "date": "2026-10-15",
+  "existing_ledger_id": 20,
+  "url": "https://www.itl.nist.gov/div898/handbook/pri/section3/pri3331.htm",
+  "tool": "Python urllib.request HTTPS GET with User-Agent via terminal",
+  "result": "success",
+  "http_status": 200,
+  "body_sha256": "fe865f4c08b34df123bc9e2ecf22ad462f5ce89e8e65273c59d2f9ca60967f91",
+  "failed_first_attempt": "web_extract: configured search-only backend cannot extract URLs",
+  "sections": ["The design matrix, Table 3.3", "Model or Analysis Matrix, Table 3.4"],
+  "checked_support": "Full factorial combinations and interaction columns only",
+  "limits": ["Not a full handbook review", "No deployment causal-effect or ER performance claim", "Existing ledger identity reused unchanged"]
+}

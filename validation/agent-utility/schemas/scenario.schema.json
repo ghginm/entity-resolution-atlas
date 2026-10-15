@@ -1,0 +1,41 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "scenario_id",
+    "title",
+    "fictional",
+    "known_project_facts",
+    "explicitly_unknown",
+    "task"
+  ],
+  "properties": {
+    "scenario_id": {
+      "type": "string",
+      "pattern": "^AU-0[1-8]$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "fictional": {
+      "const": true
+    },
+    "known_project_facts": {
+      "type": "object",
+      "minProperties": 3
+    },
+    "explicitly_unknown": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "task": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

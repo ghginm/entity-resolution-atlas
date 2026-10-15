@@ -1,0 +1,27 @@
+# 04 — Normalization & Enrichment
+
+**Design question:** Which transformations make values comparable without erasing identity evidence?
+
+## Decisions and coverage
+- Lexical/Unicode normalization, case and punctuation handling need attribute-specific safety conditions; never assume all identifiers are case-insensitive.
+- Structural parsing for names and addresses; linguistic/phonetic transformations, transliteration and language-aware variants.
+- Address, phone, date and identifier standardization requires locale, namespace, country and validity context. Alias/variant generation and multiple representations retain ambiguity.
+- External enrichment adds coverage and provenance/privacy/dependency risks. Learned parsing, normalization uncertainty and joint normalization/matching remain context-dependent design alternatives.
+
+## Solution families and useful baselines
+- Raw plus normalized plus parsed representations; conservative deterministic standardization.
+- Language-aware variants; phonetic encodings; external reference enrichment; learned or probabilistic transformations.
+
+## Ownership and limitations
+Transforming a single attribute belongs here; comparing two transformed records belongs in 06. Preserve raw values and transformation lineage.
+
+This is a domain map, not complete L2 method coverage. Unexpanded families are retained for [expansion review](../../guides/expansion-plan.md); mature names are not automatic recommendations.
+
+## Cross-domain dependencies
+- [03 — Data Understanding & Integration](03-data-integration.md).
+- [05 — Candidate Generation & Retrieval](05-candidate-retrieval.md).
+- [06 — Comparison Features & Evidence Engineering](06-comparison-evidence.md).
+- [14 — Explainability, Governance & Monitoring](14-governance-monitoring.md).
+
+## Selective retrieval
+Start from the [catalog](../../CATALOG.md) and [project intake](../../guides/project-intake.md). Compare applicable pilot cards before assuming a family is suitable.

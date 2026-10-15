@@ -1,0 +1,83 @@
+# 09 — Master Entity Construction & Maintenance
+
+[L0 catalog](../../CATALOG.md)
+
+[Domain map](../../taxonomy/domains/09-master-maintenance.md)
+
+## DEC-09-001 — Choose master representation and identity lifecycle
+
+decision · domain 09 · [DEC-09-001 — Choose master representation and identity lifecycle](../../decisions/master-representation.md)
+
+Decide how resolved members become a persistent entity that consumers use: virtual membership views, consolidated golden records, or hybrid derived views with retained lineage. Separately fix persistent identifier allocation, merge redirection, split ambiguity and versioning, independent of which attribute values the chosen representation displays. Each option changes what a correction can undo, what a downstream key means after merge or split, and what evidence a consumer can still see. Requirements and lifecycle rules are Atlas synthesis; no universally correct representation is claimed.
+
+Tags: `batch`, `entity-agnostic`, `governance`, `incremental`, `interpretable`, `provenance`.
+
+**Alternatives and differences**
+
+Declared alternatives: none in metadata; do not infer substitutability from shared tags.
+
+Read differences and conditions in: [Criteria for choosing](../../decisions/master-representation.md#criteria-for-choosing), [Trade-off comparison](../../decisions/master-representation.md#trade-off-comparison), [Good baseline candidates](../../decisions/master-representation.md#good-baseline-candidates).
+
+complements: [AR-06](../../architectures/incremental-continuous.md).
+
+evaluated_by: [EVAL-11-003](../../evaluation/entity-resolution-quality.md).
+
+## SOL-09-001 — Provenance-preserving attribute survivorship
+
+solution · domain 09 · [SOL-09-001 — Provenance-preserving attribute survivorship](../../solutions/master-records/provenance-survivorship.md)
+
+Derive consumer-facing master values from field-specific raw observations while preserving source, transformation, time and selection lineage for every chosen value. Handle uncertainty and contradiction explicitly, support recency, source precedence and independent corroboration without letting copied observations count repeatedly, and keep selection distinct from inference. Coherent attribute bundles and separate review of attribute truth versus entity membership reduce Frankenstein records. Replay and merge or split recomputation must reproduce the same trace.
+
+Tags: `conflicting`, `governance`, `interpretable`, `missingness`, `provenance`, `source-aware`.
+
+**Alternatives and differences**
+
+Declared alternatives: none in metadata; do not infer substitutability from shared tags.
+
+Read differences and conditions in: [Important variants](../../solutions/master-records/provenance-survivorship.md#important-variants), [Trade-offs and failure modes](../../solutions/master-records/provenance-survivorship.md#trade-offs-and-failure-modes), [Relationships with other methods](../../solutions/master-records/provenance-survivorship.md#relationships-with-other-methods).
+
+addresses: [DEC-09-001](../../decisions/master-representation.md).
+
+complements: [SOL-06-001](../../solutions/comparison-features/evidence-states.md).
+
+evaluated_by: [EVAL-11-003](../../evaluation/entity-resolution-quality.md).
+
+used_by: [AR-06](../../architectures/incremental-continuous.md).
+
+## Tag batch
+
+[DEC-09-001](../../decisions/master-representation.md).
+
+## Tag conflicting
+
+[SOL-09-001](../../solutions/master-records/provenance-survivorship.md).
+
+## Tag entity-agnostic
+
+[DEC-09-001](../../decisions/master-representation.md).
+
+## Tag governance
+
+[DEC-09-001](../../decisions/master-representation.md), [SOL-09-001](../../solutions/master-records/provenance-survivorship.md).
+
+## Tag incremental
+
+[DEC-09-001](../../decisions/master-representation.md).
+
+## Tag interpretable
+
+[DEC-09-001](../../decisions/master-representation.md), [SOL-09-001](../../solutions/master-records/provenance-survivorship.md).
+
+## Tag missingness
+
+[SOL-09-001](../../solutions/master-records/provenance-survivorship.md).
+
+## Tag provenance
+
+[DEC-09-001](../../decisions/master-representation.md), [SOL-09-001](../../solutions/master-records/provenance-survivorship.md).
+
+## Tag source-aware
+
+[SOL-09-001](../../solutions/master-records/provenance-survivorship.md).
+
+Generated from card summaries, tags, typed relations and section links. No compatibility or performance conclusion is generated.

@@ -1,0 +1,64 @@
+{
+  "cohort": "AU-v2",
+  "settings_version": "2.0.0",
+  "arms": [
+    "baseline-atlas",
+    "expanded-atlas",
+    "no-atlas"
+  ],
+  "repetitions_per_cell": 1,
+  "scenario_order": [
+    "AUv2-01",
+    "AUv2-02",
+    "AUv2-03",
+    "AUv2-04",
+    "AUv2-05",
+    "AUv2-06",
+    "AUv2-07",
+    "AUv2-08"
+  ],
+  "arm_order_cycle": [
+    [
+      "baseline-atlas",
+      "expanded-atlas",
+      "no-atlas"
+    ],
+    [
+      "expanded-atlas",
+      "no-atlas",
+      "baseline-atlas"
+    ],
+    [
+      "no-atlas",
+      "baseline-atlas",
+      "expanded-atlas"
+    ]
+  ],
+  "budgets": {
+    "read_attempts": 24,
+    "successful_reads": 16,
+    "retrieved_characters": 64000,
+    "read_chunk_characters": 8000,
+    "initial_characters": 24000,
+    "final_characters": 24000,
+    "stdout_line_bytes": 65536,
+    "solver_wall_seconds": 240,
+    "evaluator_wall_seconds": 600
+  },
+  "tested_identity": null,
+  "evaluator_identity": null,
+  "tested_provider": null,
+  "tested_model": null,
+  "evaluator_provider": null,
+  "evaluator_model": null,
+  "generation": {
+    "temperature": null,
+    "top_p": null,
+    "seed": null,
+    "provider_output_token_limit": null,
+    "status": "unregistered"
+  },
+  "settings_attestation": "required_before_execution",
+  "budget_units": "Unicode characters except explicitly named bytes or seconds; not tokens",
+  "arm_equivalence": "Same prompt, scenario bytes, tested identity, registered generation settings, budgets, process and broker rules across all arms; only immutable corpus inventory differs. Empty no-atlas inventory has no artificial replacement context."
+}

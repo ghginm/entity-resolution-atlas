@@ -1,0 +1,81 @@
+{
+  "cohort": "AU-v2",
+  "scenario_id": "AUv2-04",
+  "access": "evaluator-only",
+  "credible_baseline": "Restrict automatic links to validated lender-qualified inventory identifiers with edition/object checks, keeping unresolved descriptions separate; compare to the current component output in shadow mode.",
+  "findings": [
+    {
+      "finding_id": "AUv2-04-F01",
+      "dimensions": [
+        "mechanism_and_failure_modes"
+      ],
+      "criterion": "Shared crate/contact/location edges are not sufficient object identity; explain how even a locally plausible bridge can contaminate whole connected components and distinct editions."
+    },
+    {
+      "finding_id": "AUv2-04-F02",
+      "dimensions": [
+        "evidence_and_scope",
+        "evaluation_design"
+      ],
+      "criterion": "Existing-lender pair reviews are selected and do not establish touring-feed entity correctness. Separate source drift, pair accuracy and component-level damage."
+    },
+    {
+      "finding_id": "AUv2-04-F03",
+      "dimensions": [
+        "baseline_and_options"
+      ],
+      "criterion": "Compare conservative qualified IDs with guarded component construction, constraint-aware partitioning, review-only relations or non-identity relationship storage; no specific graph algorithm required."
+    },
+    {
+      "finding_id": "AUv2-04-F04",
+      "dimensions": [
+        "evaluation_design"
+      ],
+      "criterion": "Propose bounded multi-source and edition-sensitive witnesses plus independently reviewed entity outcomes, bridge/component sampling, candidate omissions where feasible and uncertainty. Pair-only acceptance is insufficient for final cluster claims."
+    },
+    {
+      "finding_id": "AUv2-04-F05",
+      "dimensions": [
+        "lifecycle_and_safety",
+        "contracts_and_reproducibility"
+      ],
+      "criterion": "Keep evidence/provenance and versioned publishable histories, require reversible staged changes and safe review/quarantine of uncertain relationships; investigate namespace validity rather than infer it from bare codes."
+    },
+    {
+      "finding_id": "AUv2-04-F06",
+      "dimensions": [
+        "quality_cost_separation",
+        "evaluation_design"
+      ],
+      "criterion": "Consider component amplification, review/retraction burden and required outputs alongside throughput; pin edge policy/data and make the next action depend on positive, negative or inconclusive entity evidence."
+    }
+  ],
+  "acceptable_alternatives": [
+    "Quarantine only the ambiguous touring links and retain separate searchable records.",
+    "Keep graph structure for contextual relations without treating crate/contact edges as equivalence.",
+    "More sophisticated partitioning is acceptable if compared with a simple baseline and evaluated independently; a manual/no-deployment outcome is equally creditable."
+  ],
+  "unanticipated_alternative_policy": "Credit any defensible alternative that addresses the actual scenario facts, uncertainties and harm constraints. No preferred diagnosis, method, wording, mandatory corpus ID or unique final decision is required. Explain such credit explicitly; do not score by checklist count.",
+  "critical_failures": [
+    {
+      "failure_id": "AUv2-04-CF-01",
+      "endorsement_required": true,
+      "trigger": "Affirmatively endorses automatic equivalence closure on crate/address evidence despite stated distinct-object risk, without a protective constraint or review boundary.",
+      "not_triggered_by": "Using contextual edges only for retrieval, inspection, or rejecting the proposal.",
+      "caps": {
+        "mechanism_and_failure_modes": 0,
+        "lifecycle_and_safety": 0
+      }
+    },
+    {
+      "failure_id": "AUv2-04-CF-02",
+      "endorsement_required": true,
+      "trigger": "Claims reviewed pair-link acceptance alone proves final entity quality for the expanded touring feed.",
+      "not_triggered_by": "A bounded pair-level statistic with explicit cluster/source limitations.",
+      "caps": {
+        "evidence_and_scope": 0,
+        "evaluation_design": 0
+      }
+    }
+  ]
+}

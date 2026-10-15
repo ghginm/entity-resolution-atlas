@@ -1,0 +1,84 @@
+{
+  "status": "passed",
+  "scope": "Wave 2 documentation and integrity checkpoint (authoritative post-remediation validation)",
+  "provenance_note": "The Wave 2 authoring session recorded interim pre-review checks and author-remediation dispositions but terminated before writing this final report. It re-runs the complete suite on the remediated corpus at this timestamp; interim artifacts remain unchanged beside it. Findings: validation/v1.2/wave-2-review-dispositions.json.",
+  "finalized_at_utc": "2026-10-14T14:38:11.023203+00:00",
+  "checks": {
+    "documentation_tests": {
+      "command": "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python -m unittest discover -s tools -p 'test_*.py'",
+      "exit_code": 0,
+      "output": "..............................................\n----------------------------------------------------------------------\nRan 46 tests in 1.462s\n\nOK",
+      "tests": 46
+    },
+    "benchmark_infrastructure_tests": {
+      "command": "python3 -m unittest discover -s validation/agent-utility/tests -p 'test_*.py'",
+      "exit_code": 0,
+      "output": "/home/ghgin/.hermes/tools/python-3.14.7+202****0901-linux-x64/lib/python3.14/unittest/case.py:615: ResourceWarning: unclosed file <_io.TextIOWrapper name=7 encoding='utf-8'>\n  result = method()\nResourceWarning: Enable tracemalloc to get the object allocation traceback\n/home/ghgin/.hermes/tools/python-3.14.7+202****0901-linux-x64/lib/python3.14/unittest/case.py:615: ResourceWarning: unclosed file <_io.TextIOWrapper name=4 encoding='utf-8'>\n  result = method()\nResourceWarning: Enable tracemalloc to get the object allocation traceback\n/home/ghgin/.hermes/tools/python-3.14.7+202****0901-linux-x64/lib/python3.14/unittest/case.py:615: ResourceWarning: unclosed file <_io.TextIOWrapper name=5 encoding='utf-8'>\n  result = method()\nResourceWarning: Enable tracemalloc to get the object allocation traceback\n.......................................\n----------------------------------------------------------------------\nRan 39 tests in 7.941s\n\nOK",
+      "tests": 39
+    },
+    "freeze": {
+      "command": "python3 validation/agent-utility/harness.py verify-freeze",
+      "exit_code": 0,
+      "output": "{\"benchmark_id\": \"AU-v1\", \"frozen_files\": 24, \"manifest_sha256\": \"bd2e57dc2d96f40fb65a6fd4ac2d9a5e6000411b91a5dc1ca47071a8bed3104c\"}",
+      "tests": null
+    },
+    "v1_corpus": {
+      "command": "python3 validation/agent-utility/harness.py verify-corpus --corpus validation/agent-utility/corpora/v1",
+      "exit_code": 0,
+      "output": "{\"cards\": 21, \"corpus_sha256\": \"e1ade517e405ac79fa93bc700dfe098848a1517dcbecf81080e307d2b30b8772\", \"files\": 42, \"label\": \"v1\"}",
+      "tests": null
+    },
+    "v11_corpus": {
+      "command": "python3 validation/agent-utility/harness.py verify-corpus --corpus validation/agent-utility/corpora/v1.1",
+      "exit_code": 0,
+      "output": "{\"cards\": 31, \"corpus_sha256\": \"4a2c25e42a90d768d6b4417c4c2f8d5060428940ac787e7347fa484a05283f3e\", \"files\": 52, \"label\": \"v1.1\"}",
+      "tests": null
+    },
+    "algebra": {
+      "command": "python3 validation/v1.2/check_reference_algebra.py",
+      "exit_code": 0,
+      "output": "{\n  \"kind\": \"algebraic sanity checks, not ER experiments or proof of asymptotic coverage\",\n  \"recall_bound_configurations\": 500,\n  \"HT_mean_and_variance_configurations\": 516,\n  \"hypergeometric_zero_event_configurations\": 328,\n  \"review_regression_checks\": [\n    \"frozen black-box output needs evaluation, not production, inclusion\",\n    \"pair denominators restricted to the same semantic universe\",\n    \"record-average versus entity-average B-cubed\",\n    \"SCAR propensity and true posterior can trade off\",\n    \"discrete fixed-size zero-event endpoint\"\n  ],\n  \"passed\": true\n}",
+      "tests": null
+    }
+  },
+  "baseline": "validation/v1.2/wave-2-baseline.json",
+  "inventory": {
+    "version": "1.2-wave-2",
+    "cards": 45,
+    "counts": {
+      "architecture": 6,
+      "decision": 10,
+      "evaluation": 6,
+      "hypothesis": 2,
+      "solution": 21
+    },
+    "new_cards": [
+      "DEC-02-001",
+      "DEC-08-002",
+      "SOL-02-001",
+      "SOL-02-002",
+      "SOL-08-005",
+      "SOL-08-006"
+    ]
+  },
+  "integrity": {
+    "protected_files_checked": 446,
+    "protected_changes": [],
+    "protected_additions": [],
+    "historical_ID_paths_preserved": 39,
+    "original_ledger_entries_preserved": 22,
+    "pre_wave_snapshot_sha256": "8bd4960681d4f2adfd4fea200e85d716ed9cddffdc235e52ea569d1ae1852f99"
+  },
+  "change_counts": {
+    "modified": 25,
+    "added": 19,
+    "deleted": 0
+  },
+  "evidence_boundary": {
+    "engineering_or_ER_experiments": false,
+    "new_agent_utility_execution": false,
+    "production_changes": false,
+    "commit_or_push": false,
+    "reviewers_not_attested_independent_models": true
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "scenario_id": "AU-04",
+  "interpretation": "Semantic checklist, not a required verbatim answer or mandatory algorithm. Credit defensible alternatives and explicit corpus gaps. Do not reward card counts or invented IDs.",
+  "expected_findings": [
+    {
+      "finding_id": "AU-04-F1",
+      "finding": "Retain original scripts/provenance; avoid destructive ASCII normalization and treat missing/shared contacts separately.",
+      "dimensions": [
+        "problem_understanding",
+        "risk_identification"
+      ]
+    },
+    {
+      "finding_id": "AU-04-F2",
+      "finding": "Compare language-aware multi-pass character/transliteration baseline with optional embeddings or learned matcher; sparse biased labels do not demonstrate suitability.",
+      "dimensions": [
+        "technical_reasoning",
+        "risk_identification"
+      ]
+    },
+    {
+      "finding_id": "AU-04-F3",
+      "finding": "Propose script/source and missingness-sliced entity-disjoint labels including missed candidates and difficult negatives; manage confidentiality and review cost.",
+      "dimensions": [
+        "alternative_quality",
+        "technical_reasoning"
+      ]
+    },
+    {
+      "finding_id": "AU-04-F4",
+      "finding": "Separate representation, candidate, score and entity policy errors; transliteration collisions and shared phones risk false merges.",
+      "dimensions": [
+        "experiment_quality",
+        "risk_identification"
+      ]
+    },
+    {
+      "finding_id": "AU-04-F5",
+      "finding": "No numerical accuracy forecast; distinguish external technique mechanisms from local untested hypotheses and measure CPU cost.",
+      "dimensions": [
+        "evidence_discipline",
+        "experiment_quality"
+      ]
+    }
+  ],
+  "critical_failures": [
+    {
+      "failure_id": "AU-04-biased_labels_as_proof",
+      "trigger": "Treats the tiny mostly Latin/easy-negative label set as proof of multilingual deployment quality.",
+      "caps": {
+        "experiment_quality": 1,
+        "evidence_discipline": 1,
+        "risk_identification": 1
+      }
+    },
+    {
+      "failure_id": "AU-04-destructive_identity",
+      "trigger": "Treats flattened names or shared family contacts as sufficient identity evidence without collision safeguards.",
+      "caps": {
+        "technical_reasoning": 1,
+        "risk_identification": 1
+      }
+    }
+  ]
+}

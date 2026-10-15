@@ -1,0 +1,17 @@
+test_buffered_line_must_not_bypass_expired_deadline (test_runtime_boundary.RuntimeBoundaryTests.test_buffered_line_must_not_bypass_expired_deadline) ... expected failure
+test_chunk_excess_is_failed_not_silently_corrected (test_runtime_boundary.RuntimeBoundaryTests.test_chunk_excess_is_failed_not_silently_corrected) ... ok
+test_duplicate_json_keys_from_process_are_rejected (test_runtime_boundary.RuntimeBoundaryTests.test_duplicate_json_keys_from_process_are_rejected) ... ok
+test_final_character_excess_is_rejected (test_runtime_boundary.RuntimeBoundaryTests.test_final_character_excess_is_rejected) ... ok
+test_nonzero_process_exit_cannot_complete (test_runtime_boundary.RuntimeBoundaryTests.test_nonzero_process_exit_cannot_complete) ... ok
+test_output_after_final_is_rejected (test_runtime_boundary.RuntimeBoundaryTests.test_output_after_final_is_rejected) ... ok
+test_partial_line_at_eof_is_rejected (test_runtime_boundary.RuntimeBoundaryTests.test_partial_line_at_eof_is_rejected) ... ok
+test_partial_line_stall_hits_reader_deadline (test_runtime_boundary.RuntimeBoundaryTests.test_partial_line_stall_hits_reader_deadline) ... ok
+test_read_before_ready_is_rejected (test_runtime_boundary.RuntimeBoundaryTests.test_read_before_ready_is_rejected) ... ok
+test_ready_identity_mismatch_is_rejected (test_runtime_boundary.RuntimeBoundaryTests.test_ready_identity_mismatch_is_rejected) ... ok
+test_real_pipe_exchange_retains_sent_received_and_stderr (test_runtime_boundary.RuntimeBoundaryTests.test_real_pipe_exchange_retains_sent_received_and_stderr) ... ok
+test_stdout_line_byte_limit_rejects_real_process_output (test_runtime_boundary.RuntimeBoundaryTests.test_stdout_line_byte_limit_rejects_real_process_output) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.519s
+
+OK (expected failures=1)

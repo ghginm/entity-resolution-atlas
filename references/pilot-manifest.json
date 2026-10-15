@@ -1,0 +1,23 @@
+{
+  "DEC-05-001": "decisions/candidate-strategy.md",
+  "DEC-06-001": "decisions/comparison-evidence.md",
+  "DEC-07-001": "decisions/scoring-strategy.md",
+  "SOL-05-001": "solutions/candidate-generation/exact-blocking.md",
+  "SOL-05-002": "solutions/candidate-generation/multi-pass-blocking.md",
+  "SOL-06-001": "solutions/comparison-features/evidence-states.md",
+  "SOL-07-001": "solutions/matching-scoring/additive-soft-matching.md",
+  "SOL-07-002": "solutions/matching-scoring/fellegi-sunter.md",
+  "SOL-07-003": "solutions/matching-scoring/logistic-regression.md",
+  "SOL-08-001": "solutions/decision-resolution/thresholds-abstention.md",
+  "HYP-06-001": "research/hypotheses/frequency-aware-evidence.md",
+  "HYP-07-001": "research/hypotheses/contextual-reliability.md",
+  "EVAL-11-001": "evaluation/candidate-recall.md",
+  "EVAL-11-002": "evaluation/pairwise-calibration.md",
+  "EVAL-11-003": "evaluation/entity-resolution-quality.md",
+  "AR-01": "architectures/linear-modular.md",
+  "AR-02": "architectures/recall-multi-pass.md",
+  "AR-03": "architectures/precision-cascade.md",
+  "AR-04": "architectures/parallel-ensemble.md",
+  "AR-05": "architectures/collective-consistency.md",
+  "AR-06": "architectures/incremental-continuous.md"
+}

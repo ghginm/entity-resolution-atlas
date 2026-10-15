@@ -1,0 +1,82 @@
+{
+  "cohort": "AU-v2",
+  "scenario_id": "AUv2-03",
+  "access": "evaluator-only",
+  "credible_baseline": "Keep the existing ordered policy as a transparent behavioral comparator, with conservative source-qualified checks and a review lane; document action meanings before any translation. Keeping the old policy is not proof it is correct.",
+  "findings": [
+    {
+      "finding_id": "AUv2-03-F01",
+      "dimensions": [
+        "mechanism_and_failure_modes"
+      ],
+      "criterion": "Explain first-match semantics, conflicting rows, shadowed birth-year checks and ambiguous highest-action-code selection. Locally issued member numbers and shared email require identity-aware treatment."
+    },
+    {
+      "finding_id": "AUv2-03-F02",
+      "dimensions": [
+        "contracts_and_reproducibility",
+        "evaluation_design"
+      ],
+      "criterion": "Define normalization, missing-value predicates, match versus review actions, precedence and defaults. Use bounded synthetic overlap, missingness, boundary and no-match witnesses to characterize semantics before replacement."
+    },
+    {
+      "finding_id": "AUv2-03-F03",
+      "dimensions": [
+        "evidence_and_scope",
+        "evaluation_design"
+      ],
+      "criterion": "Distinguish regression agreement with the old policy from member-level truth; the fixture source cannot establish independent improvement and complaint selection limits claims."
+    },
+    {
+      "finding_id": "AUv2-03-F04",
+      "dimensions": [
+        "baseline_and_options"
+      ],
+      "criterion": "Compare documented ordered policy, explicitly prioritized decision table, conflict-to-review table or conservative qualified-ID policy. Either equivalence preservation or approved behavioral change can be justified."
+    },
+    {
+      "finding_id": "AUv2-03-F05",
+      "dimensions": [
+        "lifecycle_and_safety",
+        "evaluation_design"
+      ],
+      "criterion": "Use shadow policy traces, provenance and review of high-harm access changes; independently adjudicate relevant site/household/ambiguity cases before rollout, with release and rollback gates."
+    },
+    {
+      "finding_id": "AUv2-03-F06",
+      "dimensions": [
+        "quality_cost_separation",
+        "contracts_and_reproducibility"
+      ],
+      "criterion": "Report maintainability/runtime/review burden separately from identity quality; freeze policy and witness versions so cost or semantics changes have attributable causes."
+    }
+  ],
+  "acceptable_alternatives": [
+    "A table with explicit preserved priority is reasonable if behavioral equivalence is the authorized aim.",
+    "A deliberately different table may be better if changed actions are surfaced, adjudicated and approved rather than hidden by regression claims.",
+    "Retain ordered rules and add explanation traces or conservative ambiguity review; no declarative rewrite is required."
+  ],
+  "unanticipated_alternative_policy": "Credit any defensible alternative that addresses the actual scenario facts, uncertainties and harm constraints. No preferred diagnosis, method, wording, mandatory corpus ID or unique final decision is required. Explain such credit explicitly; do not score by checklist count.",
+  "critical_failures": [
+    {
+      "failure_id": "AUv2-03-CF-01",
+      "endorsement_required": true,
+      "trigger": "Endorses highest numeric action code as equivalent to first-match semantics without defining precedence, while recommending unreviewed access-policy replacement.",
+      "not_triggered_by": "A hypothetical encoding accompanied by explicit equivalence proof obligations or a held shadow trial.",
+      "caps": {
+        "mechanism_and_failure_modes": 0,
+        "lifecycle_and_safety": 1
+      }
+    },
+    {
+      "failure_id": "AUv2-03-CF-02",
+      "endorsement_required": true,
+      "trigger": "Claims replayed old-policy labels/regression agreement establishes superior or correct member identity.",
+      "not_triggered_by": "Using replay to measure bounded behavioral agreement only.",
+      "caps": {
+        "evidence_and_scope": 0,
+        "evaluation_design": 0
+      }
+    }
+  ]
+}

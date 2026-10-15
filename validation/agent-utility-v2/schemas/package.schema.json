@@ -1,0 +1,175 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:entity-resolution-atlas:AU-v2:package",
+  "type": "object",
+  "properties": {
+    "cohort": {
+      "const": "AU-v2"
+    },
+    "package_version": {
+      "const": "2.0.0"
+    },
+    "kind": {
+      "const": "held-out-data-package"
+    },
+    "status": {
+      "const": "prepared_data_only"
+    },
+    "scenarios": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.?(?:/|$))[A-Za-z0-9_-]+(?:/[A-Za-z0-9_.-]+)*\\.[A-Za-z0-9]+$"
+      },
+      "minItems": 8,
+      "maxItems": 8
+    },
+    "keys": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.?(?:/|$))[A-Za-z0-9_-]+(?:/[A-Za-z0-9_.-]+)*\\.[A-Za-z0-9]+$"
+      },
+      "minItems": 8,
+      "maxItems": 8
+    },
+    "common_prompt": {
+      "const": "prompt.txt"
+    },
+    "settings": {
+      "const": "settings.json"
+    },
+    "protocol": {
+      "const": "protocol.md"
+    },
+    "rubric": {
+      "const": "evaluator-only/rubric.json"
+    },
+    "evaluator_prompt": {
+      "const": "evaluator-only/prompt.txt"
+    },
+    "scenario_count": {
+      "const": 8
+    },
+    "key_count": {
+      "const": 8
+    },
+    "dimension_count": {
+      "const": 8
+    },
+    "planned_cells": {
+      "const": 24
+    },
+    "actual_runs": {
+      "const": 0
+    },
+    "actual_scores": {
+      "const": 0
+    },
+    "runtime_integration": {
+      "const": "unimplemented"
+    },
+    "corpus_snapshots": {
+      "const": "not_prepared"
+    },
+    "registration_status": {
+      "const": "unregistered"
+    },
+    "tested_identity": {
+      "type": "null"
+    },
+    "evaluator_identity": {
+      "type": "null"
+    },
+    "author_model_identity": {
+      "type": "null"
+    },
+    "author_provider": {
+      "type": "null"
+    },
+    "exclusions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 5
+    },
+    "source_access": {
+      "type": "object",
+      "properties": {
+        "permitted_files_read": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "old_inputs_opened": {
+          "const": false
+        },
+        "old_keys_opened": {
+          "const": false
+        },
+        "score_or_result_files_opened": {
+          "const": false
+        },
+        "new_atlas_cards_opened": {
+          "const": false
+        },
+        "public_readme_summary_exposure": {
+          "const": true
+        }
+      },
+      "required": [
+        "permitted_files_read",
+        "old_inputs_opened",
+        "old_keys_opened",
+        "score_or_result_files_opened",
+        "new_atlas_cards_opened",
+        "public_readme_summary_exposure"
+      ],
+      "additionalProperties": false
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 6
+    }
+  },
+  "required": [
+    "cohort",
+    "package_version",
+    "kind",
+    "status",
+    "scenarios",
+    "keys",
+    "common_prompt",
+    "settings",
+    "protocol",
+    "rubric",
+    "evaluator_prompt",
+    "scenario_count",
+    "key_count",
+    "dimension_count",
+    "planned_cells",
+    "actual_runs",
+    "actual_scores",
+    "runtime_integration",
+    "corpus_snapshots",
+    "registration_status",
+    "tested_identity",
+    "evaluator_identity",
+    "author_model_identity",
+    "author_provider",
+    "exclusions",
+    "source_access",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

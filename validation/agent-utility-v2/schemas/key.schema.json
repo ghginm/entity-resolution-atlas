@@ -1,0 +1,163 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:entity-resolution-atlas:AU-v2:key",
+  "type": "object",
+  "properties": {
+    "cohort": {
+      "const": "AU-v2"
+    },
+    "scenario_id": {
+      "type": "string",
+      "pattern": "^AUv2-0[1-8]$"
+    },
+    "access": {
+      "const": "evaluator-only"
+    },
+    "credible_baseline": {
+      "type": "string",
+      "minLength": 1
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "finding_id": {
+            "type": "string",
+            "pattern": "^AUv2-0[1-8]-F[0-9]{2}$"
+          },
+          "dimensions": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "evidence_and_scope",
+                "mechanism_and_failure_modes",
+                "baseline_and_options",
+                "evaluation_design",
+                "lifecycle_and_safety",
+                "contracts_and_reproducibility",
+                "quality_cost_separation",
+                "retrieval_grounding"
+              ]
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "criterion": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "finding_id",
+          "dimensions",
+          "criterion"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 6,
+      "maxItems": 6
+    },
+    "acceptable_alternatives": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 3
+    },
+    "unanticipated_alternative_policy": {
+      "type": "string",
+      "minLength": 1
+    },
+    "critical_failures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "failure_id": {
+            "type": "string",
+            "pattern": "^AUv2-0[1-8]-CF-[0-9]{2}$"
+          },
+          "endorsement_required": {
+            "const": true
+          },
+          "trigger": {
+            "type": "string",
+            "minLength": 1
+          },
+          "not_triggered_by": {
+            "type": "string",
+            "minLength": 1
+          },
+          "caps": {
+            "type": "object",
+            "properties": {
+              "evidence_and_scope": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 3
+              },
+              "mechanism_and_failure_modes": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 3
+              },
+              "baseline_and_options": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 3
+              },
+              "evaluation_design": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 3
+              },
+              "lifecycle_and_safety": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 3
+              },
+              "contracts_and_reproducibility": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 3
+              },
+              "quality_cost_separation": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 3
+              },
+              "retrieval_grounding": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 3
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "failure_id",
+          "endorsement_required",
+          "trigger",
+          "not_triggered_by",
+          "caps"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "cohort",
+    "scenario_id",
+    "access",
+    "credible_baseline",
+    "findings",
+    "acceptable_alternatives",
+    "unanticipated_alternative_policy",
+    "critical_failures"
+  ],
+  "additionalProperties": false
+}

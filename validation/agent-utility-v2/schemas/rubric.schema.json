@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:entity-resolution-atlas:AU-v2:rubric",
+  "type": "object",
+  "properties": {
+    "cohort": {
+      "const": "AU-v2"
+    },
+    "rubric_version": {
+      "const": "2.0.0"
+    },
+    "scale": {
+      "const": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    "aggregation": {
+      "const": "none"
+    },
+    "dimensions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "enum": [
+              "evidence_and_scope",
+              "mechanism_and_failure_modes",
+              "baseline_and_options",
+              "evaluation_design",
+              "lifecycle_and_safety",
+              "contracts_and_reproducibility",
+              "quality_cost_separation",
+              "retrieval_grounding"
+            ]
+          },
+          "anchors": {
+            "type": "object",
+            "properties": {
+              "0": {
+                "type": "string",
+                "minLength": 1
+              },
+              "1": {
+                "type": "string",
+                "minLength": 1
+              },
+              "2": {
+                "type": "string",
+                "minLength": 1
+              },
+              "3": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "0",
+              "1",
+              "2",
+              "3"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "id",
+          "anchors"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 8,
+      "maxItems": 8
+    },
+    "applicability": {
+      "type": "string",
+      "minLength": 1
+    },
+    "credit_policy": {
+      "type": "string",
+      "minLength": 1
+    },
+    "critical_failure_policy": {
+      "type": "string",
+      "minLength": 1
+    },
+    "score_evidence": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "cohort",
+    "rubric_version",
+    "scale",
+    "aggregation",
+    "dimensions",
+    "applicability",
+    "credit_policy",
+    "critical_failure_policy",
+    "score_evidence"
+  ],
+  "additionalProperties": false
+}

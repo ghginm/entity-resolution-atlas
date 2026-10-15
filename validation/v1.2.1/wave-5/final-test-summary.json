@@ -1,0 +1,120 @@
+{
+  "observed_at": "2026-10-15T19:55:55.338628+00:00",
+  "suites": [
+    {
+      "suite": "runtime-boundary",
+      "argv": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "validation/v1.2.1/wave-4",
+        "-p",
+        "test_runtime_boundary.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "tests": 12,
+      "expected_failures": 1,
+      "log": "final-runtime-boundary-tests.txt",
+      "sha256": "5b48a7b3e4e3934d5484869bd74b0775593d857587f88a944f554256a7a6e204"
+    },
+    {
+      "suite": "au-v1",
+      "argv": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "validation/agent-utility/tests",
+        "-v"
+      ],
+      "returncode": 0,
+      "tests": 39,
+      "expected_failures": 0,
+      "log": "final-au-v1-tests.txt",
+      "sha256": "c890ffc8a9c47982ad96c7517fed1cb6832af0fad882a3878441e001956b8371"
+    },
+    {
+      "suite": "au-v2",
+      "argv": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "validation/agent-utility-v2/tests",
+        "-v"
+      ],
+      "returncode": 0,
+      "tests": 17,
+      "expected_failures": 0,
+      "log": "final-au-v2-tests.txt",
+      "sha256": "1903e965e3d557b3b3712dce5bbc6aa7481c508723045ec2bdd9c1c91e1af060"
+    },
+    {
+      "suite": "integration",
+      "argv": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "validation/agent-utility-integration/tests",
+        "-v"
+      ],
+      "returncode": 0,
+      "tests": 65,
+      "expected_failures": 0,
+      "log": "final-integration-tests.txt",
+      "sha256": "9b677226f9345b5e8d2a38fcf8dfa31cb4438790b148f7a5f1fd6703e81e0b0b"
+    },
+    {
+      "suite": "workflow",
+      "argv": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "validation/agent-workflow",
+        "-p",
+        "test_workflow.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "tests": 12,
+      "expected_failures": 0,
+      "log": "final-workflow-tests.txt",
+      "sha256": "28aece0f3618172b62d16c8ea2be0e0b97fe1a9a0c33b87999523ff663e291f0"
+    },
+    {
+      "suite": "docs",
+      "argv": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "tests": 59,
+      "expected_failures": 0,
+      "log": "final-docs-tests.txt",
+      "sha256": "ca78f2a555afe56a986f24c0e21e76e7347e084b4c7490a1174f754edc8a6af8"
+    }
+  ],
+  "note": "Expected failure is an unresolved deadline requirement, not a pass. Synthetic/structural tests are not ER or model utility evidence."
+}

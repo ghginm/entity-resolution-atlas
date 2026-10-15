@@ -1,0 +1,109 @@
+{
+  "recorded_at": "2026-10-14T21:20:20.851386+00:00",
+  "kind": "No-provider tooling compatibility observations and documentation integrity",
+  "script_sha256": "dc656ec2fa3609e89746c674ae48e446a55c4820a6e99b16f85b731eba11d92b",
+  "synthetic_observations": [
+    {
+      "probe": "maxItems",
+      "input": [
+        "a",
+        "b"
+      ],
+      "schema": {
+        "type": "array",
+        "maxItems": 1,
+        "items": {
+          "type": "string"
+        }
+      },
+      "AU_v1": "accepted",
+      "AU_v2": "IntegrityError: schema_error: $synthetic: array_length"
+    },
+    {
+      "probe": "uniqueItems",
+      "input": [
+        "a",
+        "a"
+      ],
+      "schema": {
+        "type": "array",
+        "uniqueItems": true,
+        "items": {
+          "type": "string"
+        }
+      },
+      "AU_v1": "accepted",
+      "AU_v2": "IntegrityError: schema_error: $synthetic: uniqueItems"
+    },
+    {
+      "probe": "number",
+      "input": 0.5,
+      "schema": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      },
+      "AU_v1": "KeyError: 'number'",
+      "AU_v2": "accepted"
+    },
+    {
+      "probe": "duplicate_keys",
+      "input": "{\"a\":1,\"a\":2}",
+      "AU_v1": "accepted",
+      "AU_v2": "IntegrityError: duplicate_json_key"
+    },
+    {
+      "probe": "nonfinite",
+      "input": "{\"a\":NaN}",
+      "AU_v1": "accepted",
+      "AU_v2": "IntegrityError: nonfinite_json_number"
+    }
+  ],
+  "observations_match_code_review": true,
+  "checks": [
+    {
+      "command": [
+        "/home/ghgin/.hermes/tools/python-3.14.7+20260901-linux-x64/bin/python3",
+        "-B",
+        "/home/ghgin/projects/entity-resolution-atlas/validation/agent-utility-v2/verify.py",
+        "--expected-manifest-sha256",
+        "22d2527c35b39e1f22a0ac5815c833924815b63cbd1704a958989f124c798f49"
+      ],
+      "exit_code": 0,
+      "output": "{\"actual_runs\": 0, \"actual_scores\": 0, \"benchmark_id\": \"AU-v2\", \"critical_failure_rules\": 17, \"dimensions\": 8, \"frozen_files\": 36, \"integrity\": \"verified\", \"json_files_excluding_manifest\": 30, \"keys\": 8, \"planned_cells\": 24, \"preparation_status\": \"prepared_data_only\", \"runtime_integration\": \"unimplemented\", \"scenarios\": 8, \"schemas\": 10, \"semantic_findings\": 48}\n"
+    },
+    {
+      "command": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "/home/ghgin/projects/entity-resolution-atlas/tools/atlas_docs.py",
+        "lint"
+      ],
+      "exit_code": 0,
+      "output": "{\n  \"errors\": [],\n  \"warnings\": [\n    \"decisions/experiment-design.md: body 935 words; consider justified deep dive\",\n    \"decisions/ground-truth-acquisition.md: body 961 words; consider justified deep dive\",\n    \"decisions/monitoring-response.md: keyword hint missing for assumptions/prerequisites; inspect manually, not a semantic verdict\",\n    \"decisions/pipeline-modularity.md: body 1163 words; consider justified deep dive\",\n    \"decisions/rule-composition.md: body 1203 words; consider justified deep dive\",\n    \"solutions/architecture/replaceable-stage-pipelines.md: body 1067 words; consider justified deep dive\",\n    \"solutions/architecture/versioned-artifact-runs.md: body 1326 words; consider justified deep dive\",\n    \"solutions/candidate-generation/approximate-blocking.md: body 1154 words; consider justified deep dive\",\n    \"solutions/comparison-features/identifier-namespaces.md: body 1086 words; consider justified deep dive\",\n    \"solutions/comparison-features/identifier-namespaces.md: keyword hint missing for mechanism; inspect manually, not a semantic verdict\",\n    \"solutions/comparison-features/string-comparators.md: body 1028 words; consider justified deep dive\",\n    \"solutions/comparison-features/string-comparators.md: keyword hint missing for failure/limitations; inspect manually, not a semantic verdict\",\n    \"solutions/decision-resolution/connected-components.md: body 1175 words; consider justified deep dive\",\n    \"solutions/decision-resolution/constrained-clustering.md: body 1126 words; consider justified deep dive\",\n    \"solutions/decision-resolution/declarative-decision-tables.md: body 1475 words; consider justified deep dive\",\n    \"solutions/decision-resolution/ordered-rule-policies.md: body 1227 words; consider justified deep dive\",\n    \"solutions/experimentation/controlled-comparison.md: body 1046 words; consider justified deep dive\",\n    \"solutions/governance/stage-monitoring.md: body 1058 words; consider justified deep dive\",\n    \"solutions/ground-truth/independent-reference.md: body 1187 words; consider justified deep dive\",\n    \"solutions/ground-truth/probability-sampled-review.md: body 1160 words; consider justified deep dive\",\n    \"solutions/ground-truth/targeted-active-review.md: body 1191 words; consider justified deep dive\",\n    \"solutions/ground-truth/weak-supervision.md: body 1229 words; consider justified deep dive\",\n    \"solutions/matching-scoring/fellegi-sunter.md: body 966 words; consider justified deep dive\",\n    \"solutions/matching-scoring/learned-neural-comparators.md: body 1066 words; consider justified deep dive\",\n    \"solutions/matching-scoring/source-aware-reliability.md: body 984 words; consider justified deep dive\",\n    \"solutions/normalization/name-representations.md: body 995 words; consider justified deep dive\",\n    \"solutions/scalability/skew-aware-execution.md: body 1009 words; consider justified deep dive\",\n    \"architectures/collective-consistency.md: keyword hint missing for failure/limitations; inspect manually, not a semantic verdict\",\n    \"architectures/incremental-continuous.md: body 1960 words; consider justified deep dive\",\n    \"evaluation/entity-resolution-quality.md: body 1027 words; consider justified deep dive\",\n    \"evaluation/execution-cost-replay.md: body 926 words; consider justified deep dive\",\n    \"evaluation/incomplete-reference-quality.md: body 903 words; consider justified deep dive\",\n    \"evaluation/retrieval-blind-spots.md: body 909 words; consider justified deep dive\",\n    \"evaluation/synthetic-metamorphic.md: body 1227 words; consider justified deep dive\"\n  ],\n  \"counts\": {\n    \"decision\": 13,\n    \"solution\": 29,\n    \"architecture\": 6,\n    \"hypothesis\": 2,\n    \"evaluation\": 7\n  },\n  \"immutable_inputs\": 6,\n  \"card_statistics\": [\n    {\n      \"id\": \"DEC-05-001\",\n      \"path\": \"decisions/candidate-strategy.md\",\n      \"body_words\": 670\n    },\n    {\n      \"id\": \"DEC-06-001\",\n      \"path\": \"decisions/comparison-evidence.md\",\n      \"body_words\": 698\n    },\n    {\n      \"id\": \"DEC-13-001\",\n      \"path\": \"decisions/execution-strategy.md\",\n      \"body_words\": 771\n    },\n    {\n      \"id\": \"DEC-12-001\",\n      \"path\": \"decisions/experiment-design.md\",\n      \"body_words\": 935\n    },\n    {\n      \"id\": \"DEC-10-001\",\n      \"path\": \"decisions/ground-truth-acquisition.md\",\n      \"body_words\": 961\n    },\n    {\n      \"id\": \"DEC-01-001\",\n      \"path\": \"decisions/identity-semantics.md\",\n      \"body_words\": 782\n    },\n    {\n      \"id\": \"DEC-09-001\",\n      \"path\": \"decisions/master-representation.md\",\n      \"body_words\": 748\n    },\n    {\n      \"id\": \"DEC-14-001\",\n      \"path\": \"decisions/monitoring-response.md\",\n      \"body_words\": 739\n    },\n    {\n      \"id\": \"DEC-04-001\",\n      \"path\": \"decisions/name-representation.md\",\n      \"body_words\": 887\n    },\n    {\n      \"id\": \"DEC-02-001\",\n      \"path\": \"decisions/pipeline-modularity.md\",\n      \"body_words\": 1163\n    },\n    {\n      \"id\": \"DEC-08-001\",\n      \"path\": \"decisions/resolution-strategy.md\",\n      \"body_words\": 873\n    },\n    {\n      \"id\": \"DEC-08-002\",\n      \"path\": \"decisions/rule-composition.md\",\n      \"body_words\": 1203\n    },\n    {\n      \"id\": \"DEC-07-001\",\n      \"path\": \"decisions/scoring-strategy.md\",\n      \"body_words\": 799\n    },\n    {\n      \"id\": \"SOL-02-001\",\n      \"path\": \"solutions/architecture/replaceable-stage-pipelines.md\",\n      \"body_words\": 1067\n    },\n    {\n      \"id\": \"SOL-02-002\",\n      \"path\": \"solutions/architecture/versioned-artifact-runs.md\",\n      \"body_words\": 1326\n    },\n    {\n      \"id\": \"SOL-05-003\",\n      \"path\": \"solutions/candidate-generation/approximate-blocking.md\",\n      \"body_words\": 1154\n    },\n    {\n      \"id\": \"SOL-05-001\",\n      \"path\": \"solutions/candidate-generation/exact-blocking.md\",\n      \"body_words\": 681\n    },\n    {\n      \"id\": \"SOL-05-002\",\n      \"path\": \"solutions/candidate-generation/multi-pass-blocking.md\",\n      \"body_words\": 733\n    },\n    {\n      \"id\": \"SOL-06-001\",\n      \"path\": \"solutions/comparison-features/evidence-states.md\",\n      \"body_words\": 727\n    },\n    {\n      \"id\": \"SOL-06-003\",\n      \"path\": \"solutions/comparison-features/identifier-namespaces.md\",\n      \"body_words\": 1086\n    },\n    {\n      \"id\": \"SOL-06-002\",\n      \"path\": \"solutions/comparison-features/string-comparators.md\",\n      \"body_words\": 1028\n    },\n    {\n      \"id\": \"SOL-08-003\",\n      \"path\": \"solutions/decision-resolution/connected-components.md\",\n      \"body_words\": 1175\n    },\n    {\n      \"id\": \"SOL-08-004\",\n      \"path\": \"solutions/decision-resolution/constrained-clustering.md\",\n      \"body_words\": 1126\n    },\n    {\n      \"id\": \"SOL-08-006\",\n      \"path\": \"solutions/decision-resolution/declarative-decision-tables.md\",\n      \"body_words\": 1475\n    },\n    {\n      \"id\": \"SOL-08-002\",\n      \"path\": \"solutions/decision-resolution/one-to-one-assignment.md\",\n      \"body_words\": 782\n    },\n    {\n      \"id\": \"SOL-08-005\",\n      \"path\": \"solutions/decision-resolution/ordered-rule-policies.md\",\n      \"body_words\": 1227\n    },\n    {\n      \"id\": \"SOL-08-001\",\n      \"path\": \"solutions/decision-resolution/thresholds-abstention.md\",\n      \"body_words\": 814\n    },\n    {\n      \"id\": \"SOL-12-001\",\n      \"path\": \"solutions/experimentation/controlled-comparison.md\",\n      \"body_words\": 1046\n    },\n    {\n      \"id\": \"SOL-14-001\",\n      \"path\": \"solutions/governance/stage-monitoring.md\",\n      \"body_words\": 1058\n    },\n    {\n      \"id\": \"SOL-10-001\",\n      \"path\": \"solutions/ground-truth/independent-reference.md\",\n      \"body_words\": 1187\n    },\n    {\n      \"id\": \"SOL-10-002\",\n      \"path\": \"solutions/ground-truth/probability-sampled-review.md\",\n      \"body_words\": 1160\n    },\n    {\n      \"id\": \"SOL-10-003\",\n      \"path\": \"solutions/ground-truth/targeted-active-review.md\",\n      \"body_words\": 1191\n    },\n    {\n      \"id\": \"SOL-10-004\",\n      \"path\": \"solutions/ground-truth/weak-supervision.md\",\n      \"body_words\": 1229\n    },\n    {\n      \"id\": \"SOL-01-001\",\n      \"path\": \"solutions/identity-semantics/temporal-identity.md\",\n      \"body_words\": 848\n    },\n    {\n      \"id\": \"SOL-09-001\",\n      \"path\": \"solutions/master-records/provenance-survivorship.md\",\n      \"body_words\": 852\n    },\n    {\n      \"id\": \"SOL-07-001\",\n      \"path\": \"solutions/matching-scoring/additive-soft-matching.md\",\n      \"body_words\": 854\n    },\n    {\n      \"id\": \"SOL-07-002\",\n      \"path\": \"solutions/matching-scoring/fellegi-sunter.md\",\n      \"body_words\": 966\n    },\n    {\n      \"id\": \"SOL-07-005\",\n      \"path\": \"solutions/matching-scoring/learned-neural-comparators.md\",\n      \"body_words\": 1066\n    },\n    {\n      \"id\": \"SOL-07-003\",\n      \"path\": \"solutions/matching-scoring/logistic-regression.md\",\n      \"body_words\": 885\n    },\n    {\n      \"id\": \"SOL-07-004\",\n      \"path\": \"solutions/matching-scoring/source-aware-reliability.md\",\n      \"body_words\": 984\n    },\n    {\n      \"id\": \"SOL-04-001\",\n      \"path\": \"solutions/normalization/name-representations.md\",\n      \"body_words\": 995\n    },\n    {\n      \"id\": \"SOL-13-001\",\n      \"path\": \"solutions/scalability/skew-aware-execution.md\",\n      \"body_words\": 1009\n    },\n    {\n      \"id\": \"AR-05\",\n      \"path\": \"architectures/collective-consistency.md\",\n      \"body_words\": 743\n    },\n    {\n      \"id\": \"AR-06\",\n      \"path\": \"architectures/incremental-continuous.md\",\n      \"body_words\": 1960\n    },\n    {\n      \"id\": \"AR-01\",\n      \"path\": \"architectures/linear-modular.md\",\n      \"body_words\": 802\n    },\n    {\n      \"id\": \"AR-04\",\n      \"path\": \"architectures/parallel-ensemble.md\",\n      \"body_words\": 722\n    },\n    {\n      \"id\": \"AR-03\",\n      \"path\": \"architectures/precision-cascade.md\",\n      \"body_words\": 734\n    },\n    {\n      \"id\": \"AR-02\",\n      \"path\": \"architectures/recall-multi-pass.md\",\n      \"body_words\": 729\n    },\n    {\n      \"id\": \"HYP-07-001\",\n      \"path\": \"research/hypotheses/contextual-reliability.md\",\n      \"body_words\": 776\n    },\n    {\n      \"id\": \"HYP-06-001\",\n      \"path\": \"research/hypotheses/frequency-aware-evidence.md\",\n      \"body_words\": 706\n    },\n    {\n      \"id\": \"EVAL-11-001\",\n      \"path\": \"evaluation/candidate-recall.md\",\n      \"body_words\": 723\n    },\n    {\n      \"id\": \"EVAL-11-003\",\n      \"path\": \"evaluation/entity-resolution-quality.md\",\n      \"body_words\": 1027\n    },\n    {\n      \"id\": \"EVAL-11-007\",\n      \"path\": \"evaluation/execution-cost-replay.md\",\n      \"body_words\": 926\n    },\n    {\n      \"id\": \"EVAL-11-005\",\n      \"path\": \"evaluation/incomplete-reference-quality.md\",\n      \"body_words\": 903\n    },\n    {\n      \"id\": \"EVAL-11-002\",\n      \"path\": \"evaluation/pairwise-calibration.md\",\n      \"body_words\": 764\n    },\n    {\n      \"id\": \"EVAL-11-004\",\n      \"path\": \"evaluation/retrieval-blind-spots.md\",\n      \"body_words\": 909\n    },\n    {\n      \"id\": \"EVAL-11-006\",\n      \"path\": \"evaluation/synthetic-metamorphic.md\",\n      \"body_words\": 1227\n    }\n  ],\n  \"graph\": {\n    \"components\": [\n      [\n        \"AR-01\",\n        \"AR-02\",\n        \"AR-03\",\n        \"AR-04\",\n        \"AR-05\",\n        \"AR-06\",\n        \"DEC-01-001\",\n        \"DEC-02-001\",\n        \"DEC-04-001\",\n        \"DEC-05-001\",\n        \"DEC-06-001\",\n        \"DEC-07-001\",\n        \"DEC-08-001\",\n        \"DEC-08-002\",\n        \"DEC-09-001\",\n        \"DEC-10-001\",\n        \"DEC-12-001\",\n        \"DEC-13-001\",\n        \"DEC-14-001\",\n        \"EVAL-11-001\",\n        \"EVAL-11-002\",\n        \"EVAL-11-003\",\n        \"EVAL-11-004\",\n        \"EVAL-11-005\",\n        \"EVAL-11-006\",\n        \"EVAL-11-007\",\n        \"HYP-06-001\",\n        \"HYP-07-001\",\n        \"SOL-01-001\",\n        \"SOL-02-001\",\n        \"SOL-02-002\",\n        \"SOL-04-001\",\n        \"SOL-05-001\",\n        \"SOL-05-002\",\n        \"SOL-05-003\",\n        \"SOL-06-001\",\n        \"SOL-06-002\",\n        \"SOL-06-003\",\n        \"SOL-07-001\",\n        \"SOL-07-002\",\n        \"SOL-07-003\",\n        \"SOL-07-004\",\n        \"SOL-07-005\",\n        \"SOL-08-001\",\n        \"SOL-08-002\",\n        \"SOL-08-003\",\n        \"SOL-08-004\",\n        \"SOL-08-005\",\n        \"SOL-08-006\",\n        \"SOL-09-001\",\n        \"SOL-10-001\",\n        \"SOL-10-002\",\n        \"SOL-10-003\",\n        \"SOL-10-004\",\n        \"SOL-12-001\",\n        \"SOL-13-001\",\n        \"SOL-14-001\"\n      ]\n    ],\n    \"orphans\": []\n  }\n}\n"
+    }
+  ],
+  "protected_files_checked": 464,
+  "protected_changes": [],
+  "canonical_cards_checked": 57,
+  "canonical_changes": [],
+  "AU_v2_package_files_checked": 37,
+  "AU_v2_changes": [],
+  "passed": true,
+  "execution_eligibility": "blocked",
+  "runtime_integration": "unimplemented",
+  "actual_runs": 0,
+  "actual_scores": 0,
+  "blockers": [
+    "No tested AU-v2 dependency-binding compatibility seam",
+    "No registered equivalent immutable corpus inventories",
+    "No attested actual tested/evaluator version identities and author conflicts resolved",
+    "No complete generation/broker-only equivalence evidence"
+  ],
+  "limits": [
+    "Not a runtime sandbox/adapter conformance test",
+    "No provider call or identity probe",
+    "No independent semantic post-remediation sign-off",
+    "No corpus-author scenario/key inspection"
+  ]
+}

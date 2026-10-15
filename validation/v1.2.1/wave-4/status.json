@@ -1,0 +1,49 @@
+{
+  "kind": "wave-4-offline-readiness-not-model-results",
+  "observed_at": "2026-10-15T03:00:03.828859+00:00",
+  "offline_scope": "completed",
+  "execution_eligibility": "blocked",
+  "pilot_status": "not_attempted",
+  "actual_solver_attempts_this_wave": 0,
+  "actual_evaluator_attempts_this_wave": 0,
+  "model_provider_probes_this_wave": 0,
+  "tests_run": 204,
+  "tests_passed": 203,
+  "expected_failures": 1,
+  "unexpected_test_failures": 0,
+  "lint_errors": 0,
+  "lint_warnings": 34,
+  "au_v2_planned_cells": 24,
+  "protected_files_verified_unchanged": 1189,
+  "blockers": [
+    "No compatible shared executor; buffered-line deadline counterexample remains unresolved.",
+    "Frozen workflow dependencies prevent an unversioned in-place harness or bridge refactor.",
+    "No trusted solver/evaluator actual model/version, effective generation or independent conflict evidence.",
+    "Full transport lifecycle, descendant containment and model context isolation not established."
+  ],
+  "evidence_sha256": {
+    "README.md": "5879985896e29f040a30da570f6c68fd09cff815e74154c10d15a62ccf0d1151",
+    "au-v1-tests.txt": "f7bc8c10288f1b72433e6ce502076b9750c2f826d2b39a511bf79b3b4906f642",
+    "au-v2-tests.txt": "a9ea6fbbad3f88701a2c4b5c69790a87c1d5982963bee5c7d401f47a55791a85",
+    "before.json": "16a7d5388668585a2c0f6f95c3a0d8763b26bcbbe80df9135eb996d2048b4ea3",
+    "boundary-initial.txt": "8fe97a069a00f9831c3a206c2ba4dde5d60296fce885ff3af981c5ce90588e0d",
+    "docs-tests.txt": "4bd5f56016e27dd0f0c02244060c9b2364bd76234d76c6da0c3be9212bfa3eec",
+    "integration-tests.txt": "57f66658975ddfd69f6635f50a8886bef05d3547c7fa36eec33ea7ee6c5d13e3",
+    "lint.txt": "0b034fce24c3315ffc22e6cb234c14f9655e045c2f7574a231d81050ae8d1544",
+    "protected-integrity.json": "f53c51d2a81651969c7c3065167c75900fbbce1d913de9afeee986d3a944b16b",
+    "runtime-boundary-tests.txt": "9c11577021e4ff221683d3662fbfc22466b08c05a9c16058535099db8b445596",
+    "runtime-discovery.json": "43b8bc1e78c7d7bc4bd5a2c180ce6b150e160d261530b2fcfb7efa2413cbd9cf",
+    "synthetic-pipe.json": "897fe41cbba21e33a9085224cc10f07a5fd62c8e455bfed2316b6de423fbfaab",
+    "test-summary.json": "f4bf6cc911c1f030341cf164de54249ae2d4210c4dfccfb2ba37518e42a75663",
+    "test_runtime_boundary.py": "26bfb852970593f9c9033c04f8a046e275f65059bdc94c8e22af1c82c56bf38e",
+    "verification.json": "63d58c13ff963cc84800bf450db9abebe1c51600e14583a69927b625af56dbec",
+    "workflow-tests.txt": "4fece7c8ca6af001f3b64e93da725b24200ac64fcd47f2ddc86429296ffc22d2"
+  },
+  "changed_existing_repository_files": [
+    "guides/change-log.md",
+    "validation/v1.2.1/au-v2-readiness.md"
+  ],
+  "new_repository_directory": "validation/v1.2.1/wave-4",
+  "next_independent_wave": "Wave 5 scientific review and final validation; do not open frozen cases/keys/results for authoring.",
+  "runtime_resume": "Authorize a concrete versioned shared-executor design preserving frozen dependencies, then independently establish eligibility evidence. No model run command is available."
+}

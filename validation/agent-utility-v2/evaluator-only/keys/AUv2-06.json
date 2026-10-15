@@ -1,0 +1,83 @@
+{
+  "cohort": "AU-v2",
+  "scenario_id": "AUv2-06",
+  "access": "evaluator-only",
+  "credible_baseline": "Freeze a deterministic title-and-publisher comparator in a simple versioned script or explicit staged batch, using immutable input/configuration and complete-output accounting before adding orchestration.",
+  "findings": [
+    {
+      "finding_id": "AUv2-06-F01",
+      "dimensions": [
+        "contracts_and_reproducibility"
+      ],
+      "criterion": "Define logical pair identity/order, source snapshots, normalization/features, candidate inclusion/exclusion semantics, scorer/configuration and resolver contracts; unordered storage does not mean undefined comparison units."
+    },
+    {
+      "finding_id": "AUv2-06-F02",
+      "dimensions": [
+        "mechanism_and_failure_modes",
+        "contracts_and_reproducibility"
+      ],
+      "criterion": "Pair-ID-only cache keys omit dependencies. Candidate, feature, scoring and policy changes need explicit invalidation/reuse decisions with artifact lineage; record-ID or pair-ID stability alone is insufficient."
+    },
+    {
+      "finding_id": "AUv2-06-F03",
+      "dimensions": [
+        "evaluation_design",
+        "quality_cost_separation"
+      ],
+      "criterion": "Isolate candidate replacement, execution parallelism and block cap as distinct interventions; reuse fixed scorer/resolution only when contracts are compatible and compare matched logical work separately from capped work."
+    },
+    {
+      "finding_id": "AUv2-06-F04",
+      "dimensions": [
+        "evidence_and_scope",
+        "evaluation_design"
+      ],
+      "criterion": "Famous-title and accepted-link judgments are selected; assess edition distinctions, candidate coverage and final entities with independent evidence and uncertainty. Do not fabricate general recall."
+    },
+    {
+      "finding_id": "AUv2-06-F05",
+      "dimensions": [
+        "baseline_and_options",
+        "lifecycle_and_safety"
+      ],
+      "criterion": "Compare a versioned monolith/simple staged script with modular reusable artifacts; orchestration and workflow-engine adoption are optional. Provide publish-review/change-log and rollback boundaries."
+    },
+    {
+      "finding_id": "AUv2-06-F06",
+      "dimensions": [
+        "quality_cost_separation",
+        "evaluation_design"
+      ],
+      "criterion": "Account for required outputs, retries, failed/incomplete shards, end-to-end time/storage and review costs, and define attribution and next-step gates under positive/negative/inconclusive results."
+    }
+  ],
+  "acceptable_alternatives": [
+    "A monolith with sufficient versioning, traces and stage-specific experiments can earn full credit.",
+    "Content-addressed artifacts or a dependency-aware cache can be sound; wholesale recomputation is acceptable if simpler and affordable.",
+    "A workflow platform may be justified by existing needs, but merely adding one is neither necessary nor sufficient for correctness."
+  ],
+  "unanticipated_alternative_policy": "Credit any defensible alternative that addresses the actual scenario facts, uncertainties and harm constraints. No preferred diagnosis, method, wording, mandatory corpus ID or unique final decision is required. Explain such credit explicitly; do not score by checklist count.",
+  "critical_failures": [
+    {
+      "failure_id": "AUv2-06-CF-01",
+      "endorsement_required": true,
+      "trigger": "Endorses unchanged pair-ID cache reuse across feature/normalization/scorer changes as safe merely because IDs are stable.",
+      "not_triggered_by": "Conditional reuse backed by complete matching dependency hashes or deliberate invalidation.",
+      "caps": {
+        "contracts_and_reproducibility": 0,
+        "mechanism_and_failure_modes": 1
+      }
+    },
+    {
+      "failure_id": "AUv2-06-CF-02",
+      "endorsement_required": true,
+      "trigger": "Claims the combined cap/parallelism/candidate change proves a quality-preserving speedup using only successful shards or accepted-link accuracy.",
+      "not_triggered_by": "Separately scoped hypotheses with completeness and quality checks.",
+      "caps": {
+        "quality_cost_separation": 0,
+        "evaluation_design": 0
+      }
+    }
+  ]
+}

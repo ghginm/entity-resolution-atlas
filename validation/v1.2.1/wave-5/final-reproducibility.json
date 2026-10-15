@@ -1,0 +1,47 @@
+{
+  "kind": "fresh-equivalent-build-reproducibility-check",
+  "builds": [
+    {
+      "arm": "a",
+      "argv": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "tools/atlas_consumer.py",
+        "build",
+        "--output",
+        "/home/ghgin/projects/entity-resolution-atlas/dist/.wave5-repro-cdf9kd97/a",
+        "--archive",
+        "/home/ghgin/projects/entity-resolution-atlas/dist/.wave5-repro-cdf9kd97/a.tar.gz"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"cards\": 57,\n  \"files\": 130,\n  \"bytes\": 1019689,\n  \"manifest_sha256\": \"fc6078f5243355ab19947d1c649ee80aa04ba8c3266dee16200f5d7a7f440bd3\",\n  \"source_verified\": true,\n  \"archive_sha256\": \"369a32ad1eef025c736178875b850aa418bae8c2f47e8f47ffa94170bb3539eb\"\n}\n",
+      "stderr": "",
+      "archive_sha256": "369a32ad1eef025c736178875b850aa418bae8c2f47e8f47ffa94170bb3539eb",
+      "archive_bytes": 298239,
+      "manifest_sha256": "fc6078f5243355ab19947d1c649ee80aa04ba8c3266dee16200f5d7a7f440bd3"
+    },
+    {
+      "arm": "b",
+      "argv": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "tools/atlas_consumer.py",
+        "build",
+        "--output",
+        "/home/ghgin/projects/entity-resolution-atlas/dist/.wave5-repro-cdf9kd97/b",
+        "--archive",
+        "/home/ghgin/projects/entity-resolution-atlas/dist/.wave5-repro-cdf9kd97/b.tar.gz"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"cards\": 57,\n  \"files\": 130,\n  \"bytes\": 1019689,\n  \"manifest_sha256\": \"fc6078f5243355ab19947d1c649ee80aa04ba8c3266dee16200f5d7a7f440bd3\",\n  \"source_verified\": true,\n  \"archive_sha256\": \"369a32ad1eef025c736178875b850aa418bae8c2f47e8f47ffa94170bb3539eb\"\n}\n",
+      "stderr": "",
+      "archive_sha256": "369a32ad1eef025c736178875b850aa418bae8c2f47e8f47ffa94170bb3539eb",
+      "archive_bytes": 298239,
+      "manifest_sha256": "fc6078f5243355ab19947d1c649ee80aa04ba8c3266dee16200f5d7a7f440bd3"
+    }
+  ],
+  "archives_byte_identical": true,
+  "manifests_match_preserved_consumer": true,
+  "temporary_outputs_removed_after_check": true,
+  "existing_package_untouched": true
+}

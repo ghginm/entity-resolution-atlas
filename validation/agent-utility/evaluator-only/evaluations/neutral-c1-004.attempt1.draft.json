@@ -1,0 +1,118 @@
+{
+ "corpus_sha256": "e1ade517e405ac79fa93bc700dfe098848a1517dcbecf81080e307d2b30b8772",
+ "critical_failures": [
+  {
+   "evidence_quote": "Perform expert labeling (using the 250 entity-centered investigations budget) on these *newly generated candidates* to identify true matches (if any). This provides independent ground truth for the \"invisible pairs\" space.",
+   "failure_id": "AU-02-selected_recall_as_total",
+   "rationale": "The response correctly rejects interpreting the existing 96% as overall recall, but endorses a replacement evaluation whose truth is restricted to candidates admitted by the proposed multi-pass strategy. It then calls this independent ground truth and uses it to measure Candidate Recall and dataset-wide precision/recall. No investigation establishes matches missed by every proposed pass. This meets the alternative trigger of proposing only candidate-pool validation to certify recall; it is not triggered by the rejected historical baseline."
+  }
+ ],
+ "dimensions": {
+  "alternative_quality": {
+   "effective_score": 2,
+   "evidence_quotes": [
+    "Simple baseline: Current single-pass exact-key blocking on normalized manufacturer code.",
+    "Poorly chosen additional passes might generate many irrelevant candidates without a substantial recall gain. Uncontrolled candidate growth can exceed processing capacity."
+   ],
+   "omitted_findings": [],
+   "rationale": "Provides a credible existing exact-key baseline and a materially different multi-pass union, with mechanisms, eligibility/deduplication prerequisites, candidate/scoring costs and failure modes. This meets anchor 2. The proposed vendor-name/identifier combinations are not checked for alignment between vendor rows and stocked specifications, and no controlled equal-budget or uncapped-versus-capped comparison establishes when the added complexity is warranted. These limitations prevent anchor 3.",
+   "raw_score": 2
+  },
+  "efficiency": {
+   "effective_score": 2,
+   "evidence_quotes": [
+    "The core problem identified is the limitation of the current candidate generation strategy.",
+    "Iterative and controlled implementation: Begin with a minimal number of new passes."
+   ],
+   "omitted_findings": [],
+   "rationale": "The logged progression from discovery metadata to the candidate-generation domain map and one applicable solution is selective and useful; no irrelevant substantive reads are apparent. The answer prioritizes the candidate-selection problem and proposes a bounded initial intervention. However, substantial repeated descriptions of union benefits, costs and re-evaluation make the recommendation less concise, while retrieval stops before resolving the crucial independent-truth evaluation question. Useful reasoning within the stated budget fits anchor 2, not the fully prioritized actionable decision chain required for anchor 3.",
+   "raw_score": 2
+  },
+  "evidence_discipline": {
+   "effective_score": 2,
+   "evidence_quotes": [
+    "Missing information (explicitly unknown):",
+    "Old match prevalence and evidence weights need not transfer",
+    "This provides independent ground truth for the \"invisible pairs\" space."
+   ],
+   "omitted_findings": [],
+   "rationale": "Project facts and unknowns are separated, Atlas identifiers and quoted union/distribution-shift claims are traceable to actual logged content, and recommendations are not presented as executed or measured improvements. Recalibration is conditional rather than assumed unnecessary. Nevertheless, the assertion that labeling only the new candidates supplies independent ground truth overstates the scope of the proposed evidence; high precision of the exact-code baseline is also not established by the brief. These prevent anchor 3 without constituting fabricated citations or measured results.",
+   "raw_score": 2
+  },
+  "experiment_quality": {
+   "effective_score": 0,
+   "evidence_quotes": [
+    "For each sampled entity, apply the proposed multi-pass blocking strategy to generate all potential candidate pairs.",
+    "Perform expert labeling (using the 250 entity-centered investigations budget) on these *newly generated candidates* to identify true matches (if any).",
+    "Candidate Recall (EVAL-11-001): For the sampled 250 entities, measure the number of true matches retrieved by the multi-pass strategy versus the single-pass baseline (which should yield zero for these entities by selection)."
+   ],
+   "omitted_findings": [
+    "AU-02-F2",
+    "AU-02-F4"
+   ],
+   "rationale": "Despite a comparator, fixed scorer/threshold controls, useful slices and outcome-dependent next steps, the central recall test uses circular truth: experts label only pairs admitted by the method being tested. It cannot estimate matches missed by all passes. The stated baseline-zero assumption also does not follow for all proposed acquired-vendor/support-ticket strata. There are no sampling weights, entity-disjoint/source holdouts, quantitative uncertainty procedure or independently ascertained final-link denominator, yet dataset-wide precision/recall is proposed. Anchor 0 explicitly covers circular truth. AU-02-F2 and AU-02-F4 are missed in their material independent-truth and holdout requirements, although entity-centered sampling and separate metric headings receive partial credit elsewhere.",
+   "raw_score": 0
+  },
+  "problem_understanding": {
+   "effective_score": 1,
+   "evidence_quotes": [
+    "The final deliverable is a link table; downstream substitution rules are separate.",
+    "The existing 96% recall figure is misleading for the overall problem, as it applies only to the current candidate pool.",
+    "250 *entities* (spare parts or catalog rows, as defined by the project)"
+   ],
+   "omitted_findings": [],
+   "rationale": "Correctly identifies physical-part linkage rather than substitution, selection-conditioned historical recall, missing/misused codes, label and compute constraints, and unresolved package-variant semantics. This meets anchor 2. The experiment does not consistently resolve catalog-row versus physical-entity investigation units or the need for truth outside its own retrieval population, so anchor 3 is not earned. The evidenced selected-pool-validation critical failure caps the effective score at 1.",
+   "raw_score": 2
+  },
+  "retrieval_relevance": {
+   "effective_score": 2,
+   "evidence_quotes": [
+    "SOL-05-002 \"Multi-pass blocking and candidate union\" (from solutions/candidate-generation/multi-pass-blocking.md)",
+    "Consider alternative candidate generation techniques (e.g., approximate methods, although these are \"taxonomy-only, unexpanded\" in the current Atlas corpus, meaning further research or external solutions might be needed)."
+   ],
+   "omitted_findings": [],
+   "rationale": "The actual logs contain relevant decision discovery, a candidate-retrieval domain map, and the full multi-pass solution with explicit comparator/evaluation guidance and calibration-population prerequisites. Claims about union and genuine unexpanded approximate-method coverage are linked to that content, so the corpus gap is not penalized. This satisfies anchor 2's applicable alternative/evaluation material. It does not earn anchor 3: candidate-recall and calibration evaluation cards were discoverable but not opened, and the available instruction that independent truth must include pairs missing from all routes was not carried into the recommendation.",
+   "raw_score": 2
+  },
+  "risk_identification": {
+   "effective_score": 1,
+   "evidence_quotes": [
+    "Bias in existing labels: The current 2400 labeled pairs are from the manufacturer-code pool and may not be representative of the \"invisible pairs\" population.",
+    "Existing scoring model may perform poorly on newly discovered candidates if their evidence patterns differ significantly.",
+    "Establish a pragmatic upper bound on candidate generation runtime or candidate pair output for the multi-pass strategy to prevent resource exhaustion, even if this means potential recall sacrifices."
+   ],
+   "omitted_findings": [
+    "AU-02-F2",
+    "AU-02-F4"
+   ],
+   "rationale": "Identifies selection bias, missed links, scorer population shift, candidate explosion and review-capacity risks, with complementary-key, budget-monitoring and re-evaluation safeguards. These scenario-specific mechanisms meet anchor 2. However, its new labeling plan repeats selection bias rather than controlling it, omits truth for non-admitted pairs and appropriate holdouts/uncertainty, and does not concretely address false-link harm or reversible deployment. Anchor 3 is therefore not met. The selected-pool-validation critical failure caps the effective score at 1.",
+   "raw_score": 2
+  },
+  "technical_reasoning": {
+   "effective_score": 1,
+   "evidence_quotes": [
+    "Union the results of these passes, ensuring stable pair identity and preserving pass provenance for each candidate pair (SOL-05-002).",
+    "This implies the scorer may need re-calibration or retraining.",
+    "This provides independent ground truth for the \"invisible pairs\" space."
+   ],
+   "omitted_findings": [
+    "AU-02-F2"
+   ],
+   "rationale": "Candidate deduplication/provenance, increased downstream workload, and changed scoring/calibration populations are reasoned correctly. However, an important assumption is missing: candidate-centered labels are not an independently established match universe, even when the starting sample is entity-centered. This materially invalidates the proposed coverage mechanism, rather than being a minor omission. Suggested vendor-conditioned keys also lack a checked cross-source attribute contract, and pair-score thresholds are inferred from a link-table deliverable without resolving linkage cardinality. Anchor 1 best reflects useful method descriptions with consequential missing assumptions; AU-02-F2 is missed in its non-admitted-pair and weighted-strata requirements.",
+   "raw_score": 1
+  }
+ },
+ "evaluated_at": "2026-10-13T13:35:18.925095+00:00",
+ "evaluator": {
+  "blinded": true,
+  "conflicts": "none; fresh automated process distinct from benchmark author, tested agent and corpus authors",
+  "identity": "eval-openai-codex-default-fresh-process",
+  "independent": true,
+  "role": "fresh_model_process"
+ },
+ "manifest_sha256": "bd2e57dc2d96f40fb65a6fd4ac2d9a5e6000411b91a5dc1ca47071a8bed3104c",
+ "run_sha256": "639ea8a3f89ecc8ebb11ed9c5fa4f092fde01c7f9f3a0b18cb408ff4c6cec3cf",
+ "scenario_id": "AU-02",
+ "schema_version": "1.0",
+ "settings_sha256": "ba133047d7e3acbe9d50ac8fe8d738b24344071c61039ad7162ff05552a8ba66"
+}

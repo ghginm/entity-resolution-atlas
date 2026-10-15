@@ -1,0 +1,67 @@
+{
+  "review_id": "deleg_6daaa1ae",
+  "review_role": "separate read-only critique process",
+  "model_identity": null,
+  "identity_attested": false,
+  "review_result": "needs revision; no blocking scientific claim identified",
+  "files_changed_by_reviewer": [],
+  "findings": [
+    {
+      "id": "M1",
+      "severity": "major",
+      "finding": "Task success/counts do not establish required route-level logical comparison completion.",
+      "remediation": "Pair/role/revision/route/context unit frame; disjoint new/cache completion, unresolved work, attempts/retries and set-level reconciliation; missing-internal-route witness.",
+      "targets": [
+        "solutions/scalability/skew-aware-execution.md",
+        "evaluation/execution-cost-replay.md"
+      ]
+    },
+    {
+      "id": "M2",
+      "severity": "major",
+      "finding": "Independent stochastic workloads do not isolate placement and non-detection is not equivalence.",
+      "remediation": "Freeze/couple realized execution work; separate expected-cost/output contrast with named joint objects, margins, replication, uncertainty and inconclusive rule.",
+      "targets": [
+        "solutions/scalability/skew-aware-execution.md",
+        "evaluation/execution-cost-replay.md"
+      ]
+    },
+    {
+      "id": "M3",
+      "severity": "major",
+      "finding": "Accepted/queried denominators omit missing work; monitor-observed clock excludes observation loss.",
+      "remediation": "Independent expected input/query frames, missing/unknown work and unidentifiable completeness; independent incident eligibility/deadline, never-detected counts and conditional latency.",
+      "targets": [
+        "solutions/governance/stage-monitoring.md"
+      ]
+    },
+    {
+      "id": "M4",
+      "severity": "major",
+      "finding": "Common audit budget conflates evaluation audits with operational arm interventions.",
+      "remediation": "Common withheld independent evaluation audit; arm-specific operational review; matched or incremental resource contrast and held-out incidents.",
+      "targets": [
+        "solutions/governance/stage-monitoring.md"
+      ]
+    },
+    {
+      "id": "m1",
+      "severity": "minor",
+      "finding": "Prior version check does not ensure atomic publication.",
+      "remediation": "Validation/commit serialization boundary, all relevant dependency versions, between-check-and-commit witness and hold when boundary absent.",
+      "targets": [
+        "guides/incremental-operations.md"
+      ]
+    },
+    {
+      "id": "m2",
+      "severity": "minor",
+      "finding": "Receipt/idempotency is not coherent applied-version acknowledgment.",
+      "remediation": "Receipt/durable/apply stages, version precedence/gaps/conflict handling and out-of-order/partial-bundle witnesses.",
+      "targets": [
+        "guides/incremental-operations.md"
+      ]
+    }
+  ],
+  "disposition": "Integrating-author corrections applied; no independent post-remediation sign-off or distinct-model identity attested; no runtime benchmark."
+}

@@ -1,0 +1,668 @@
+# Codex Task — Atlas v1.2.1: Agent-Friendly Consumption, Evaluation & Quality Fixes
+
+## 0. Mission
+
+Improve the existing Entity Resolution Atlas v1.2, focusing on:
+
+1. **Extremely efficient consumption by external coding agents.**
+2. Reliable selective retrieval with minimal context/token overhead.
+3. A clean, reproducible, lightweight consumer distribution.
+4. Empirical evaluation of knowledge utility and agent workflow efficiency.
+5. Targeted scientific/technical quality assurance.
+6. Resolution of remaining validation and reproducibility issues.
+
+This is an implementation task, not just a proposal.
+
+Preserve the Atlas as a universal, project-agnostic external knowledge base.
+
+Do not create another ER knowledge base, rewrite the existing 57 cards, introduce a new taxonomy, or expand content volume merely for coverage.
+
+The main objective is to make the **existing knowledge significantly easier, cheaper and safer for agents to use**.
+
+---
+
+# 1. Primary requirement: minimize external-agent context consumption
+
+This is the most important requirement of v1.2.1.
+
+The Atlas is primarily intended for use by external AI coding agents such as Codex, Claude Code or similar tool-enabled agents working on independent software/ML projects.
+
+These agents may have limited context windows, limited token budgets and expensive reasoning cycles.
+
+A well-designed Atlas must let them:
+
+- Locate relevant knowledge without reading the entire repository.
+- Identify useful solutions without opening every related card.
+- Retrieve deeper scientific material only when necessary.
+- Compare alternatives without repeatedly loading duplicate explanations.
+- Incorporate Atlas knowledge into project-specific plans without embedding the entire Atlas in their context.
+- Stop retrieval once sufficient evidence is available.
+
+**Success should be evaluated in terms of recommendation quality relative to context and retrieval cost, not simply total knowledge volume.**
+
+## 1.1 Audit current retrieval costs
+
+Inspect:
+
+- `AGENTS.md`
+- `README.md`
+- `CATALOG.md`
+- `guides/agent-task-patterns.md`
+- `guides/project-atlas-integration.md`
+- `indexes/domains/`
+- Existing L0/L1/L2/L3 navigation
+- Documentation generation tooling
+
+Measure approximate input tokens, bytes and retrieval hops for representative tasks.
+
+At minimum evaluate:
+
+- Finding an ER scoring method.
+- Investigating graph overmerging.
+- Improving blocking efficiency.
+- Planning evaluation without labels.
+- Refactoring a rule-heavy pipeline.
+- Designing a reproducible ML experiment.
+- Adding a new data source.
+- Investigating incremental identity updates.
+
+Record whether agents currently need to read oversized files, duplicate explanations or unrelated cards to reach a useful answer.
+
+Use real tokenization where feasible; otherwise explicitly label word/byte estimates as proxies rather than actual model token usage.
+
+## 1.2 Implement an ultra-light entry point
+
+Create an extremely compact consumer entry point, tentatively:
+
+`START_HERE.md`
+
+It should contain only what an external agent needs to begin using Atlas.
+
+Target approximately 300–600 words, preferably less when practical.
+
+It must explain:
+
+- What Atlas provides.
+- How to locate relevant knowledge.
+- Which files to read first.
+- When to open L1/L2/L3 material.
+- How to stop retrieval.
+- How to distinguish universal Atlas knowledge from project-specific facts.
+- How to produce a project-specific recommendation.
+
+It should NOT repeat scientific theory, full taxonomy, documentation contribution rules or benchmark instructions.
+
+An agent should generally be able to begin using the Atlas by reading this single entry point.
+
+## 1.3 Separate consumer and maintainer instructions
+
+Currently `AGENTS.md` contains both consumption and maintenance instructions.
+
+Evaluate whether splitting these responsibilities would improve agent efficiency.
+
+For example:
+
+- Small root `AGENTS.md`: only essential scope, authority and routing instructions.
+- Compact consumer instructions.
+- Detailed maintainer instructions elsewhere.
+
+Avoid duplicating the same instructions across several files.
+
+Preserve important behavioral safeguards:
+
+- Do not invent project-specific facts.
+- Distinguish theory, hypothesis and evidence.
+- Consider a simple baseline.
+- Preserve identity/namespace semantics.
+- Do not treat proxy metrics as measured accuracy.
+- Do not make unauthorized production changes.
+
+Repository maintainers should still have access to full contribution, scientific validation and benchmark rules.
+
+External consumers should not need to load them.
+
+Do not assume that every coding harness automatically discovers nested AGENTS files. Document how to explicitly provide the entry point when automatic discovery is unsupported.
+
+---
+
+# 2. Progressive retrieval architecture
+
+Preserve the existing L0/L1/L2/L3 architecture.
+
+Improve it where measurable retrieval inefficiencies exist.
+
+## 2.1 Problem-first routing
+
+An external agent should usually begin with a problem statement, not an Atlas ID.
+
+For example:
+
+"I have many false merges involving common organization names and no reliable labels."
+
+The agent should be able to locate:
+
+- Relevant Decision Cards.
+- Applicable Solution Cards.
+- Important prerequisites.
+- Competing approaches.
+- Relevant Evaluation Cards.
+- Optional deeper material.
+
+Without scanning 57 cards.
+
+Prefer extending the existing task-pattern/catalog infrastructure rather than creating a second knowledge ontology.
+
+Consider a compact, generated question-to-knowledge routing layer if it provides a clear benefit.
+
+Routing must use stable canonical card IDs and remain consistent with the existing manifest.
+
+## 2.2 Bounded context retrieval
+
+Define a practical retrieval budget strategy.
+
+Illustrative defaults:
+
+**Tier 0 — Discovery**
+
+A compact entry point and relevant route, ideally within approximately 500–1,000 tokens.
+
+**Tier 1 — Method selection**
+
+Open only the most relevant decision/index summaries and identify baseline plus plausible alternatives.
+
+**Tier 2 — Detailed investigation**
+
+Open selected cards, relevant evaluation and necessary cross-module material.
+
+**Tier 3 — Deep research**
+
+Open specialized deep dives or literature references only when the problem requires it.
+
+These are soft targets, not scientific or hard technical limits.
+
+A difficult research task may require substantially more context.
+
+The objective is to avoid unnecessary consumption, not truncate necessary reasoning.
+
+## 2.3 Explicit retrieval stopping conditions
+
+Implement clear guidance for stopping retrieval once the agent can identify:
+
+- The relevant decision.
+- A credible baseline.
+- Applicable alternatives.
+- Critical prerequisites and failure modes.
+- The evaluation strategy.
+- Important unknown project facts.
+
+The agent should not keep opening related documents merely because links exist.
+
+Likewise, it must not stop prematurely if an essential constraint or counterexample remains unresolved.
+
+## 2.4 Avoid redundant context
+
+Inspect repeated content across:
+
+- Catalog.
+- Domain indexes.
+- Task patterns.
+- Decision Cards.
+- Solution Cards.
+- Guides.
+
+Prefer summaries, targeted links and canonical ownership over repeated scientific explanations.
+
+Do not mechanically shorten substantive knowledge cards unless there is genuine duplication.
+
+If useful, introduce concise comparison summaries that allow an agent to choose which alternatives warrant deeper reading.
+
+## 2.5 Optional lookup helper
+
+Evaluate whether a small deterministic local lookup command would materially reduce retrieval overhead.
+
+For example:
+
+`python tools/atlas_lookup.py route "graph overmerging without labels"`
+
+or:
+
+`python tools/atlas_lookup.py id DEC-08-001`
+
+A useful helper could return:
+
+- Relevant IDs and paths.
+- Short applicability summaries.
+- Important related decision/evaluation IDs.
+- Approximate reading cost.
+- Suggested next retrieval steps.
+
+However:
+
+- No LLM dependency.
+- No hosted search service.
+- No database server.
+- No embedding infrastructure.
+- No requirement to index the whole repository at runtime.
+- No speculative complex ranking algorithm.
+
+Only implement this helper if it improves measurable retrieval efficiency over simple Markdown navigation or a tiny generated index.
+
+A portable Markdown-only route must remain available.
+
+---
+
+# 3. Consumer distribution
+
+Implement a reproducible consumer package.
+
+Tentative output:
+
+`dist/atlas-consumer/`
+
+Keep the complete development repository unchanged in purpose.
+
+The consumer package should contain only what external coding agents need to reason about ER systems.
+
+## 3.1 Included content
+
+Include:
+
+- Minimal entry instructions.
+- Compact navigation.
+- Canonical knowledge cards.
+- Relevant taxonomy and domain indexes.
+- Useful consumer guides.
+- Optional L3 deep dives.
+- Necessary public evidence references.
+- Manifest/version metadata.
+
+Preserve card IDs, frontmatter and scientific content.
+
+## 3.2 Excluded content
+
+Exclude:
+
+- Frozen benchmark cases and evaluator keys.
+- Historical benchmark results.
+- Solver traces.
+- Internal validation reports.
+- Development scratch files.
+- Historical `dev_docs`.
+- Tests and test fixtures.
+- Maintenance-only documentation.
+- Intermediate archives.
+- Internal change-review artifacts.
+- Irrelevant generated files.
+
+Never expose evaluator-only artifacts to consumer agents.
+
+A consumer package should be a clean knowledge product, not a full source-repository copy.
+
+## 3.3 Reproducible packaging
+
+Implement a deterministic build, preferably using existing tooling or a small standalone script.
+
+Use an explicit inclusion manifest/allowlist rather than relying only on filename exclusions.
+
+The build should validate:
+
+- No broken internal links.
+- No missing canonical objects.
+- Stable IDs.
+- Correct domain navigation.
+- Correct source references.
+- No evaluator leakage.
+- No accidental inclusion of development-only files.
+- Stable content hashes across equivalent builds.
+
+Preserve the source repository as the authoritative version.
+
+Generated packages should not become a second independently maintained knowledge base.
+
+Provide clear commands to build and verify the package.
+
+## 3.4 Support partial retrieval
+
+Do not solve token consumption merely by reducing archive file size.
+
+An archive containing all 57 knowledge cards is acceptable if an external agent can read only the relevant ones.
+
+The important distinction is:
+
+**Available knowledge is not the same as loaded context.**
+
+Make it easy for external agents to inspect paths, read individual documents and follow targeted links.
+
+Avoid instructions that encourage reading all Markdown files or injecting all Atlas content into one prompt.
+
+---
+
+# 4. Agent workflow evaluation
+
+The existing AU-v2 comparison excludes the newly introduced task/integration guides.
+
+Therefore it cannot measure the complete benefit of v1.2 agent-friendliness.
+
+Do not modify frozen AU-v2.
+
+Instead, design a separate evaluation focused on actual external-agent workflows.
+
+## 4.1 Evaluation scenarios
+
+Use representative fictional ER engineering/research tasks.
+
+Include:
+
+- No-label evaluation planning.
+- Graph contamination investigation.
+- Rule-policy refactoring.
+- Source-aware scorer selection.
+- Blocking cost optimization.
+- New-source integration.
+- Incremental identity maintenance.
+- Reproducible experiment design.
+
+Scenarios should contain enough project-specific context to permit meaningful decisions without requiring private data.
+
+## 4.2 Comparison design
+
+Measure at least:
+
+A. No Atlas.
+
+B. v1.1 knowledge baseline.
+
+C. v1.2 knowledge.
+
+D. v1.2 knowledge with improved v1.2.1 consumer workflow.
+
+Where feasible, use additional controlled comparisons to isolate the contribution of guides/routing from substantive card content.
+
+Keep model, task information, available tools and resource budgets comparable across arms.
+
+Document unavoidable differences and confounding factors.
+
+Avoid exposing test answers to the evaluated agent.
+
+Freeze the evaluation protocol before observing new results.
+
+## 4.3 Measure both quality and cost
+
+Measure:
+
+**Recommendation quality**
+
+- Correct problem framing.
+- Appropriate method selection.
+- Awareness of assumptions.
+- Comparison with baseline.
+- Relevant failure modes.
+- Appropriate evaluation design.
+- Correct scientific uncertainty.
+- Actionability of proposed implementation.
+
+**Agent efficiency**
+
+- Number of file reads.
+- Documents opened.
+- Relevant versus irrelevant reads.
+- Total retrieved bytes/tokens.
+- Input tokens where reliably measurable.
+- Number of retrieval hops.
+- Time to a sufficiently supported recommendation.
+- Total execution cost where available.
+
+A shorter recommendation is not automatically better.
+
+A workflow that saves tokens but omits critical limitations should not be judged successful.
+
+Report the quality/cost trade-off and per-scenario results, not merely a single aggregate winner.
+
+## 4.4 Avoid benchmark infrastructure overengineering
+
+Reuse existing:
+
+- AU-v1 harness components where compatible.
+- AU-v2 protocol ideas.
+- Existing bridge/scoring logic.
+- Existing snapshot/export mechanisms.
+
+Do not build a new agent platform.
+
+Do not duplicate a subprocess runtime merely to avoid changing protected legacy components.
+
+The benchmark infrastructure should be as simple as possible while providing credible evidence.
+
+If no compatible real execution environment or independent evaluator is available, finish all offline-verifiable pieces and report the remaining blocker.
+
+Do not invent results.
+
+---
+
+# 5. AU-v2 execution readiness
+
+Investigate the exact outstanding runtime requirements documented in:
+
+- `validation/agent-utility-integration/README.md`
+- `validation/agent-utility-integration/SCORING.md`
+- `validation/v1.2/au-v2-remaining-work.md`
+- `validation/v1.2/au-v2-runtime-compatibility.md`
+
+The existing frozen benchmark contains eight scenarios and 24 planned cells.
+
+Preserve frozen inputs, preparation plan and historical artifacts.
+
+Priority:
+
+1. Identify whether a compatible trusted executor already exists.
+2. Determine the smallest valid integration change.
+3. Verify actual read/transport/budget behavior with synthetic processes.
+4. Establish genuine model identity/settings and evaluation independence.
+5. Run a small pilot when prerequisites exist.
+6. Execute full AU-v2 only when eligible.
+7. Report actual outcomes and uncertainty.
+
+Avoid spending excessive effort creating infrastructure for a runtime that is unavailable.
+
+If execution requires credentials, unsupported tools, unauthorized changes to protected files, or unverified independence assumptions, document the blocker and continue with independent improvements.
+
+**Never represent infrastructure tests or synthetic fixtures as measured model improvements.**
+
+---
+
+# 6. Scientific quality review
+
+Perform a targeted review of the highest-risk knowledge families.
+
+Prioritize:
+
+- Evaluation with incomplete reference truth.
+- Sampling and selection bias.
+- Positive-unlabeled assumptions.
+- Probability interpretation and calibration.
+- Source-conditioned scoring.
+- Graph constraints and transitive overmerge.
+- Incremental identity semantics.
+- Experiment design and stage interactions.
+
+For important quantitative statements:
+
+- Check assumptions.
+- Verify mathematical reasoning.
+- Confirm denominators and target populations.
+- Inspect counterexamples.
+- Verify scientific sources where possible.
+- Distinguish theoretical consequences from empirical evidence.
+
+Use adversarial examples rather than only confirming that text sounds reasonable.
+
+Focus review effort on consequential claims and genuinely uncertain areas.
+
+Fix demonstrated scientific errors and misleading recommendations.
+
+Do not rewrite scientifically sound cards for stylistic reasons.
+
+Document review scope and limitations. Do not call limited review a full scientific certification.
+
+---
+
+# 7. Validation and repository cleanup
+
+## 7.1 Existing validation
+
+Re-run applicable structural and content checks.
+
+Preserve the expected functionality of:
+
+- 49 Atlas documentation tests.
+- 39 AU-v1 infrastructure tests.
+- 17 AU-v2 package tests.
+- 65 integration/scoring tests.
+- Citation checks.
+- Manifest/catalog validation.
+- Protected-file integrity checks.
+
+Counts are reference baselines, not mandatory fixed totals after adding new tests.
+
+Do not silently alter frozen benchmarks.
+
+## 7.2 AU-v1 subprocess flakiness
+
+Investigate the environment-sensitive test:
+
+`test_real_process_fixture_is_fresh_and_failures_recorded`
+
+Previous independent execution reported a timeout under the 0.5-second deadline, while the same fixture completed with longer deadlines.
+
+Determine whether this is test flakiness, scheduler latency or another environmental issue.
+
+Do not modify protected AU-v1 artifacts merely to eliminate the failure.
+
+If modification is outside authorized scope, document a reproducible diagnostic and proposed minimal fix separately.
+
+Do not weaken assertions or silently extend deadlines within protected tests.
+
+## 7.3 Advisory warnings
+
+Current lint status:
+
+- 0 errors.
+- 34 warnings, primarily document length and keyword hints.
+
+Review warnings, but do not remove legitimate technical depth to obtain zero warnings.
+
+Fix only genuinely misleading metadata, unnecessary duplication or incorrect routing.
+
+---
+
+# 8. Implementation order
+
+Proceed in the following waves.
+
+### Wave 1 — Agent retrieval and context optimization
+
+Audit retrieval cost, implement compact entry point, improve routing and stopping conditions.
+
+This is the highest priority and must not be deferred behind benchmark work.
+
+### Wave 2 — Consumer package
+
+Implement reproducible build, allowlist, link validation, leakage protection and portable consumption instructions.
+
+### Wave 3 — Agent workflow evaluation
+
+Implement a credible independent workflow benchmark measuring decision quality and retrieval cost.
+
+Ensure new guides are included in the appropriate experimental arm.
+
+### Wave 4 — AU-v2 readiness and pilot
+
+Resolve feasible runtime integration requirements, execute eligible tests if possible and document genuine blockers.
+
+### Wave 5 — Scientific review and final validation
+
+Review high-risk scientific material, validate packaging and navigation, run existing tests, report remaining issues.
+
+Finish coherent waves before starting another.
+
+Do not stop after producing a plan.
+
+If execution limits are reached, create a precise handoff describing completed work, test results, remaining tasks and exact continuation steps.
+
+---
+
+# 9. Acceptance tests for agent friendliness
+
+In addition to ordinary documentation tests, implement automated checks covering the following properties.
+
+**A. Cold-start usability**
+
+Given only a consumer package path, an unfamiliar agent can identify the correct entry point without reading the full repository.
+
+**B. Selective retrieval**
+
+For representative queries, the routing system identifies relevant decisions and evaluations without requiring a full-corpus scan by the consuming agent.
+
+**C. Context containment**
+
+Record cumulative retrieval cost and detect accidental full-document or full-directory loading.
+
+Report both total corpus size and actual task-level retrieved content.
+
+**D. Referential integrity**
+
+All returned IDs, links and paths resolve within the consumer package.
+
+**E. Consumer isolation**
+
+No evaluation keys, frozen scoring data or internal validation artifacts appear in the package.
+
+**F. Scientific boundaries**
+
+Agent guidance does not imply that retrieval quality, structural validation or synthetic tests establish real-world ER accuracy.
+
+**G. Maintenance consistency**
+
+Updated canonical content can regenerate the consumer package without manually maintaining duplicate summaries or indexes.
+
+These checks should include executable validation wherever feasible and manual review where judgment is required.
+
+---
+
+# 10. Deliverables
+
+Produce:
+
+1. Updated Atlas repository.
+2. Compact agent entry point.
+3. Improved selective navigation.
+4. Reproducible consumer-package builder.
+5. Verified consumer distribution.
+6. Retrieval cost/efficiency report.
+7. Separate agent workflow evaluation infrastructure and any actually obtained results.
+8. AU-v2 execution-readiness report and eligible results, if available.
+9. Targeted scientific review and corrections.
+10. Updated documentation, tests, manifests and final handoff.
+
+Do not commit or push changes unless explicitly authorized. Do not modify another project's production system.
+
+## Final success criteria
+
+An external coding agent should be able to:
+
+- Receive a project-specific ER problem.
+- Access the external Atlas.
+- Locate a small relevant knowledge subset.
+- Understand alternatives, assumptions and trade-offs.
+- Retrieve only the necessary deeper theory.
+- Design an actionable experiment or implementation plan.
+- Identify relevant module/architecture interactions.
+- Stop reading when adequate evidence is available.
+
+All of this should require **substantially less redundant context consumption than reading or searching the entire Atlas manually**.
+
+Measure that improvement rather than simply asserting it.
+
+The Atlas must remain a high-quality, universal Entity Resolution knowledge base, not a project-specific implementation or an unnecessarily elaborate agent framework.
+
+Start with Wave 1 and continue through the feasible implementation waves.

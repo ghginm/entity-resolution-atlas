@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+    "-B",
+    "tools/atlas_consumer.py",
+    "build",
+    "--output",
+    "dist/atlas-consumer-wave5",
+    "--archive",
+    "dist/atlas-consumer-wave5.tar.gz"
+  ],
+  "returncode": 0,
+  "stdout": "{\n  \"cards\": 57,\n  \"files\": 130,\n  \"bytes\": 1020240,\n  \"manifest_sha256\": \"be999130f3444e9a539d458287e34f7087440bd55c9cb9dc0cd3ad31b96ac592\",\n  \"source_verified\": true,\n  \"archive_sha256\": \"c0db36fe4473cabc89c184e28cff552979cbf4ad2c2e1f553cfa1c6394fd7f0c\"\n}\n",
+  "stderr": ""
+}

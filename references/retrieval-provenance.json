@@ -1,0 +1,329 @@
+{
+  "verified_sources": [
+    {
+      "id": "1",
+      "url": "https://nhis.ipums.org/nhis/resources/Fellegi69.pdf",
+      "actual_url": "https://nhis.ipums.org/nhis/resources/Fellegi69.pdf",
+      "pages": 29,
+      "sha256": "77262e3c19b5a5afa1d4753e4cb1dd24bac16dbc9af396baa78b61ca2220b4b0"
+    },
+    {
+      "id": "2",
+      "url": "https://arxiv.org/pdf/1905.06167",
+      "actual_url": "https://arxiv.org/pdf/1905.06167",
+      "pages": 38,
+      "sha256": "6e26e7a95b315a799f8ddb2a466c48615a931297cf256701b7fd3a3c4a3c814c"
+    },
+    {
+      "id": "3",
+      "url": "https://proceedings.mlr.press/v70/guo17a/guo17a.pdf",
+      "actual_url": "https://proceedings.mlr.press/v70/guo17a/guo17a.pdf",
+      "pages": 10,
+      "sha256": "df7c93f97204f8a3c2b10f6d5bf5265baac25f00c1ae3b473a3e1dbc102dacb2"
+    },
+    {
+      "id": "4",
+      "url": "https://arxiv.org/pdf/2404.05622",
+      "actual_url": "https://arxiv.org/pdf/2404.05622",
+      "pages": 33,
+      "sha256": "360afc290709280a4552cf3ca27ee094f18f726db15ea8e4228ada7571df6b61"
+    },
+    {
+      "id": "5",
+      "url": "https://arxiv.org/pdf/2008.04443",
+      "actual_url": "https://arxiv.org/pdf/2008.04443",
+      "pages": 53,
+      "sha256": "51b08f193a9e7e866a8076925d8c00bd37c5f3e37f965892b76261103559ece6"
+    },
+    {
+      "id": "7",
+      "retrieval_route": "Author download.html → printings/ESLII_print12_toc.pdf.download.html → Google Drive file 1--Wo5Hcl2y_v3DL-tGgcJHRPdtjiVYjS",
+      "sha256": "8d098d65cf53925ba0fc13a52a2790d48a32433223cbd876d0a527cd1afe2e0f",
+      "verification": "retrieved PDF text; selected sections reviewed"
+    },
+    {
+      "id": "10",
+      "retrieval_route": "https://cdn.aaai.org/AAAI/2007/AAAI07-255.pdf",
+      "sha256": "e103d4911fd37b9e1fce4632f1cf7296d4a56b4313a09296ead104be4fc3ad2d",
+      "verification": "retrieved PDF text; selected sections reviewed"
+    },
+    {
+      "id": "9",
+      "retrieval_route": "Publisher search result with abstract at ledger URL",
+      "verification": "publisher metadata and abstract only; full author PDF 403"
+    }
+  ],
+  "v1.1_verified_sources": [
+    {
+      "id": 11,
+      "actual_url": "https://arxiv.org/pdf/1601.06630",
+      "sha256": "7db122e9d7a93009b79e2ff99a4cc0bb3381e916f4dd1e97ff437439796a14fd",
+      "version": "arXiv:1601.06630v1, January 2016",
+      "verification": "primary PDF retrieved; sections 2, 3.4 and 4–5 reviewed for matching constraints, objective assumptions and unresolved decisions"
+    },
+    {
+      "id": 12,
+      "actual_url": "https://www.vldb.org/pvldb/vol2/vldb09-1025.pdf",
+      "sha256": "7ce69f6d49272af9830b34ceea050b47a309f40a3c78d65dd72d80dc4faf6db1",
+      "version": "VLDB 2009 paper",
+      "verification": "primary PDF retrieved; sections 1–2.1 and evaluation scope reviewed; no relative performance findings transferred"
+    },
+    {
+      "id": 13,
+      "actual_url": "https://www.bioinf.jku.at/teaching/ss2011/se-inf/data_fusion_a1-bleiholder.pdf",
+      "sha256": "0611c55748db99806c12131dae027a7f6a2b84342c0aab0a1a3ed377e7b307df",
+      "version": "ACM Computing Surveys 41(1), Article 1, December 2008",
+      "verification": "primary published article from academic teaching host; sections 2–2.5 reviewed for fusion distinction and conflict-handling strategies"
+    },
+    {
+      "id": 14,
+      "actual_url": "https://arxiv.org/pdf/2110.03839",
+      "sha256": "3fa86d6d5d78d4bd262475b733cb658fd7113af83c44749a2f33dae19706be96",
+      "version": "arXiv:2110.03839v1, October 2021",
+      "verification": "primary PDF retrieved; sections 2–5 reviewed for multifile partition, file-specific duplication and partial estimates; not a primary reference for the Atlas greedy constraint policy"
+    }
+  ],
+  "excluded_sources": [
+    {
+      "id": 6,
+      "reason": "exploratory URL not verified; unused"
+    },
+    {
+      "id": 8,
+      "reason": "author PDF HTTP 403; unused"
+    }
+  ],
+  "retention": "Only bibliographic identifiers and hashes retained here; full source text remains outside repo in temporary retrieval cache.",
+  "v1.2_wave_1_verified_sources": [
+    {
+      "id": 15,
+      "actual_url": "https://www150.statcan.gc.ca/n1/pub/12-587-x/12-587-x2003001-eng.pdf",
+      "sha256": "ee016aa1303e94c412a67e824f392a43b9ef04b13c51fc1649d5293cb766b31b",
+      "version": "2010 electronic edition; originally published October 2003",
+      "verification": "Selected chapters 6–7: probability/stratified sampling, weights, nonresponse, totals/ratios, design variance; survey principles not ER acquisition gains",
+      "retrieved_utc_date": "2026-10-14"
+    },
+    {
+      "id": 16,
+      "actual_url": "https://proceedings.neurips.cc/paper_files/paper/2016/file/6709e8d64a5f47269ed5cea9f625f7ab-Paper.pdf",
+      "sha256": "54f91b929f910218c05ffb47f10cd9e061afe04a019bc5f882c363d24b7705b5",
+      "version": "NeurIPS 2016 primary paper",
+      "verification": "Sections 3–5; equations 1–9, Theorems 1–2 and application tables; correct-model/dependence assumptions, no ER performance transfer; supplementary proofs not reviewed",
+      "retrieved_utc_date": "2026-10-14"
+    },
+    {
+      "id": 17,
+      "actual_url": "https://cseweb.ucsd.edu/~elkan/posonly.pdf",
+      "sha256": "566e651732d5a6af47e11969740176d74b3fe488b8c083e7631f7492f46c5f32",
+      "version": "KDD 2008 author-hosted primary paper",
+      "verification": "Section 2 and beginning of section 3: SCAR identity and single-sample versus case-control distinction; no automatic propensity identification or ER accuracy claim",
+      "retrieved_utc_date": "2026-10-14"
+    },
+    {
+      "id": 18,
+      "actual_url": "https://arxiv.org/pdf/0812.4952",
+      "sha256": "b6381912c3b3922dbf36e1f0c6d521981c440bcbdda1ed9b10ca2202ac50c030",
+      "version": "arXiv:0812.4952v4, 20 May 2009",
+      "verification": "Sections 2–4 and 7: importance-weighted querying, bounded-loss/finite-class safety assumptions, loss-weighting construction; no arbitrary ER heuristic guarantees",
+      "retrieved_utc_date": "2026-10-14"
+    },
+    {
+      "id": 19,
+      "actual_url": "https://www.cse.ust.hk/~scc/publ/CS98-01-metamorphictesting.pdf",
+      "sha256": "a2095b46cebac69051c7d5e6eb16bea4c0ddce5f1981182852c929a4167e131b",
+      "version": "HKUST technical report CS98-01, 1998",
+      "verification": "Abstract, introduction, preliminaries, conditional examples and conclusion; general follow-up testing without complete oracle, not ER accuracy",
+      "retrieved_utc_date": "2026-10-14"
+    },
+    {
+      "id": 20,
+      "actual_url": "https://www.itl.nist.gov/div898/handbook/pri/section3/pri3331.htm",
+      "sha256": "e549492766b04444ca97c61f0edbfe11d6e7b2f10aa24afe2e2e572c791879c7",
+      "version": "Official NIST/SEMATECH e-Handbook HTML as retrieved",
+      "verification": "Two-level full factorial combinations, design/analysis matrices, replication and interactions; no ER deployment causal guarantee",
+      "retrieved_utc_date": "2026-10-14"
+    },
+    {
+      "id": 21,
+      "actual_url": "https://www.vldb.org/pvldb/vol11/p269-ratner.pdf",
+      "sha256": "efd3784f0ea27a2c3d10270d269b661e2c08ae34fe9d7c3985d97db5426bd558",
+      "version": "PVLDB 11(3), 2017 primary paper",
+      "verification": "Section 2, sections 3.1–3.2, section 4.1 incl 4.1.1–4.1.4: LF aggregation/training and comparison setup; no ER superiority or arbitrary label-model calibration",
+      "retrieved_utc_date": "2026-10-14"
+    },
+    {
+      "id": 22,
+      "actual_url": "https://hypothesis.readthedocs.io/en/latest/tutorial/introduction.html",
+      "sha256": "721c97c5ccf6428530bde575a9e7a02247b46122d3d2cce2908022305e7be030",
+      "version": "Official Hypothesis 6.169.1 introduction, latest route as retrieved",
+      "verification": "Strategies/assertions, reference equivalence and input-domain counterexample; framework illustration, not library recommendation",
+      "retrieved_utc_date": "2026-10-14"
+    }
+  ],
+  "v1.2_wave_2_verified_sources": [
+    {
+      "id": 23,
+      "actual_url": "https://www.omg.org/spec/DMN/1.5/PDF",
+      "sha256": "196c80d0f483446a6e616ba096be5d44be0f8d1820684f59a41c80bfefc52e0f",
+      "version": "DMN 1.5, formal/24-01-01; PDF title page January 2024, not a latest-version claim",
+      "pages": 250,
+      "verification": "Sections 8.2.11–8.2.12: hit-policy semantics and default outputs; selected surrounding definitions. No conformance, ER performance or general missing-value guarantee.",
+      "retrieved_utc_date": "2026-10-14"
+    },
+    {
+      "id": 24,
+      "actual_url": "https://doc.dvc.org/user-guide/pipelines/running-pipelines",
+      "sha256": "e2c95c2551bf7c37927fd98fc1ca96e185d2990235bc82e70ad07c7974a7bdc0",
+      "version": "Live official Running Pipelines HTML as retrieved",
+      "verification": "DAG, Caching Stages and missing-data sections: declared command/dependency/parameter reuse; no automatic semantic dependency completeness or determinism guarantee.",
+      "retrieved_utc_date": "2026-10-14"
+    },
+    {
+      "id": 25,
+      "actual_url": "https://www.w3.org/TR/prov-primer/",
+      "sha256": "4db54135a6f06bbee1983e079c6d9bd3d54e5b45eb6ed0f5686e922c665b8c4a",
+      "version": "W3C Working Group Note 30 April 2013",
+      "verification": "Sections 1–2: provenance entities, activities, agents, derivation and plans; not ER same-as semantics or an agent framework.",
+      "retrieved_utc_date": "2026-10-14"
+    },
+    {
+      "id": 26,
+      "actual_url": "https://mlflow.org/docs/3.3.1/ml/model-registry/",
+      "sha256": "929caa9764d5dc099e8dc942fcd737e9a3f6c32d0dec25539d2f608a1d910655",
+      "version": "Pinned MLflow 3.3.1 documentation",
+      "verification": "Overview and Concepts: registered models/versions, mutable aliases, tags and lineage. Metadata and marketing claims are not independent validation or full ER reproducibility guarantees.",
+      "retrieved_utc_date": "2026-10-14"
+    },
+    {
+      "id": 27,
+      "actual_url": "https://martinfowler.com/bliki/RulesEngine.html",
+      "sha256": "d5624df488de74e47cfd8b2a6df17799879f5d81e011518f15ab27a36b8c74d4",
+      "version": "Author-maintained RulesEngine essay as retrieved",
+      "verification": "Production-rule model, chaining and implicit-control-flow design cautions. Explicitly nonrepresentative experience is not a measured engine failure rate.",
+      "retrieved_utc_date": "2026-10-14"
+    },
+    {
+      "id": 28,
+      "actual_url": "https://martinfowler.com/eaaDev/EventSourcing.html",
+      "sha256": "ff817ecc7b176c9456b8381687437e93f38bb8be6c6c3b4e4403b664818f8a02",
+      "version": "Author-maintained Event Sourcing design essay as retrieved",
+      "verification": "Application-state storage, replay, wrong-sequence events, external updates and queries. Does not guarantee correct ER identity, complete events or reversible external side effects.",
+      "retrieved_utc_date": "2026-10-14"
+    }
+  ],
+  "v1.2_wave_3_verified_sources": [
+    {
+      "id": 29,
+      "actual_url": "https://www.stat.cmu.edu/NCRN/PUBLIC/RLClassFiles/HW/Winkler1990.pdf",
+      "sha256": "ea2026c5073196fb1f88f9a81ac450c752d21a32f96101aee5322f6de7c97807",
+      "verification": "Primary 1990 paper; comparison-vector/partial-agreement discussion and frequency-weight/joint-dependency description reviewed. No numerical gains transferred to Atlas.",
+      "retrieved_utc_date": "2026-10-14"
+    },
+    {
+      "id": 30,
+      "actual_url": "https://www.census.gov/content/dam/Census/library/working-papers/2004/adrm/rrs2004-02.pdf",
+      "sha256": "1cfb3b54f2f6f09d7e56a58657b5ba8e913293991c603066aa045c67469f7d7e",
+      "verification": "Yancey 2004 Census primary report; abstract and comparator/edit-cost/dynamic-programming sections reviewed. Adaptive costs trained on Census first/last-name data are not universal multilingual guarantees.",
+      "retrieved_utc_date": "2026-10-14"
+    },
+    {
+      "id": 31,
+      "actual_url": "https://www.census.gov/content/dam/Census/library/working-papers/2005/adrm/rrs2005-05.pdf",
+      "sha256": "cd554d0963ba0e47c24abc19e7625b33d8f4cef1e674b6913e94776a2eb95000",
+      "verification": "Yancey 2005 Census primary report; comparator definitions, sections 5.1, 5.3 and 6.1 reviewed. Census-name classification and Bigmatch linkage contrasts remain population/configuration-specific.",
+      "retrieved_utc_date": "2026-10-14"
+    },
+    {
+      "id": 32,
+      "actual_url": "https://www.unicode.org/reports/tr15/",
+      "sha256": "efcf19da85342bd87fb93b590975ca422597243f2e19c6cb46e941d0d2d48d73",
+      "version": "Retrieved HTML labels Unicode 18.0.0, revision 58, 2026-08-12; version identifier of received bytes, not a latest-version guarantee",
+      "verification": "Sections on canonical/compatibility equivalence and four normalization forms, with compatibility-folding caution reviewed. Character equivalence is not entity identity or ER accuracy.",
+      "retrieved_utc_date": "2026-10-14"
+    },
+    {
+      "id": 33,
+      "actual_url": "https://www.unicode.org/reports/tr24/",
+      "sha256": "009e2e6db21ac136223966d3fb8d146c527e7f7714a22231ad3b812ad7827ded",
+      "version": "Retrieved HTML labels Unicode 18.0.0, revision 41, 2026-08-28",
+      "verification": "Script/Script_Extensions, Common/Inherited handling, combining-mark and mixed-script/version caveats reviewed. Not language identification or a transliteration method.",
+      "retrieved_utc_date": "2026-10-14"
+    },
+    {
+      "id": 34,
+      "actual_url": "https://www.archives.gov/research/census/soundex",
+      "sha256": "233924806f2600a929ab8105c265f2581a889533abda81fc5fdc3e6bb49dc217",
+      "verification": "Official NARA Soundex System page; basic coding, grouped letters, repeated/separated letters and prefix rules reviewed. Historical surname-indexing specification, not cross-language matching validation.",
+      "retrieved_utc_date": "2026-10-14"
+    },
+    {
+      "id": 36,
+      "actual_url": "https://arxiv.org/pdf/2310.11244v4",
+      "sha256": "c7c203afa33e4a6ab1a019cc4c5e9b8a4416960ece8b28e6ac6a797ddca20b1b",
+      "version": "arXiv:2310.11244v4 (18 October 2024), received PDF identifies EDBT 2025 publication",
+      "verification": "Primary paper, abstract/introduction, section 2 benchmark/splits/serialization/response parsing, and section 5 cost/runtime snapshot reviewed. Dataset/model-conditional comparison; not universal LLM superiority, sensitive-entity identity truth or current API prices.",
+      "retrieved_utc_date": "2026-10-14"
+    },
+    {
+      "id": 7,
+      "sha256": "8d098d65cf53925ba0fc13a52a2790d48a32433223cbd876d0a527cd1afe2e0f",
+      "verification": "Existing author-provided PDF/text revisited at sections 9.1 additive logistic models, 9.2 recursive trees and 10.10 gradient boosting. Supports general mechanisms only; monotone-ER/ranking/hierarchical specialist guarantees were not verified.",
+      "retrieved_utc_date": "2026-10-14"
+    }
+  ],
+  "v1.2_wave_3_additional_verified_sources": [
+    {
+      "id": 35,
+      "actual_url": "http://www.kamalnigam.com/papers/canopy-kdd00.pdf",
+      "sha256": "15c9f3b088e5a53a407d28806a98a85c6d91b4d5a273796fd27bb7f7b287fa0c",
+      "verification": "Primary McCallum/Nigam/Ungar canopy paper; introduction and sections 2.1–2.2 cheap/wide versus tight radii and expensive within-canopy work reviewed. No unconditional lossless-ER or transferred gain claim.",
+      "retrieved_utc_date": "2026-10-14"
+    },
+    {
+      "id": 37,
+      "actual_url": "https://wkiri.com/research/papers/wagstaff-constraints-00.pdf",
+      "sha256": "50fb61e241d7f732acbc1c6f7566f9263cfaa2f5f0a5769c541b51ab16b79617",
+      "verification": "Author-hosted ICML-2000 full paper; sections 2.1–2.3 hard constraints and COP-COBWEB reviewed. Not the separate one-page AAAI abstract or the later COP-k-means paper. No ER result transferred.",
+      "retrieved_utc_date": "2026-10-14"
+    },
+    {
+      "id": 38,
+      "actual_url": "http://infolab.stanford.edu/~ullman/mmds/ch3.pdf",
+      "sha256": "ec5c527cd2ede90bcfc00cfb1b7a2ab535a113bf929108a4166e6e3957fef6b9",
+      "verification": "Author-hosted MMDS chapter, sections 3.3.3–3.4.2 MinHash/banding and 3.9.3–3.9.4 set-cardinality/prefix filtering reviewed. Textbook exposition, not original algorithm paper or ER-identity recall guarantee. PDF extraction emitted missing-fontTools warnings; selected extracted passages readable, no obscure glyph-dependent result imported.",
+      "retrieved_utc_date": "2026-10-14"
+    },
+    {
+      "id": 39,
+      "actual_url": "https://creatingfutureus.org/wp-content/uploads/2021/10/Hernandez-and-Stolfo-1998.pdf",
+      "sha256": "cf1a2e7e4d5374103143e1eea1280d7260fbaa5eb945876c6771dcff93d6d5e8",
+      "verification": "Primary Hernández–Stolfo 1998 article, 29-page full text via external mirror; section 2.1 key/sort/window mechanism and key-error discussion reviewed. Title and author text checked; mirror is not a publisher-authenticity attestation.",
+      "retrieved_utc_date": "2026-10-14"
+    },
+    {
+      "id": 40,
+      "actual_url": "https://www.cs.princeton.edu/courses/archive/spring13/cos598C/broder97resemblance.pdf",
+      "sha256": "da1227992d4a308f9f6f9f99893fd7b00c26e6cf757b1372f426074c101ef56b",
+      "verification": "Primary Broder document-resemblance article from academic course host; introduction, set/sampling definition and section 4.1 permutation/hash-collision discussion reviewed. MinHash banding formula is attributed separately to source 38; no ER recall theorem.",
+      "retrieved_utc_date": "2026-10-14"
+    }
+  ],
+  "v1.2_wave_4_verified_sources": [
+    {"id": 41, "sha256": "69486e37e0afd09cc7adf8445d55a2b5280b3ceb9fec0fd8333290cdbe7b8feb", "verification": "Official Spark 3.5.6 HTML: caching, adaptive partition coalescing and skew-join splitting/replication. Version-pinned examples, not ER guarantees.", "retrieved_utc_date": "2026-10-14"},
+    {"id": 42, "sha256": "aafd05923923b188cbf35df5d0644127491de2c7c07464e561f582851ca21a02", "verification": "Official PostgreSQL 17 HTML: EXPLAIN estimates versus ANALYZE execution and caveats. No modifying query was executed.", "retrieved_utc_date": "2026-10-14"},
+    {"id": 43, "sha256": "1a67da09a8bd5ba9a3577176e30aa2fbd88534e6baf0bc31522b4999f643d2a1", "verification": "Primary NeurIPS 2015 PDF; title/authors and section 7 Changes in the External World, fixed thresholds and monitoring/testing reviewed. pypdf missing-fontTools warnings; selected prose readable, no glyph-dependent claim used.", "retrieved_utc_date": "2026-10-14"},
+    {"id": 44, "sha256": "7576edb531d9848825814ee88e28b1795d3a84b435b4b797d3670eafdc4a89f1", "verification": "Official AI RMF 1.0 PDF, January 2023; MEASURE 2.3-2.5 and 3.1-3.3. Initial HTTP 403 recovered with browser-style User-Agent. Not a latest-version claim or ER estimator.", "retrieved_utc_date": "2026-10-14"},
+    {"id": 45, "sha256": "58e1f2373e1c8a5782f7ddfce677fa9fc15e2d920ec0ab97ee754697e91bc2f0", "actual_url": "https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.01162020.pdf", "verification": "Official DOI redirect to Privacy Framework 1.0, January 2020 PDF; CT.DM-P and CT.DP-P core entries. Pinned historical version, not latest or legal/compliance/security guarantee.", "retrieved_utc_date": "2026-10-14"}
+  ],
+  "v1.2_wave_3_retrieval_limitations": [
+    "Unrelated exploratory arXiv downloads were rejected after title checks, unregistered and uncited; only the identified, pinned sources support the reviewed scopes.",
+    "Failed exploratory source paths provide no evidence; identified author/academic copies were used where available.",
+    "Hierarchical/shrinkage, specialist transliteration, learned blocking, LTR and specific ANN internals have bounded role-level synthesis only, not verified algorithm-specific guarantees.",
+    "Content review was author-only; independent scientific review is not attested."
+  ],
+  "v1.2_wave_2_retrieval_limitations": [
+    "Discovery results alone were not treated as full-text verification.",
+    "Direct HTTPS retrieval and selected-text review succeeded for the admitted sources; see their version and scope records.",
+    "An exploratory Parnas paper was not verified or admitted as a citation; no full-text support claim was created for it."
+  ]
+}

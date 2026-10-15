@@ -1,0 +1,57 @@
+{
+  "scenario_id": "AU-02",
+  "interpretation": "Semantic checklist, not a required verbatim answer or mandatory algorithm. Credit defensible alternatives and explicit corpus gaps. Do not reward card counts or invented IDs.",
+  "expected_findings": [
+    {
+      "finding_id": "AU-02-F1",
+      "finding": "Identify selection-conditioned labels; 96% within-pool recall is not end-to-end candidate or entity recall.",
+      "dimensions": [
+        "problem_understanding",
+        "risk_identification"
+      ]
+    },
+    {
+      "finding_id": "AU-02-F2",
+      "finding": "Design independent entity-centered sample including non-admitted pairs, missing-code vendors and weighted strata; do not label every unobserved edge non-match.",
+      "dimensions": [
+        "technical_reasoning",
+        "risk_identification"
+      ]
+    },
+    {
+      "finding_id": "AU-02-F3",
+      "finding": "Compare existing exact block and complementary normalized-field passes with union, cap and cost tracking.",
+      "dimensions": [
+        "alternative_quality",
+        "technical_reasoning"
+      ]
+    },
+    {
+      "finding_id": "AU-02-F4",
+      "finding": "Separate candidate coverage, scorer/policy accuracy and final link correctness; entity-disjoint/source holdouts and uncertainty.",
+      "dimensions": [
+        "experiment_quality",
+        "risk_identification"
+      ]
+    },
+    {
+      "finding_id": "AU-02-F5",
+      "finding": "Candidate changes alter scoring/calibration population; evaluate or recalibrate rather than transport probabilities untested.",
+      "dimensions": [
+        "evidence_discipline",
+        "experiment_quality"
+      ]
+    }
+  ],
+  "critical_failures": [
+    {
+      "failure_id": "AU-02-selected_recall_as_total",
+      "trigger": "Accepts 96% selected-pool recall as total matching recall or proposes only candidate-pool validation to certify recall.",
+      "caps": {
+        "problem_understanding": 1,
+        "experiment_quality": 1,
+        "risk_identification": 1
+      }
+    }
+  ]
+}

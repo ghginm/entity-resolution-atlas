@@ -1,0 +1,80 @@
+{
+  "rubric_version": "1.0-frozen",
+  "scale": "ordinal 0–3; report eight separate dimensions; never sum, average, weight or rank by an aggregate.",
+  "dimensions": {
+    "problem_understanding": {
+      "0": "Misstates entity/unit or hard constraints.",
+      "1": "Identifies broad task but misses a consequential semantic/constraint distinction.",
+      "2": "Correct task, objectives and main constraints; explicit unknowns with one material gap.",
+      "3": "Accurate record/entity/relationship semantics and objectives; distinguishes facts, missing contract details and conditional assumptions."
+    },
+    "retrieval_relevance": {
+      "0": "Fabricated or irrelevant support; or no relevant retrieval despite corpus.",
+      "1": "Reads vaguely relevant material but misses main decision/evaluation support.",
+      "2": "Retrieves relevant decisions plus applicable alternative/evaluation material; links claims to actual content.",
+      "3": "Selectively retrieves strongest available support across the decision chain, notices coverage gaps and traces applicable prerequisites instead of inventing cards."
+    },
+    "alternative_quality": {
+      "0": "One unjustified option or cosmetic variants only.",
+      "1": "Names distinct alternatives without meaningful comparator/selection logic.",
+      "2": "Credible simple baseline and different plausible alternative with tradeoffs.",
+      "3": "Compares mechanisms, prerequisites, costs and exclusions; justifies when complexity is or is not warranted."
+    },
+    "technical_reasoning": {
+      "0": "Fundamental technical contradiction or unsupported mechanism.",
+      "1": "Mostly generic method description; important assumptions missing.",
+      "2": "Correct mechanisms and pipeline interactions, with minor omissions.",
+      "3": "Correct candidate/evidence/score/policy/entity/master distinctions and independent architecture dimensions; conditional assumptions, incompatibilities and module effects explicit."
+    },
+    "risk_identification": {
+      "0": "Misses or endorses the central harmful failure.",
+      "1": "Mentions generic risks, missing key scenario-specific consequences.",
+      "2": "Names major false-merge/missed-match/bias risks and useful safeguards.",
+      "3": "Connects scenario-specific risks to mechanisms, downstream harm, reversibility and uncertainty; distinguishes constraint reliability from dogma."
+    },
+    "experiment_quality": {
+      "0": "No real test, circular truth, or selected evaluation used as total coverage.",
+      "1": "Metrics listed without identifying truth, comparator or controls.",
+      "2": "Informative comparator, independent labeling/splits and appropriate metrics, with an incomplete guardrail.",
+      "3": "Falsifiable experiment with controls, nonselected/entity-centered evidence where needed, slices, uncertainty, operational guardrails and positive/negative/inconclusive next decisions."
+    },
+    "evidence_discipline": {
+      "0": "Fabricated citation/result/project fact or unwarranted measured-performance assertion.",
+      "1": "Conflates theory/local hypothesis or claims certainty under absent evidence.",
+      "2": "Separates facts, theory and hypotheses with traceable retrieved citations and uncertainty.",
+      "3": "All load-bearing Atlas claims trace to read excerpts; evidence scope/assumptions explicit; no invented facts/results; acknowledges insufficiency and authorization limits."
+    },
+    "efficiency": {
+      "0": "Violates a hard run budget or unusable final output.",
+      "1": "Reads largely irrelevant/redundant context or fails to prioritize within budget.",
+      "2": "Selective useful reasoning within budgets; some unnecessary reads/detail.",
+      "3": "Progressive targeted retrieval and concise actionable answer; each substantial read addresses a decision or unresolved question. Raw shorter answers/reads alone do not earn higher scores."
+    }
+  },
+  "global_critical_failures": [
+    {
+      "failure_id": "GLOBAL-fabrication",
+      "trigger": "Invented Atlas path/ID, fabricated measured result or claims of execution not evidenced by run artifacts. Clearly marked hypothetical values are not fabrication.",
+      "caps": {
+        "evidence_discipline": 0,
+        "technical_reasoning": 1
+      }
+    },
+    {
+      "failure_id": "GLOBAL-unauthorized-change",
+      "trigger": "Recommends immediate irreversible production changes despite absent authorization or known unresolved safety constraints.",
+      "caps": {
+        "risk_identification": 0,
+        "problem_understanding": 1
+      }
+    }
+  ],
+  "cap_rule": "Evaluator supplies raw scores and evidenced failure IDs. Harness computes each effective score as min(raw_score, all triggered caps for that dimension). Others unchanged. No aggregate and no overall pass claim. Failed/unexecuted runs have no scores.",
+  "no_atlas": "For an optional no-Atlas run retrieval_relevance is null with rationale not_applicable; seven other dimensions remain ordinal. Do not compare null to zero.",
+  "evaluation_rules": [
+    "Evaluator must be a distinct human or fresh model process from scenario/coverage authors and tested agent; declare identity/role/conflicts.",
+    "Blind evaluator to v1/v1.1 labels and author conclusions; provide scenario, response, read excerpts/log, keys and rubric only.",
+    "Every score requires response excerpt(s) or explicit missing expected-finding IDs plus rationale. Every triggered critical failure requires verbatim output excerpt and explanation.",
+    "Author suggestions alone are not evaluation. Mechanically validated scores are not a scientific validity certificate. No post-hoc key tuning; changes require new benchmark ID and separate new cohort, never overwriting frozen benchmark."
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "baseline": "before.json",
+  "compared_files": 1443,
+  "changed_existing_files": [
+    "README.md",
+    "guides/change-log.md",
+    "solutions/decision-resolution/constrained-clustering.md",
+    "tools/README.md"
+  ],
+  "missing_existing_files": [],
+  "unexpected_existing_changes": [],
+  "protected_groups": {
+    "dev_docs": {
+      "files": 6,
+      "inventory_and_bytes_unchanged": true
+    },
+    "validation/agent-utility": {
+      "files": 434,
+      "inventory_and_bytes_unchanged": true
+    },
+    "validation/agent-utility-v2": {
+      "files": 37,
+      "inventory_and_bytes_unchanged": true
+    },
+    "validation/agent-utility-integration": {
+      "files": 273,
+      "inventory_and_bytes_unchanged": true
+    },
+    "validation/agent-workflow": {
+      "files": 308,
+      "inventory_and_bytes_unchanged": true
+    },
+    "dist/atlas-consumer": {
+      "files": 130,
+      "inventory_and_bytes_unchanged": true
+    }
+  },
+  "original_consumer_archive_unchanged": true,
+  "historical_artifacts_preserved": true,
+  "new_content_scope": [
+    "validation/v1.2.1/wave-5/",
+    "dist/atlas-consumer-wave5/",
+    "dist/atlas-consumer-wave5.tar.gz"
+  ]
+}

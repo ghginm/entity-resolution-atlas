@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:entity-resolution-atlas:AU-v2:coverage",
+  "type": "object",
+  "properties": {
+    "cohort": {
+      "const": "AU-v2"
+    },
+    "access": {
+      "const": "evaluator-only"
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 1
+    },
+    "cases": {
+      "type": "object",
+      "properties": {
+        "AUv2-01": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 2
+        },
+        "AUv2-02": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 2
+        },
+        "AUv2-03": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 2
+        },
+        "AUv2-04": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 2
+        },
+        "AUv2-05": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 2
+        },
+        "AUv2-06": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 2
+        },
+        "AUv2-07": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 2
+        },
+        "AUv2-08": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 2
+        }
+      },
+      "required": [
+        "AUv2-01",
+        "AUv2-02",
+        "AUv2-03",
+        "AUv2-04",
+        "AUv2-05",
+        "AUv2-06",
+        "AUv2-07",
+        "AUv2-08"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "cohort",
+    "access",
+    "purpose",
+    "cases"
+  ],
+  "additionalProperties": false
+}

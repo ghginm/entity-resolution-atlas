@@ -1,0 +1,1293 @@
+{
+  "recorded_at": "2026-10-15T00:59:29.144110+00:00",
+  "scope": "Original v1.2+ task delivery: knowledge/navigation/report handover, actual structural checks; no new model outcomes",
+  "review_dispositions": "validation/v1.2/final-delivery-content-review.md",
+  "status": "completed_checks",
+  "delivery_status": "documentation_delivered_with_explicit_deferrals_and_unexecuted_utility",
+  "registration_evidence_check_automatically_enforced_by_scoring": false,
+  "independent_post_remediation_signoff": false,
+  "checks": [
+    {
+      "command": [
+        "/home/ghgin/.hermes/tools/python-3.14.7+20260901-linux-x64/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "validation/agent-utility-integration/tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "output": "test_broker_counts_repeated_content_then_fails_read_budget (test_bridge.BridgeTests.test_broker_counts_repeated_content_then_fails_read_budget) ... ok\ntest_broker_denies_path_aliases_and_counts_them (test_bridge.BridgeTests.test_broker_denies_path_aliases_and_counts_them) ... ok\ntest_broker_detects_mutation_during_read (test_bridge.BridgeTests.test_broker_detects_mutation_during_read) ... ok\ntest_broker_fails_character_budget_before_returning_content (test_bridge.BridgeTests.test_broker_fails_character_budget_before_returning_content) ... ok\ntest_broker_returns_au_v2_unicode_slice_with_legacy_accounting (test_bridge.BridgeTests.test_broker_returns_au_v2_unicode_slice_with_legacy_accounting) ... ok\ntest_cli_prepares_snapshot_with_no_dispatch_command (test_bridge.BridgeTests.test_cli_prepares_snapshot_with_no_dispatch_command) ... ok\ntest_denied_no_atlas_attempts_exhaust_frozen_budget (test_bridge.BridgeTests.test_denied_no_atlas_attempts_exhaust_frozen_budget) ... ok\ntest_export_rejects_symlink_output_ancestor (test_bridge.BridgeTests.test_export_rejects_symlink_output_ancestor) ... ok\ntest_malformed_request_is_denied_and_counted (test_bridge.BridgeTests.test_malformed_request_is_denied_and_counted) ... ok\ntest_over_budget_read_fails_closed_and_retains_attempt (test_bridge.BridgeTests.test_over_budget_read_fails_closed_and_retains_attempt) ... ok\ntest_preparation_plan_preserves_frozen_three_arm_rotation (test_bridge.BridgeTests.test_preparation_plan_preserves_frozen_three_arm_rotation) ... ok\ntest_protocol_denies_identity_mismatch (test_bridge.BridgeTests.test_protocol_denies_identity_mismatch) ... ok\ntest_protocol_denies_read_before_ready (test_bridge.BridgeTests.test_protocol_denies_read_before_ready) ... ok\ntest_protocol_denies_settings_mismatch (test_bridge.BridgeTests.test_protocol_denies_settings_mismatch) ... ok\ntest_protocol_nonbyte_input_is_a_terminal_validation_failure (test_bridge.BridgeTests.test_protocol_nonbyte_input_is_a_terminal_validation_failure) ... ok\ntest_protocol_rejects_duplicate_json_keys (test_bridge.BridgeTests.test_protocol_rejects_duplicate_json_keys) ... ok\ntest_protocol_rejects_nonzero_exit (test_bridge.BridgeTests.test_protocol_rejects_nonzero_exit) ... ok\ntest_protocol_rejects_output_after_final (test_bridge.BridgeTests.test_protocol_rejects_output_after_final) ... ok\ntest_protocol_rejects_oversized_final_without_truncation (test_bridge.BridgeTests.test_protocol_rejects_oversized_final_without_truncation) ... ok\ntest_protocol_requires_nonempty_registered_identity (test_bridge.BridgeTests.test_protocol_requires_nonempty_registered_identity) ... ok\ntest_protocol_requires_ready_then_final_and_successful_exit (test_bridge.BridgeTests.test_protocol_requires_ready_then_final_and_successful_exit) ... ok\ntest_registration_checks_bound_evidence_without_granting_execution (test_bridge.BridgeTests.test_registration_checks_bound_evidence_without_granting_execution) ... ok\ntest_registration_rejects_aliases_of_same_model (test_bridge.BridgeTests.test_registration_rejects_aliases_of_same_model) ... ok\ntest_registration_rejects_claimed_unsupported_effective_setting (test_bridge.BridgeTests.test_registration_rejects_claimed_unsupported_effective_setting) ... ok\ntest_registration_rejects_duplicate_arms (test_bridge.BridgeTests.test_registration_rejects_duplicate_arms) ... ok\ntest_registration_rejects_missing_null_evidence_field (test_bridge.BridgeTests.test_registration_rejects_missing_null_evidence_field) ... ok\ntest_review_named_knowledge_card_is_not_a_review_artifact (test_bridge.BridgeTests.test_review_named_knowledge_card_is_not_a_review_artifact) ... ok\ntest_snapshot_export_uses_only_allowlisted_knowledge (test_bridge.BridgeTests.test_snapshot_export_uses_only_allowlisted_knowledge) ... ok\ntest_snapshot_rejects_added_file (test_bridge.BridgeTests.test_snapshot_rejects_added_file) ... ok\ntest_snapshot_rejects_overwrite (test_bridge.BridgeTests.test_snapshot_rejects_overwrite) ... ok\ntest_snapshot_rejects_payload_mutation (test_bridge.BridgeTests.test_snapshot_rejects_payload_mutation) ... ok\ntest_snapshot_rejects_rehashed_but_false_l0 (test_bridge.BridgeTests.test_snapshot_rejects_rehashed_but_false_l0) ... ok\ntest_symlink_parent_replacement_cannot_return_content (test_bridge.BridgeTests.test_symlink_parent_replacement_cannot_return_content) ... ok\ntest_applicable_retrieval_cannot_be_null (test_scoring.ScoringTests.test_applicable_retrieval_cannot_be_null) ... ok\ntest_completed_fixture_packet_is_blinded_and_receipt_stays_private (test_scoring.ScoringTests.test_completed_fixture_packet_is_blinded_and_receipt_stays_private) ... ok\ntest_effective_scores_use_only_affected_dimension_caps (test_scoring.ScoringTests.test_effective_scores_use_only_affected_dimension_caps) ... ok\ntest_evaluator_cli_packet_and_score_workflow_with_synthetic_context (test_scoring.ScoringTests.test_evaluator_cli_packet_and_score_workflow_with_synthetic_context) ... ok\ntest_frozen_context_uses_anchored_schemas_without_inspecting_case_contents (test_scoring.ScoringTests.test_frozen_context_uses_anchored_schemas_without_inspecting_case_contents) ... ok\ntest_no_atlas_retrieval_is_null_not_zero (test_scoring.ScoringTests.test_no_atlas_retrieval_is_null_not_zero) ... ok\ntest_packet_and_score_bundles_are_exclusive_and_preserve_raw_draft (test_scoring.ScoringTests.test_packet_and_score_bundles_are_exclusive_and_preserve_raw_draft) ... ok\ntest_packet_rejects_boolean_integer_alias_in_actual_start (test_scoring.ScoringTests.test_packet_rejects_boolean_integer_alias_in_actual_start) ... ok\ntest_packet_rejects_final_response_disagreement (test_scoring.ScoringTests.test_packet_rejects_final_response_disagreement) ... ok\ntest_packet_rejects_forged_broker_content_even_if_rehashed (test_scoring.ScoringTests.test_packet_rejects_forged_broker_content_even_if_rehashed) ... ok\ntest_packet_rejects_forged_read_counter (test_scoring.ScoringTests.test_packet_rejects_forged_read_counter) ... ok\ntest_packet_rejects_identity_attestation_false (test_scoring.ScoringTests.test_packet_rejects_identity_attestation_false) ... ok\ntest_packet_rejects_nonfinite_exponent_in_registration (test_scoring.ScoringTests.test_packet_rejects_nonfinite_exponent_in_registration) ... ok\ntest_packet_rejects_nonfinite_replayed_read_even_when_broker_denies_it (test_scoring.ScoringTests.test_packet_rejects_nonfinite_replayed_read_even_when_broker_denies_it) ... ok\ntest_packet_rejects_nonzero_exit (test_scoring.ScoringTests.test_packet_rejects_nonzero_exit) ... ok\ntest_packet_rejects_output_after_final (test_scoring.ScoringTests.test_packet_rejects_output_after_final) ... ok\ntest_packet_rejects_rehashed_timezone_naive_journal (test_scoring.ScoringTests.test_packet_rejects_rehashed_timezone_naive_journal) ... ok\ntest_packet_rejects_response_hash_mismatch (test_scoring.ScoringTests.test_packet_rejects_response_hash_mismatch) ... ok\ntest_packet_rejects_terminal_wall_budget_violation (test_scoring.ScoringTests.test_packet_rejects_terminal_wall_budget_violation) ... ok\ntest_packet_rejects_unblinded_start_metadata (test_scoring.ScoringTests.test_packet_rejects_unblinded_start_metadata) ... ok\ntest_packet_rejects_unsupported_setting_with_effective_value (test_scoring.ScoringTests.test_packet_rejects_unsupported_setting_with_effective_value) ... ok\ntest_packet_requires_sent_not_generated_broker_bytes (test_scoring.ScoringTests.test_packet_requires_sent_not_generated_broker_bytes) ... ok\ntest_read_attempt_count_is_visible_without_unblinding (test_scoring.ScoringTests.test_read_attempt_count_is_visible_without_unblinding) ... ok\ntest_score_rejects_changed_packet_bytes (test_scoring.ScoringTests.test_score_rejects_changed_packet_bytes) ... ok\ntest_score_rejects_duplicate_critical_failure (test_scoring.ScoringTests.test_score_rejects_duplicate_critical_failure) ... ok\ntest_score_rejects_finding_from_other_dimension (test_scoring.ScoringTests.test_score_rejects_finding_from_other_dimension) ... ok\ntest_score_rejects_unknown_omitted_finding (test_scoring.ScoringTests.test_score_rejects_unknown_omitted_finding) ... ok\ntest_score_rejects_wrong_evaluator_identity (test_scoring.ScoringTests.test_score_rejects_wrong_evaluator_identity) ... ok\ntest_score_requires_exact_critical_failure_quote (test_scoring.ScoringTests.test_score_requires_exact_critical_failure_quote) ... ok\ntest_score_requires_exact_dimension_quote (test_scoring.ScoringTests.test_score_requires_exact_dimension_quote) ... ok\ntest_score_requires_specific_dimension_evidence (test_scoring.ScoringTests.test_score_requires_specific_dimension_evidence) ... ok\ntest_unexecuted_run_cannot_load_evaluator_only_material (test_scoring.ScoringTests.test_unexecuted_run_cannot_load_evaluator_only_material) ... ok\n\n----------------------------------------------------------------------\nRan 65 tests in 2.354s\n\nOK\n"
+    },
+    {
+      "command": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools",
+        "-p",
+        "test_*.py"
+      ],
+      "exit_code": 0,
+      "output": ".................................................\n----------------------------------------------------------------------\nRan 49 tests in 0.655s\n\nOK\n"
+    },
+    {
+      "command": [
+        "/home/ghgin/.hermes/tools/python-3.14.7+20260901-linux-x64/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "validation/agent-utility/tests",
+        "-p",
+        "test_*.py"
+      ],
+      "exit_code": 0,
+      "output": "/home/ghgin/.hermes/tools/python-3.14.7+20260901-linux-x64/lib/python3.14/unittest/case.py:615: ResourceWarning: unclosed file <_io.TextIOWrapper name=7 encoding='utf-8'>\n  result = method()\nResourceWarning: Enable tracemalloc to get the object allocation traceback\n/home/ghgin/.hermes/tools/python-3.14.7+20260901-linux-x64/lib/python3.14/unittest/case.py:615: ResourceWarning: unclosed file <_io.TextIOWrapper name=4 encoding='utf-8'>\n  result = method()\nResourceWarning: Enable tracemalloc to get the object allocation traceback\n/home/ghgin/.hermes/tools/python-3.14.7+20260901-linux-x64/lib/python3.14/unittest/case.py:615: ResourceWarning: unclosed file <_io.TextIOWrapper name=5 encoding='utf-8'>\n  result = method()\nResourceWarning: Enable tracemalloc to get the object allocation traceback\n.......................................\n----------------------------------------------------------------------\nRan 39 tests in 4.605s\n\nOK\n"
+    },
+    {
+      "command": [
+        "/home/ghgin/.hermes/tools/python-3.14.7+20260901-linux-x64/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/home/ghgin/.hermes/cache/scratch/au-v2-exact-check-7g65dr2c/package/tests",
+        "-p",
+        "test_integrity.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "output": "test_absolute_manifest_path_is_rejected (test_integrity.IntegrityTests.test_absolute_manifest_path_is_rejected) ... ok\ntest_anchor_argument_is_mandatory (test_integrity.IntegrityTests.test_anchor_argument_is_mandatory) ... ok\ntest_cross_case_reference_is_rejected (test_integrity.IntegrityTests.test_cross_case_reference_is_rejected) ... ok\ntest_duplicate_json_keys_are_rejected (test_integrity.IntegrityTests.test_duplicate_json_keys_are_rejected) ... ok\ntest_duplicate_rubric_dimension_is_rejected (test_integrity.IntegrityTests.test_duplicate_rubric_dimension_is_rejected) ... ok\ntest_false_manifest_count_is_rejected (test_integrity.IntegrityTests.test_false_manifest_count_is_rejected) ... ok\ntest_nonfinite_json_is_rejected (test_integrity.IntegrityTests.test_nonfinite_json_is_rejected) ... ok\ntest_pristine_package_is_accepted (test_integrity.IntegrityTests.test_pristine_package_is_accepted) ... ok\ntest_schema_engine_constraints (test_integrity.IntegrityTests.test_schema_engine_constraints) ... ok\ntest_schema_invalid_but_rehashed_input_is_rejected (test_integrity.IntegrityTests.test_schema_invalid_but_rehashed_input_is_rejected) ... ok\ntest_substantive_score_null_is_invalid (test_integrity.IntegrityTests.test_substantive_score_null_is_invalid) ... ok\ntest_symlinked_directory_is_rejected (test_integrity.IntegrityTests.test_symlinked_directory_is_rejected) ... ok\ntest_symlinked_file_is_rejected (test_integrity.IntegrityTests.test_symlinked_file_is_rejected) ... ok\ntest_tampered_file_is_rejected (test_integrity.IntegrityTests.test_tampered_file_is_rejected) ... ok\ntest_traversal_in_manifest_is_rejected (test_integrity.IntegrityTests.test_traversal_in_manifest_is_rejected) ... ok\ntest_unlisted_file_is_rejected (test_integrity.IntegrityTests.test_unlisted_file_is_rejected) ... ok\ntest_wrong_anchor_is_rejected (test_integrity.IntegrityTests.test_wrong_anchor_is_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 17 tests in 0.693s\n\nOK\n"
+    },
+    {
+      "command": [
+        "/home/ghgin/.hermes/tools/python-3.14.7+20260901-linux-x64/bin/python3",
+        "-B",
+        "/home/ghgin/projects/entity-resolution-atlas/validation/agent-utility-v2/verify.py",
+        "--expected-manifest-sha256",
+        "22d2527c35b39e1f22a0ac5815c833924815b63cbd1704a958989f124c798f49"
+      ],
+      "exit_code": 0,
+      "output": "{\"actual_runs\": 0, \"actual_scores\": 0, \"benchmark_id\": \"AU-v2\", \"critical_failure_rules\": 17, \"dimensions\": 8, \"frozen_files\": 36, \"integrity\": \"verified\", \"json_files_excluding_manifest\": 30, \"keys\": 8, \"planned_cells\": 24, \"preparation_status\": \"prepared_data_only\", \"runtime_integration\": \"unimplemented\", \"scenarios\": 8, \"schemas\": 10, \"semantic_findings\": 48}\n"
+    },
+    {
+      "command": [
+        "/home/ghgin/.hermes/tools/python-3.14.7+20260901-linux-x64/bin/python3",
+        "-B",
+        "/home/ghgin/projects/entity-resolution-atlas/validation/agent-utility/harness.py",
+        "verify-freeze"
+      ],
+      "exit_code": 0,
+      "output": "{\"benchmark_id\": \"AU-v1\", \"frozen_files\": 24, \"manifest_sha256\": \"bd2e57dc2d96f40fb65a6fd4ac2d9a5e6000411b91a5dc1ca47071a8bed3104c\"}\n"
+    },
+    {
+      "command": [
+        "/home/ghgin/.hermes/tools/python-3.14.7+20260901-linux-x64/bin/python3",
+        "-B",
+        "/home/ghgin/projects/entity-resolution-atlas/validation/agent-utility/harness.py",
+        "verify-corpus",
+        "--corpus",
+        "validation/agent-utility/corpora/v1.1"
+      ],
+      "exit_code": 0,
+      "output": "{\"cards\": 31, \"corpus_sha256\": \"4a2c25e42a90d768d6b4417c4c2f8d5060428940ac787e7347fa484a05283f3e\", \"files\": 52, \"label\": \"v1.1\"}\n"
+    },
+    {
+      "command": [
+        "/home/ghgin/.hermes/tools/python-3.14.7+20260901-linux-x64/bin/python3",
+        "-B",
+        "/home/ghgin/projects/entity-resolution-atlas/validation/agent-utility-integration/bridge.py",
+        "verify",
+        "--snapshot",
+        "/home/ghgin/projects/entity-resolution-atlas/validation/agent-utility-integration/corpora/2026-10-14-02/baseline",
+        "--expected-sha256",
+        "cb0b01f42b3559290d6d03b1aa20645c5f3afd569ec49f32ca8f8a3bff549b88"
+      ],
+      "exit_code": 0,
+      "output": "{\"cards\": 31, \"files\": 52, \"integrity\": \"verified\"}\n"
+    },
+    {
+      "command": [
+        "/home/ghgin/.hermes/tools/python-3.14.7+20260901-linux-x64/bin/python3",
+        "-B",
+        "/home/ghgin/projects/entity-resolution-atlas/validation/agent-utility-integration/bridge.py",
+        "verify",
+        "--snapshot",
+        "/home/ghgin/projects/entity-resolution-atlas/validation/agent-utility-integration/corpora/2026-10-14-02/expanded",
+        "--expected-sha256",
+        "3c69f5e66bfb4a3b517df20611505563dd343fe3164139dd1770596890d889c7"
+      ],
+      "exit_code": 0,
+      "output": "{\"cards\": 57, \"files\": 79, \"integrity\": \"verified\"}\n"
+    },
+    {
+      "command": [
+        "/home/ghgin/.hermes/tools/python-3.14.7+20260901-linux-x64/bin/python3",
+        "-B",
+        "/home/ghgin/projects/entity-resolution-atlas/validation/agent-utility-integration/bridge.py",
+        "verify",
+        "--snapshot",
+        "/home/ghgin/projects/entity-resolution-atlas/validation/agent-utility-integration/corpora/2026-10-14-02/empty",
+        "--expected-sha256",
+        "c6c12f9277aed75cf41e9727a2cbf042be041d503e189be9f068d8d1d5083542"
+      ],
+      "exit_code": 0,
+      "output": "{\"cards\": 0, \"files\": 0, \"integrity\": \"verified\"}\n"
+    },
+    {
+      "command": [
+        "/home/ghgin/.hermes/tools/python-3.14.7+20260901-linux-x64/bin/python3",
+        "-B",
+        "/home/ghgin/projects/entity-resolution-atlas/validation/agent-utility-integration/scoring.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "output": "usage: scoring.py [-h] {packet,score} ...\n\nEvaluator-only mechanical AU-v2 packet/scoring tools; never model dispatch.\n\npositional arguments:\n  {packet,score}\n\noptions:\n  -h, --help      show this help message and exit\n"
+    },
+    {
+      "command": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "/home/ghgin/projects/entity-resolution-atlas/tools/atlas_docs.py",
+        "catalog"
+      ],
+      "exit_code": 0,
+      "output": "Generated /home/ghgin/projects/entity-resolution-atlas/CATALOG.md\nGenerated /home/ghgin/projects/entity-resolution-atlas/indexes/domains/01.md\nGenerated /home/ghgin/projects/entity-resolution-atlas/indexes/domains/02.md\nGenerated /home/ghgin/projects/entity-resolution-atlas/indexes/domains/03.md\nGenerated /home/ghgin/projects/entity-resolution-atlas/indexes/domains/04.md\nGenerated /home/ghgin/projects/entity-resolution-atlas/indexes/domains/05.md\nGenerated /home/ghgin/projects/entity-resolution-atlas/indexes/domains/06.md\nGenerated /home/ghgin/projects/entity-resolution-atlas/indexes/domains/07.md\nGenerated /home/ghgin/projects/entity-resolution-atlas/indexes/domains/08.md\nGenerated /home/ghgin/projects/entity-resolution-atlas/indexes/domains/09.md\nGenerated /home/ghgin/projects/entity-resolution-atlas/indexes/domains/10.md\nGenerated /home/ghgin/projects/entity-resolution-atlas/indexes/domains/11.md\nGenerated /home/ghgin/projects/entity-resolution-atlas/indexes/domains/12.md\nGenerated /home/ghgin/projects/entity-resolution-atlas/indexes/domains/13.md\nGenerated /home/ghgin/projects/entity-resolution-atlas/indexes/domains/14.md\n"
+    },
+    {
+      "command": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "/home/ghgin/projects/entity-resolution-atlas/tools/atlas_docs.py",
+        "lint"
+      ],
+      "exit_code": 0,
+      "output": "{\n  \"errors\": [],\n  \"warnings\": [\n    \"decisions/experiment-design.md: body 935 words; consider justified deep dive\",\n    \"decisions/ground-truth-acquisition.md: body 961 words; consider justified deep dive\",\n    \"decisions/monitoring-response.md: keyword hint missing for assumptions/prerequisites; inspect manually, not a semantic verdict\",\n    \"decisions/pipeline-modularity.md: body 1163 words; consider justified deep dive\",\n    \"decisions/rule-composition.md: body 1203 words; consider justified deep dive\",\n    \"solutions/architecture/replaceable-stage-pipelines.md: body 1067 words; consider justified deep dive\",\n    \"solutions/architecture/versioned-artifact-runs.md: body 1326 words; consider justified deep dive\",\n    \"solutions/candidate-generation/approximate-blocking.md: body 1154 words; consider justified deep dive\",\n    \"solutions/comparison-features/identifier-namespaces.md: body 1086 words; consider justified deep dive\",\n    \"solutions/comparison-features/identifier-namespaces.md: keyword hint missing for mechanism; inspect manually, not a semantic verdict\",\n    \"solutions/comparison-features/string-comparators.md: body 1028 words; consider justified deep dive\",\n    \"solutions/comparison-features/string-comparators.md: keyword hint missing for failure/limitations; inspect manually, not a semantic verdict\",\n    \"solutions/decision-resolution/connected-components.md: body 1175 words; consider justified deep dive\",\n    \"solutions/decision-resolution/constrained-clustering.md: body 1126 words; consider justified deep dive\",\n    \"solutions/decision-resolution/declarative-decision-tables.md: body 1475 words; consider justified deep dive\",\n    \"solutions/decision-resolution/ordered-rule-policies.md: body 1227 words; consider justified deep dive\",\n    \"solutions/experimentation/controlled-comparison.md: body 1046 words; consider justified deep dive\",\n    \"solutions/governance/stage-monitoring.md: body 1058 words; consider justified deep dive\",\n    \"solutions/ground-truth/independent-reference.md: body 1187 words; consider justified deep dive\",\n    \"solutions/ground-truth/probability-sampled-review.md: body 1160 words; consider justified deep dive\",\n    \"solutions/ground-truth/targeted-active-review.md: body 1191 words; consider justified deep dive\",\n    \"solutions/ground-truth/weak-supervision.md: body 1229 words; consider justified deep dive\",\n    \"solutions/matching-scoring/fellegi-sunter.md: body 966 words; consider justified deep dive\",\n    \"solutions/matching-scoring/learned-neural-comparators.md: body 1066 words; consider justified deep dive\",\n    \"solutions/matching-scoring/source-aware-reliability.md: body 984 words; consider justified deep dive\",\n    \"solutions/normalization/name-representations.md: body 995 words; consider justified deep dive\",\n    \"solutions/scalability/skew-aware-execution.md: body 1009 words; consider justified deep dive\",\n    \"architectures/collective-consistency.md: keyword hint missing for failure/limitations; inspect manually, not a semantic verdict\",\n    \"architectures/incremental-continuous.md: body 1960 words; consider justified deep dive\",\n    \"evaluation/entity-resolution-quality.md: body 1027 words; consider justified deep dive\",\n    \"evaluation/execution-cost-replay.md: body 926 words; consider justified deep dive\",\n    \"evaluation/incomplete-reference-quality.md: body 903 words; consider justified deep dive\",\n    \"evaluation/retrieval-blind-spots.md: body 909 words; consider justified deep dive\",\n    \"evaluation/synthetic-metamorphic.md: body 1227 words; consider justified deep dive\"\n  ],\n  \"counts\": {\n    \"decision\": 13,\n    \"solution\": 29,\n    \"architecture\": 6,\n    \"hypothesis\": 2,\n    \"evaluation\": 7\n  },\n  \"immutable_inputs\": 6,\n  \"card_statistics\": [\n    {\n      \"id\": \"DEC-05-001\",\n      \"path\": \"decisions/candidate-strategy.md\",\n      \"body_words\": 670\n    },\n    {\n      \"id\": \"DEC-06-001\",\n      \"path\": \"decisions/comparison-evidence.md\",\n      \"body_words\": 698\n    },\n    {\n      \"id\": \"DEC-13-001\",\n      \"path\": \"decisions/execution-strategy.md\",\n      \"body_words\": 771\n    },\n    {\n      \"id\": \"DEC-12-001\",\n      \"path\": \"decisions/experiment-design.md\",\n      \"body_words\": 935\n    },\n    {\n      \"id\": \"DEC-10-001\",\n      \"path\": \"decisions/ground-truth-acquisition.md\",\n      \"body_words\": 961\n    },\n    {\n      \"id\": \"DEC-01-001\",\n      \"path\": \"decisions/identity-semantics.md\",\n      \"body_words\": 782\n    },\n    {\n      \"id\": \"DEC-09-001\",\n      \"path\": \"decisions/master-representation.md\",\n      \"body_words\": 748\n    },\n    {\n      \"id\": \"DEC-14-001\",\n      \"path\": \"decisions/monitoring-response.md\",\n      \"body_words\": 739\n    },\n    {\n      \"id\": \"DEC-04-001\",\n      \"path\": \"decisions/name-representation.md\",\n      \"body_words\": 887\n    },\n    {\n      \"id\": \"DEC-02-001\",\n      \"path\": \"decisions/pipeline-modularity.md\",\n      \"body_words\": 1163\n    },\n    {\n      \"id\": \"DEC-08-001\",\n      \"path\": \"decisions/resolution-strategy.md\",\n      \"body_words\": 873\n    },\n    {\n      \"id\": \"DEC-08-002\",\n      \"path\": \"decisions/rule-composition.md\",\n      \"body_words\": 1203\n    },\n    {\n      \"id\": \"DEC-07-001\",\n      \"path\": \"decisions/scoring-strategy.md\",\n      \"body_words\": 799\n    },\n    {\n      \"id\": \"SOL-02-001\",\n      \"path\": \"solutions/architecture/replaceable-stage-pipelines.md\",\n      \"body_words\": 1067\n    },\n    {\n      \"id\": \"SOL-02-002\",\n      \"path\": \"solutions/architecture/versioned-artifact-runs.md\",\n      \"body_words\": 1326\n    },\n    {\n      \"id\": \"SOL-05-003\",\n      \"path\": \"solutions/candidate-generation/approximate-blocking.md\",\n      \"body_words\": 1154\n    },\n    {\n      \"id\": \"SOL-05-001\",\n      \"path\": \"solutions/candidate-generation/exact-blocking.md\",\n      \"body_words\": 681\n    },\n    {\n      \"id\": \"SOL-05-002\",\n      \"path\": \"solutions/candidate-generation/multi-pass-blocking.md\",\n      \"body_words\": 733\n    },\n    {\n      \"id\": \"SOL-06-001\",\n      \"path\": \"solutions/comparison-features/evidence-states.md\",\n      \"body_words\": 727\n    },\n    {\n      \"id\": \"SOL-06-003\",\n      \"path\": \"solutions/comparison-features/identifier-namespaces.md\",\n      \"body_words\": 1086\n    },\n    {\n      \"id\": \"SOL-06-002\",\n      \"path\": \"solutions/comparison-features/string-comparators.md\",\n      \"body_words\": 1028\n    },\n    {\n      \"id\": \"SOL-08-003\",\n      \"path\": \"solutions/decision-resolution/connected-components.md\",\n      \"body_words\": 1175\n    },\n    {\n      \"id\": \"SOL-08-004\",\n      \"path\": \"solutions/decision-resolution/constrained-clustering.md\",\n      \"body_words\": 1126\n    },\n    {\n      \"id\": \"SOL-08-006\",\n      \"path\": \"solutions/decision-resolution/declarative-decision-tables.md\",\n      \"body_words\": 1475\n    },\n    {\n      \"id\": \"SOL-08-002\",\n      \"path\": \"solutions/decision-resolution/one-to-one-assignment.md\",\n      \"body_words\": 782\n    },\n    {\n      \"id\": \"SOL-08-005\",\n      \"path\": \"solutions/decision-resolution/ordered-rule-policies.md\",\n      \"body_words\": 1227\n    },\n    {\n      \"id\": \"SOL-08-001\",\n      \"path\": \"solutions/decision-resolution/thresholds-abstention.md\",\n      \"body_words\": 814\n    },\n    {\n      \"id\": \"SOL-12-001\",\n      \"path\": \"solutions/experimentation/controlled-comparison.md\",\n      \"body_words\": 1046\n    },\n    {\n      \"id\": \"SOL-14-001\",\n      \"path\": \"solutions/governance/stage-monitoring.md\",\n      \"body_words\": 1058\n    },\n    {\n      \"id\": \"SOL-10-001\",\n      \"path\": \"solutions/ground-truth/independent-reference.md\",\n      \"body_words\": 1187\n    },\n    {\n      \"id\": \"SOL-10-002\",\n      \"path\": \"solutions/ground-truth/probability-sampled-review.md\",\n      \"body_words\": 1160\n    },\n    {\n      \"id\": \"SOL-10-003\",\n      \"path\": \"solutions/ground-truth/targeted-active-review.md\",\n      \"body_words\": 1191\n    },\n    {\n      \"id\": \"SOL-10-004\",\n      \"path\": \"solutions/ground-truth/weak-supervision.md\",\n      \"body_words\": 1229\n    },\n    {\n      \"id\": \"SOL-01-001\",\n      \"path\": \"solutions/identity-semantics/temporal-identity.md\",\n      \"body_words\": 848\n    },\n    {\n      \"id\": \"SOL-09-001\",\n      \"path\": \"solutions/master-records/provenance-survivorship.md\",\n      \"body_words\": 852\n    },\n    {\n      \"id\": \"SOL-07-001\",\n      \"path\": \"solutions/matching-scoring/additive-soft-matching.md\",\n      \"body_words\": 854\n    },\n    {\n      \"id\": \"SOL-07-002\",\n      \"path\": \"solutions/matching-scoring/fellegi-sunter.md\",\n      \"body_words\": 966\n    },\n    {\n      \"id\": \"SOL-07-005\",\n      \"path\": \"solutions/matching-scoring/learned-neural-comparators.md\",\n      \"body_words\": 1066\n    },\n    {\n      \"id\": \"SOL-07-003\",\n      \"path\": \"solutions/matching-scoring/logistic-regression.md\",\n      \"body_words\": 885\n    },\n    {\n      \"id\": \"SOL-07-004\",\n      \"path\": \"solutions/matching-scoring/source-aware-reliability.md\",\n      \"body_words\": 984\n    },\n    {\n      \"id\": \"SOL-04-001\",\n      \"path\": \"solutions/normalization/name-representations.md\",\n      \"body_words\": 995\n    },\n    {\n      \"id\": \"SOL-13-001\",\n      \"path\": \"solutions/scalability/skew-aware-execution.md\",\n      \"body_words\": 1009\n    },\n    {\n      \"id\": \"AR-05\",\n      \"path\": \"architectures/collective-consistency.md\",\n      \"body_words\": 743\n    },\n    {\n      \"id\": \"AR-06\",\n      \"path\": \"architectures/incremental-continuous.md\",\n      \"body_words\": 1960\n    },\n    {\n      \"id\": \"AR-01\",\n      \"path\": \"architectures/linear-modular.md\",\n      \"body_words\": 802\n    },\n    {\n      \"id\": \"AR-04\",\n      \"path\": \"architectures/parallel-ensemble.md\",\n      \"body_words\": 722\n    },\n    {\n      \"id\": \"AR-03\",\n      \"path\": \"architectures/precision-cascade.md\",\n      \"body_words\": 734\n    },\n    {\n      \"id\": \"AR-02\",\n      \"path\": \"architectures/recall-multi-pass.md\",\n      \"body_words\": 729\n    },\n    {\n      \"id\": \"HYP-07-001\",\n      \"path\": \"research/hypotheses/contextual-reliability.md\",\n      \"body_words\": 776\n    },\n    {\n      \"id\": \"HYP-06-001\",\n      \"path\": \"research/hypotheses/frequency-aware-evidence.md\",\n      \"body_words\": 706\n    },\n    {\n      \"id\": \"EVAL-11-001\",\n      \"path\": \"evaluation/candidate-recall.md\",\n      \"body_words\": 723\n    },\n    {\n      \"id\": \"EVAL-11-003\",\n      \"path\": \"evaluation/entity-resolution-quality.md\",\n      \"body_words\": 1027\n    },\n    {\n      \"id\": \"EVAL-11-007\",\n      \"path\": \"evaluation/execution-cost-replay.md\",\n      \"body_words\": 926\n    },\n    {\n      \"id\": \"EVAL-11-005\",\n      \"path\": \"evaluation/incomplete-reference-quality.md\",\n      \"body_words\": 903\n    },\n    {\n      \"id\": \"EVAL-11-002\",\n      \"path\": \"evaluation/pairwise-calibration.md\",\n      \"body_words\": 764\n    },\n    {\n      \"id\": \"EVAL-11-004\",\n      \"path\": \"evaluation/retrieval-blind-spots.md\",\n      \"body_words\": 909\n    },\n    {\n      \"id\": \"EVAL-11-006\",\n      \"path\": \"evaluation/synthetic-metamorphic.md\",\n      \"body_words\": 1227\n    }\n  ],\n  \"graph\": {\n    \"components\": [\n      [\n        \"AR-01\",\n        \"AR-02\",\n        \"AR-03\",\n        \"AR-04\",\n        \"AR-05\",\n        \"AR-06\",\n        \"DEC-01-001\",\n        \"DEC-02-001\",\n        \"DEC-04-001\",\n        \"DEC-05-001\",\n        \"DEC-06-001\",\n        \"DEC-07-001\",\n        \"DEC-08-001\",\n        \"DEC-08-002\",\n        \"DEC-09-001\",\n        \"DEC-10-001\",\n        \"DEC-12-001\",\n        \"DEC-13-001\",\n        \"DEC-14-001\",\n        \"EVAL-11-001\",\n        \"EVAL-11-002\",\n        \"EVAL-11-003\",\n        \"EVAL-11-004\",\n        \"EVAL-11-005\",\n        \"EVAL-11-006\",\n        \"EVAL-11-007\",\n        \"HYP-06-001\",\n        \"HYP-07-001\",\n        \"SOL-01-001\",\n        \"SOL-02-001\",\n        \"SOL-02-002\",\n        \"SOL-04-001\",\n        \"SOL-05-001\",\n        \"SOL-05-002\",\n        \"SOL-05-003\",\n        \"SOL-06-001\",\n        \"SOL-06-002\",\n        \"SOL-06-003\",\n        \"SOL-07-001\",\n        \"SOL-07-002\",\n        \"SOL-07-003\",\n        \"SOL-07-004\",\n        \"SOL-07-005\",\n        \"SOL-08-001\",\n        \"SOL-08-002\",\n        \"SOL-08-003\",\n        \"SOL-08-004\",\n        \"SOL-08-005\",\n        \"SOL-08-006\",\n        \"SOL-09-001\",\n        \"SOL-10-001\",\n        \"SOL-10-002\",\n        \"SOL-10-003\",\n        \"SOL-10-004\",\n        \"SOL-12-001\",\n        \"SOL-13-001\",\n        \"SOL-14-001\"\n      ]\n    ],\n    \"orphans\": []\n  }\n}\n"
+    }
+  ],
+  "test_suites": [
+    {
+      "command": [
+        "/home/ghgin/.hermes/tools/python-3.14.7+20260901-linux-x64/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "validation/agent-utility-integration/tests",
+        "-v"
+      ],
+      "tests": 65,
+      "passed": true
+    },
+    {
+      "command": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools",
+        "-p",
+        "test_*.py"
+      ],
+      "tests": 49,
+      "passed": true
+    },
+    {
+      "command": [
+        "/home/ghgin/.hermes/tools/python-3.14.7+20260901-linux-x64/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "validation/agent-utility/tests",
+        "-p",
+        "test_*.py"
+      ],
+      "tests": 39,
+      "passed": true
+    },
+    {
+      "command": [
+        "/home/ghgin/.hermes/tools/python-3.14.7+20260901-linux-x64/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/home/ghgin/.hermes/cache/scratch/au-v2-exact-check-7g65dr2c/package/tests",
+        "-p",
+        "test_integrity.py",
+        "-v"
+      ],
+      "tests": 17,
+      "passed": true
+    }
+  ],
+  "lint": {
+    "errors": [],
+    "warnings": [
+      "decisions/experiment-design.md: body 935 words; consider justified deep dive",
+      "decisions/ground-truth-acquisition.md: body 961 words; consider justified deep dive",
+      "decisions/monitoring-response.md: keyword hint missing for assumptions/prerequisites; inspect manually, not a semantic verdict",
+      "decisions/pipeline-modularity.md: body 1163 words; consider justified deep dive",
+      "decisions/rule-composition.md: body 1203 words; consider justified deep dive",
+      "solutions/architecture/replaceable-stage-pipelines.md: body 1067 words; consider justified deep dive",
+      "solutions/architecture/versioned-artifact-runs.md: body 1326 words; consider justified deep dive",
+      "solutions/candidate-generation/approximate-blocking.md: body 1154 words; consider justified deep dive",
+      "solutions/comparison-features/identifier-namespaces.md: body 1086 words; consider justified deep dive",
+      "solutions/comparison-features/identifier-namespaces.md: keyword hint missing for mechanism; inspect manually, not a semantic verdict",
+      "solutions/comparison-features/string-comparators.md: body 1028 words; consider justified deep dive",
+      "solutions/comparison-features/string-comparators.md: keyword hint missing for failure/limitations; inspect manually, not a semantic verdict",
+      "solutions/decision-resolution/connected-components.md: body 1175 words; consider justified deep dive",
+      "solutions/decision-resolution/constrained-clustering.md: body 1126 words; consider justified deep dive",
+      "solutions/decision-resolution/declarative-decision-tables.md: body 1475 words; consider justified deep dive",
+      "solutions/decision-resolution/ordered-rule-policies.md: body 1227 words; consider justified deep dive",
+      "solutions/experimentation/controlled-comparison.md: body 1046 words; consider justified deep dive",
+      "solutions/governance/stage-monitoring.md: body 1058 words; consider justified deep dive",
+      "solutions/ground-truth/independent-reference.md: body 1187 words; consider justified deep dive",
+      "solutions/ground-truth/probability-sampled-review.md: body 1160 words; consider justified deep dive",
+      "solutions/ground-truth/targeted-active-review.md: body 1191 words; consider justified deep dive",
+      "solutions/ground-truth/weak-supervision.md: body 1229 words; consider justified deep dive",
+      "solutions/matching-scoring/fellegi-sunter.md: body 966 words; consider justified deep dive",
+      "solutions/matching-scoring/learned-neural-comparators.md: body 1066 words; consider justified deep dive",
+      "solutions/matching-scoring/source-aware-reliability.md: body 984 words; consider justified deep dive",
+      "solutions/normalization/name-representations.md: body 995 words; consider justified deep dive",
+      "solutions/scalability/skew-aware-execution.md: body 1009 words; consider justified deep dive",
+      "architectures/collective-consistency.md: keyword hint missing for failure/limitations; inspect manually, not a semantic verdict",
+      "architectures/incremental-continuous.md: body 1960 words; consider justified deep dive",
+      "evaluation/entity-resolution-quality.md: body 1027 words; consider justified deep dive",
+      "evaluation/execution-cost-replay.md: body 926 words; consider justified deep dive",
+      "evaluation/incomplete-reference-quality.md: body 903 words; consider justified deep dive",
+      "evaluation/retrieval-blind-spots.md: body 909 words; consider justified deep dive",
+      "evaluation/synthetic-metamorphic.md: body 1227 words; consider justified deep dive"
+    ],
+    "counts": {
+      "decision": 13,
+      "solution": 29,
+      "architecture": 6,
+      "hypothesis": 2,
+      "evaluation": 7
+    },
+    "immutable_inputs": 6,
+    "card_statistics": [
+      {
+        "id": "DEC-05-001",
+        "path": "decisions/candidate-strategy.md",
+        "body_words": 670
+      },
+      {
+        "id": "DEC-06-001",
+        "path": "decisions/comparison-evidence.md",
+        "body_words": 698
+      },
+      {
+        "id": "DEC-13-001",
+        "path": "decisions/execution-strategy.md",
+        "body_words": 771
+      },
+      {
+        "id": "DEC-12-001",
+        "path": "decisions/experiment-design.md",
+        "body_words": 935
+      },
+      {
+        "id": "DEC-10-001",
+        "path": "decisions/ground-truth-acquisition.md",
+        "body_words": 961
+      },
+      {
+        "id": "DEC-01-001",
+        "path": "decisions/identity-semantics.md",
+        "body_words": 782
+      },
+      {
+        "id": "DEC-09-001",
+        "path": "decisions/master-representation.md",
+        "body_words": 748
+      },
+      {
+        "id": "DEC-14-001",
+        "path": "decisions/monitoring-response.md",
+        "body_words": 739
+      },
+      {
+        "id": "DEC-04-001",
+        "path": "decisions/name-representation.md",
+        "body_words": 887
+      },
+      {
+        "id": "DEC-02-001",
+        "path": "decisions/pipeline-modularity.md",
+        "body_words": 1163
+      },
+      {
+        "id": "DEC-08-001",
+        "path": "decisions/resolution-strategy.md",
+        "body_words": 873
+      },
+      {
+        "id": "DEC-08-002",
+        "path": "decisions/rule-composition.md",
+        "body_words": 1203
+      },
+      {
+        "id": "DEC-07-001",
+        "path": "decisions/scoring-strategy.md",
+        "body_words": 799
+      },
+      {
+        "id": "SOL-02-001",
+        "path": "solutions/architecture/replaceable-stage-pipelines.md",
+        "body_words": 1067
+      },
+      {
+        "id": "SOL-02-002",
+        "path": "solutions/architecture/versioned-artifact-runs.md",
+        "body_words": 1326
+      },
+      {
+        "id": "SOL-05-003",
+        "path": "solutions/candidate-generation/approximate-blocking.md",
+        "body_words": 1154
+      },
+      {
+        "id": "SOL-05-001",
+        "path": "solutions/candidate-generation/exact-blocking.md",
+        "body_words": 681
+      },
+      {
+        "id": "SOL-05-002",
+        "path": "solutions/candidate-generation/multi-pass-blocking.md",
+        "body_words": 733
+      },
+      {
+        "id": "SOL-06-001",
+        "path": "solutions/comparison-features/evidence-states.md",
+        "body_words": 727
+      },
+      {
+        "id": "SOL-06-003",
+        "path": "solutions/comparison-features/identifier-namespaces.md",
+        "body_words": 1086
+      },
+      {
+        "id": "SOL-06-002",
+        "path": "solutions/comparison-features/string-comparators.md",
+        "body_words": 1028
+      },
+      {
+        "id": "SOL-08-003",
+        "path": "solutions/decision-resolution/connected-components.md",
+        "body_words": 1175
+      },
+      {
+        "id": "SOL-08-004",
+        "path": "solutions/decision-resolution/constrained-clustering.md",
+        "body_words": 1126
+      },
+      {
+        "id": "SOL-08-006",
+        "path": "solutions/decision-resolution/declarative-decision-tables.md",
+        "body_words": 1475
+      },
+      {
+        "id": "SOL-08-002",
+        "path": "solutions/decision-resolution/one-to-one-assignment.md",
+        "body_words": 782
+      },
+      {
+        "id": "SOL-08-005",
+        "path": "solutions/decision-resolution/ordered-rule-policies.md",
+        "body_words": 1227
+      },
+      {
+        "id": "SOL-08-001",
+        "path": "solutions/decision-resolution/thresholds-abstention.md",
+        "body_words": 814
+      },
+      {
+        "id": "SOL-12-001",
+        "path": "solutions/experimentation/controlled-comparison.md",
+        "body_words": 1046
+      },
+      {
+        "id": "SOL-14-001",
+        "path": "solutions/governance/stage-monitoring.md",
+        "body_words": 1058
+      },
+      {
+        "id": "SOL-10-001",
+        "path": "solutions/ground-truth/independent-reference.md",
+        "body_words": 1187
+      },
+      {
+        "id": "SOL-10-002",
+        "path": "solutions/ground-truth/probability-sampled-review.md",
+        "body_words": 1160
+      },
+      {
+        "id": "SOL-10-003",
+        "path": "solutions/ground-truth/targeted-active-review.md",
+        "body_words": 1191
+      },
+      {
+        "id": "SOL-10-004",
+        "path": "solutions/ground-truth/weak-supervision.md",
+        "body_words": 1229
+      },
+      {
+        "id": "SOL-01-001",
+        "path": "solutions/identity-semantics/temporal-identity.md",
+        "body_words": 848
+      },
+      {
+        "id": "SOL-09-001",
+        "path": "solutions/master-records/provenance-survivorship.md",
+        "body_words": 852
+      },
+      {
+        "id": "SOL-07-001",
+        "path": "solutions/matching-scoring/additive-soft-matching.md",
+        "body_words": 854
+      },
+      {
+        "id": "SOL-07-002",
+        "path": "solutions/matching-scoring/fellegi-sunter.md",
+        "body_words": 966
+      },
+      {
+        "id": "SOL-07-005",
+        "path": "solutions/matching-scoring/learned-neural-comparators.md",
+        "body_words": 1066
+      },
+      {
+        "id": "SOL-07-003",
+        "path": "solutions/matching-scoring/logistic-regression.md",
+        "body_words": 885
+      },
+      {
+        "id": "SOL-07-004",
+        "path": "solutions/matching-scoring/source-aware-reliability.md",
+        "body_words": 984
+      },
+      {
+        "id": "SOL-04-001",
+        "path": "solutions/normalization/name-representations.md",
+        "body_words": 995
+      },
+      {
+        "id": "SOL-13-001",
+        "path": "solutions/scalability/skew-aware-execution.md",
+        "body_words": 1009
+      },
+      {
+        "id": "AR-05",
+        "path": "architectures/collective-consistency.md",
+        "body_words": 743
+      },
+      {
+        "id": "AR-06",
+        "path": "architectures/incremental-continuous.md",
+        "body_words": 1960
+      },
+      {
+        "id": "AR-01",
+        "path": "architectures/linear-modular.md",
+        "body_words": 802
+      },
+      {
+        "id": "AR-04",
+        "path": "architectures/parallel-ensemble.md",
+        "body_words": 722
+      },
+      {
+        "id": "AR-03",
+        "path": "architectures/precision-cascade.md",
+        "body_words": 734
+      },
+      {
+        "id": "AR-02",
+        "path": "architectures/recall-multi-pass.md",
+        "body_words": 729
+      },
+      {
+        "id": "HYP-07-001",
+        "path": "research/hypotheses/contextual-reliability.md",
+        "body_words": 776
+      },
+      {
+        "id": "HYP-06-001",
+        "path": "research/hypotheses/frequency-aware-evidence.md",
+        "body_words": 706
+      },
+      {
+        "id": "EVAL-11-001",
+        "path": "evaluation/candidate-recall.md",
+        "body_words": 723
+      },
+      {
+        "id": "EVAL-11-003",
+        "path": "evaluation/entity-resolution-quality.md",
+        "body_words": 1027
+      },
+      {
+        "id": "EVAL-11-007",
+        "path": "evaluation/execution-cost-replay.md",
+        "body_words": 926
+      },
+      {
+        "id": "EVAL-11-005",
+        "path": "evaluation/incomplete-reference-quality.md",
+        "body_words": 903
+      },
+      {
+        "id": "EVAL-11-002",
+        "path": "evaluation/pairwise-calibration.md",
+        "body_words": 764
+      },
+      {
+        "id": "EVAL-11-004",
+        "path": "evaluation/retrieval-blind-spots.md",
+        "body_words": 909
+      },
+      {
+        "id": "EVAL-11-006",
+        "path": "evaluation/synthetic-metamorphic.md",
+        "body_words": 1227
+      }
+    ],
+    "graph": {
+      "components": [
+        [
+          "AR-01",
+          "AR-02",
+          "AR-03",
+          "AR-04",
+          "AR-05",
+          "AR-06",
+          "DEC-01-001",
+          "DEC-02-001",
+          "DEC-04-001",
+          "DEC-05-001",
+          "DEC-06-001",
+          "DEC-07-001",
+          "DEC-08-001",
+          "DEC-08-002",
+          "DEC-09-001",
+          "DEC-10-001",
+          "DEC-12-001",
+          "DEC-13-001",
+          "DEC-14-001",
+          "EVAL-11-001",
+          "EVAL-11-002",
+          "EVAL-11-003",
+          "EVAL-11-004",
+          "EVAL-11-005",
+          "EVAL-11-006",
+          "EVAL-11-007",
+          "HYP-06-001",
+          "HYP-07-001",
+          "SOL-01-001",
+          "SOL-02-001",
+          "SOL-02-002",
+          "SOL-04-001",
+          "SOL-05-001",
+          "SOL-05-002",
+          "SOL-05-003",
+          "SOL-06-001",
+          "SOL-06-002",
+          "SOL-06-003",
+          "SOL-07-001",
+          "SOL-07-002",
+          "SOL-07-003",
+          "SOL-07-004",
+          "SOL-07-005",
+          "SOL-08-001",
+          "SOL-08-002",
+          "SOL-08-003",
+          "SOL-08-004",
+          "SOL-08-005",
+          "SOL-08-006",
+          "SOL-09-001",
+          "SOL-10-001",
+          "SOL-10-002",
+          "SOL-10-003",
+          "SOL-10-004",
+          "SOL-12-001",
+          "SOL-13-001",
+          "SOL-14-001"
+        ]
+      ],
+      "orphans": []
+    }
+  },
+  "remaining_volume": {
+    "solver_cells": 24,
+    "independent_assessments_if_all_complete": 24,
+    "result_artifacts_not_API_calls": 48,
+    "sequential_solver_budget_minutes": 96.0,
+    "sequential_evaluator_budget_minutes": 240.0,
+    "sequential_combined_budget_hours": 5.6,
+    "is_elapsed_time_prediction_or_price": false
+  },
+  "task_reconciliation": {
+    "requested_content_subsections": 26,
+    "report_section_rows": 26,
+    "requested_deliverables": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "report_deliverables": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "unknown_full_ids": [],
+    "exact_reconciliation_passed": true,
+    "structural_paths_checked_by_full_lint": true,
+    "semantic_complete_certification": false
+  },
+  "inventory": {
+    "manifest": {
+      "version": "1.2",
+      "counts": {
+        "architecture": 6,
+        "decision": 13,
+        "evaluation": 7,
+        "hypothesis": 2,
+        "solution": 29
+      },
+      "cards": {
+        "AR-01": "architectures/linear-modular.md",
+        "AR-02": "architectures/recall-multi-pass.md",
+        "AR-03": "architectures/precision-cascade.md",
+        "AR-04": "architectures/parallel-ensemble.md",
+        "AR-05": "architectures/collective-consistency.md",
+        "AR-06": "architectures/incremental-continuous.md",
+        "DEC-01-001": "decisions/identity-semantics.md",
+        "DEC-02-001": "decisions/pipeline-modularity.md",
+        "DEC-04-001": "decisions/name-representation.md",
+        "DEC-05-001": "decisions/candidate-strategy.md",
+        "DEC-06-001": "decisions/comparison-evidence.md",
+        "DEC-07-001": "decisions/scoring-strategy.md",
+        "DEC-08-001": "decisions/resolution-strategy.md",
+        "DEC-08-002": "decisions/rule-composition.md",
+        "DEC-09-001": "decisions/master-representation.md",
+        "DEC-10-001": "decisions/ground-truth-acquisition.md",
+        "DEC-12-001": "decisions/experiment-design.md",
+        "DEC-13-001": "decisions/execution-strategy.md",
+        "DEC-14-001": "decisions/monitoring-response.md",
+        "EVAL-11-001": "evaluation/candidate-recall.md",
+        "EVAL-11-002": "evaluation/pairwise-calibration.md",
+        "EVAL-11-003": "evaluation/entity-resolution-quality.md",
+        "EVAL-11-004": "evaluation/retrieval-blind-spots.md",
+        "EVAL-11-005": "evaluation/incomplete-reference-quality.md",
+        "EVAL-11-006": "evaluation/synthetic-metamorphic.md",
+        "EVAL-11-007": "evaluation/execution-cost-replay.md",
+        "HYP-06-001": "research/hypotheses/frequency-aware-evidence.md",
+        "HYP-07-001": "research/hypotheses/contextual-reliability.md",
+        "SOL-01-001": "solutions/identity-semantics/temporal-identity.md",
+        "SOL-02-001": "solutions/architecture/replaceable-stage-pipelines.md",
+        "SOL-02-002": "solutions/architecture/versioned-artifact-runs.md",
+        "SOL-04-001": "solutions/normalization/name-representations.md",
+        "SOL-05-001": "solutions/candidate-generation/exact-blocking.md",
+        "SOL-05-002": "solutions/candidate-generation/multi-pass-blocking.md",
+        "SOL-05-003": "solutions/candidate-generation/approximate-blocking.md",
+        "SOL-06-001": "solutions/comparison-features/evidence-states.md",
+        "SOL-06-002": "solutions/comparison-features/string-comparators.md",
+        "SOL-06-003": "solutions/comparison-features/identifier-namespaces.md",
+        "SOL-07-001": "solutions/matching-scoring/additive-soft-matching.md",
+        "SOL-07-002": "solutions/matching-scoring/fellegi-sunter.md",
+        "SOL-07-003": "solutions/matching-scoring/logistic-regression.md",
+        "SOL-07-004": "solutions/matching-scoring/source-aware-reliability.md",
+        "SOL-07-005": "solutions/matching-scoring/learned-neural-comparators.md",
+        "SOL-08-001": "solutions/decision-resolution/thresholds-abstention.md",
+        "SOL-08-002": "solutions/decision-resolution/one-to-one-assignment.md",
+        "SOL-08-003": "solutions/decision-resolution/connected-components.md",
+        "SOL-08-004": "solutions/decision-resolution/constrained-clustering.md",
+        "SOL-08-005": "solutions/decision-resolution/ordered-rule-policies.md",
+        "SOL-08-006": "solutions/decision-resolution/declarative-decision-tables.md",
+        "SOL-09-001": "solutions/master-records/provenance-survivorship.md",
+        "SOL-10-001": "solutions/ground-truth/independent-reference.md",
+        "SOL-10-002": "solutions/ground-truth/probability-sampled-review.md",
+        "SOL-10-003": "solutions/ground-truth/targeted-active-review.md",
+        "SOL-10-004": "solutions/ground-truth/weak-supervision.md",
+        "SOL-12-001": "solutions/experimentation/controlled-comparison.md",
+        "SOL-13-001": "solutions/scalability/skew-aware-execution.md",
+        "SOL-14-001": "solutions/governance/stage-monitoring.md"
+      }
+    },
+    "v1_1_ids": [
+      "AR-01",
+      "AR-02",
+      "AR-03",
+      "AR-04",
+      "AR-05",
+      "AR-06",
+      "DEC-01-001",
+      "DEC-05-001",
+      "DEC-06-001",
+      "DEC-07-001",
+      "DEC-08-001",
+      "DEC-09-001",
+      "EVAL-11-001",
+      "EVAL-11-002",
+      "EVAL-11-003",
+      "EVAL-11-004",
+      "HYP-06-001",
+      "HYP-07-001",
+      "SOL-01-001",
+      "SOL-05-001",
+      "SOL-05-002",
+      "SOL-06-001",
+      "SOL-07-001",
+      "SOL-07-002",
+      "SOL-07-003",
+      "SOL-08-001",
+      "SOL-08-002",
+      "SOL-08-003",
+      "SOL-08-004",
+      "SOL-09-001",
+      "SOL-10-001"
+    ],
+    "added_ids": [
+      "DEC-02-001",
+      "DEC-04-001",
+      "DEC-08-002",
+      "DEC-10-001",
+      "DEC-12-001",
+      "DEC-13-001",
+      "DEC-14-001",
+      "EVAL-11-005",
+      "EVAL-11-006",
+      "EVAL-11-007",
+      "SOL-02-001",
+      "SOL-02-002",
+      "SOL-04-001",
+      "SOL-05-003",
+      "SOL-06-002",
+      "SOL-06-003",
+      "SOL-07-004",
+      "SOL-07-005",
+      "SOL-08-005",
+      "SOL-08-006",
+      "SOL-10-002",
+      "SOL-10-003",
+      "SOL-10-004",
+      "SOL-12-001",
+      "SOL-13-001",
+      "SOL-14-001"
+    ],
+    "substantially_changed_v1_1_ids_by_bytes": [
+      "AR-01",
+      "AR-06",
+      "DEC-05-001",
+      "DEC-06-001",
+      "DEC-07-001",
+      "DEC-08-001",
+      "EVAL-11-001",
+      "EVAL-11-002",
+      "EVAL-11-003",
+      "EVAL-11-004",
+      "HYP-07-001",
+      "SOL-05-001",
+      "SOL-05-002",
+      "SOL-06-001",
+      "SOL-07-001",
+      "SOL-07-002",
+      "SOL-07-003",
+      "SOL-08-001",
+      "SOL-08-003",
+      "SOL-08-004",
+      "SOL-10-001"
+    ],
+    "new_cards": 26,
+    "changed_existing_cards": 21,
+    "removed_v1_1_ids": []
+  },
+  "current_manifest_preserved": true,
+  "maintenance_changes": [
+    "README.md",
+    "guides/v1.2-expansion-tracker.md",
+    "guides/v1.2-implementation-summary.md",
+    "guides/decision-coverage-matrix.md",
+    "guides/v1.2-final-review.md",
+    "guides/change-log.md"
+  ],
+  "delivery_artifact_hashes": {
+    "guides/v1.2-final-delivery.md": "e5efa126aef6c1e690419b1d1760c46e7c78644176bd80a394cb83d422496482",
+    "validation/v1.2/final-delivery-content-review.md": "0134ee2b1f9a0fe593199ea7556792872d9d1d55e6bd7b4f7f4f49c7459c6c9a",
+    "README.md": "2de5c24c5c493e11e56bc37c5c082063a7645d9ea3f9fa0b0ce4abcc01146510",
+    "guides/v1.2-expansion-tracker.md": "d2805a23831a54de1dfd7ad19231f76153aea7de9fcef88d66e3e2e0e0bc2e00",
+    "guides/v1.2-implementation-summary.md": "3cc96a8016e4ad8171ec4c11a0845a87473781b242f074efe56bff1f25fc9230",
+    "guides/decision-coverage-matrix.md": "c0e60cbb89c5ef1f659deb71a48bc09aa5255876d577baac7af44397a2e429b6",
+    "guides/v1.2-final-review.md": "e092c4dd129fb9e0840d6ffd99fac6b08d91cb778b675ea871f6c59b42af55ba",
+    "guides/change-log.md": "f156bc2e99f3572d484e4ae2f8c4d8abe5b8e50e61f700a461567d7002ae6d75"
+  },
+  "bounded_critiques_returned_and_dispositions_recorded": true,
+  "bibliography_or_source_ledger_new_claims_added_in_handover": false,
+  "citation_verification": {
+    "documents": 69,
+    "checks": [
+      {
+        "path": "architectures/collective-consistency.md",
+        "exit_code": 0,
+        "output": "info: stats: 67 prose sentence(s), 2 with declared provenance (3%) — 2 cited, 0 marked [unverified] (a sentence may be both); 1 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "architectures/incremental-continuous.md",
+        "exit_code": 0,
+        "output": "info: stats: 139 prose sentence(s), 3 with declared provenance (2%) — 3 cited, 0 marked [unverified] (a sentence may be both); 2 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "architectures/linear-modular.md",
+        "exit_code": 0,
+        "output": "info: stats: 66 prose sentence(s), 1 with declared provenance (2%) — 1 cited, 0 marked [unverified] (a sentence may be both); 1 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "architectures/parallel-ensemble.md",
+        "exit_code": 0,
+        "output": "info: stats: 61 prose sentence(s), 1 with declared provenance (2%) — 1 cited, 0 marked [unverified] (a sentence may be both); 1 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "architectures/precision-cascade.md",
+        "exit_code": 0,
+        "output": "info: stats: 61 prose sentence(s), 1 with declared provenance (2%) — 1 cited, 0 marked [unverified] (a sentence may be both); 1 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "architectures/recall-multi-pass.md",
+        "exit_code": 0,
+        "output": "info: stats: 63 prose sentence(s), 1 with declared provenance (2%) — 1 cited, 0 marked [unverified] (a sentence may be both); 1 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "decisions/candidate-strategy.md",
+        "exit_code": 0,
+        "output": "info: stats: 55 prose sentence(s), 3 with declared provenance (5%) — 3 cited, 0 marked [unverified] (a sentence may be both); 1 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "decisions/comparison-evidence.md",
+        "exit_code": 0,
+        "output": "info: stats: 54 prose sentence(s), 3 with declared provenance (6%) — 3 cited, 0 marked [unverified] (a sentence may be both); 2 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [2], [3], [4], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "decisions/experiment-design.md",
+        "exit_code": 0,
+        "output": "info: stats: 64 prose sentence(s), 1 with declared provenance (2%) — 1 cited, 0 marked [unverified] (a sentence may be both); 1 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "decisions/ground-truth-acquisition.md",
+        "exit_code": 0,
+        "output": "info: stats: 76 prose sentence(s), 4 with declared provenance (5%) — 4 cited, 0 marked [unverified] (a sentence may be both); 2 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "decisions/identity-semantics.md",
+        "exit_code": 0,
+        "output": "info: stats: 71 prose sentence(s), 1 with declared provenance (1%) — 1 cited, 0 marked [unverified] (a sentence may be both); 1 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "decisions/master-representation.md",
+        "exit_code": 0,
+        "output": "info: stats: 57 prose sentence(s), 1 with declared provenance (2%) — 1 cited, 0 marked [unverified] (a sentence may be both); 1 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "decisions/monitoring-response.md",
+        "exit_code": 0,
+        "output": "info: stats: 80 prose sentence(s), 2 with declared provenance (2%) — 2 cited, 0 marked [unverified] (a sentence may be both); 2 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [45]\ncitations OK\n"
+      },
+      {
+        "path": "decisions/name-representation.md",
+        "exit_code": 0,
+        "output": "info: stats: 71 prose sentence(s), 2 with declared provenance (3%) — 2 cited, 0 marked [unverified] (a sentence may be both); 2 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "decisions/pipeline-modularity.md",
+        "exit_code": 0,
+        "output": "info: stats: 79 prose sentence(s), 1 with declared provenance (1%) — 1 cited, 0 marked [unverified] (a sentence may be both); 1 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "decisions/resolution-strategy.md",
+        "exit_code": 0,
+        "output": "info: stats: 71 prose sentence(s), 3 with declared provenance (4%) — 3 cited, 0 marked [unverified] (a sentence may be both); 3 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [13], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "decisions/rule-composition.md",
+        "exit_code": 0,
+        "output": "info: stats: 84 prose sentence(s), 3 with declared provenance (4%) — 3 cited, 0 marked [unverified] (a sentence may be both); 2 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [24], [25], [26], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "decisions/scoring-strategy.md",
+        "exit_code": 0,
+        "output": "info: stats: 59 prose sentence(s), 7 with declared provenance (12%) — 7 cited, 0 marked [unverified] (a sentence may be both); 3 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [2], [3], [4], [6], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "deep-dives/incomplete-reference-estimation.md",
+        "exit_code": 0,
+        "output": "info: stats: 98 prose sentence(s), 5 with declared provenance (5%) — 5 cited, 0 marked [unverified] (a sentence may be both); 3 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [16], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "deep-dives/selection-and-calibration.md",
+        "exit_code": 0,
+        "output": "info: stats: 72 prose sentence(s), 5 with declared provenance (7%) — 5 cited, 0 marked [unverified] (a sentence may be both); 4 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [2], [4], [6], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "evaluation/candidate-recall.md",
+        "exit_code": 0,
+        "output": "info: stats: 57 prose sentence(s), 4 with declared provenance (7%) — 4 cited, 0 marked [unverified] (a sentence may be both); 2 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [3], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "evaluation/entity-resolution-quality.md",
+        "exit_code": 0,
+        "output": "info: stats: 76 prose sentence(s), 3 with declared provenance (4%) — 3 cited, 0 marked [unverified] (a sentence may be both); 2 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "evaluation/incomplete-reference-quality.md",
+        "exit_code": 0,
+        "output": "info: stats: 64 prose sentence(s), 3 with declared provenance (5%) — 3 cited, 0 marked [unverified] (a sentence may be both); 3 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [16], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "evaluation/pairwise-calibration.md",
+        "exit_code": 0,
+        "output": "info: stats: 60 prose sentence(s), 2 with declared provenance (3%) — 2 cited, 0 marked [unverified] (a sentence may be both); 2 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [2], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "evaluation/retrieval-blind-spots.md",
+        "exit_code": 0,
+        "output": "info: stats: 57 prose sentence(s), 4 with declared provenance (7%) — 4 cited, 0 marked [unverified] (a sentence may be both); 3 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [3], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "evaluation/synthetic-metamorphic.md",
+        "exit_code": 0,
+        "output": "info: stats: 89 prose sentence(s), 3 with declared provenance (3%) — 3 cited, 0 marked [unverified] (a sentence may be both); 2 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [20], [21], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "guides/decision-provenance.md",
+        "exit_code": 0,
+        "output": "info: stats: 42 prose sentence(s), 1 with declared provenance (2%) — 1 cited, 0 marked [unverified] (a sentence may be both); 1 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "guides/er-behavioral-testing.md",
+        "exit_code": 0,
+        "output": "info: stats: 81 prose sentence(s), 3 with declared provenance (4%) — 3 cited, 0 marked [unverified] (a sentence may be both); 2 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [20], [21], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "guides/er-governance.md",
+        "exit_code": 0,
+        "output": "info: stats: 66 prose sentence(s), 1 with declared provenance (2%) — 1 cited, 0 marked [unverified] (a sentence may be both); 1 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44]\ncitations OK\n"
+      },
+      {
+        "path": "guides/rule-policy-refactoring.md",
+        "exit_code": 0,
+        "output": "info: stats: 102 prose sentence(s), 9 with declared provenance (9%) — 9 cited, 0 marked [unverified] (a sentence may be both); 2 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [24], [25], [26], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "guides/run-manifest-template.md",
+        "exit_code": 0,
+        "output": "info: stats: 72 prose sentence(s), 3 with declared provenance (4%) — 3 cited, 0 marked [unverified] (a sentence may be both); 3 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "references/bibliography.md",
+        "exit_code": 0,
+        "output": "info: stats: 15 prose sentence(s), 0 with declared provenance (0%) — 0 cited, 0 marked [unverified] (a sentence may be both); 38 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [6], [8], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "references/wave-2-evidence-notes.md",
+        "exit_code": 0,
+        "output": "info: stats: 21 prose sentence(s), 1 with declared provenance (5%) — 1 cited, 0 marked [unverified] (a sentence may be both); 6 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "references/wave-3-evidence-notes.md",
+        "exit_code": 0,
+        "output": "info: stats: 32 prose sentence(s), 0 with declared provenance (0%) — 0 cited, 0 marked [unverified] (a sentence may be both); 12 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "research/hypotheses/contextual-reliability.md",
+        "exit_code": 0,
+        "output": "info: stats: 57 prose sentence(s), 1 with declared provenance (2%) — 1 cited, 0 marked [unverified] (a sentence may be both); 1 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "research/hypotheses/frequency-aware-evidence.md",
+        "exit_code": 0,
+        "output": "info: stats: 52 prose sentence(s), 1 with declared provenance (2%) — 1 cited, 0 marked [unverified] (a sentence may be both); 1 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "solutions/architecture/replaceable-stage-pipelines.md",
+        "exit_code": 0,
+        "output": "info: stats: 86 prose sentence(s), 1 with declared provenance (1%) — 1 cited, 0 marked [unverified] (a sentence may be both); 1 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "solutions/architecture/versioned-artifact-runs.md",
+        "exit_code": 0,
+        "output": "info: stats: 92 prose sentence(s), 4 with declared provenance (4%) — 4 cited, 0 marked [unverified] (a sentence may be both); 3 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "solutions/candidate-generation/approximate-blocking.md",
+        "exit_code": 0,
+        "output": "info: stats: 76 prose sentence(s), 6 with declared provenance (8%) — 6 cited, 0 marked [unverified] (a sentence may be both); 4 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [36], [37], [41], [42], [43], [44], [45]\nwarn: 1 sentence(s) carry more than 3 citations\ncitations OK\n"
+      },
+      {
+        "path": "solutions/candidate-generation/exact-blocking.md",
+        "exit_code": 0,
+        "output": "info: stats: 50 prose sentence(s), 5 with declared provenance (10%) — 5 cited, 0 marked [unverified] (a sentence may be both); 3 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [3], [4], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "solutions/candidate-generation/multi-pass-blocking.md",
+        "exit_code": 0,
+        "output": "info: stats: 57 prose sentence(s), 2 with declared provenance (4%) — 2 cited, 0 marked [unverified] (a sentence may be both); 1 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "solutions/comparison-features/evidence-states.md",
+        "exit_code": 0,
+        "output": "info: stats: 60 prose sentence(s), 5 with declared provenance (8%) — 5 cited, 0 marked [unverified] (a sentence may be both); 2 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [2], [3], [4], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "solutions/comparison-features/identifier-namespaces.md",
+        "exit_code": 0,
+        "output": "info: stats: 82 prose sentence(s), 2 with declared provenance (2%) — 2 cited, 0 marked [unverified] (a sentence may be both); 1 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "solutions/comparison-features/string-comparators.md",
+        "exit_code": 0,
+        "output": "info: stats: 70 prose sentence(s), 6 with declared provenance (9%) — 6 cited, 0 marked [unverified] (a sentence may be both); 4 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [32], [33], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "solutions/decision-resolution/connected-components.md",
+        "exit_code": 0,
+        "output": "info: stats: 86 prose sentence(s), 2 with declared provenance (2%) — 2 cited, 0 marked [unverified] (a sentence may be both); 1 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "solutions/decision-resolution/constrained-clustering.md",
+        "exit_code": 0,
+        "output": "info: stats: 58 prose sentence(s), 8 with declared provenance (14%) — 8 cited, 0 marked [unverified] (a sentence may be both); 3 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [13], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "solutions/decision-resolution/declarative-decision-tables.md",
+        "exit_code": 0,
+        "output": "info: stats: 97 prose sentence(s), 8 with declared provenance (8%) — 8 cited, 0 marked [unverified] (a sentence may be both); 2 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [24], [25], [26], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "solutions/decision-resolution/one-to-one-assignment.md",
+        "exit_code": 0,
+        "output": "info: stats: 60 prose sentence(s), 5 with declared provenance (8%) — 5 cited, 0 marked [unverified] (a sentence may be both); 2 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [12], [13], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "solutions/decision-resolution/ordered-rule-policies.md",
+        "exit_code": 0,
+        "output": "info: stats: 97 prose sentence(s), 2 with declared provenance (2%) — 2 cited, 0 marked [unverified] (a sentence may be both); 1 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "solutions/decision-resolution/thresholds-abstention.md",
+        "exit_code": 0,
+        "output": "info: stats: 59 prose sentence(s), 5 with declared provenance (8%) — 5 cited, 0 marked [unverified] (a sentence may be both); 2 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [2], [3], [4], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "solutions/experimentation/controlled-comparison.md",
+        "exit_code": 0,
+        "output": "info: stats: 80 prose sentence(s), 2 with declared provenance (2%) — 2 cited, 0 marked [unverified] (a sentence may be both); 1 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "solutions/governance/stage-monitoring.md",
+        "exit_code": 0,
+        "output": "info: stats: 117 prose sentence(s), 2 with declared provenance (2%) — 2 cited, 0 marked [unverified] (a sentence may be both); 1 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "solutions/ground-truth/independent-reference.md",
+        "exit_code": 0,
+        "output": "info: stats: 88 prose sentence(s), 5 with declared provenance (6%) — 5 cited, 0 marked [unverified] (a sentence may be both); 2 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "solutions/ground-truth/probability-sampled-review.md",
+        "exit_code": 0,
+        "output": "info: stats: 85 prose sentence(s), 5 with declared provenance (6%) — 5 cited, 0 marked [unverified] (a sentence may be both); 1 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "solutions/ground-truth/targeted-active-review.md",
+        "exit_code": 0,
+        "output": "info: stats: 89 prose sentence(s), 3 with declared provenance (3%) — 3 cited, 0 marked [unverified] (a sentence may be both); 1 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "solutions/ground-truth/weak-supervision.md",
+        "exit_code": 0,
+        "output": "info: stats: 87 prose sentence(s), 8 with declared provenance (9%) — 8 cited, 0 marked [unverified] (a sentence may be both); 2 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [17], [18], [19], [20], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "solutions/identity-semantics/temporal-identity.md",
+        "exit_code": 0,
+        "output": "info: stats: 69 prose sentence(s), 1 with declared provenance (1%) — 1 cited, 0 marked [unverified] (a sentence may be both); 1 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "solutions/master-records/provenance-survivorship.md",
+        "exit_code": 0,
+        "output": "info: stats: 65 prose sentence(s), 2 with declared provenance (3%) — 2 cited, 0 marked [unverified] (a sentence may be both); 1 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "solutions/matching-scoring/additive-soft-matching.md",
+        "exit_code": 0,
+        "output": "info: stats: 67 prose sentence(s), 3 with declared provenance (4%) — 3 cited, 0 marked [unverified] (a sentence may be both); 2 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [2], [3], [4], [5], [6], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "solutions/matching-scoring/fellegi-sunter.md",
+        "exit_code": 0,
+        "output": "info: stats: 70 prose sentence(s), 12 with declared provenance (17%) — 12 cited, 0 marked [unverified] (a sentence may be both); 3 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [2], [3], [4], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "solutions/matching-scoring/learned-neural-comparators.md",
+        "exit_code": 0,
+        "output": "info: stats: 77 prose sentence(s), 6 with declared provenance (8%) — 6 cited, 0 marked [unverified] (a sentence may be both); 3 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [4], [5], [6], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "solutions/matching-scoring/logistic-regression.md",
+        "exit_code": 0,
+        "output": "info: stats: 64 prose sentence(s), 8 with declared provenance (12%) — 8 cited, 0 marked [unverified] (a sentence may be both); 2 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [4], [5], [6], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "solutions/matching-scoring/source-aware-reliability.md",
+        "exit_code": 0,
+        "output": "info: stats: 70 prose sentence(s), 1 with declared provenance (1%) — 1 cited, 0 marked [unverified] (a sentence may be both); 1 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "solutions/normalization/name-representations.md",
+        "exit_code": 0,
+        "output": "info: stats: 78 prose sentence(s), 3 with declared provenance (4%) — 3 cited, 0 marked [unverified] (a sentence may be both); 2 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "solutions/scalability/skew-aware-execution.md",
+        "exit_code": 0,
+        "output": "info: stats: 123 prose sentence(s), 3 with declared provenance (2%) — 3 cited, 0 marked [unverified] (a sentence may be both); 2 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "validation/v1.2/critique-acquisition-experiments.md",
+        "exit_code": 0,
+        "output": "info: stats: 124 prose sentence(s), 1 with declared provenance (1%) — 1 cited, 0 marked [unverified] (a sentence may be both); 8 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [17], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "validation/v1.2/critique-estimation.md",
+        "exit_code": 0,
+        "output": "info: stats: 149 prose sentence(s), 9 with declared provenance (6%) — 9 cited, 0 marked [unverified] (a sentence may be both); 4 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [3], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [16], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "validation/v1.2/critique-wave-2-engineering.md",
+        "exit_code": 0,
+        "output": "info: stats: 117 prose sentence(s), 4 with declared provenance (3%) — 4 cited, 0 marked [unverified] (a sentence may be both); 4 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [27], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      },
+      {
+        "path": "validation/v1.2/critique-wave-2-rules.md",
+        "exit_code": 0,
+        "output": "info: stats: 119 prose sentence(s), 6 with declared provenance (5%) — 6 cited, 0 marked [unverified] (a sentence may be both); 2 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [24], [25], [26], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\ncitations OK\n"
+      }
+    ],
+    "passed": true
+  },
+  "selected_snapshots": {
+    "baseline-atlas": {
+      "path": "validation/agent-utility-integration/corpora/2026-10-14-02/baseline",
+      "manifest_sha256": "cb0b01f42b3559290d6d03b1aa20645c5f3afd569ec49f32ca8f8a3bff549b88",
+      "cards": 31,
+      "files": 52
+    },
+    "expanded-atlas": {
+      "path": "validation/agent-utility-integration/corpora/2026-10-14-02/expanded",
+      "manifest_sha256": "3c69f5e66bfb4a3b517df20611505563dd343fe3164139dd1770596890d889c7",
+      "cards": 57,
+      "files": 79
+    },
+    "no-atlas": {
+      "path": "validation/agent-utility-integration/corpora/2026-10-14-02/empty",
+      "manifest_sha256": "c6c12f9277aed75cf41e9727a2cbf042be041d503e189be9f068d8d1d5083542",
+      "cards": 0,
+      "files": 0
+    }
+  },
+  "source_provenance": {
+    "baseline": {
+      "cards": 31,
+      "corpus_sha256": "4a2c25e42a90d768d6b4417c4c2f8d5060428940ac787e7347fa484a05283f3e",
+      "files": 52,
+      "label": "v1.1"
+    },
+    "expanded_card_hash_checkpoint": "pre-AU-v2-knowledge-hashes.json",
+    "expanded_ids_equal_live_manifest": true,
+    "source_byte_changes": [],
+    "export_policy": "shared-legacy-knowledge-eligibility-v2; preserve review-named L2 cards; no guides; neutral md.txt payloads",
+    "guides_excluded_from_both_arms": true
+  },
+  "preparation_plan": {
+    "path": "validation/agent-utility-integration/preparation-plan-2026-10-14-02.json",
+    "sha256": "bee9ee0ab82b43a223529fff1f9d1b69f262643515604ff685f4b68d98d04751",
+    "planned_cells": 24,
+    "revalidated": true
+  },
+  "broker_exercise": {
+    "kind": "Metadata-only broker exercise, not model retrieval",
+    "read_type": "read_result",
+    "returned_characters": 128,
+    "content_sha256": "189d85a6f12d110ef00999d4ea9cf65f112fbd05befdd826e8005a14e7ba07b1",
+    "denied_type": "read_denied",
+    "attempts": 2,
+    "reads": 1
+  },
+  "no_atlas_denial": "read_denied",
+  "protected_files_checked": 845,
+  "protected_changes": [],
+  "canonical_cards_checked": 57,
+  "canonical_changes_after_case_design": [],
+  "implementation_files": {
+    "validation/agent-utility-integration/bridge.py": "80ff450366d2e369613f66417c26480c12ffffe85d09f291d5bac58183dc66b9",
+    "validation/agent-utility-integration/tests/test_bridge.py": "83416b0630f38757d97b68006db827c8415fa4bbbb2298f6efa33bc4e01952b8",
+    "validation/agent-utility-integration/README.md": "7c3351ea675f802a2c5a15f7d2a73326c901242eedd16defbae6c187f8db9db0",
+    "validation/agent-utility-integration/scoring.py": "2ce4ef12621096a337bb01e030ba376a2fa37fe0c6fb324bc3d8f008116a5ff8",
+    "validation/agent-utility-integration/tests/test_scoring.py": "9d3f18a5e0e84e45162eea4830d5f4afcb60f59ef53299efd1a865f3a2b23040",
+    "validation/agent-utility-integration/SCORING.md": "da74184906e4014559fd397a081fd3d63334df83c6d618a5eba4cc7ee51b3654"
+  },
+  "superseded_export": {
+    "path": "validation/agent-utility-integration/corpora/2026-10-14-01",
+    "selected": false,
+    "reason": "Initial overbroad review-name filter omitted two real L2 cards; fixed with failing regression and versioned policy before testing models"
+  },
+  "passed": true,
+  "runtime_integration": "offline_bridge_and_mechanical_scoring_only",
+  "actual_registration": "absent",
+  "execution_eligibility": "blocked",
+  "actual_runs": 0,
+  "actual_scores": 0,
+  "remaining": [
+    "Existing process-executor seam, trusted transport/raw evidence/containment",
+    "Genuinely independent evaluator invocation and trusted identity/settings evidence",
+    "Complete 24-cell cohort, independent assessments and comparative reporting"
+  ],
+  "limits": [
+    "Not model performance, independence or containment certification",
+    "No author inspection of scenario/key contents",
+    "Mechanical attestation checks do not authenticate signatures or prove honesty",
+    "No corpus change or protected runtime write",
+    "Registration evidence/executable binding checks remain an external prerequisite, not an automatic scoring gate",
+    "Raw scoring judgments and endorsement semantics are not assigned or certified by mechanical validators",
+    "Legacy-runtime refactor permission question had no submitted answer; authorization not inferred"
+  ]
+}

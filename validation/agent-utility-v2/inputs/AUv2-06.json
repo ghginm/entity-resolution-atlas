@@ -1,0 +1,18 @@
+{
+  "cohort": "AU-v2",
+  "scenario_id": "AUv2-06",
+  "fictional": true,
+  "title": "Research archive catalog pipeline",
+  "background": "A fictional archive links catalog entries for the same published edition; translations and revised editions are distinct. The team wants to compare a replacement candidate stage without changing scoring or publishing logic.",
+  "observations": [
+    "The monolith emits only final clusters. Its candidate stage normalizes titles and emits an unordered pair list, but currently does not persist a normalization version, source snapshot, or exclusion reasons.",
+    "A new modular proposal writes candidate files for reuse. The scoring service caches by pair ID alone; features and score thresholds are configured in separate mutable files.",
+    "The scheduler team also plans more workers and a block-size cap. Its dashboard reports successful-task time and sampled accepted-link accuracy, with incomplete shards omitted.",
+    "An existing deterministic title-and-publisher rule can be preserved as a comparator. Independent edition-level judgments are scarce and have mostly been collected for famous titles."
+  ],
+  "constraints": [
+    "The archive can run a future offline comparison on authorized snapshots; no run is authorized by this request.",
+    "Publication requires a reviewable change history and complete outputs. Additional infrastructure is optional, not a project requirement."
+  ],
+  "request": "Propose module boundaries, reusable-artifact rules, and a comparison design that would let the team attribute quality and cost changes without prematurely choosing a workflow platform."
+}

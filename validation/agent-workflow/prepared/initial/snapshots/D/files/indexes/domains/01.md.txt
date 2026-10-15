@@ -1,0 +1,79 @@
+# 01 — Problem Formulation & Identity Semantics
+
+[L0 catalog](../../CATALOG.md)
+
+[Domain map](../../taxonomy/domains/01-problem-identity.md)
+
+## DEC-01-001 — Define identity before choosing resolution
+
+decision · domain 01 · [DEC-01-001 — Define identity before choosing resolution](../../decisions/identity-semantics.md)
+
+Define the real-world object, granularity, namespace and time scope that a correct identity assertion denotes. Distinguish source records from entities and strict same-as from related-to edges before choosing labels, cardinality constraints or output structures. Compare enduring identity, time-scoped state identity and relationship-only linkage. The choice needs domain-owner adjudication of identifier reuse and continuity; neither similar attributes nor a convenient clustering algorithm supplies those rules. Ambiguous cases can remain unresolved rather than becoming false equivalences.
+
+Tags: `constraints`, `entity-agnostic`, `governance`, `identifiers`, `source-aware`, `uncertainty`.
+
+**Alternatives and differences**
+
+Declared alternatives: none in metadata; do not infer substitutability from shared tags.
+
+Read differences and conditions in: [Criteria for choosing](../../decisions/identity-semantics.md#criteria-for-choosing), [Trade-off comparison](../../decisions/identity-semantics.md#trade-off-comparison), [Good baseline candidates](../../decisions/identity-semantics.md#good-baseline-candidates).
+
+complements: [DEC-09-001](../../decisions/master-representation.md).
+
+evaluated_by: [EVAL-11-003](../../evaluation/entity-resolution-quality.md).
+
+## SOL-01-001 — Enduring identity with time-scoped evidence
+
+solution · domain 01 · [SOL-01-001 — Enduring identity with time-scoped evidence](../../solutions/identity-semantics/temporal-identity.md)
+
+Maintain enduring entity identity while representing changing attributes as versioned, time-scoped observations rather than overwriting history. Separate validity, source observation and ingestion times, and use an explicit domain continuity policy for migration, identifier reuse and organizational succession. Compare with snapshot or episode identity when longitudinal continuity is not required or cannot be established. The approach enables revisable histories and as-of views but needs trustworthy temporal semantics, correction lineage and evaluation that distinguishes identity truth from attribute-state truth.
+
+Tags: `entity-agnostic`, `identifiers`, `incremental`, `provenance`, `source-aware`, `uncertainty`.
+
+**Alternatives and differences**
+
+Declared alternatives: none in metadata; do not infer substitutability from shared tags.
+
+Read differences and conditions in: [Important variants](../../solutions/identity-semantics/temporal-identity.md#important-variants), [Trade-offs and failure modes](../../solutions/identity-semantics/temporal-identity.md#trade-offs-and-failure-modes), [Relationships with other methods](../../solutions/identity-semantics/temporal-identity.md#relationships-with-other-methods).
+
+addresses: [DEC-01-001](../../decisions/identity-semantics.md).
+
+complements: [SOL-09-001](../../solutions/master-records/provenance-survivorship.md).
+
+evaluated_by: [EVAL-11-003](../../evaluation/entity-resolution-quality.md).
+
+used_by: [AR-06](../../architectures/incremental-continuous.md).
+
+## Tag constraints
+
+[DEC-01-001](../../decisions/identity-semantics.md).
+
+## Tag entity-agnostic
+
+[DEC-01-001](../../decisions/identity-semantics.md), [SOL-01-001](../../solutions/identity-semantics/temporal-identity.md).
+
+## Tag governance
+
+[DEC-01-001](../../decisions/identity-semantics.md).
+
+## Tag identifiers
+
+[DEC-01-001](../../decisions/identity-semantics.md), [SOL-01-001](../../solutions/identity-semantics/temporal-identity.md).
+
+## Tag incremental
+
+[SOL-01-001](../../solutions/identity-semantics/temporal-identity.md).
+
+## Tag provenance
+
+[SOL-01-001](../../solutions/identity-semantics/temporal-identity.md).
+
+## Tag source-aware
+
+[DEC-01-001](../../decisions/identity-semantics.md), [SOL-01-001](../../solutions/identity-semantics/temporal-identity.md).
+
+## Tag uncertainty
+
+[DEC-01-001](../../decisions/identity-semantics.md), [SOL-01-001](../../solutions/identity-semantics/temporal-identity.md).
+
+Generated from card summaries, tags, typed relations and section links. No compatibility or performance conclusion is generated.

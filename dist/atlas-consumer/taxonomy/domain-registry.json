@@ -1,0 +1,58 @@
+{
+  "01": {
+    "title": "Problem Formulation & Identity Semantics",
+    "path": "taxonomy/domains/01-problem-identity.md"
+  },
+  "02": {
+    "title": "Pipeline Architecture & Orchestration",
+    "path": "taxonomy/domains/02-architecture-orchestration.md"
+  },
+  "03": {
+    "title": "Data Understanding & Integration",
+    "path": "taxonomy/domains/03-data-integration.md"
+  },
+  "04": {
+    "title": "Normalization & Enrichment",
+    "path": "taxonomy/domains/04-normalization-enrichment.md"
+  },
+  "05": {
+    "title": "Candidate Generation & Retrieval",
+    "path": "taxonomy/domains/05-candidate-retrieval.md"
+  },
+  "06": {
+    "title": "Comparison Features & Evidence Engineering",
+    "path": "taxonomy/domains/06-comparison-evidence.md"
+  },
+  "07": {
+    "title": "Matching & Scoring",
+    "path": "taxonomy/domains/07-matching-scoring.md"
+  },
+  "08": {
+    "title": "Decision Policies & Entity Resolution",
+    "path": "taxonomy/domains/08-decision-resolution.md"
+  },
+  "09": {
+    "title": "Master Entity Construction & Maintenance",
+    "path": "taxonomy/domains/09-master-maintenance.md"
+  },
+  "10": {
+    "title": "Ground Truth & Labeling",
+    "path": "taxonomy/domains/10-ground-truth.md"
+  },
+  "11": {
+    "title": "Evaluation & Diagnostics",
+    "path": "taxonomy/domains/11-evaluation-diagnostics.md"
+  },
+  "12": {
+    "title": "Experimentation & Research Methods",
+    "path": "taxonomy/domains/12-experimentation.md"
+  },
+  "13": {
+    "title": "Scalability & Execution",
+    "path": "taxonomy/domains/13-scalability-execution.md"
+  },
+  "14": {
+    "title": "Explainability, Governance & Monitoring",
+    "path": "taxonomy/domains/14-governance-monitoring.md"
+  }
+}

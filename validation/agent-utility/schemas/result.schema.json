@@ -1,0 +1,170 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "run_id",
+    "scenario_id",
+    "corpus_label",
+    "status",
+    "error",
+    "manifest_sha256",
+    "harness_sha256",
+    "corpus_sha256",
+    "settings_sha256",
+    "scenario_sha256",
+    "prompt_sha256",
+    "started_at",
+    "finished_at",
+    "adapter",
+    "reads",
+    "read_attempts",
+    "read_chars",
+    "response",
+    "adapter_exit_code"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scenario_id": {
+      "type": "string",
+      "pattern": "^AU-0[1-8]$"
+    },
+    "corpus_label": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "prepared",
+        "unexecuted",
+        "failed",
+        "completed"
+      ]
+    },
+    "error": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "manifest_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "harness_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "corpus_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "settings_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "scenario_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "prompt_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "started_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "finished_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "adapter": {
+      "type": "object"
+    },
+    "reads": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "request_id",
+          "path",
+          "layer",
+          "offset",
+          "requested_length",
+          "returned_chars",
+          "content_sha256",
+          "content",
+          "error"
+        ],
+        "properties": {
+          "request_id": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "layer": {
+            "enum": [
+              "L0",
+              "L1",
+              "L2",
+              "L3",
+              "denied"
+            ]
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "requested_length": {
+            "type": "integer"
+          },
+          "returned_chars": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "content_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "content": {
+            "type": "string"
+          },
+          "error": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "read_attempts": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "read_chars": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "response": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "adapter_exit_code": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    }
+  }
+}

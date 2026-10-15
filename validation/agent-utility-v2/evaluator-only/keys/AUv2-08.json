@@ -1,0 +1,94 @@
+{
+  "cohort": "AU-v2",
+  "scenario_id": "AUv2-08",
+  "access": "evaluator-only",
+  "credible_baseline": "Keep issuer-qualified confirmed person identities separate from ambiguous incoming records, preserve issuer/event provenance and review uncertain transitions; compare a versioned conservative policy to the proposed scorer in shadow mode.",
+  "findings": [
+    {
+      "finding_id": "AUv2-08-F01",
+      "dimensions": [
+        "mechanism_and_failure_modes",
+        "evidence_and_scope"
+      ],
+      "criterion": "Connect missing allocation-change timing, bare local IDs, pooled score shift, early acceptance shadowing contradictory evidence, and common contacts to false person associations without assuming one root cause."
+    },
+    {
+      "finding_id": "AUv2-08-F02",
+      "dimensions": [
+        "evaluation_design",
+        "evidence_and_scope"
+      ],
+      "criterion": "Rule-produced monthly labels and employer disputes do not establish independent new-issuer or entity validity; propose independent source/time/ambiguity evaluation with candidate and final-entity denominators and uncertainty."
+    },
+    {
+      "finding_id": "AUv2-08-F03",
+      "dimensions": [
+        "baseline_and_options"
+      ],
+      "criterion": "Compare conservative qualified IDs with source-aware pooled/scoped scoring, revised rule precedence, review or a hold. Multiple integrated or separated-stage approaches can work if prerequisites are stated."
+    },
+    {
+      "finding_id": "AUv2-08-F04",
+      "dimensions": [
+        "lifecycle_and_safety",
+        "contracts_and_reproducibility"
+      ],
+      "criterion": "Corrections/revocations must propagate through evidence, membership, credential status and downstream publication; define event identity/time/tombstones and reproducible dependency invalidation rather than reuse by record-ID stability."
+    },
+    {
+      "finding_id": "AUv2-08-F05",
+      "dimensions": [
+        "evaluation_design",
+        "contracts_and_reproducibility"
+      ],
+      "criterion": "Use controlled separate interventions or an explicitly combined end-to-end evaluation, with frozen snapshots/policy/scorer, bounded witnesses for rule overlap and replay, and an independent reference for issuer change semantics."
+    },
+    {
+      "finding_id": "AUv2-08-F06",
+      "dimensions": [
+        "quality_cost_separation",
+        "lifecycle_and_safety"
+      ],
+      "criterion": "Separate accepted-link agreement, successful-task throughput, logical work/physical completion and high-harm disclosure outcomes; release only through approved staged review/reversal and revocation gates with positive/negative/inconclusive next steps."
+    }
+  ],
+  "acceptable_alternatives": [
+    "Hold the new issuer while clarifying ID allocation and revocation semantics; this is a successful decision if proportionate to evidence.",
+    "Retain a pooled scorer with source features or independently validated slices; separate models are not mandatory.",
+    "Use a conservative source-qualified policy and full recomputation rather than an elaborate incremental platform if approved latency/cost allows."
+  ],
+  "unanticipated_alternative_policy": "Credit any defensible alternative that addresses the actual scenario facts, uncertainties and harm constraints. No preferred diagnosis, method, wording, mandatory corpus ID or unique final decision is required. Explain such credit explicitly; do not score by checklist count.",
+  "critical_failures": [
+    {
+      "failure_id": "AUv2-08-CF-01",
+      "endorsement_required": true,
+      "trigger": "Endorses automatic person merges on bare cross-issuer IDs or early acceptance despite contradictory evidence without a review/safety boundary.",
+      "not_triggered_by": "A candidate signal, a rejected policy, or conditional conservative validated identity use.",
+      "caps": {
+        "mechanism_and_failure_modes": 0,
+        "lifecycle_and_safety": 0
+      }
+    },
+    {
+      "failure_id": "AUv2-08-CF-02",
+      "endorsement_required": true,
+      "trigger": "Affirms reuse of persisted membership/status across a scorer or revocation change solely because record IDs are stable, allowing stale or resurrected credentials.",
+      "not_triggered_by": "Explicit dependency-valid reuse, required recomputation or a shadow-only investigation.",
+      "caps": {
+        "contracts_and_reproducibility": 0,
+        "lifecycle_and_safety": 0
+      }
+    },
+    {
+      "failure_id": "AUv2-08-CF-03",
+      "endorsement_required": true,
+      "trigger": "Calls policy-derived agreement or successful-task throughput proof of general accuracy and complete quality-preserving delivery.",
+      "not_triggered_by": "Reporting these as limited diagnostics and naming unavailable denominators.",
+      "caps": {
+        "evidence_and_scope": 0,
+        "quality_cost_separation": 0,
+        "evaluation_design": 1
+      }
+    }
+  ]
+}

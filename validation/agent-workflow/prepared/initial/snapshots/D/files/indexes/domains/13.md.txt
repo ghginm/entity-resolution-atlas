@@ -1,0 +1,81 @@
+# 13 — Scalability & Execution
+
+[L0 catalog](../../CATALOG.md)
+
+[Domain map](../../taxonomy/domains/13-scalability-execution.md)
+
+## DEC-13-001 — Execution placement, skew and bounded work
+
+decision · domain 13 · [DEC-13-001 — Execution placement, skew and bounded work](../../decisions/execution-strategy.md)
+
+Choose a bounded single-process, database/vectorized, or partitioned execution plan for the same declared ER semantics before changing retrieval budgets. Distinguish physical tiling that preserves comparisons from logical truncation that changes the population. Requires measured workload tails, resource limits, dependency versions and output-equivalence contracts. Compare total index, shuffle, comparison, resolution and recovery costs; distributed execution is not automatically faster, more complete or reproducible.
+
+Tags: `batch`, `blocking`, `candidate-generation`, `entity-agnostic`, `evaluation`, `incremental`, `large-scale`, `low-cost`, `provenance`.
+
+**Alternatives and differences**
+
+Declared alternatives: none in metadata; do not infer substitutability from shared tags.
+
+Read differences and conditions in: [Criteria for choosing](../../decisions/execution-strategy.md#criteria-for-choosing), [Trade-off comparison](../../decisions/execution-strategy.md#trade-off-comparison), [Good baseline candidates](../../decisions/execution-strategy.md#good-baseline-candidates).
+
+complements: [DEC-02-001](../../decisions/pipeline-modularity.md), [DEC-05-001](../../decisions/candidate-strategy.md).
+
+evaluated_by: [EVAL-11-001](../../evaluation/candidate-recall.md), [EVAL-11-003](../../evaluation/entity-resolution-quality.md), [EVAL-11-007](../../evaluation/execution-cost-replay.md).
+
+## SOL-13-001 — Skew-aware bounded execution with complete pair coverage
+
+solution · domain 13 · [SOL-13-001 — Skew-aware bounded execution with complete pair coverage](../../solutions/scalability/skew-aware-execution.md)
+
+Stream or tile candidate work while retaining declared eligibility, stable pair identity and complete comparison coverage. Profile hot blocks and expensive feature routes, choose resident-data batching before optional distribution, and reconcile retries and global resolution. Requires task coverage manifests, versioned indexes and resource accounting. Tiling bounds memory, not inherent pair count; caps, timeouts and incomplete tasks must remain distinguishable from valid non-matches and from equivalent physical optimization.
+
+Tags: `batch`, `blocking`, `candidate-generation`, `entity-agnostic`, `evaluation`, `incremental`, `large-scale`, `provenance`.
+
+**Alternatives and differences**
+
+Declared alternatives: none in metadata; do not infer substitutability from shared tags.
+
+Read differences and conditions in: [Important variants](../../solutions/scalability/skew-aware-execution.md#important-variants), [Trade-offs and failure modes](../../solutions/scalability/skew-aware-execution.md#trade-offs-and-failure-modes), [Relationships with other methods](../../solutions/scalability/skew-aware-execution.md#relationships-with-other-methods).
+
+addresses: [DEC-13-001](../../decisions/execution-strategy.md).
+
+complements: [SOL-02-002](../../solutions/architecture/versioned-artifact-runs.md), [SOL-05-003](../../solutions/candidate-generation/approximate-blocking.md).
+
+evaluated_by: [EVAL-11-001](../../evaluation/candidate-recall.md), [EVAL-11-006](../../evaluation/synthetic-metamorphic.md), [EVAL-11-007](../../evaluation/execution-cost-replay.md).
+
+## Tag batch
+
+[DEC-13-001](../../decisions/execution-strategy.md), [SOL-13-001](../../solutions/scalability/skew-aware-execution.md).
+
+## Tag blocking
+
+[DEC-13-001](../../decisions/execution-strategy.md), [SOL-13-001](../../solutions/scalability/skew-aware-execution.md).
+
+## Tag candidate-generation
+
+[DEC-13-001](../../decisions/execution-strategy.md), [SOL-13-001](../../solutions/scalability/skew-aware-execution.md).
+
+## Tag entity-agnostic
+
+[DEC-13-001](../../decisions/execution-strategy.md), [SOL-13-001](../../solutions/scalability/skew-aware-execution.md).
+
+## Tag evaluation
+
+[DEC-13-001](../../decisions/execution-strategy.md), [SOL-13-001](../../solutions/scalability/skew-aware-execution.md).
+
+## Tag incremental
+
+[DEC-13-001](../../decisions/execution-strategy.md), [SOL-13-001](../../solutions/scalability/skew-aware-execution.md).
+
+## Tag large-scale
+
+[DEC-13-001](../../decisions/execution-strategy.md), [SOL-13-001](../../solutions/scalability/skew-aware-execution.md).
+
+## Tag low-cost
+
+[DEC-13-001](../../decisions/execution-strategy.md).
+
+## Tag provenance
+
+[DEC-13-001](../../decisions/execution-strategy.md), [SOL-13-001](../../solutions/scalability/skew-aware-execution.md).
+
+Generated from card summaries, tags, typed relations and section links. No compatibility or performance conclusion is generated.

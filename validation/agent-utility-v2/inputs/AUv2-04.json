@@ -1,0 +1,18 @@
+{
+  "cohort": "AU-v2",
+  "scenario_id": "AUv2-04",
+  "fictional": true,
+  "title": "Touring exhibition object register",
+  "background": "A fictional exhibition consortium links catalog descriptions of the same physical artwork. Editions and distinct objects by the same artist must not be collapsed. Shipping containers and conservation offices can be shared.",
+  "observations": [
+    "Current clusters are connected components of accepted pair links. Registrars have reliable inventory codes within a lender, but the same bare code occurs at unrelated lenders.",
+    "A new touring feed includes a shipping-crate identifier and the address of a common conservation office. In a planning example, one crate relation connects a small lender cluster to a larger touring cluster.",
+    "Most reviewed pairs come from the original lenders. The new feed has different title abbreviations and several records for distinct edition objects.",
+    "The proposal is to expand via additional shared-contact and crate links, then assess quality by the fraction of reviewed pair links accepted by registrars. A conservative lender-code matching process remains available."
+  ],
+  "constraints": [
+    "A mistaken object history in a published catalog is costly to retract. Unlinked descriptions can remain searchable separately.",
+    "There is no authority to consolidate records in production; staff can review bounded counterexamples and proposed cluster outcomes."
+  ],
+  "request": "Recommend the next experiment and release policy for the touring feed, including the unit of evaluation and options if current evidence is inconclusive."
+}

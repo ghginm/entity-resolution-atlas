@@ -1,0 +1,18 @@
+{
+  "cohort": "AU-v2",
+  "scenario_id": "AUv2-01",
+  "fictional": true,
+  "title": "Harbor workshop warranty desks",
+  "background": "A fictional repair cooperative wants to associate warranty submissions with the same physical tool, not the owner or a model family. Replacement housings can carry a copied service sticker; staff cannot yet document which sticker namespaces are unique.",
+  "observations": [
+    "The current weekly process proposes links on exact normalized sticker plus manufacturer and leaves the rest separate. Staff inspect a convenience queue of customer complaints; there is no representative labeled sample.",
+    "A vendor proposes broad name/model retrieval followed by a learned scorer. Its demonstration dashboard reports agreement among pairs that passed retrieval and whose worker tasks returned successfully.",
+    "Two remote depots submit mostly photographs transcribed by contractors. Their records are absent from the complaint queue. Some worker shards expire without output, while other shards are retried.",
+    "An operations sponsor calls the dashboard enough evidence to switch next month. No numerical quality or error-cost target has been approved."
+  ],
+  "constraints": [
+    "A false association can deny an unrelated owner a repair; a missed association usually creates duplicate clerical work.",
+    "Only a read-only planning exercise is authorized. An independent small audit can be requested, but no labels have been obtained."
+  ],
+  "request": "Advise the operations lead whether and how to compare the current process and proposal, what can be reported now, and what evidence and delivery conditions should govern the next decision."
+}

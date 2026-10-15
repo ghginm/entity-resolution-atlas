@@ -1,0 +1,18 @@
+{
+  "scenario_id": "AU-07",
+  "title": "A capped overnight candidate queue",
+  "fictional": true,
+  "known_project_facts": {
+    "project": "A national equipment maintenance network deduplicates asset records across monthly service feeds; assets are not sites or product families.",
+    "scale": "18 million rows; 600000 updates per month; batch window two hours; 64 GB RAM; CPU budget only. Some manufacturer serial numbers repeat across namespaces and refurbished units.",
+    "current_pipeline": "Exact serial and normalized site/name passes. A few common serial-like placeholders generate giant blocks. Engineers retain only the first 25 candidates per row by input order. Scores and thresholds were fitted before the cap.",
+    "observations": "Reported pair precision remains high, but technicians find duplicates omitted from the queue. A proposal adds broad embedding ANN retrieval plus a costly cross-encoder to every pair.",
+    "constraints": "Need bounded candidate/scoring workloads, stable replay and audit trails. No representative missed-match labels; equipment history must survive updates and correction."
+  },
+  "explicitly_unknown": [
+    "What are block-size, marginal pass coverage and cost distributions?",
+    "What recall loss does ordering/capping impose on source and asset slices?",
+    "What workload and replay guardrails make added retrieval practical?"
+  ],
+  "task": "Produce a defensible project-specific ER experiment/design recommendation using selectively retrieved Atlas knowledge if available. Do not implement ER or change production. Separate facts, assumptions, uncertainties, mechanisms and proposed evidence."
+}

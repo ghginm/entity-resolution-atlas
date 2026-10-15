@@ -1,0 +1,37 @@
+{
+  "dimensions": [
+    "framing",
+    "method",
+    "assumptions",
+    "baseline",
+    "failures",
+    "evaluation",
+    "uncertainty",
+    "actionability"
+  ],
+  "judgment_requirements": [
+    "Every dimension has a response quote or explicit scoped omission, reasoning, and applicability.",
+    "Credit defensible solutions outside checklists; do not score keyword matches.",
+    "Evaluator labels each read attempt relevant, irrelevant or uncertain with a reason; no automatic path-based relevance. Denials can be uncertain.",
+    "Record dimension vector, no weighted sum or universal winner.",
+    "Fabricated outcomes, assumed missing hard semantics, unqualified deployment or omitted critical limitations fail the quality gate even if retrieval is small. Each failure requires a concrete quote or omission and affected dimensions.",
+    "Quality gate: every dimension at least 2, no critical failure; inconclusive stays inconclusive. Missing evidence cannot pass by zero cost.",
+    "Do not infer independent evaluator identity from role/model self-report; require external operator attestation and bound raw evidence."
+  ],
+  "quality_status_values": [
+    "pass",
+    "fail",
+    "unscored"
+  ],
+  "read_relevance_values": [
+    "relevant",
+    "irrelevant",
+    "uncertain"
+  ],
+  "scale": {
+    "0": "absent, materially wrong or fabricated",
+    "1": "partial, generic or weakly justified",
+    "2": "project-specific and defensible with important limits",
+    "3": "well-supported, discriminating and actionable within authority"
+  }
+}

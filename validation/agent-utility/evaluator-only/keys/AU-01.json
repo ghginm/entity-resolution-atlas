@@ -1,0 +1,57 @@
+{
+  "scenario_id": "AU-01",
+  "interpretation": "Semantic checklist, not a required verbatim answer or mandatory algorithm. Credit defensible alternatives and explicit corpus gaps. Do not reward card counts or invented IDs.",
+  "expected_findings": [
+    {
+      "finding_id": "AU-01-F1",
+      "finding": "Strict person identity, shared volunteer phone is not an equivalence relation.",
+      "dimensions": [
+        "problem_understanding",
+        "risk_identification"
+      ]
+    },
+    {
+      "finding_id": "AU-01-F2",
+      "finding": "Trace R14–R27–R88 bridge; high pair scores do not justify transitive component membership.",
+      "dimensions": [
+        "technical_reasoning",
+        "risk_identification"
+      ]
+    },
+    {
+      "finding_id": "AU-01-F3",
+      "finding": "Compare conservative pair decisions with abstention versus trusted cannot-link/constrained cluster repair; discuss reliability and reversibility.",
+      "dimensions": [
+        "alternative_quality",
+        "technical_reasoning"
+      ]
+    },
+    {
+      "finding_id": "AU-01-F4",
+      "finding": "Audit candidate loss, contradictions and entity overmerge with staff-adjudicated groups; pair precision alone is insufficient.",
+      "dimensions": [
+        "experiment_quality",
+        "risk_identification"
+      ]
+    },
+    {
+      "finding_id": "AU-01-F5",
+      "finding": "Choose topology, scoring, resolution and lifecycle independently; do not mistake a cascade for a clustering rule.",
+      "dimensions": [
+        "evidence_discipline",
+        "experiment_quality"
+      ]
+    }
+  ],
+  "critical_failures": [
+    {
+      "failure_id": "AU-01-unsafe_transitive_merge",
+      "trigger": "Recommends unconditional connected components or the three-record union despite stated bridge contradiction and high false-merge harm.",
+      "caps": {
+        "problem_understanding": 1,
+        "technical_reasoning": 1,
+        "risk_identification": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "status": "author-remediation-complete",
+  "at_utc": "2026-10-14T13:49:28.933377+00:00",
+  "reports": [
+    "validation/v1.2/critique-wave-2-rules.md",
+    "validation/v1.2/critique-wave-2-engineering.md"
+  ],
+  "finding_count": 13,
+  "severities": {
+    "major": 4,
+    "minor": 9
+  },
+  "open_blocking_or_major": 0,
+  "findings": [
+    {
+      "id": "R1",
+      "severity": "major",
+      "resolution": "Compound Collect permits no aggregation operator; annotation-only control and written rejection witness added.",
+      "evidence": {
+        "solutions/decision-resolution/declarative-decision-tables.md": [
+          "Collect **without an operator**",
+          "Annotation-only additions"
+        ],
+        "guides/rule-policy-refactoring.md": [
+          "reject Collect-count on two actual outputs"
+        ]
+      },
+      "status": "closed-by-integrating-author",
+      "evidence_sha256": {
+        "solutions/decision-resolution/declarative-decision-tables.md": "5e1b441ada78fa032d5aa8d0a2145fd7eeaed61cc65b3a915a4f3b9db542281d",
+        "guides/rule-policy-refactoring.md": "f306991c59aac84e969675d38b06a19422ffbfbbc51a22b85d42b6fbad19db00"
+      }
+    },
+    {
+      "id": "R2",
+      "severity": "major",
+      "resolution": "Compound Priority clause precedence, unranked payload/annotation distinctions and result-tie contract added with row/column controls.",
+      "evidence": {
+        "solutions/decision-resolution/declarative-decision-tables.md": [
+          "left to right in horizontal tables",
+          "tied ranks leave unequal unranked payloads"
+        ],
+        "guides/rule-policy-refactoring.md": [
+          "action-first selects the former, risk-first the latter"
+        ]
+      },
+      "status": "closed-by-integrating-author",
+      "evidence_sha256": {
+        "solutions/decision-resolution/declarative-decision-tables.md": "5e1b441ada78fa032d5aa8d0a2145fd7eeaed61cc65b3a915a4f3b9db542281d",
+        "guides/rule-policy-refactoring.md": "f306991c59aac84e969675d38b06a19422ffbfbbc51a22b85d42b6fbad19db00"
+      }
+    },
+    {
+      "id": "R3",
+      "severity": "major",
+      "resolution": "Mandatory unknown/error admissibility cannot disappear as inapplicable; pre-effect deferral/escalation or explicit separately authorized risk treatment, with optional diagnostic control.",
+      "evidence": {
+        "decisions/rule-composition.md": [
+          "Unknown optional evidence differs from unresolved mandatory admissibility"
+        ],
+        "solutions/decision-resolution/ordered-rule-policies.md": [
+          "mandatory admissibility guard"
+        ],
+        "solutions/decision-resolution/declarative-decision-tables.md": [
+          "Before effects, resolve mandatory admissibility checks"
+        ],
+        "guides/rule-policy-refactoring.md": [
+          "W7: unresolved guard"
+        ],
+        "taxonomy/module-contracts.md": [
+          "unknown/error mandatory admissibility guard"
+        ]
+      },
+      "status": "closed-by-integrating-author",
+      "evidence_sha256": {
+        "decisions/rule-composition.md": "6807926aa0c3c7eeac1595a5dc9b2a1706e7964c71a916217222db9ac8cf359d",
+        "solutions/decision-resolution/ordered-rule-policies.md": "b366680debc9d837ad6e4b7c3f9334d213d3402c76c25ba5ae6595a5995c4cbe",
+        "solutions/decision-resolution/declarative-decision-tables.md": "5e1b441ada78fa032d5aa8d0a2145fd7eeaed61cc65b3a915a4f3b9db542281d",
+        "guides/rule-policy-refactoring.md": "f306991c59aac84e969675d38b06a19422ffbfbbc51a22b85d42b6fbad19db00",
+        "taxonomy/module-contracts.md": "ad6afc60fd567ccf1870696cc8a1fe86a2642e013100df78efb17fd75cf75b6c"
+      }
+    },
+    {
+      "id": "R4",
+      "severity": "minor",
+      "resolution": "Rule family links engineering cost estimand/practical margin to matched change/diagnosis tasks separately from conformance.",
+      "evidence": {
+        "decisions/rule-composition.md": [
+          "matched extension/diagnosis tasks"
+        ],
+        "solutions/decision-resolution/ordered-rule-policies.md": [
+          "matched change/diagnosis task protocol"
+        ],
+        "solutions/decision-resolution/declarative-decision-tables.md": [
+          "Measure engineering benefit separately"
+        ]
+      },
+      "status": "closed-by-integrating-author",
+      "evidence_sha256": {
+        "decisions/rule-composition.md": "6807926aa0c3c7eeac1595a5dc9b2a1706e7964c71a916217222db9ac8cf359d",
+        "solutions/decision-resolution/ordered-rule-policies.md": "b366680debc9d837ad6e4b7c3f9334d213d3402c76c25ba5ae6595a5995c4cbe",
+        "solutions/decision-resolution/declarative-decision-tables.md": "5e1b441ada78fa032d5aa8d0a2145fd7eeaed61cc65b3a915a4f3b9db542281d"
+      }
+    },
+    {
+      "id": "R5",
+      "severity": "minor",
+      "resolution": "Duplicate delivery starts after first committed state; reset-state comparison and legitimate new-version control are distinct.",
+      "evidence": {
+        "guides/rule-policy-refactoring.md": [
+          "same-event replay from that resulting state",
+          "Resetting to the initial state for both executions tests determinism"
+        ]
+      },
+      "status": "closed-by-integrating-author",
+      "evidence_sha256": {
+        "guides/rule-policy-refactoring.md": "f306991c59aac84e969675d38b06a19422ffbfbbc51a22b85d42b6fbad19db00"
+      }
+    },
+    {
+      "id": "R6",
+      "severity": "minor",
+      "resolution": "Soft, diagnostic-only and trusted-prohibition variants preserve separate authority; promoting diagnostics is a policy change.",
+      "evidence": {
+        "guides/rule-policy-refactoring.md": [
+          "W3: soft / diagnostic / hard",
+          "granting a diagnostic veto is a separately authorized policy change"
+        ]
+      },
+      "status": "closed-by-integrating-author",
+      "evidence_sha256": {
+        "guides/rule-policy-refactoring.md": "f306991c59aac84e969675d38b06a19422ffbfbbc51a22b85d42b6fbad19db00"
+      }
+    },
+    {
+      "id": "ENG-01",
+      "severity": "major",
+      "resolution": "Cache-free and affected-state comparators distinguish history/initial-state equivalence from snapshot-determined behavior; prohibit reusing the invalidation target as oracle.",
+      "evidence": {
+        "evaluation/synthetic-metamorphic.md": [
+          "history/initial-state-equivalent reference",
+          "Do not seed the reference with the derived artifact whose invalidation is under test"
+        ]
+      },
+      "status": "closed-by-integrating-author",
+      "evidence_sha256": {
+        "evaluation/synthetic-metamorphic.md": "93bef6ed81cba8c2a8b4cfbd5d808907b6349d382d71cffe2145e1d253dd22c1"
+      }
+    },
+    {
+      "id": "ENG-02",
+      "severity": "minor",
+      "resolution": "Previously unstored eligible-neighbor witness uses an independent small-universe retrieval oracle and bounded approximate-retrieval property.",
+      "evidence": {
+        "evaluation/synthetic-metamorphic.md": [
+          "independent exhaustive retrieval oracle",
+          "previously unstored eligible neighbor",
+          "not whether that neighbor is a true match"
+        ]
+      },
+      "status": "closed-by-integrating-author",
+      "evidence_sha256": {
+        "evaluation/synthetic-metamorphic.md": "93bef6ed81cba8c2a8b4cfbd5d808907b6349d382d71cffe2145e1d253dd22c1"
+      }
+    },
+    {
+      "id": "ENG-03",
+      "severity": "minor",
+      "resolution": "Retained bundles and finalized records remain subordinate to current retention/erasure authorization; unavailable rollback is explicit.",
+      "evidence": {
+        "guides/run-manifest-template.md": [
+          "immutable within authorized retention",
+          "without restoring erased contents"
+        ],
+        "solutions/architecture/versioned-artifact-runs.md": [
+          "only where still authorized"
+        ]
+      },
+      "status": "closed-by-integrating-author",
+      "evidence_sha256": {
+        "guides/run-manifest-template.md": "a7336d80b06a40224c4bd11a36630ac632b2cf97838584051d50f0ae979df248",
+        "solutions/architecture/versioned-artifact-runs.md": "f13b046137a419e4081f31f0df7995ce91d99fab976478ceca81c1e9244e2562"
+      }
+    },
+    {
+      "id": "ENG-04",
+      "severity": "minor",
+      "resolution": "Atomic bundle publication is scoped to declared authoritative boundary; outside-consumer visibility/pending status remains explicit.",
+      "evidence": {
+        "solutions/architecture/versioned-artifact-runs.md": [
+          "atomically at the declared authoritative boundary",
+          "version visibility/pending status outside it"
+        ]
+      },
+      "status": "closed-by-integrating-author",
+      "evidence_sha256": {
+        "solutions/architecture/versioned-artifact-runs.md": "f13b046137a419e4081f31f0df7995ce91d99fab976478ceca81c1e9244e2562"
+      }
+    },
+    {
+      "id": "ENG-05",
+      "severity": "minor",
+      "resolution": "Combined manifest row now distinguishes optional calibration from actual evidence/predicate-based policy prerequisites.",
+      "evidence": {
+        "guides/run-manifest-template.md": [
+          "Calibration, if used:",
+          "A non-probability rule need not add calibration or labels"
+        ]
+      },
+      "status": "closed-by-integrating-author",
+      "evidence_sha256": {
+        "guides/run-manifest-template.md": "a7336d80b06a40224c4bd11a36630ac632b2cf97838584051d50f0ae979df248"
+      }
+    },
+    {
+      "id": "ENG-06",
+      "severity": "minor",
+      "resolution": "Counterbalanced task/configuration order, matched nonidentical instances, prior familiarity and setup/migration costs qualify maintainer-task evidence.",
+      "evidence": {
+        "decisions/pipeline-modularity.md": [
+          "Counterbalance configuration/task order",
+          "matched nonidentical task instances",
+          "Separate initial setup/migration cost"
+        ],
+        "solutions/architecture/replaceable-stage-pipelines.md": [
+          "task-order/familiarity controls"
+        ]
+      },
+      "status": "closed-by-integrating-author",
+      "evidence_sha256": {
+        "decisions/pipeline-modularity.md": "cd6da98f2be76d4e1a92be0df7ce51578ca39520cad488d9e45238de97bb43c5",
+        "solutions/architecture/replaceable-stage-pipelines.md": "210f1181a97884f43add30d67ad6cb1fcf34ef6d59656c8f046223c24fcb17ae"
+      }
+    },
+    {
+      "id": "ENG-07",
+      "severity": "minor",
+      "resolution": "Repeated six-variant menu replaced by canonical decision link; manifest retains one normalization example and points to canonical invalidation table; explicit selective-reading cue added.",
+      "evidence": {
+        "solutions/architecture/replaceable-stage-pipelines.md": [
+          "owns the complete alternative menu",
+          "Retrieve contracts for boundary substitution"
+        ],
+        "guides/run-manifest-template.md": [
+          "canonical invalidation table"
+        ]
+      },
+      "status": "closed-by-integrating-author",
+      "evidence_sha256": {
+        "solutions/architecture/replaceable-stage-pipelines.md": "210f1181a97884f43add30d67ad6cb1fcf34ef6d59656c8f046223c24fcb17ae",
+        "guides/run-manifest-template.md": "a7336d80b06a40224c4bd11a36630ac632b2cf97838584051d50f0ae979df248"
+      }
+    }
+  ],
+  "verification_boundary": "Evidence phrase and file-hash checks verify documented remediation presence, not scientific correctness, executed runtime behavior, or independent post-remediation reviewer approval. Critique reports retain original findings/snapshots unchanged."
+}

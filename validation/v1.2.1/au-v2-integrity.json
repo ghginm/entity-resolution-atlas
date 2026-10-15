@@ -1,0 +1,1 @@
+{"actual_runs": 0, "actual_scores": 0, "benchmark_id": "AU-v2", "critical_failure_rules": 17, "dimensions": 8, "frozen_files": 36, "integrity": "verified", "json_files_excluding_manifest": 30, "keys": 8, "planned_cells": 24, "preparation_status": "prepared_data_only", "runtime_integration": "unimplemented", "scenarios": 8, "schemas": 10, "semantic_findings": 48}

@@ -1,0 +1,18 @@
+{
+  "scenario_id": "AU-04",
+  "title": "Sparse labels across script changes",
+  "fictional": true,
+  "known_project_facts": {
+    "project": "An academic fellowship office links applicant histories across two annual intake systems; identity is the individual applicant, not family or institution.",
+    "data": "Names use Arabic, Latin and Devanagari scripts, sometimes switched between years. Latin transliterations are inconsistent. Many applicants omit date of birth; family contact phones and institutional email addresses are shared.",
+    "labels": "80 adjudicated links, mostly Latin-script applicants, and 100 easy non-links from dissimilar names. No representative multilingual held-out set.",
+    "current_pipeline": "ASCII-folded name prefix blocks and edit distance on flattened names. A team proposes a multilingual embedding encoder and supervised neural matcher.",
+    "constraints": "Offline processing; CPU-only service; one researcher has two days per month for adjudication. Keep original strings and source provenance. False merges can combine confidential applicant histories."
+  },
+  "explicitly_unknown": [
+    "Which language/script and source slices exist and need evaluation?",
+    "How are name order, shared contacts and missing attributes encoded?",
+    "What validated labels or runtime evidence justify a learned alternative?"
+  ],
+  "task": "Produce a defensible project-specific ER experiment/design recommendation using selectively retrieved Atlas knowledge if available. Do not implement ER or change production. Separate facts, assumptions, uncertainties, mechanisms and proposed evidence."
+}

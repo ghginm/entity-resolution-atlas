@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "validation/agent-utility-integration/bridge.py": "80ff450366d2e369613f66417c26480c12ffffe85d09f291d5bac58183dc66b9",
+    "validation/agent-utility-v2/verify.py": "1254176a9aaf6007c7602b0128d9bb98681848c450d66614fe628badd91f6108",
+    "validation/agent-utility/harness.py": "f1a835f7d934616a40371c03df0923eccebd7a1f8871f5b41da14c585aaf9cd4"
+  },
+  "sources": {
+    "B": {
+      "manifest": "corpus-manifest.json",
+      "path": "validation/agent-utility-integration/corpora/2026-10-14-02/baseline",
+      "sha256": "cb0b01f42b3559290d6d03b1aa20645c5f3afd569ec49f32ca8f8a3bff549b88"
+    },
+    "C": {
+      "manifest": "corpus-manifest.json",
+      "path": "validation/agent-utility-integration/corpora/2026-10-14-02/expanded",
+      "sha256": "3c69f5e66bfb4a3b517df20611505563dd343fe3164139dd1770596890d889c7"
+    },
+    "D": {
+      "manifest": "consumer-manifest.json",
+      "path": "dist/atlas-consumer",
+      "sha256": "fc6078f5243355ab19947d1c649ee80aa04ba8c3266dee16200f5d7a7f440bd3"
+    }
+  }
+}

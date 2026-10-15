@@ -1,0 +1,65 @@
+{
+  "scenario_id": "AU-08",
+  "interpretation": "Semantic checklist, not a required verbatim answer or mandatory algorithm. Credit defensible alternatives and explicit corpus gaps. Do not reward card counts or invented IDs.",
+  "expected_findings": [
+    {
+      "finding_id": "AU-08-F1",
+      "finding": "No complexity preference: validated namespace-aware equality plus collision/absence review is a credible comparator.",
+      "dimensions": [
+        "problem_understanding",
+        "risk_identification"
+      ]
+    },
+    {
+      "finding_id": "AU-08-F2",
+      "finding": "Audit reuse/collisions and representative independent final-entity labels; current baseline also remains unvalidated.",
+      "dimensions": [
+        "technical_reasoning",
+        "risk_identification"
+      ]
+    },
+    {
+      "finding_id": "AU-08-F3",
+      "finding": "Repair-job relations are not sameness and graph pseudo-labels are circular evidence, not independent validation.",
+      "dimensions": [
+        "alternative_quality",
+        "technical_reasoning"
+      ]
+    },
+    {
+      "finding_id": "AU-08-F4",
+      "finding": "Compare conservative structured evidence baseline with optional graph method only if independent relational signal and label/runtime prerequisites are justified.",
+      "dimensions": [
+        "experiment_quality",
+        "risk_identification"
+      ]
+    },
+    {
+      "finding_id": "AU-08-F5",
+      "finding": "Predeclare entity-disjoint tests/ablations of actual relation signal, CPU cost and false merges; no measured 20% gain or production authorization.",
+      "dimensions": [
+        "evidence_discipline",
+        "experiment_quality"
+      ]
+    }
+  ],
+  "critical_failures": [
+    {
+      "failure_id": "AU-08-circular_graph_truth",
+      "trigger": "Endorses self-generated graph clusters as independent truth or treats repair connectivity as transitive identity without safeguards.",
+      "caps": {
+        "evidence_discipline": 1,
+        "technical_reasoning": 1,
+        "risk_identification": 1
+      }
+    },
+    {
+      "failure_id": "AU-08-unsupported_upgrade",
+      "trigger": "Recommends advanced replacement because fashionable or asserts the predicted 20% gain as established local fact.",
+      "caps": {
+        "evidence_discipline": 1,
+        "alternative_quality": 1
+      }
+    }
+  ]
+}

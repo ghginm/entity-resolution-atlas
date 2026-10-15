@@ -1,0 +1,2399 @@
+{
+  "kind": "offline-declared-read-replay",
+  "not_model_usage": true,
+  "quality_measured": false,
+  "tokenizer": "tiktoken cl100k_base",
+  "limitations": [
+    "Declared read paths, not autonomous agent decisions or measured model input usage.",
+    "Tokens cover returned UTF-8 content only; exclude prompts, tool wrappers, replay, reasoning, output and billing.",
+    "Identical L2 seed sets isolate navigation cost; sufficiency still requires project-specific review.",
+    "Read requests are not latency or sequential hop measurements; no execution cost claim."
+  ],
+  "baseline_archive_sha256": "f38fb9e6e775223e341d37de77346e4350ceb04e767c5764b5b0a46639f9de57",
+  "tasks": {
+    "scoring": {
+      "arms": {
+        "v1.2-selective": {
+          "file_reads": 12,
+          "documents": 9,
+          "canonical_cards": 5,
+          "retrieved_bytes": 62653,
+          "retrieved_tokens": 12057,
+          "full_corpus_loading_detected": false,
+          "events": [
+            {
+              "path": "AGENTS.md",
+              "offset": 1,
+              "lines": 42,
+              "bytes": 8175,
+              "words": 947,
+              "tokens": 1514,
+              "sha256": "31cfc214661a185ad676dd4f757e635956c4e740fb79160787f668c20a86d439",
+              "layer": "L0"
+            },
+            {
+              "path": "guides/agent-task-patterns.md",
+              "offset": 24,
+              "lines": 13,
+              "bytes": 868,
+              "words": 86,
+              "tokens": 164,
+              "sha256": "9c89d37878c0473dfe9dce82adbf037b7f7f665976cb54b755dbc69d908ed7eb",
+              "layer": "L0"
+            },
+            {
+              "path": "indexes/domains/07.md",
+              "offset": 7,
+              "lines": 18,
+              "bytes": 1923,
+              "words": 162,
+              "tokens": 396,
+              "sha256": "17a6e549d9b939a6b1065c9b1fea91c0e01967d55b6f242679cbf6420a36df76",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/07.md",
+              "offset": 45,
+              "lines": 22,
+              "bytes": 2157,
+              "words": 168,
+              "tokens": 471,
+              "sha256": "df4dcc21e24e75afaa194204c713793e0a48bdd800900a63701897e72b8024de",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/07.md",
+              "offset": 67,
+              "lines": 22,
+              "bytes": 2139,
+              "words": 166,
+              "tokens": 475,
+              "sha256": "44a12a330e21b664be976073b3150785fa8674d77abbc1e2ebb0d73968eaa68f",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/07.md",
+              "offset": 111,
+              "lines": 20,
+              "bytes": 2375,
+              "words": 189,
+              "tokens": 494,
+              "sha256": "b75fd8f171467ae7e6c773f116a302dcf453848a152ecd732fcc70f1889eb339",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/11.md",
+              "offset": 25,
+              "lines": 18,
+              "bytes": 1806,
+              "words": 157,
+              "tokens": 368,
+              "sha256": "1fd7a10a74effeb01383a3cbd7f414a91048d97a87e05429fb8501c45f97ee1b",
+              "layer": "L1"
+            },
+            {
+              "path": "decisions/scoring-strategy.md",
+              "offset": 1,
+              "lines": 88,
+              "bytes": 8468,
+              "words": 929,
+              "tokens": 1576,
+              "sha256": "d531581acfffb6b50a76cbd20cbc81a175d4dff16b3ea7761e70f5b35e9ea495",
+              "layer": "L2"
+            },
+            {
+              "path": "solutions/matching-scoring/additive-soft-matching.md",
+              "offset": 1,
+              "lines": 95,
+              "bytes": 8565,
+              "words": 987,
+              "tokens": 1571,
+              "sha256": "51c58237db8519db2a06a5a85cfa448d5271bc0e368f7dabc112111db6f5f294",
+              "layer": "L2"
+            },
+            {
+              "path": "solutions/matching-scoring/fellegi-sunter.md",
+              "offset": 1,
+              "lines": 112,
+              "bytes": 9573,
+              "words": 1110,
+              "tokens": 1885,
+              "sha256": "8c4dffd6ae0c9d1d096fef97b6d98f4b1af0aca9b2681dc44f97be8f001e7d8c",
+              "layer": "L2"
+            },
+            {
+              "path": "solutions/matching-scoring/source-aware-reliability.md",
+              "offset": 1,
+              "lines": 82,
+              "bytes": 9127,
+              "words": 1108,
+              "tokens": 1671,
+              "sha256": "1429888f34f902b29ef06290948c0418e0d87f0e75bfaf2cfa3869d559ceefae",
+              "layer": "L2"
+            },
+            {
+              "path": "evaluation/pairwise-calibration.md",
+              "offset": 1,
+              "lines": 62,
+              "bytes": 7477,
+              "words": 889,
+              "tokens": 1472,
+              "sha256": "6cc32a1901d2a4e618d9038fe1bef2c7add5427de72467e8b3aef65e1e950915",
+              "layer": "L2"
+            }
+          ]
+        },
+        "v1.2.1-selective": {
+          "file_reads": 13,
+          "documents": 10,
+          "canonical_cards": 5,
+          "retrieved_bytes": 58928,
+          "retrieved_tokens": 11576,
+          "full_corpus_loading_detected": false,
+          "events": [
+            {
+              "path": "AGENTS.md",
+              "offset": 1,
+              "lines": 7,
+              "bytes": 865,
+              "words": 107,
+              "tokens": 172,
+              "sha256": "5ef60b5a81b30c7f8ce8cc77647e7be9b7629ed7c13197b09aad63a0b0983c49",
+              "layer": "L0"
+            },
+            {
+              "path": "START_HERE.md",
+              "offset": 1,
+              "lines": 38,
+              "bytes": 3522,
+              "words": 408,
+              "tokens": 697,
+              "sha256": "4e5ac2f782894323d9fb63f0bfc0a3211fbe3af8f480362d421317b776d27af0",
+              "layer": "L0"
+            },
+            {
+              "path": "indexes/tasks/scoring.md",
+              "offset": 1,
+              "lines": 26,
+              "bytes": 2422,
+              "words": 214,
+              "tokens": 563,
+              "sha256": "1e397c5b7599cc4e2b898fbf9fe3e828b3a0f5d216f1f9d2f486fd75c413f959",
+              "layer": "L0"
+            },
+            {
+              "path": "indexes/domains/07.md",
+              "offset": 7,
+              "lines": 18,
+              "bytes": 1647,
+              "words": 130,
+              "tokens": 356,
+              "sha256": "9b31046c6278eeddafe500c4ded711ffa1d4f6c77a391c8c81bdd5e1743ad3d5",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/07.md",
+              "offset": 45,
+              "lines": 22,
+              "bytes": 1826,
+              "words": 129,
+              "tokens": 415,
+              "sha256": "a50e63f3f23b32de4f83d1096c9c1299c4744177390d855b170bf1fc3e0df806",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/07.md",
+              "offset": 67,
+              "lines": 22,
+              "bytes": 1833,
+              "words": 127,
+              "tokens": 425,
+              "sha256": "07e40f19430f57bb0a8a99e0794f4a98aadedfee2bc2e0b65cffe38c5d7a8176",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/07.md",
+              "offset": 111,
+              "lines": 20,
+              "bytes": 2016,
+              "words": 148,
+              "tokens": 443,
+              "sha256": "ed5e229b1703ceedd67ac56c4581c32d13300c1a90fc6cdaa1dec4310017d335",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/11.md",
+              "offset": 25,
+              "lines": 18,
+              "bytes": 1587,
+              "words": 130,
+              "tokens": 330,
+              "sha256": "af22bfb7da7ae8801f9a657191ff16689adca0b604bd9dad35949e917e96aee1",
+              "layer": "L1"
+            },
+            {
+              "path": "decisions/scoring-strategy.md",
+              "offset": 1,
+              "lines": 88,
+              "bytes": 8468,
+              "words": 929,
+              "tokens": 1576,
+              "sha256": "d531581acfffb6b50a76cbd20cbc81a175d4dff16b3ea7761e70f5b35e9ea495",
+              "layer": "L2"
+            },
+            {
+              "path": "solutions/matching-scoring/additive-soft-matching.md",
+              "offset": 1,
+              "lines": 95,
+              "bytes": 8565,
+              "words": 987,
+              "tokens": 1571,
+              "sha256": "51c58237db8519db2a06a5a85cfa448d5271bc0e368f7dabc112111db6f5f294",
+              "layer": "L2"
+            },
+            {
+              "path": "solutions/matching-scoring/fellegi-sunter.md",
+              "offset": 1,
+              "lines": 112,
+              "bytes": 9573,
+              "words": 1110,
+              "tokens": 1885,
+              "sha256": "8c4dffd6ae0c9d1d096fef97b6d98f4b1af0aca9b2681dc44f97be8f001e7d8c",
+              "layer": "L2"
+            },
+            {
+              "path": "solutions/matching-scoring/source-aware-reliability.md",
+              "offset": 1,
+              "lines": 82,
+              "bytes": 9127,
+              "words": 1108,
+              "tokens": 1671,
+              "sha256": "1429888f34f902b29ef06290948c0418e0d87f0e75bfaf2cfa3869d559ceefae",
+              "layer": "L2"
+            },
+            {
+              "path": "evaluation/pairwise-calibration.md",
+              "offset": 1,
+              "lines": 62,
+              "bytes": 7477,
+              "words": 889,
+              "tokens": 1472,
+              "sha256": "6cc32a1901d2a4e618d9038fe1bef2c7add5427de72467e8b3aef65e1e950915",
+              "layer": "L2"
+            }
+          ]
+        }
+      },
+      "reading_token_reduction_pct": 3.99
+    },
+    "graph": {
+      "arms": {
+        "v1.2-selective": {
+          "file_reads": 10,
+          "documents": 8,
+          "canonical_cards": 4,
+          "retrieved_bytes": 55855,
+          "retrieved_tokens": 10593,
+          "full_corpus_loading_detected": false,
+          "events": [
+            {
+              "path": "AGENTS.md",
+              "offset": 1,
+              "lines": 42,
+              "bytes": 8175,
+              "words": 947,
+              "tokens": 1514,
+              "sha256": "31cfc214661a185ad676dd4f757e635956c4e740fb79160787f668c20a86d439",
+              "layer": "L0"
+            },
+            {
+              "path": "guides/agent-task-patterns.md",
+              "offset": 62,
+              "lines": 12,
+              "bytes": 811,
+              "words": 81,
+              "tokens": 152,
+              "sha256": "1126114dd8b09a2f35c70b28505905d20d04302d25fa7bb90922d6069ddad216",
+              "layer": "L0"
+            },
+            {
+              "path": "indexes/domains/08.md",
+              "offset": 7,
+              "lines": 18,
+              "bytes": 1694,
+              "words": 149,
+              "tokens": 334,
+              "sha256": "bffa39b6c9fbb715234ae55a4f5539c901daf9041e08678d4d373e85b3054bd5",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/08.md",
+              "offset": 83,
+              "lines": 20,
+              "bytes": 2116,
+              "words": 175,
+              "tokens": 430,
+              "sha256": "304f5c0f72bae9539552147d95759a53c4bd39191d05a9360c81256ad6c9a6c2",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/08.md",
+              "offset": 103,
+              "lines": 22,
+              "bytes": 2247,
+              "words": 171,
+              "tokens": 466,
+              "sha256": "ee2ee9b8cc5af4c71619ab6061fec665d290ab75e947a340e46bddd89af4557e",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/11.md",
+              "offset": 43,
+              "lines": 16,
+              "bytes": 1608,
+              "words": 143,
+              "tokens": 316,
+              "sha256": "7673ceb01e5c62dc41947ed7c0f175c94865aa974cfb93ba71882277196901a4",
+              "layer": "L1"
+            },
+            {
+              "path": "decisions/resolution-strategy.md",
+              "offset": 1,
+              "lines": 90,
+              "bytes": 8668,
+              "words": 1007,
+              "tokens": 1543,
+              "sha256": "9c73cc4144a7e81bcf45cc7ecd742b2916705a4a0d3fb69f365eb34e3bf5a712",
+              "layer": "L2"
+            },
+            {
+              "path": "solutions/decision-resolution/connected-components.md",
+              "offset": 1,
+              "lines": 98,
+              "bytes": 10347,
+              "words": 1300,
+              "tokens": 1930,
+              "sha256": "20ed4658a26240569a7163c1281c9d2fe24f975f8aa65da79d1ccb0824e7360a",
+              "layer": "L2"
+            },
+            {
+              "path": "solutions/decision-resolution/constrained-clustering.md",
+              "offset": 1,
+              "lines": 92,
+              "bytes": 10421,
+              "words": 1258,
+              "tokens": 2055,
+              "sha256": "c84d648a560f3c447bac8126f0c599cfbc6c5eb0613835267791c193caa6db73",
+              "layer": "L2"
+            },
+            {
+              "path": "evaluation/entity-resolution-quality.md",
+              "offset": 1,
+              "lines": 75,
+              "bytes": 9768,
+              "words": 1161,
+              "tokens": 1853,
+              "sha256": "5c670587e596de5e56e618d1ef80fdf7cad1d88d758ead3bbda1ce6b1b487620",
+              "layer": "L2"
+            }
+          ]
+        },
+        "v1.2.1-selective": {
+          "file_reads": 11,
+          "documents": 9,
+          "canonical_cards": 4,
+          "retrieved_bytes": 53204,
+          "retrieved_tokens": 10229,
+          "full_corpus_loading_detected": false,
+          "events": [
+            {
+              "path": "AGENTS.md",
+              "offset": 1,
+              "lines": 7,
+              "bytes": 865,
+              "words": 107,
+              "tokens": 172,
+              "sha256": "5ef60b5a81b30c7f8ce8cc77647e7be9b7629ed7c13197b09aad63a0b0983c49",
+              "layer": "L0"
+            },
+            {
+              "path": "START_HERE.md",
+              "offset": 1,
+              "lines": 38,
+              "bytes": 3522,
+              "words": 408,
+              "tokens": 697,
+              "sha256": "4e5ac2f782894323d9fb63f0bfc0a3211fbe3af8f480362d421317b776d27af0",
+              "layer": "L0"
+            },
+            {
+              "path": "indexes/tasks/graph.md",
+              "offset": 1,
+              "lines": 26,
+              "bytes": 2465,
+              "words": 223,
+              "tokens": 519,
+              "sha256": "4c0e16412b76447fdc768ef4f074a4828d2cc0b6c7d1d6698781a7ba5add5193",
+              "layer": "L0"
+            },
+            {
+              "path": "indexes/domains/08.md",
+              "offset": 7,
+              "lines": 18,
+              "bytes": 1522,
+              "words": 128,
+              "tokens": 308,
+              "sha256": "df6aace73af16fcfc86489514101916a141fdba98642ac81c6f65d38f47f5ded",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/08.md",
+              "offset": 83,
+              "lines": 20,
+              "bytes": 1750,
+              "words": 131,
+              "tokens": 371,
+              "sha256": "c358e6701be147a49ce962c7b5e766f5a2555c0bc66d84711ba6d589e8037a85",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/08.md",
+              "offset": 103,
+              "lines": 22,
+              "bytes": 1871,
+              "words": 123,
+              "tokens": 405,
+              "sha256": "46a8bafab82f06ba8eb05841700dbe916ea5bf3eee3f060d1b8b1ee7d59de734",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/11.md",
+              "offset": 43,
+              "lines": 16,
+              "bytes": 1454,
+              "words": 129,
+              "tokens": 288,
+              "sha256": "0ced2252c2bf275b1d3c9734434f184d8c6b0a354bb1ada7d1726f4d114e9ef8",
+              "layer": "L1"
+            },
+            {
+              "path": "decisions/resolution-strategy.md",
+              "offset": 1,
+              "lines": 90,
+              "bytes": 8668,
+              "words": 1007,
+              "tokens": 1543,
+              "sha256": "9c73cc4144a7e81bcf45cc7ecd742b2916705a4a0d3fb69f365eb34e3bf5a712",
+              "layer": "L2"
+            },
+            {
+              "path": "solutions/decision-resolution/connected-components.md",
+              "offset": 1,
+              "lines": 98,
+              "bytes": 10347,
+              "words": 1300,
+              "tokens": 1930,
+              "sha256": "20ed4658a26240569a7163c1281c9d2fe24f975f8aa65da79d1ccb0824e7360a",
+              "layer": "L2"
+            },
+            {
+              "path": "solutions/decision-resolution/constrained-clustering.md",
+              "offset": 1,
+              "lines": 92,
+              "bytes": 10972,
+              "words": 1327,
+              "tokens": 2143,
+              "sha256": "abe552afb59d62e51b7db48174e071b34051458c68525ce21042b7dc9c997217",
+              "layer": "L2"
+            },
+            {
+              "path": "evaluation/entity-resolution-quality.md",
+              "offset": 1,
+              "lines": 75,
+              "bytes": 9768,
+              "words": 1161,
+              "tokens": 1853,
+              "sha256": "5c670587e596de5e56e618d1ef80fdf7cad1d88d758ead3bbda1ce6b1b487620",
+              "layer": "L2"
+            }
+          ]
+        }
+      },
+      "reading_token_reduction_pct": 3.44
+    },
+    "blocking": {
+      "arms": {
+        "v1.2-selective": {
+          "file_reads": 12,
+          "documents": 9,
+          "canonical_cards": 5,
+          "retrieved_bytes": 57841,
+          "retrieved_tokens": 11013,
+          "full_corpus_loading_detected": false,
+          "events": [
+            {
+              "path": "AGENTS.md",
+              "offset": 1,
+              "lines": 42,
+              "bytes": 8175,
+              "words": 947,
+              "tokens": 1514,
+              "sha256": "31cfc214661a185ad676dd4f757e635956c4e740fb79160787f668c20a86d439",
+              "layer": "L0"
+            },
+            {
+              "path": "guides/agent-task-patterns.md",
+              "offset": 74,
+              "lines": 13,
+              "bytes": 882,
+              "words": 82,
+              "tokens": 180,
+              "sha256": "842abdc62e23cc26bf62c1b0da2955c0859b52f356b5a0f13f3da5b494387374",
+              "layer": "L0"
+            },
+            {
+              "path": "indexes/domains/05.md",
+              "offset": 7,
+              "lines": 18,
+              "bytes": 1511,
+              "words": 143,
+              "tokens": 300,
+              "sha256": "1cb659f9b100f9e33f03b9b0ba144e3eaf3b318d7ef836daeff23414b4032c4a",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/05.md",
+              "offset": 25,
+              "lines": 20,
+              "bytes": 1847,
+              "words": 147,
+              "tokens": 380,
+              "sha256": "697b79dd26dbb7cf45ea72b1e7cd695864fb30a306ca943c976d18336907af5d",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/05.md",
+              "offset": 65,
+              "lines": 20,
+              "bytes": 2241,
+              "words": 181,
+              "tokens": 461,
+              "sha256": "d5d95c21d90d488ad611e794e1dba8d30ada25aa79daa9e7a3dd1189dd704af9",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/11.md",
+              "offset": 7,
+              "lines": 18,
+              "bytes": 1665,
+              "words": 151,
+              "tokens": 315,
+              "sha256": "bd1b6e27d5b120ad2bfe7924599325bb82acc6319935198bd2b7738353a0f728",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/11.md",
+              "offset": 113,
+              "lines": 18,
+              "bytes": 1859,
+              "words": 171,
+              "tokens": 376,
+              "sha256": "4a5d21817a2a12245420bd05c1f454164151e30e4896931437c4018fe57c293f",
+              "layer": "L1"
+            },
+            {
+              "path": "decisions/candidate-strategy.md",
+              "offset": 1,
+              "lines": 63,
+              "bytes": 6487,
+              "words": 782,
+              "tokens": 1138,
+              "sha256": "ea4cd74a9e0c80223f6a3fee66a58b993751296348a558f66a16f15da67ab628",
+              "layer": "L2"
+            },
+            {
+              "path": "solutions/candidate-generation/exact-blocking.md",
+              "offset": 1,
+              "lines": 72,
+              "bytes": 6631,
+              "words": 809,
+              "tokens": 1196,
+              "sha256": "23438f371c444b84ba85e87f64a1c100a738e06e59ed499ea64857d6b746f760",
+              "layer": "L2"
+            },
+            {
+              "path": "solutions/candidate-generation/approximate-blocking.md",
+              "offset": 1,
+              "lines": 92,
+              "bytes": 10806,
+              "words": 1324,
+              "tokens": 2055,
+              "sha256": "3b57317d424d82554f01ef89f14ba31be1aa452c94de486e806493a1f2ef19c0",
+              "layer": "L2"
+            },
+            {
+              "path": "evaluation/candidate-recall.md",
+              "offset": 1,
+              "lines": 59,
+              "bytes": 6971,
+              "words": 861,
+              "tokens": 1367,
+              "sha256": "126cf55c76c3d6837d0289cd4c3ece82da6e04c44e2bdae8c3b93da74d1c1391",
+              "layer": "L2"
+            },
+            {
+              "path": "evaluation/execution-cost-replay.md",
+              "offset": 1,
+              "lines": 161,
+              "bytes": 8766,
+              "words": 1034,
+              "tokens": 1731,
+              "sha256": "b943577011db83dc4f4ff66c2ea1bc9f23665e22988789f25dac0c86f58a1590",
+              "layer": "L2"
+            }
+          ]
+        },
+        "v1.2.1-selective": {
+          "file_reads": 13,
+          "documents": 10,
+          "canonical_cards": 5,
+          "retrieved_bytes": 54402,
+          "retrieved_tokens": 10569,
+          "full_corpus_loading_detected": false,
+          "events": [
+            {
+              "path": "AGENTS.md",
+              "offset": 1,
+              "lines": 7,
+              "bytes": 865,
+              "words": 107,
+              "tokens": 172,
+              "sha256": "5ef60b5a81b30c7f8ce8cc77647e7be9b7629ed7c13197b09aad63a0b0983c49",
+              "layer": "L0"
+            },
+            {
+              "path": "START_HERE.md",
+              "offset": 1,
+              "lines": 38,
+              "bytes": 3522,
+              "words": 408,
+              "tokens": 697,
+              "sha256": "4e5ac2f782894323d9fb63f0bfc0a3211fbe3af8f480362d421317b776d27af0",
+              "layer": "L0"
+            },
+            {
+              "path": "indexes/tasks/blocking.md",
+              "offset": 1,
+              "lines": 26,
+              "bytes": 2441,
+              "words": 212,
+              "tokens": 556,
+              "sha256": "a33f0621c412c8495c3fe290dda35e30650c04916bf4832903e9276b91107851",
+              "layer": "L0"
+            },
+            {
+              "path": "indexes/domains/05.md",
+              "offset": 7,
+              "lines": 18,
+              "bytes": 1409,
+              "words": 129,
+              "tokens": 286,
+              "sha256": "6829c67b9d4f34ddd43e0159d29f07bf13f624f8b74597c1ddac3fa8c97fcd48",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/05.md",
+              "offset": 25,
+              "lines": 20,
+              "bytes": 1600,
+              "words": 116,
+              "tokens": 347,
+              "sha256": "2f7b89698098717ba9b6fca63327406b9ac5d95887e33ff91788946fab252891",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/05.md",
+              "offset": 65,
+              "lines": 20,
+              "bytes": 1906,
+              "words": 139,
+              "tokens": 410,
+              "sha256": "19938e9d9a9db51dffb90b2bba40e24b5446e86c01ad7079deeda44536854568",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/11.md",
+              "offset": 7,
+              "lines": 18,
+              "bytes": 1484,
+              "words": 129,
+              "tokens": 289,
+              "sha256": "616ccd3e6e106fd5d1e9a0207b59b9d95338aa0e71d082a33b74e9942b91bfef",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/11.md",
+              "offset": 113,
+              "lines": 18,
+              "bytes": 1514,
+              "words": 130,
+              "tokens": 325,
+              "sha256": "7c27c0b8871d574e588982879fd26c03b20f41384237ff118f05cfb4ea349ab3",
+              "layer": "L1"
+            },
+            {
+              "path": "decisions/candidate-strategy.md",
+              "offset": 1,
+              "lines": 63,
+              "bytes": 6487,
+              "words": 782,
+              "tokens": 1138,
+              "sha256": "ea4cd74a9e0c80223f6a3fee66a58b993751296348a558f66a16f15da67ab628",
+              "layer": "L2"
+            },
+            {
+              "path": "solutions/candidate-generation/exact-blocking.md",
+              "offset": 1,
+              "lines": 72,
+              "bytes": 6631,
+              "words": 809,
+              "tokens": 1196,
+              "sha256": "23438f371c444b84ba85e87f64a1c100a738e06e59ed499ea64857d6b746f760",
+              "layer": "L2"
+            },
+            {
+              "path": "solutions/candidate-generation/approximate-blocking.md",
+              "offset": 1,
+              "lines": 92,
+              "bytes": 10806,
+              "words": 1324,
+              "tokens": 2055,
+              "sha256": "3b57317d424d82554f01ef89f14ba31be1aa452c94de486e806493a1f2ef19c0",
+              "layer": "L2"
+            },
+            {
+              "path": "evaluation/candidate-recall.md",
+              "offset": 1,
+              "lines": 59,
+              "bytes": 6971,
+              "words": 861,
+              "tokens": 1367,
+              "sha256": "126cf55c76c3d6837d0289cd4c3ece82da6e04c44e2bdae8c3b93da74d1c1391",
+              "layer": "L2"
+            },
+            {
+              "path": "evaluation/execution-cost-replay.md",
+              "offset": 1,
+              "lines": 161,
+              "bytes": 8766,
+              "words": 1034,
+              "tokens": 1731,
+              "sha256": "b943577011db83dc4f4ff66c2ea1bc9f23665e22988789f25dac0c86f58a1590",
+              "layer": "L2"
+            }
+          ]
+        }
+      },
+      "reading_token_reduction_pct": 4.03
+    },
+    "no-labels": {
+      "arms": {
+        "v1.2-selective": {
+          "file_reads": 10,
+          "documents": 8,
+          "canonical_cards": 4,
+          "retrieved_bytes": 56581,
+          "retrieved_tokens": 10535,
+          "full_corpus_loading_detected": false,
+          "events": [
+            {
+              "path": "AGENTS.md",
+              "offset": 1,
+              "lines": 42,
+              "bytes": 8175,
+              "words": 947,
+              "tokens": 1514,
+              "sha256": "31cfc214661a185ad676dd4f757e635956c4e740fb79160787f668c20a86d439",
+              "layer": "L0"
+            },
+            {
+              "path": "guides/agent-task-patterns.md",
+              "offset": 11,
+              "lines": 13,
+              "bytes": 866,
+              "words": 84,
+              "tokens": 163,
+              "sha256": "08e0589aaaca3e35492145fa4e36375aa40e4b3036175d9629f6c67b126b0c2c",
+              "layer": "L0"
+            },
+            {
+              "path": "indexes/domains/10.md",
+              "offset": 7,
+              "lines": 18,
+              "bytes": 1964,
+              "words": 177,
+              "tokens": 384,
+              "sha256": "d139916704c5ce30269ba17632c7efa7fdb866c0353a3cae8d69643c0fac6975",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/10.md",
+              "offset": 45,
+              "lines": 20,
+              "bytes": 2325,
+              "words": 200,
+              "tokens": 481,
+              "sha256": "461cc0a3efba7bd1bd1e6085b3c9bc2135c758b8cb08866562e717724d8dbb28",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/10.md",
+              "offset": 65,
+              "lines": 18,
+              "bytes": 2034,
+              "words": 181,
+              "tokens": 403,
+              "sha256": "ee864c557a4b61b1a1f80e3d463613e343d7f182ea52ad7349bc28751ab77e5d",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/11.md",
+              "offset": 77,
+              "lines": 18,
+              "bytes": 1872,
+              "words": 166,
+              "tokens": 361,
+              "sha256": "05623496b524cab9d2bb6b2e770d07cfcad3edceece0fb0569d80ec198370569",
+              "layer": "L1"
+            },
+            {
+              "path": "decisions/ground-truth-acquisition.md",
+              "offset": 1,
+              "lines": 87,
+              "bytes": 9245,
+              "words": 1105,
+              "tokens": 1702,
+              "sha256": "217a9b330fc339933907a336101978d828fba81702fd9b7b9169257b21ab2f57",
+              "layer": "L2"
+            },
+            {
+              "path": "solutions/ground-truth/probability-sampled-review.md",
+              "offset": 1,
+              "lines": 89,
+              "bytes": 10479,
+              "words": 1295,
+              "tokens": 1922,
+              "sha256": "6fce991b19ab21563cd9ff6a3f26c25afefed54557110b2c74868db2056f002b",
+              "layer": "L2"
+            },
+            {
+              "path": "solutions/ground-truth/targeted-active-review.md",
+              "offset": 1,
+              "lines": 91,
+              "bytes": 10828,
+              "words": 1321,
+              "tokens": 1907,
+              "sha256": "5c3668755b34eaddc2f2dd14c7a7dfed962e84389cf9dd4922cd4e363a12b824",
+              "layer": "L2"
+            },
+            {
+              "path": "evaluation/incomplete-reference-quality.md",
+              "offset": 1,
+              "lines": 86,
+              "bytes": 8793,
+              "words": 1051,
+              "tokens": 1698,
+              "sha256": "a6e13f89efcebfbb09c3c73d47236294eefbac9fe4b164808a9d5a6eddfd0850",
+              "layer": "L2"
+            }
+          ]
+        },
+        "v1.2.1-selective": {
+          "file_reads": 11,
+          "documents": 9,
+          "canonical_cards": 4,
+          "retrieved_bytes": 53191,
+          "retrieved_tokens": 10090,
+          "full_corpus_loading_detected": false,
+          "events": [
+            {
+              "path": "AGENTS.md",
+              "offset": 1,
+              "lines": 7,
+              "bytes": 865,
+              "words": 107,
+              "tokens": 172,
+              "sha256": "5ef60b5a81b30c7f8ce8cc77647e7be9b7629ed7c13197b09aad63a0b0983c49",
+              "layer": "L0"
+            },
+            {
+              "path": "START_HERE.md",
+              "offset": 1,
+              "lines": 38,
+              "bytes": 3522,
+              "words": 408,
+              "tokens": 697,
+              "sha256": "4e5ac2f782894323d9fb63f0bfc0a3211fbe3af8f480362d421317b776d27af0",
+              "layer": "L0"
+            },
+            {
+              "path": "indexes/tasks/no-labels.md",
+              "offset": 1,
+              "lines": 25,
+              "bytes": 2412,
+              "words": 213,
+              "tokens": 520,
+              "sha256": "6d4fbb6394a473842a61884e6ad0d91500cc9c6f12fc8a303545030efe139113",
+              "layer": "L0"
+            },
+            {
+              "path": "indexes/domains/10.md",
+              "offset": 7,
+              "lines": 18,
+              "bytes": 1714,
+              "words": 146,
+              "tokens": 351,
+              "sha256": "423c5e89e66b5c922fbfd8974bc4a06c90e84703aa504632bf4a53b4f36088d7",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/10.md",
+              "offset": 45,
+              "lines": 20,
+              "bytes": 1966,
+              "words": 158,
+              "tokens": 429,
+              "sha256": "5cbd2978574e14e266c58885a0a30f5a749a85390134e4e49b01031fd5acd35a",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/10.md",
+              "offset": 65,
+              "lines": 18,
+              "bytes": 1793,
+              "words": 153,
+              "tokens": 371,
+              "sha256": "eb255f5979587126a63330d7e2af53ffc40106dab843afe1e7188e0a1d2e189f",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/11.md",
+              "offset": 77,
+              "lines": 18,
+              "bytes": 1574,
+              "words": 132,
+              "tokens": 321,
+              "sha256": "958c366d35d2b1cf47a39c4016e1bbfb4cbe05231b1f9becb3a8d2d1150eca9e",
+              "layer": "L1"
+            },
+            {
+              "path": "decisions/ground-truth-acquisition.md",
+              "offset": 1,
+              "lines": 87,
+              "bytes": 9245,
+              "words": 1105,
+              "tokens": 1702,
+              "sha256": "217a9b330fc339933907a336101978d828fba81702fd9b7b9169257b21ab2f57",
+              "layer": "L2"
+            },
+            {
+              "path": "solutions/ground-truth/probability-sampled-review.md",
+              "offset": 1,
+              "lines": 89,
+              "bytes": 10479,
+              "words": 1295,
+              "tokens": 1922,
+              "sha256": "6fce991b19ab21563cd9ff6a3f26c25afefed54557110b2c74868db2056f002b",
+              "layer": "L2"
+            },
+            {
+              "path": "solutions/ground-truth/targeted-active-review.md",
+              "offset": 1,
+              "lines": 91,
+              "bytes": 10828,
+              "words": 1321,
+              "tokens": 1907,
+              "sha256": "5c3668755b34eaddc2f2dd14c7a7dfed962e84389cf9dd4922cd4e363a12b824",
+              "layer": "L2"
+            },
+            {
+              "path": "evaluation/incomplete-reference-quality.md",
+              "offset": 1,
+              "lines": 86,
+              "bytes": 8793,
+              "words": 1051,
+              "tokens": 1698,
+              "sha256": "a6e13f89efcebfbb09c3c73d47236294eefbac9fe4b164808a9d5a6eddfd0850",
+              "layer": "L2"
+            }
+          ]
+        }
+      },
+      "reading_token_reduction_pct": 4.22
+    },
+    "rules": {
+      "arms": {
+        "v1.2-selective": {
+          "file_reads": 10,
+          "documents": 8,
+          "canonical_cards": 4,
+          "retrieved_bytes": 63397,
+          "retrieved_tokens": 12022,
+          "full_corpus_loading_detected": false,
+          "events": [
+            {
+              "path": "AGENTS.md",
+              "offset": 1,
+              "lines": 42,
+              "bytes": 8175,
+              "words": 947,
+              "tokens": 1514,
+              "sha256": "31cfc214661a185ad676dd4f757e635956c4e740fb79160787f668c20a86d439",
+              "layer": "L0"
+            },
+            {
+              "path": "guides/agent-task-patterns.md",
+              "offset": 49,
+              "lines": 13,
+              "bytes": 788,
+              "words": 83,
+              "tokens": 153,
+              "sha256": "748957a3c0071f210ed26dfb81458dd35239b3df010bd12047514d55255bf96d",
+              "layer": "L0"
+            },
+            {
+              "path": "indexes/domains/08.md",
+              "offset": 25,
+              "lines": 18,
+              "bytes": 1860,
+              "words": 170,
+              "tokens": 379,
+              "sha256": "f73ca5192b20900f083263d0b34616d1f52ae12a4963cccbe302c3febd9b26c3",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/08.md",
+              "offset": 125,
+              "lines": 20,
+              "bytes": 2099,
+              "words": 175,
+              "tokens": 430,
+              "sha256": "7227da66087784223445ca579d567d909f8614f59028c525213738931a1eb53b",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/08.md",
+              "offset": 145,
+              "lines": 18,
+              "bytes": 1971,
+              "words": 167,
+              "tokens": 402,
+              "sha256": "a7b952db76a93a42de1ee5bbca7d9429b95a9d32aef757e3d4c41f73cb0e7bb8",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/11.md",
+              "offset": 95,
+              "lines": 18,
+              "bytes": 2545,
+              "words": 205,
+              "tokens": 523,
+              "sha256": "ff4eb1dc7d79765f0c0b56ae3e6bab41194c61ae90810fb79750c88cfc240f2e",
+              "layer": "L1"
+            },
+            {
+              "path": "decisions/rule-composition.md",
+              "offset": 1,
+              "lines": 101,
+              "bytes": 10775,
+              "words": 1328,
+              "tokens": 1974,
+              "sha256": "6807926aa0c3c7eeac1595a5dc9b2a1706e7964c71a916217222db9ac8cf359d",
+              "layer": "L2"
+            },
+            {
+              "path": "solutions/decision-resolution/ordered-rule-policies.md",
+              "offset": 1,
+              "lines": 102,
+              "bytes": 10986,
+              "words": 1349,
+              "tokens": 2002,
+              "sha256": "b366680debc9d837ad6e4b7c3f9334d213d3402c76c25ba5ae6595a5995c4cbe",
+              "layer": "L2"
+            },
+            {
+              "path": "solutions/decision-resolution/declarative-decision-tables.md",
+              "offset": 1,
+              "lines": 117,
+              "bytes": 12602,
+              "words": 1606,
+              "tokens": 2371,
+              "sha256": "5e1b441ada78fa032d5aa8d0a2145fd7eeaed61cc65b3a915a4f3b9db542281d",
+              "layer": "L2"
+            },
+            {
+              "path": "evaluation/synthetic-metamorphic.md",
+              "offset": 1,
+              "lines": 94,
+              "bytes": 11596,
+              "words": 1364,
+              "tokens": 2274,
+              "sha256": "93bef6ed81cba8c2a8b4cfbd5d808907b6349d382d71cffe2145e1d253dd22c1",
+              "layer": "L2"
+            }
+          ]
+        },
+        "v1.2.1-selective": {
+          "file_reads": 11,
+          "documents": 9,
+          "canonical_cards": 4,
+          "retrieved_bytes": 59787,
+          "retrieved_tokens": 11539,
+          "full_corpus_loading_detected": false,
+          "events": [
+            {
+              "path": "AGENTS.md",
+              "offset": 1,
+              "lines": 7,
+              "bytes": 865,
+              "words": 107,
+              "tokens": 172,
+              "sha256": "5ef60b5a81b30c7f8ce8cc77647e7be9b7629ed7c13197b09aad63a0b0983c49",
+              "layer": "L0"
+            },
+            {
+              "path": "START_HERE.md",
+              "offset": 1,
+              "lines": 38,
+              "bytes": 3522,
+              "words": 408,
+              "tokens": 697,
+              "sha256": "4e5ac2f782894323d9fb63f0bfc0a3211fbe3af8f480362d421317b776d27af0",
+              "layer": "L0"
+            },
+            {
+              "path": "indexes/tasks/rules.md",
+              "offset": 1,
+              "lines": 25,
+              "bytes": 2323,
+              "words": 211,
+              "tokens": 523,
+              "sha256": "4b9373178330d4c7b2eeb42cf1645b0a634160c6bb2a80cf84bbaf676576258b",
+              "layer": "L0"
+            },
+            {
+              "path": "indexes/domains/08.md",
+              "offset": 25,
+              "lines": 18,
+              "bytes": 1621,
+              "words": 139,
+              "tokens": 343,
+              "sha256": "96fa400dcd0377cbec2ce53c08e60ad21722e9adab5626f43de35aa15e7ce25b",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/08.md",
+              "offset": 125,
+              "lines": 20,
+              "bytes": 1790,
+              "words": 137,
+              "tokens": 382,
+              "sha256": "5ab55bc55629039251e70a22b65e451f3bb3112242b491aed7b788238f9f351e",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/08.md",
+              "offset": 145,
+              "lines": 18,
+              "bytes": 1715,
+              "words": 136,
+              "tokens": 366,
+              "sha256": "b7ccf9654e8ac2953dc9e0062553d098cc40c4e4143587305cc0b66a1c928424",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/11.md",
+              "offset": 95,
+              "lines": 18,
+              "bytes": 1992,
+              "words": 138,
+              "tokens": 435,
+              "sha256": "a25affc4ac48d402add103f7875dbcbf9f35b5a5c7a95f5bb04845879824b892",
+              "layer": "L1"
+            },
+            {
+              "path": "decisions/rule-composition.md",
+              "offset": 1,
+              "lines": 101,
+              "bytes": 10775,
+              "words": 1328,
+              "tokens": 1974,
+              "sha256": "6807926aa0c3c7eeac1595a5dc9b2a1706e7964c71a916217222db9ac8cf359d",
+              "layer": "L2"
+            },
+            {
+              "path": "solutions/decision-resolution/ordered-rule-policies.md",
+              "offset": 1,
+              "lines": 102,
+              "bytes": 10986,
+              "words": 1349,
+              "tokens": 2002,
+              "sha256": "b366680debc9d837ad6e4b7c3f9334d213d3402c76c25ba5ae6595a5995c4cbe",
+              "layer": "L2"
+            },
+            {
+              "path": "solutions/decision-resolution/declarative-decision-tables.md",
+              "offset": 1,
+              "lines": 117,
+              "bytes": 12602,
+              "words": 1606,
+              "tokens": 2371,
+              "sha256": "5e1b441ada78fa032d5aa8d0a2145fd7eeaed61cc65b3a915a4f3b9db542281d",
+              "layer": "L2"
+            },
+            {
+              "path": "evaluation/synthetic-metamorphic.md",
+              "offset": 1,
+              "lines": 94,
+              "bytes": 11596,
+              "words": 1364,
+              "tokens": 2274,
+              "sha256": "93bef6ed81cba8c2a8b4cfbd5d808907b6349d382d71cffe2145e1d253dd22c1",
+              "layer": "L2"
+            }
+          ]
+        }
+      },
+      "reading_token_reduction_pct": 4.02
+    },
+    "experiments": {
+      "arms": {
+        "v1.2-selective": {
+          "file_reads": 10,
+          "documents": 9,
+          "canonical_cards": 4,
+          "retrieved_bytes": 57282,
+          "retrieved_tokens": 10760,
+          "full_corpus_loading_detected": false,
+          "events": [
+            {
+              "path": "AGENTS.md",
+              "offset": 1,
+              "lines": 42,
+              "bytes": 8175,
+              "words": 947,
+              "tokens": 1514,
+              "sha256": "31cfc214661a185ad676dd4f757e635956c4e740fb79160787f668c20a86d439",
+              "layer": "L0"
+            },
+            {
+              "path": "guides/agent-task-patterns.md",
+              "offset": 87,
+              "lines": 16,
+              "bytes": 1110,
+              "words": 103,
+              "tokens": 222,
+              "sha256": "5df724f2ccbad803f7134ff4240be6ccb0fc0a9c84d67ad38e9146598564f186",
+              "layer": "L0"
+            },
+            {
+              "path": "indexes/domains/12.md",
+              "offset": 7,
+              "lines": 18,
+              "bytes": 1992,
+              "words": 179,
+              "tokens": 393,
+              "sha256": "7e4d90d18f4b61aa12270f9f58ae6e3e0e9912853ffa7646065d1e6da2e82935",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/02.md",
+              "offset": 153,
+              "lines": 22,
+              "bytes": 2117,
+              "words": 178,
+              "tokens": 423,
+              "sha256": "20a29366d1e2cf551bc3d334155b392a70bf2281d1e2804155548a3776f03cb8",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/12.md",
+              "offset": 25,
+              "lines": 18,
+              "bytes": 2108,
+              "words": 180,
+              "tokens": 408,
+              "sha256": "00960669768bd7c5448ca85e2ab44a7a7014cf118717615cb9970a9780e9c2bc",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/11.md",
+              "offset": 113,
+              "lines": 18,
+              "bytes": 1859,
+              "words": 171,
+              "tokens": 376,
+              "sha256": "4a5d21817a2a12245420bd05c1f454164151e30e4896931437c4018fe57c293f",
+              "layer": "L1"
+            },
+            {
+              "path": "decisions/experiment-design.md",
+              "offset": 1,
+              "lines": 89,
+              "bytes": 8471,
+              "words": 1056,
+              "tokens": 1597,
+              "sha256": "e2ba7cb2c85991232972c871db7c867d22fd5913893e8df4219d5893f22cf8b4",
+              "layer": "L2"
+            },
+            {
+              "path": "solutions/architecture/versioned-artifact-runs.md",
+              "offset": 1,
+              "lines": 108,
+              "bytes": 12459,
+              "words": 1456,
+              "tokens": 2253,
+              "sha256": "f13b046137a419e4081f31f0df7995ce91d99fab976478ceca81c1e9244e2562",
+              "layer": "L2"
+            },
+            {
+              "path": "solutions/experimentation/controlled-comparison.md",
+              "offset": 1,
+              "lines": 89,
+              "bytes": 10225,
+              "words": 1166,
+              "tokens": 1843,
+              "sha256": "83481ad7ee74d9731f71a87c7a3de29e5b205a06c50ae93fa11c76a7a5d647c5",
+              "layer": "L2"
+            },
+            {
+              "path": "evaluation/execution-cost-replay.md",
+              "offset": 1,
+              "lines": 161,
+              "bytes": 8766,
+              "words": 1034,
+              "tokens": 1731,
+              "sha256": "b943577011db83dc4f4ff66c2ea1bc9f23665e22988789f25dac0c86f58a1590",
+              "layer": "L2"
+            }
+          ]
+        },
+        "v1.2.1-selective": {
+          "file_reads": 11,
+          "documents": 10,
+          "canonical_cards": 4,
+          "retrieved_bytes": 53716,
+          "retrieved_tokens": 10288,
+          "full_corpus_loading_detected": false,
+          "events": [
+            {
+              "path": "AGENTS.md",
+              "offset": 1,
+              "lines": 7,
+              "bytes": 865,
+              "words": 107,
+              "tokens": 172,
+              "sha256": "5ef60b5a81b30c7f8ce8cc77647e7be9b7629ed7c13197b09aad63a0b0983c49",
+              "layer": "L0"
+            },
+            {
+              "path": "START_HERE.md",
+              "offset": 1,
+              "lines": 38,
+              "bytes": 3522,
+              "words": 408,
+              "tokens": 697,
+              "sha256": "4e5ac2f782894323d9fb63f0bfc0a3211fbe3af8f480362d421317b776d27af0",
+              "layer": "L0"
+            },
+            {
+              "path": "indexes/tasks/experiments.md",
+              "offset": 1,
+              "lines": 28,
+              "bytes": 2651,
+              "words": 233,
+              "tokens": 580,
+              "sha256": "cf15e602e3330ab738a08d61bc05d7a2edbaa934737edc8a0e9255cc3735150e",
+              "layer": "L0"
+            },
+            {
+              "path": "indexes/domains/12.md",
+              "offset": 7,
+              "lines": 18,
+              "bytes": 1675,
+              "words": 142,
+              "tokens": 350,
+              "sha256": "10e7e37e168ee9ad892edceab7ade41af6b21ab7ffdca1c5cbede9faeb75afa0",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/02.md",
+              "offset": 153,
+              "lines": 22,
+              "bytes": 1780,
+              "words": 139,
+              "tokens": 376,
+              "sha256": "096efd18937bd411fb65b526f1fef6da5b0a17337310f838003deccf292898fe",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/12.md",
+              "offset": 25,
+              "lines": 18,
+              "bytes": 1788,
+              "words": 141,
+              "tokens": 364,
+              "sha256": "cc65663f3c6917681479f5e9150443d4a26e31f272e9d3d2926c4172b6968cbb",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/11.md",
+              "offset": 113,
+              "lines": 18,
+              "bytes": 1514,
+              "words": 130,
+              "tokens": 325,
+              "sha256": "7c27c0b8871d574e588982879fd26c03b20f41384237ff118f05cfb4ea349ab3",
+              "layer": "L1"
+            },
+            {
+              "path": "decisions/experiment-design.md",
+              "offset": 1,
+              "lines": 89,
+              "bytes": 8471,
+              "words": 1056,
+              "tokens": 1597,
+              "sha256": "e2ba7cb2c85991232972c871db7c867d22fd5913893e8df4219d5893f22cf8b4",
+              "layer": "L2"
+            },
+            {
+              "path": "solutions/architecture/versioned-artifact-runs.md",
+              "offset": 1,
+              "lines": 108,
+              "bytes": 12459,
+              "words": 1456,
+              "tokens": 2253,
+              "sha256": "f13b046137a419e4081f31f0df7995ce91d99fab976478ceca81c1e9244e2562",
+              "layer": "L2"
+            },
+            {
+              "path": "solutions/experimentation/controlled-comparison.md",
+              "offset": 1,
+              "lines": 89,
+              "bytes": 10225,
+              "words": 1166,
+              "tokens": 1843,
+              "sha256": "83481ad7ee74d9731f71a87c7a3de29e5b205a06c50ae93fa11c76a7a5d647c5",
+              "layer": "L2"
+            },
+            {
+              "path": "evaluation/execution-cost-replay.md",
+              "offset": 1,
+              "lines": 161,
+              "bytes": 8766,
+              "words": 1034,
+              "tokens": 1731,
+              "sha256": "b943577011db83dc4f4ff66c2ea1bc9f23665e22988789f25dac0c86f58a1590",
+              "layer": "L2"
+            }
+          ]
+        }
+      },
+      "reading_token_reduction_pct": 4.39
+    },
+    "new-source": {
+      "arms": {
+        "v1.2-selective": {
+          "file_reads": 10,
+          "documents": 10,
+          "canonical_cards": 4,
+          "retrieved_bytes": 51182,
+          "retrieved_tokens": 9681,
+          "full_corpus_loading_detected": false,
+          "events": [
+            {
+              "path": "AGENTS.md",
+              "offset": 1,
+              "lines": 42,
+              "bytes": 8175,
+              "words": 947,
+              "tokens": 1514,
+              "sha256": "31cfc214661a185ad676dd4f757e635956c4e740fb79160787f668c20a86d439",
+              "layer": "L0"
+            },
+            {
+              "path": "guides/agent-task-patterns.md",
+              "offset": 103,
+              "lines": 14,
+              "bytes": 940,
+              "words": 94,
+              "tokens": 188,
+              "sha256": "6cda67f424c6970f776f6799c1c3ccf53cae1eb747fa14545cbf2a302371aeec",
+              "layer": "L0"
+            },
+            {
+              "path": "indexes/domains/14.md",
+              "offset": 7,
+              "lines": 18,
+              "bytes": 1980,
+              "words": 173,
+              "tokens": 391,
+              "sha256": "094c128baa6279c198dc74bf8391e50848e54202cbdc27dec8abaec3085b7fe6",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/06.md",
+              "offset": 85,
+              "lines": 20,
+              "bytes": 2296,
+              "words": 182,
+              "tokens": 460,
+              "sha256": "7a63d8957526605421115f0d49a80b0b879770a90e662a81312c7f863b011afc",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/07.md",
+              "offset": 111,
+              "lines": 20,
+              "bytes": 2375,
+              "words": 189,
+              "tokens": 494,
+              "sha256": "b75fd8f171467ae7e6c773f116a302dcf453848a152ecd732fcc70f1889eb339",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/11.md",
+              "offset": 25,
+              "lines": 18,
+              "bytes": 1806,
+              "words": 157,
+              "tokens": 368,
+              "sha256": "1fd7a10a74effeb01383a3cbd7f414a91048d97a87e05429fb8501c45f97ee1b",
+              "layer": "L1"
+            },
+            {
+              "path": "decisions/monitoring-response.md",
+              "offset": 1,
+              "lines": 134,
+              "bytes": 7324,
+              "words": 867,
+              "tokens": 1422,
+              "sha256": "b3624c18aa0573c6a099542b548edc3ee98b525338a9b804f3ac9bd1adb68f29",
+              "layer": "L2"
+            },
+            {
+              "path": "solutions/comparison-features/identifier-namespaces.md",
+              "offset": 1,
+              "lines": 88,
+              "bytes": 9682,
+              "words": 1204,
+              "tokens": 1701,
+              "sha256": "cdcc3c3912b9e4a678092eb4ae3e0c41e8c9982d7acdc3227faf958f09195804",
+              "layer": "L2"
+            },
+            {
+              "path": "solutions/matching-scoring/source-aware-reliability.md",
+              "offset": 1,
+              "lines": 82,
+              "bytes": 9127,
+              "words": 1108,
+              "tokens": 1671,
+              "sha256": "1429888f34f902b29ef06290948c0418e0d87f0e75bfaf2cfa3869d559ceefae",
+              "layer": "L2"
+            },
+            {
+              "path": "evaluation/pairwise-calibration.md",
+              "offset": 1,
+              "lines": 62,
+              "bytes": 7477,
+              "words": 889,
+              "tokens": 1472,
+              "sha256": "6cc32a1901d2a4e618d9038fe1bef2c7add5427de72467e8b3aef65e1e950915",
+              "layer": "L2"
+            }
+          ]
+        },
+        "v1.2.1-selective": {
+          "file_reads": 11,
+          "documents": 11,
+          "canonical_cards": 4,
+          "retrieved_bytes": 47576,
+          "retrieved_tokens": 9192,
+          "full_corpus_loading_detected": false,
+          "events": [
+            {
+              "path": "AGENTS.md",
+              "offset": 1,
+              "lines": 7,
+              "bytes": 865,
+              "words": 107,
+              "tokens": 172,
+              "sha256": "5ef60b5a81b30c7f8ce8cc77647e7be9b7629ed7c13197b09aad63a0b0983c49",
+              "layer": "L0"
+            },
+            {
+              "path": "START_HERE.md",
+              "offset": 1,
+              "lines": 38,
+              "bytes": 3522,
+              "words": 408,
+              "tokens": 697,
+              "sha256": "4e5ac2f782894323d9fb63f0bfc0a3211fbe3af8f480362d421317b776d27af0",
+              "layer": "L0"
+            },
+            {
+              "path": "indexes/tasks/new-source.md",
+              "offset": 1,
+              "lines": 26,
+              "bytes": 2380,
+              "words": 213,
+              "tokens": 527,
+              "sha256": "08b6743096f14e1c7efc2ac4da4fa8189ccf4de503e164c82b8c631d00e28136",
+              "layer": "L0"
+            },
+            {
+              "path": "indexes/domains/14.md",
+              "offset": 7,
+              "lines": 18,
+              "bytes": 1635,
+              "words": 131,
+              "tokens": 343,
+              "sha256": "35c9baab0d336fcc067fd104f689524cbc7bcff3941615ef0c1c73ef14077665",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/06.md",
+              "offset": 85,
+              "lines": 20,
+              "bytes": 1961,
+              "words": 141,
+              "tokens": 414,
+              "sha256": "7c12bac724ef6f2fc5b18db3f2cc32845db715c3b705842065417f2450f735ab",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/07.md",
+              "offset": 111,
+              "lines": 20,
+              "bytes": 2016,
+              "words": 148,
+              "tokens": 443,
+              "sha256": "ed5e229b1703ceedd67ac56c4581c32d13300c1a90fc6cdaa1dec4310017d335",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/11.md",
+              "offset": 25,
+              "lines": 18,
+              "bytes": 1587,
+              "words": 130,
+              "tokens": 330,
+              "sha256": "af22bfb7da7ae8801f9a657191ff16689adca0b604bd9dad35949e917e96aee1",
+              "layer": "L1"
+            },
+            {
+              "path": "decisions/monitoring-response.md",
+              "offset": 1,
+              "lines": 134,
+              "bytes": 7324,
+              "words": 867,
+              "tokens": 1422,
+              "sha256": "b3624c18aa0573c6a099542b548edc3ee98b525338a9b804f3ac9bd1adb68f29",
+              "layer": "L2"
+            },
+            {
+              "path": "solutions/comparison-features/identifier-namespaces.md",
+              "offset": 1,
+              "lines": 88,
+              "bytes": 9682,
+              "words": 1204,
+              "tokens": 1701,
+              "sha256": "cdcc3c3912b9e4a678092eb4ae3e0c41e8c9982d7acdc3227faf958f09195804",
+              "layer": "L2"
+            },
+            {
+              "path": "solutions/matching-scoring/source-aware-reliability.md",
+              "offset": 1,
+              "lines": 82,
+              "bytes": 9127,
+              "words": 1108,
+              "tokens": 1671,
+              "sha256": "1429888f34f902b29ef06290948c0418e0d87f0e75bfaf2cfa3869d559ceefae",
+              "layer": "L2"
+            },
+            {
+              "path": "evaluation/pairwise-calibration.md",
+              "offset": 1,
+              "lines": 62,
+              "bytes": 7477,
+              "words": 889,
+              "tokens": 1472,
+              "sha256": "6cc32a1901d2a4e618d9038fe1bef2c7add5427de72467e8b3aef65e1e950915",
+              "layer": "L2"
+            }
+          ]
+        }
+      },
+      "reading_token_reduction_pct": 5.05
+    },
+    "incremental": {
+      "arms": {
+        "v1.2-selective": {
+          "file_reads": 10,
+          "documents": 10,
+          "canonical_cards": 4,
+          "retrieved_bytes": 58007,
+          "retrieved_tokens": 10780,
+          "full_corpus_loading_detected": false,
+          "events": [
+            {
+              "path": "AGENTS.md",
+              "offset": 1,
+              "lines": 42,
+              "bytes": 8175,
+              "words": 947,
+              "tokens": 1514,
+              "sha256": "31cfc214661a185ad676dd4f757e635956c4e740fb79160787f668c20a86d439",
+              "layer": "L0"
+            },
+            {
+              "path": "guides/agent-task-patterns.md",
+              "offset": 117,
+              "lines": 14,
+              "bytes": 877,
+              "words": 92,
+              "tokens": 174,
+              "sha256": "98277c6ea9ef3a6cd662a1301ea14301ed1789e563123b0a29f2c90ecab20df7",
+              "layer": "L0"
+            },
+            {
+              "path": "indexes/domains/02.md",
+              "offset": 97,
+              "lines": 18,
+              "bytes": 2072,
+              "words": 178,
+              "tokens": 435,
+              "sha256": "61e4dc08d83706c9c67eb8d608bb60db1c65b07c70a7024208931a6bea3cad4e",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/09.md",
+              "offset": 7,
+              "lines": 18,
+              "bytes": 1583,
+              "words": 154,
+              "tokens": 306,
+              "sha256": "001d2933c127af14ddbef03fe758c0107c6bec850790eb36eb001dfde97c604e",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/01.md",
+              "offset": 25,
+              "lines": 22,
+              "bytes": 1926,
+              "words": 163,
+              "tokens": 391,
+              "sha256": "7aa182614f9badb2b203db0e686fd97d0233d884f0c5e263e373e8bc7a3cb1b4",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/11.md",
+              "offset": 113,
+              "lines": 18,
+              "bytes": 1859,
+              "words": 171,
+              "tokens": 376,
+              "sha256": "4a5d21817a2a12245420bd05c1f454164151e30e4896931437c4018fe57c293f",
+              "layer": "L1"
+            },
+            {
+              "path": "architectures/incremental-continuous.md",
+              "offset": 1,
+              "lines": 115,
+              "bytes": 17942,
+              "words": 2086,
+              "tokens": 3201,
+              "sha256": "e24680c75fe00c0355e8c550ee7cfc6371b51c8b6c71c03d64750419701e10a5",
+              "layer": "L2"
+            },
+            {
+              "path": "decisions/master-representation.md",
+              "offset": 1,
+              "lines": 75,
+              "bytes": 6809,
+              "words": 870,
+              "tokens": 1259,
+              "sha256": "cec2f284efb2ffc34ac6e723ff0ba01fe1b167c11467dc87fb0317d8bb52d077",
+              "layer": "L2"
+            },
+            {
+              "path": "solutions/identity-semantics/temporal-identity.md",
+              "offset": 1,
+              "lines": 91,
+              "bytes": 7998,
+              "words": 968,
+              "tokens": 1393,
+              "sha256": "1ec7970997beaa0bdde17d77faa52d50289c729c78b208490e1593f88f966ae7",
+              "layer": "L2"
+            },
+            {
+              "path": "evaluation/execution-cost-replay.md",
+              "offset": 1,
+              "lines": 161,
+              "bytes": 8766,
+              "words": 1034,
+              "tokens": 1731,
+              "sha256": "b943577011db83dc4f4ff66c2ea1bc9f23665e22988789f25dac0c86f58a1590",
+              "layer": "L2"
+            }
+          ]
+        },
+        "v1.2.1-selective": {
+          "file_reads": 11,
+          "documents": 11,
+          "canonical_cards": 4,
+          "retrieved_bytes": 54640,
+          "retrieved_tokens": 10319,
+          "full_corpus_loading_detected": false,
+          "events": [
+            {
+              "path": "AGENTS.md",
+              "offset": 1,
+              "lines": 7,
+              "bytes": 865,
+              "words": 107,
+              "tokens": 172,
+              "sha256": "5ef60b5a81b30c7f8ce8cc77647e7be9b7629ed7c13197b09aad63a0b0983c49",
+              "layer": "L0"
+            },
+            {
+              "path": "START_HERE.md",
+              "offset": 1,
+              "lines": 38,
+              "bytes": 3522,
+              "words": 408,
+              "tokens": 697,
+              "sha256": "4e5ac2f782894323d9fb63f0bfc0a3211fbe3af8f480362d421317b776d27af0",
+              "layer": "L0"
+            },
+            {
+              "path": "indexes/tasks/incremental.md",
+              "offset": 1,
+              "lines": 26,
+              "bytes": 2280,
+              "words": 212,
+              "tokens": 505,
+              "sha256": "ccf3d0ab68f9200e25f50af0295c0cafb5b9302313d3e3f9dd0d2718626c550e",
+              "layer": "L0"
+            },
+            {
+              "path": "indexes/domains/02.md",
+              "offset": 97,
+              "lines": 18,
+              "bytes": 1737,
+              "words": 137,
+              "tokens": 384,
+              "sha256": "598c4b601f082f6b1eb922be60bac4c556f2efed6378d316f0c2a9ae95fe1557",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/09.md",
+              "offset": 7,
+              "lines": 18,
+              "bytes": 1480,
+              "words": 143,
+              "tokens": 291,
+              "sha256": "bfd384b68fe8fb3f30b64e0154f7eec6ecf5a17b8bf282ea95da612c9df14639",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/01.md",
+              "offset": 25,
+              "lines": 22,
+              "bytes": 1727,
+              "words": 142,
+              "tokens": 361,
+              "sha256": "0b80bbba892e547e9e4ba4892de928592121dadcd7692116e35cc76970dff9c0",
+              "layer": "L1"
+            },
+            {
+              "path": "indexes/domains/11.md",
+              "offset": 113,
+              "lines": 18,
+              "bytes": 1514,
+              "words": 130,
+              "tokens": 325,
+              "sha256": "7c27c0b8871d574e588982879fd26c03b20f41384237ff118f05cfb4ea349ab3",
+              "layer": "L1"
+            },
+            {
+              "path": "architectures/incremental-continuous.md",
+              "offset": 1,
+              "lines": 115,
+              "bytes": 17942,
+              "words": 2086,
+              "tokens": 3201,
+              "sha256": "e24680c75fe00c0355e8c550ee7cfc6371b51c8b6c71c03d64750419701e10a5",
+              "layer": "L2"
+            },
+            {
+              "path": "decisions/master-representation.md",
+              "offset": 1,
+              "lines": 75,
+              "bytes": 6809,
+              "words": 870,
+              "tokens": 1259,
+              "sha256": "cec2f284efb2ffc34ac6e723ff0ba01fe1b167c11467dc87fb0317d8bb52d077",
+              "layer": "L2"
+            },
+            {
+              "path": "solutions/identity-semantics/temporal-identity.md",
+              "offset": 1,
+              "lines": 91,
+              "bytes": 7998,
+              "words": 968,
+              "tokens": 1393,
+              "sha256": "1ec7970997beaa0bdde17d77faa52d50289c729c78b208490e1593f88f966ae7",
+              "layer": "L2"
+            },
+            {
+              "path": "evaluation/execution-cost-replay.md",
+              "offset": 1,
+              "lines": 161,
+              "bytes": 8766,
+              "words": 1034,
+              "tokens": 1731,
+              "sha256": "b943577011db83dc4f4ff66c2ea1bc9f23665e22988789f25dac0c86f58a1590",
+              "layer": "L2"
+            }
+          ]
+        }
+      },
+      "reading_token_reduction_pct": 4.28
+    }
+  },
+  "navigation_audit": {
+    "AGENTS.md": {
+      "before": {
+        "path": "AGENTS.md",
+        "offset": 1,
+        "lines": 42,
+        "bytes": 8175,
+        "words": 947,
+        "tokens": 1514,
+        "sha256": "31cfc214661a185ad676dd4f757e635956c4e740fb79160787f668c20a86d439",
+        "layer": "L0"
+      },
+      "after": {
+        "path": "AGENTS.md",
+        "offset": 1,
+        "lines": 7,
+        "bytes": 865,
+        "words": 107,
+        "tokens": 172,
+        "sha256": "5ef60b5a81b30c7f8ce8cc77647e7be9b7629ed7c13197b09aad63a0b0983c49",
+        "layer": "L0"
+      }
+    },
+    "README.md": {
+      "before": {
+        "path": "README.md",
+        "offset": 1,
+        "lines": 68,
+        "bytes": 11156,
+        "words": 1108,
+        "tokens": 2349,
+        "sha256": "2de5c24c5c493e11e56bc37c5c082063a7645d9ea3f9fa0b0ce4abcc01146510",
+        "layer": "L0"
+      },
+      "after": {
+        "path": "README.md",
+        "offset": 1,
+        "lines": 73,
+        "bytes": 10678,
+        "words": 1065,
+        "tokens": 2262,
+        "sha256": "d61380c61bff77b5c69661b68d5f1573ff0a6c99926684a752ab55d34e741272",
+        "layer": "L0"
+      }
+    },
+    "CATALOG.md": {
+      "before": {
+        "path": "CATALOG.md",
+        "offset": 1,
+        "lines": 137,
+        "bytes": 29349,
+        "words": 2551,
+        "tokens": 7353,
+        "sha256": "0ac44c236be8a96f668cae3ad6d9afd5b14b38b807734e298ab52b4284a2dfc4",
+        "layer": "L0"
+      },
+      "after": {
+        "path": "CATALOG.md",
+        "offset": 1,
+        "lines": 137,
+        "bytes": 29349,
+        "words": 2551,
+        "tokens": 7353,
+        "sha256": "0ac44c236be8a96f668cae3ad6d9afd5b14b38b807734e298ab52b4284a2dfc4",
+        "layer": "L0"
+      }
+    },
+    "guides/agent-task-patterns.md": {
+      "before": {
+        "path": "guides/agent-task-patterns.md",
+        "offset": 1,
+        "lines": 137,
+        "bytes": 8907,
+        "words": 913,
+        "tokens": 1726,
+        "sha256": "517348ab62fad43375a64129cef4cd2554e1eefd02a032857b6604835851e67c",
+        "layer": "L0"
+      },
+      "after": {
+        "path": "guides/agent-task-patterns.md",
+        "offset": 1,
+        "lines": 139,
+        "bytes": 9087,
+        "words": 930,
+        "tokens": 1759,
+        "sha256": "e8a2dd7cd3f33cf2d496e50e05300832361841723a2bc754b7b38a2810b8d016",
+        "layer": "L0"
+      }
+    },
+    "guides/project-atlas-integration.md": {
+      "before": {
+        "path": "guides/project-atlas-integration.md",
+        "offset": 1,
+        "lines": 90,
+        "bytes": 5045,
+        "words": 601,
+        "tokens": 969,
+        "sha256": "7e66d1f1352a951b7966b015c1c5996182322fd01cc61db9b24e4508f2c58bc3",
+        "layer": "L0"
+      },
+      "after": {
+        "path": "guides/project-atlas-integration.md",
+        "offset": 1,
+        "lines": 90,
+        "bytes": 5045,
+        "words": 601,
+        "tokens": 969,
+        "sha256": "7e66d1f1352a951b7966b015c1c5996182322fd01cc61db9b24e4508f2c58bc3",
+        "layer": "L0"
+      }
+    },
+    "indexes/domains/01.md": {
+      "before": {
+        "path": "indexes/domains/01.md",
+        "offset": 1,
+        "lines": 79,
+        "bytes": 5250,
+        "words": 447,
+        "tokens": 1100,
+        "sha256": "c4aed5213995773968e12464297410d21b07c1782ffe42c0efc6a9493779421d",
+        "layer": "L0"
+      },
+      "after": {
+        "path": "indexes/domains/01.md",
+        "offset": 1,
+        "lines": 79,
+        "bytes": 4367,
+        "words": 340,
+        "tokens": 965,
+        "sha256": "0d4e04e7bb67f80550730f9e4dcc3c1959da405d0eda458cbc8e2b4109b0d74e",
+        "layer": "L0"
+      }
+    },
+    "indexes/domains/02.md": {
+      "before": {
+        "path": "indexes/domains/02.md",
+        "offset": 1,
+        "lines": 287,
+        "bytes": 24263,
+        "words": 1936,
+        "tokens": 5164,
+        "sha256": "8a320f9410e42193038fe2e8589960c9b4409d777af8363f6098309f7c07748d",
+        "layer": "L0"
+      },
+      "after": {
+        "path": "indexes/domains/02.md",
+        "offset": 1,
+        "lines": 287,
+        "bytes": 19196,
+        "words": 1387,
+        "tokens": 4340,
+        "sha256": "78ab85571c5dbdf969c26a96031c718eb688351be3cbaea75e1d2265e93eb74f",
+        "layer": "L0"
+      }
+    },
+    "indexes/domains/03.md": {
+      "before": {
+        "path": "indexes/domains/03.md",
+        "offset": 1,
+        "lines": 9,
+        "bytes": 372,
+        "words": 45,
+        "tokens": 77,
+        "sha256": "1fb13941f91aa977ea2fea1a9be9ba8a87922ff5b4c188339ba651fa3512915e",
+        "layer": "L0"
+      },
+      "after": {
+        "path": "indexes/domains/03.md",
+        "offset": 1,
+        "lines": 9,
+        "bytes": 372,
+        "words": 45,
+        "tokens": 77,
+        "sha256": "1fb13941f91aa977ea2fea1a9be9ba8a87922ff5b4c188339ba651fa3512915e",
+        "layer": "L0"
+      }
+    },
+    "indexes/domains/04.md": {
+      "before": {
+        "path": "indexes/domains/04.md",
+        "offset": 1,
+        "lines": 73,
+        "bytes": 6042,
+        "words": 493,
+        "tokens": 1231,
+        "sha256": "310099232d066ebf0d8e14b32d6c39fde1bf639321ecad4c86c7d1f3df051547",
+        "layer": "L0"
+      },
+      "after": {
+        "path": "indexes/domains/04.md",
+        "offset": 1,
+        "lines": 73,
+        "bytes": 4721,
+        "words": 345,
+        "tokens": 1046,
+        "sha256": "d7f124eb21fb5e3b8f4492bc6beed7fa335053477e1354e56db7b45af139d198",
+        "layer": "L0"
+      }
+    },
+    "indexes/domains/05.md": {
+      "before": {
+        "path": "indexes/domains/05.md",
+        "offset": 1,
+        "lines": 149,
+        "bytes": 11251,
+        "words": 892,
+        "tokens": 2364,
+        "sha256": "a603951978a8388c0a52b283b464fba28e9ac58ef7a3b4b9084da4188ccd83be",
+        "layer": "L0"
+      },
+      "after": {
+        "path": "indexes/domains/05.md",
+        "offset": 1,
+        "lines": 149,
+        "bytes": 9161,
+        "words": 623,
+        "tokens": 2056,
+        "sha256": "1757037bad7cda8e55e16f141fb4434e78c769f26f31e7699f35126796116d48",
+        "layer": "L0"
+      }
+    },
+    "indexes/domains/06.md": {
+      "before": {
+        "path": "indexes/domains/06.md",
+        "offset": 1,
+        "lines": 173,
+        "bytes": 15220,
+        "words": 1196,
+        "tokens": 3166,
+        "sha256": "7821253342b5b944bfb47e468682c51d1c2cf3a3713a0d926b385a6cb932cc76",
+        "layer": "L0"
+      },
+      "after": {
+        "path": "indexes/domains/06.md",
+        "offset": 1,
+        "lines": 173,
+        "bytes": 11961,
+        "words": 803,
+        "tokens": 2704,
+        "sha256": "a65b7238dfa539abddb110a24d37c28a3c8414259ee8d2285e3b6dc8b5fc6100",
+        "layer": "L0"
+      }
+    },
+    "indexes/domains/07.md": {
+      "before": {
+        "path": "indexes/domains/07.md",
+        "offset": 1,
+        "lines": 227,
+        "bytes": 22416,
+        "words": 1680,
+        "tokens": 5009,
+        "sha256": "a799ed3968c06f4a9ad9063ee04f443204d96cd533952ec370da5b1bf9499396",
+        "layer": "L0"
+      },
+      "after": {
+        "path": "indexes/domains/07.md",
+        "offset": 1,
+        "lines": 227,
+        "bytes": 17369,
+        "words": 1082,
+        "tokens": 4217,
+        "sha256": "9ecf21dc79aecbaa9e0ab8a45ef13c1aa84945675a0310a0d2d732bc478003ce",
+        "layer": "L0"
+      }
+    },
+    "indexes/domains/08.md": {
+      "before": {
+        "path": "indexes/domains/08.md",
+        "offset": 1,
+        "lines": 235,
+        "bytes": 25246,
+        "words": 1973,
+        "tokens": 5380,
+        "sha256": "431472da0ef018f5dbe3bef9f13352c344762464f489079ad50bf7f4ec893521",
+        "layer": "L0"
+      },
+      "after": {
+        "path": "indexes/domains/08.md",
+        "offset": 1,
+        "lines": 235,
+        "bytes": 19204,
+        "words": 1210,
+        "tokens": 4426,
+        "sha256": "7cfa616572ab0634505c88f59d73ea83707babfd282942756fa1c41a65a1a365",
+        "layer": "L0"
+      }
+    },
+    "indexes/domains/09.md": {
+      "before": {
+        "path": "indexes/domains/09.md",
+        "offset": 1,
+        "lines": 83,
+        "bytes": 5332,
+        "words": 442,
+        "tokens": 1110,
+        "sha256": "c8eb848c48e91fb1ccb8286a26429be008a01baa6b596752a31f786c04ea316e",
+        "layer": "L0"
+      },
+      "after": {
+        "path": "indexes/domains/09.md",
+        "offset": 1,
+        "lines": 83,
+        "bytes": 4400,
+        "words": 342,
+        "tokens": 972,
+        "sha256": "92e27932a088eca90d0677edde75dca89553e66cdab0ea53dc5d28d78b285c00",
+        "layer": "L0"
+      }
+    },
+    "indexes/domains/10.md": {
+      "before": {
+        "path": "indexes/domains/10.md",
+        "offset": 1,
+        "lines": 161,
+        "bytes": 16832,
+        "words": 1371,
+        "tokens": 3560,
+        "sha256": "4cc38924b47e167a89a156692c0ce6b3672d33cab6db07e1d5ec2507f91bab0f",
+        "layer": "L0"
+      },
+      "after": {
+        "path": "indexes/domains/10.md",
+        "offset": 1,
+        "lines": 161,
+        "bytes": 12588,
+        "words": 863,
+        "tokens": 2952,
+        "sha256": "fec74e31dc43be38dc0b8e6d6a1df531d4a2fb687e4cbdbb409505904ea7ede1",
+        "layer": "L0"
+      }
+    },
+    "indexes/domains/11.md": {
+      "before": {
+        "path": "indexes/domains/11.md",
+        "offset": 1,
+        "lines": 219,
+        "bytes": 20233,
+        "words": 1684,
+        "tokens": 4110,
+        "sha256": "06681e2c261390f5eb098fc82663454b4ba077497c9a28f8be1ab44a5fcc4501",
+        "layer": "L0"
+      },
+      "after": {
+        "path": "indexes/domains/11.md",
+        "offset": 1,
+        "lines": 219,
+        "bytes": 15120,
+        "words": 1080,
+        "tokens": 3361,
+        "sha256": "f1b248290b501390035adfbf17a1f1e4ae0ce9947626106546b85658a77188f9",
+        "layer": "L0"
+      }
+    },
+    "indexes/domains/12.md": {
+      "before": {
+        "path": "indexes/domains/12.md",
+        "offset": 1,
+        "lines": 63,
+        "bytes": 5862,
+        "words": 512,
+        "tokens": 1160,
+        "sha256": "6fa88c578ced4a5b53d1f2fabebb4a2518cdc1f8639abebe989a0713aed52b8a",
+        "layer": "L0"
+      },
+      "after": {
+        "path": "indexes/domains/12.md",
+        "offset": 1,
+        "lines": 63,
+        "bytes": 4460,
+        "words": 336,
+        "tokens": 968,
+        "sha256": "098f2061a2caf41fd92c8dbd4142d450a4e204aed0e7ef5e1e66966912cb60f3",
+        "layer": "L0"
+      }
+    },
+    "indexes/domains/13.md": {
+      "before": {
+        "path": "indexes/domains/13.md",
+        "offset": 1,
+        "lines": 81,
+        "bytes": 6372,
+        "words": 545,
+        "tokens": 1397,
+        "sha256": "8eb20664e32f9294f9d23f3e8f2214deb8cb5755bc90f617837090e5dbf8c10e",
+        "layer": "L0"
+      },
+      "after": {
+        "path": "indexes/domains/13.md",
+        "offset": 1,
+        "lines": 81,
+        "bytes": 4836,
+        "words": 339,
+        "tokens": 1157,
+        "sha256": "34c7878887fdbbb3f4ac7af61bfd966af616fbeae29cc0ef10a7fdb52f4cbea2",
+        "layer": "L0"
+      }
+    },
+    "indexes/domains/14.md": {
+      "before": {
+        "path": "indexes/domains/14.md",
+        "offset": 1,
+        "lines": 85,
+        "bytes": 6946,
+        "words": 576,
+        "tokens": 1450,
+        "sha256": "91415b36506af6764bac3b3679b7f936766ee49ecc788fc1c834cc9e75524ba2",
+        "layer": "L0"
+      },
+      "after": {
+        "path": "indexes/domains/14.md",
+        "offset": 1,
+        "lines": 85,
+        "bytes": 5044,
+        "words": 344,
+        "tokens": 1184,
+        "sha256": "f4af8e06a9a596b9675fd242c67fcddfb3ecbe876a051efe7b2e3c0edeb02669",
+        "layer": "L0"
+      }
+    }
+  },
+  "canonical_corpus": {
+    "cards": 57,
+    "bytes": 517979
+  }
+}

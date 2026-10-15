@@ -1,0 +1,30 @@
+{
+  "files": {
+    "bindings.json": "d7fad8b0e3267286bc4b5e6aa874cbda349bda73cc5a763523846080ed1f68c6",
+    "evaluator/checklists.json": "d622748250873c1994507927dce84dae670137a1779c6b524e63f25901b7dbfd",
+    "evaluator/rubric.json": "cb5c3c22b9e959e5e64ee15053e537eed866c085185845baefdb920350a091c4",
+    "export-policy.json": "3221f13f568ef23040dfbadf0e1d3cfbbb2c470740d514cc170b92370af8c134",
+    "prompt.txt": "083481cd92bcb4f07cf13bc7fed3de695fd1c78680d5fd6291460617f3a6e450",
+    "protocol.json": "a1a6a6cb7dd03a375dd5fc01708366ed04c37c4692f07aec6bf52ad1bd2ca36d",
+    "scenarios/AW-01.json": "e17d04a5847bd6d275888a8e2018aea54d1cee1522f55c21dde98466c04333a0",
+    "scenarios/AW-02.json": "f23503808f6fc82126d01849d5985644b23c0690b5e139db12935da0cce221b4",
+    "scenarios/AW-03.json": "906d1d55c369deb6403e6f2846ea714dddfa401388068532f5011dd1a8c0e84c",
+    "scenarios/AW-04.json": "0dee6fc9cc0944669c3fe503bd8aba1d30e889ed9904ebfc9c47e6e2b6aff6fd",
+    "scenarios/AW-05.json": "059d084dec9c64d0b2cd5a60cc399e4961131d9a2ba1a8e5ffca75402b86e894",
+    "scenarios/AW-06.json": "cd5aa7aa75749d32f36c0466e89369f3bcfd4a081778e44735bf0ffae971c08c",
+    "scenarios/AW-07.json": "8be50274f96421451987070f5c1461123da666a188900b27a46dd97581baa26e",
+    "scenarios/AW-08.json": "9fc91c9a7b3f4a0839d4f2166d59422c1a3cd0aaa9f40cfeda80c9a3df5f727a"
+  },
+  "kind": "AW-frozen-inputs-1",
+  "scenarios": [
+    "AW-01",
+    "AW-02",
+    "AW-03",
+    "AW-04",
+    "AW-05",
+    "AW-06",
+    "AW-07",
+    "AW-08"
+  ],
+  "solver_outputs_seen": false
+}

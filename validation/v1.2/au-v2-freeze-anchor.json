@@ -1,0 +1,7 @@
+{
+  "benchmark_id": "AU-v2",
+  "manifest_path": "validation/agent-utility-v2/freeze-manifest.json",
+  "manifest_sha256": "22d2527c35b39e1f22a0ac5815c833924815b63cbd1704a958989f124c798f49",
+  "frozen_payload_files": 36,
+  "anchor_source": "fresh designer report; independently byte-verified by integrating author; keep another operator copy outside repository"
+}

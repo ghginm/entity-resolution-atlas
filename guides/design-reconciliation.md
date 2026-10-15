@@ -1,0 +1,29 @@
+# Reference audit and design reconciliation
+
+## Purpose and source hierarchy
+The target is a reusable, project-agnostic decision-support repository for future agents designing or improving unfamiliar ER projects. It is not a pipeline implementation or a preferred architecture. This note records the initial-build reconciliation; the unavailable original instruction is not claimed to be reproduced or required. The current repository-local [scope](../SCOPE.md), [schema](../SCHEMA.md) and [agent workflow](../AGENTS.md) are normative. Historical conversations are successive refinements, not six concurrent specifications. Original bytes remain in `dev_docs/`, protected by [baseline hashes](../references/dev-docs-sha256.json).
+
+## Audit and mapping of every input
+| Historical file | Valuable material extracted | Canonical destination / reconciliation |
+|---|---|---|
+| [high_level_idea.txt](../dev_docs/high_level_idea.txt) | Decision-centric chain, agent retrieval, exploration/exploitation, soft matching mechanisms; initial ten-folder sketch and paradigm-named architectures | README/AGENTS, schema and guides; retain fourteen conceptual domains, not the first physical sketch |
+| [taxonomy_v0.1.txt](../dev_docs/taxonomy_v0.1.txt) | Fourteen domains, project-property tags, error costs, module interactions | Taxonomy overview and domain summaries; no generic high/medium research ranking |
+| [taxonomy_v0.2.txt](../dev_docs/taxonomy_v0.2.txt) | Domains 01–04, identity ontology, source namespaces, flexible schemas, raw→parsed→canonical lineage, multi-representation normalization and uncertainty | Domain maps 01–04; contracts and evidence-state card; learned/joint normalization retained in expansion plan |
+| [taxonomy_v0.3.txt](../dev_docs/taxonomy_v0.3.txt) | Domains 05–09; blocking families, contextual evidence, expert→learned additive scores, FS dependencies, threshold/resolution boundaries, virtual/golden records | Pilot candidate/evidence/scoring/policy cards; domain maps and research backlog preserve unexpanded families |
+| [taxonomy_review.txt](../dev_docs/taxonomy_review.txt) | Domains 10–14, four axes, six archetypes, cardinality/assignment, blocking/filtering, selection bias, entity-centric evaluation, privacy, transfer, distillation, LLM comparison | Four architecture dimensions and six AR cards; three evaluation cards; taxonomy and expansion ledger for topics not yet researched |
+| [knowledge_model_card_templates.txt](../dev_docs/knowledge_model_card_templates.txt) | Five types, typed relationships, L1/L2/L3, module contracts, source/evidence distinctions | Five templates and SCHEMA. Guides are navigation, not a sixth card type |
+
+## Meaningful decisions
+1. **Retain all fourteen domains; do not equate them with stages.** Early discussions mixed lifecycle/inference with task types. Incremental is owned by 02/13/09, collective by 02/08; 01 owns identity meaning and cardinality semantics.
+2. **Factor architecture axes.** Deterministic/probabilistic/supervised/neural are matching paradigms, not competing end-to-end blueprints. Linear/cascade/parallel/iterative are topologies. Federated access may coexist with any temporal lifecycle.
+3. **Assign canonical ownership.** Reliability profiling→03, quality comparisons→06, learned weights→07. Normalization→04 versus comparison→06; retrieval logic→05 versus execution→13; scoring→07 versus actions/membership→08 versus master representation→09. Label construction/evaluation/experimental procedure→10/11/12.
+4. **Resolve IDs rather than preserving competing spellings.** Architecture IDs use the required AR-01…AR-06, not a second ARC namespace. Other IDs include primary domain. Relations keep one direction; used_by points from component to architecture.
+5. **Preserve theory while qualifying it.** Additive scoring need not be a probability; FS has a joint likelihood-ratio theory and an independence-based additive simplification; logistic does not assume independent predictors. Manual→learned weights is an alternative path, not guaranteed progress. Candidate selection can change evidence distributions, not only match prevalence.
+6. **Separate knowledge maturity from evidence.** Established ideas may motivate untested adaptations. Hypothesis cards contain no observed results; the three scenarios are conceptual stress tests only. A source-specific finding is not a universal claim.
+7. **Bound the pilot.** Six required architecture cards plus fifteen non-architecture pilot cards produce a connected working knowledge graph without filling every historical subgroup. Architecture is the fifth primary type. Coverage maps explicitly distinguish taxonomy-level mentions from completed cards.
+
+## Omissions repaired or explicitly retained
+The review adds/foregrounds unmatched assignment options, same-as versus related-to, candidate-conditioned calibration, outside-candidate label audits, entity-level error amplification, reversible changes/deletions and dependence-aware uncertainty. Historical privacy-preserving linkage, schema evolution, cross-domain transfer, neural distillation/selective scoring and LLM-assisted comparison are not discarded: they remain in [expansion work](expansion-plan.md) with evidence/security gaps. [Opportunities](../research/opportunities-index.md) records less prominent ideas such as joint normalization/matching, adaptive budgets and automatic architecture selection.
+
+## Evidence audit
+Favicon-only historical reference fragments were not copied as citations. A small verified bibliography replaces them. Primary PDF text was retrieved for foundational statistics, blocking, calibration and entity-centric evaluation; collective motivation additionally has a publisher-abstract reference with explicit access limits. The failed/unused URLs are identified in [retrieval status](../references/retrieval-status.json), not passed off as verified sources. No original historical document was modified.

@@ -1,0 +1,18 @@
+You are a blinded, independent evaluator for one Entity-Resolution design-recommendation response. You are not the benchmark author, not the agent that produced the answer, and not the author of the reference corpus. Score decision quality, not style or length.
+
+Read these two JSON files completely before judging (pretty packet + empty evaluation template):
+- /home/ghgin/projects/entity-resolution-atlas/validation/agent-utility/evaluator-only/packets/neutral-c1-016.pretty.json
+- /home/ghgin/projects/entity-resolution-atlas/validation/agent-utility/evaluator-only/evaluations/neutral-c1-016.template.json
+
+Packet fields: scenario = the fictional project brief given to the tested agent; response = the agent's final recommendation; read_logs = exactly which corpus excerpts the agent actually retrieved; answer_key = semantic expected findings (ids AU-xx-Fyyy) and conditional critical failures (ids AU-xx-* and GLOBAL-*); rubric = eight ordinal dimensions 0..3 with anchors and per-dimension caps; plus neutral provenance hashes.
+
+Rules:
+1. For each of the eight dimensions in the template, fill raw_score (integer 0..3 strictly following the rubric anchors), a concrete rationale, and evidence: either EXACT verbatim substrings of `response` (copy character-for-character; short quotes are better) and/or omitted_findings listing answer_key finding ids the response genuinely missed. A dimension needs at least one real quote or one valid omitted-finding id.
+2. Judge only what the response endorses. Discussing a dangerous baseline in order to reject it is NOT a critical failure. Set critical_failures only for failures actually present, each with exact evidence_quote and rationale. Apply GLOBAL-* failures only for fabrication or recommending an unauthorized irreversible action without safeguards.
+3. retrieval_relevance is judged against what read_logs show the agent actually retrieved from its own corpus; honest identification of a genuine corpus gap is not penalized as the agent's error. If packet no_atlas is true, retrieval_relevance raw_score and effective_score MUST be null and its rationale MUST contain the word not_applicable; judge the other seven dimensions normally.
+4. Do not invent an aggregate, mean or winner. Do not assume which corpus version was supplied.
+5. evaluator object: identity "eval-openai-codex-default-fresh-process", role "fresh_model_process", independent true, blinded true, conflicts: "none; fresh automated process distinct from benchmark author, tested agent and corpus authors".
+6. Keep scenario_id and the four provenance hash fields exactly as given in the template. Leave evaluated_at as the literal string FILL_BY_OPERATOR.
+7. Write the completed single JSON object (the filled template, nothing else) to this exact path:
+/home/ghgin/projects/entity-resolution-atlas/validation/agent-utility/evaluator-only/evaluations/neutral-c1-016.attempt1.draft.json
+Use a file-writing tool; do not paste the JSON back to the chat.

@@ -1,0 +1,26 @@
+{
+  "protocol_version": "atlas-utility-jsonl-1",
+  "model_settings": {
+    "model": "PARENT_SELECTS_BEFORE_RUN",
+    "temperature": 0,
+    "seed": 1729,
+    "max_output_tokens": 4500
+  },
+  "budgets": {
+    "max_read_attempts": 24,
+    "max_reads": 16,
+    "max_read_chars": 64000,
+    "max_chunk_chars": 8000,
+    "max_initial_chars": 24000,
+    "max_final_chars": 24000,
+    "max_message_bytes": 65536,
+    "timeout_seconds": 240
+  },
+  "layers": [
+    "L0",
+    "L1",
+    "L2",
+    "L3"
+  ],
+  "adapter_contract": "JSONL stdin/stdout broker only; no direct filesystem/network tools exposed to tested model. Fresh process/session per scenario, no replay or shared conversation; adapters must attest isolation and settings and use stdout only for protocol."
+}

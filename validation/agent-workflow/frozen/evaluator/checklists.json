@@ -1,0 +1,45 @@
+{
+  "purpose": "Evaluator-only NON-EXHAUSTIVE semantic prompts, not a required answer script. Credit defensible alternatives, relevant unknowns and authorized stops. Do not penalize describing a dangerous baseline to reject it. No named method/card citation requirement.",
+  "tasks": {
+    "AW-01": [
+      "Complaint-selected cases are not representative ground truth; make no unearned accuracy or recall claim.",
+      "Separate candidate coverage, pair decisions and entity harms; propose bounded sampling/review uncertainty.",
+      "Household similarity, recycled local identifiers and privacy costs matter; conservative abstention is defensible."
+    ],
+    "AW-02": [
+      "Connected components impose transitive closure; high pair quality need not ensure entity quality.",
+      "Distinguish edge admission changes from fixed-edge resolution or membership constraints.",
+      "Shared addresses and payment-group identifiers require semantics; topology is not truth and missing edges are not negatives."
+    ],
+    "AW-03": [
+      "Specify ordered precedence, veto/early accept interaction, source priority and missingness.",
+      "Use bounded overlap/conflict witnesses and replay; sampled behavioral agreement is not exhaustive equivalence or identity truth.",
+      "Freeze unchanged components; intentional policy change requires separate evidence and authorization."
+    ],
+    "AW-04": [
+      "Scope namespaces and validity before treating identifier agreement as strong evidence.",
+      "Uncalibrated additive scores are not probabilities; new candidates and source slices alter applicability of old labels/calibration.",
+      "Use a credible simple baseline, abstention and targeted plus representative evidence; report limited review uncertainty."
+    ],
+    "AW-05": [
+      "Separate set-preserving physical execution changes from quality-affecting caps or changed candidate logic.",
+      "Reconcile complete required comparison output including unions, pair deduplication, failures, retries and skew.",
+      "Incident-only misses do not estimate population recall; compare quality and end-to-end resources with uncertainty."
+    ],
+    "AW-06": [
+      "Unknown identifier namespace/grain/reuse must be resolved or blocked, never assumed.",
+      "Membership and master-value selection differ; ingestion order is not event-time truth.",
+      "Use shadow reversible onboarding, source-aware evidence, correction/deletion contracts and independent representative outcomes."
+    ],
+    "AW-07": [
+      "Immediate-neighbor refresh is not established dependency closure; propagate affected retrieval/evidence/membership/master dependencies.",
+      "Resolution equivalence does not guarantee stable external IDs; define merge/split lineage aliases and tombstones.",
+      "Source-key reuse and deletion authority remain unknown; replay corrections and retractions against a bounded baseline."
+    ],
+    "AW-08": [
+      "Freeze data/code/settings/artifacts and change one factor; yesterday-versus-fresh comparisons are confounded.",
+      "Guard entity/time leakage and source imbalance; candidate recall, pair and entity outcomes are distinct.",
+      "Compatible artifact reuse needs provenance/contracts; repeatability or behavioral agreement is not identity truth."
+    ]
+  }
+}

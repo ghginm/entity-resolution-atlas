@@ -1,0 +1,51 @@
+{
+  "sources": [
+    {
+      "ledger_id": 20,
+      "url": "https://www.itl.nist.gov/div898/handbook/pri/section3/pri3331.htm",
+      "title": "NIST/SEMATECH e-Handbook: Two-level full factorial designs",
+      "retrieved_at": "2026-10-15T03:04:49.454375+00:00",
+      "http_status": 200,
+      "final_url": "https://www.itl.nist.gov/div898/handbook/pri/section3/pri3331.htm",
+      "body_sha256": "e8f1ff00b7222f371d5fc5f75c2e1046eca0fb4675bad59ce758ea12b1a584f2",
+      "scope": "HTML fetched; only the claim-bearing sections were reviewed; not full feature or source audit.",
+      "lookup_term_found": false
+    },
+    {
+      "ledger_id": 24,
+      "url": "https://dvc.org/doc/user-guide/pipelines/running-pipelines",
+      "title": "DVC: Running Pipelines",
+      "retrieved_at": "2026-10-15T03:04:49.997466+00:00",
+      "http_status": 200,
+      "final_url": "https://doc.dvc.org/user-guide/pipelines/running-pipelines",
+      "body_sha256": "e2c95c2551bf7c37927fd98fc1ca96e185d2990235bc82e70ad07c7974a7bdc0",
+      "scope": "HTML fetched; only the claim-bearing sections were reviewed; not full feature or source audit.",
+      "lookup_term_found": true
+    },
+    {
+      "ledger_id": 25,
+      "url": "https://www.w3.org/TR/prov-primer",
+      "title": "PROV Model Primer",
+      "retrieved_at": "2026-10-15T03:04:50.265411+00:00",
+      "http_status": 200,
+      "final_url": "https://www.w3.org/TR/prov-primer/",
+      "body_sha256": "4db54135a6f06bbee1983e079c6d9bd3d54e5b45eb6ed0f5686e922c665b8c4a",
+      "scope": "HTML fetched; only the claim-bearing sections were reviewed; not full feature or source audit.",
+      "lookup_term_found": true
+    },
+    {
+      "ledger_id": 26,
+      "url": "https://mlflow.org/docs/3.3.1/ml/model-registry",
+      "title": "MLflow Model Registry (3.3.1)",
+      "retrieved_at": "2026-10-15T03:04:50.452445+00:00",
+      "http_status": 200,
+      "final_url": "https://mlflow.org/docs/3.3.1/ml/model-registry",
+      "body_sha256": "929caa9764d5dc099e8dc942fcd737e9a3f6c32d0dec25539d2f608a1d910655",
+      "scope": "HTML fetched; only the claim-bearing sections were reviewed; not full feature or source audit.",
+      "lookup_term_found": true
+    }
+  ],
+  "new_sources_registered": false,
+  "existing_ledger_preserved": true,
+  "web_tool_note": "NIST, DVC and W3C also inspected using web.run; the versioned MLflow page failed in web.run and was retried by direct HTTPS."
+}

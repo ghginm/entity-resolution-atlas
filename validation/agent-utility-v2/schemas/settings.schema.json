@@ -1,0 +1,185 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:entity-resolution-atlas:AU-v2:settings",
+  "type": "object",
+  "properties": {
+    "cohort": {
+      "const": "AU-v2"
+    },
+    "settings_version": {
+      "const": "2.0.0"
+    },
+    "arms": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "baseline-atlas",
+          "expanded-atlas",
+          "no-atlas"
+        ]
+      },
+      "minItems": 3,
+      "maxItems": 3,
+      "uniqueItems": true
+    },
+    "repetitions_per_cell": {
+      "const": 1
+    },
+    "scenario_order": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^AUv2-0[1-8]$"
+      },
+      "minItems": 8,
+      "maxItems": 8
+    },
+    "arm_order_cycle": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "enum": [
+            "baseline-atlas",
+            "expanded-atlas",
+            "no-atlas"
+          ]
+        },
+        "minItems": 3,
+        "maxItems": 3
+      },
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "budgets": {
+      "type": "object",
+      "properties": {
+        "read_attempts": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "successful_reads": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "retrieved_characters": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "read_chunk_characters": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "initial_characters": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "final_characters": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "stdout_line_bytes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "solver_wall_seconds": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "evaluator_wall_seconds": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "read_attempts",
+        "successful_reads",
+        "retrieved_characters",
+        "read_chunk_characters",
+        "initial_characters",
+        "final_characters",
+        "stdout_line_bytes",
+        "solver_wall_seconds",
+        "evaluator_wall_seconds"
+      ],
+      "additionalProperties": false
+    },
+    "tested_identity": {
+      "type": "null"
+    },
+    "evaluator_identity": {
+      "type": "null"
+    },
+    "tested_provider": {
+      "type": "null"
+    },
+    "tested_model": {
+      "type": "null"
+    },
+    "evaluator_provider": {
+      "type": "null"
+    },
+    "evaluator_model": {
+      "type": "null"
+    },
+    "generation": {
+      "type": "object",
+      "properties": {
+        "temperature": {
+          "type": "null"
+        },
+        "top_p": {
+          "type": "null"
+        },
+        "seed": {
+          "type": "null"
+        },
+        "provider_output_token_limit": {
+          "type": "null"
+        },
+        "status": {
+          "const": "unregistered"
+        }
+      },
+      "required": [
+        "temperature",
+        "top_p",
+        "seed",
+        "provider_output_token_limit",
+        "status"
+      ],
+      "additionalProperties": false
+    },
+    "settings_attestation": {
+      "const": "required_before_execution"
+    },
+    "budget_units": {
+      "type": "string",
+      "minLength": 1
+    },
+    "arm_equivalence": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "cohort",
+    "settings_version",
+    "arms",
+    "repetitions_per_cell",
+    "scenario_order",
+    "arm_order_cycle",
+    "budgets",
+    "tested_identity",
+    "evaluator_identity",
+    "tested_provider",
+    "tested_model",
+    "evaluator_provider",
+    "evaluator_model",
+    "generation",
+    "settings_attestation",
+    "budget_units",
+    "arm_equivalence"
+  ],
+  "additionalProperties": false
+}

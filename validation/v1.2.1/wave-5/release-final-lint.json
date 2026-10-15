@@ -1,0 +1,398 @@
+{
+  "errors": [],
+  "warnings": [
+    "decisions/experiment-design.md: body 935 words; consider justified deep dive",
+    "decisions/ground-truth-acquisition.md: body 961 words; consider justified deep dive",
+    "decisions/monitoring-response.md: keyword hint missing for assumptions/prerequisites; inspect manually, not a semantic verdict",
+    "decisions/pipeline-modularity.md: body 1163 words; consider justified deep dive",
+    "decisions/rule-composition.md: body 1203 words; consider justified deep dive",
+    "solutions/architecture/replaceable-stage-pipelines.md: body 1067 words; consider justified deep dive",
+    "solutions/architecture/versioned-artifact-runs.md: body 1326 words; consider justified deep dive",
+    "solutions/candidate-generation/approximate-blocking.md: body 1154 words; consider justified deep dive",
+    "solutions/comparison-features/identifier-namespaces.md: body 1086 words; consider justified deep dive",
+    "solutions/comparison-features/identifier-namespaces.md: keyword hint missing for mechanism; inspect manually, not a semantic verdict",
+    "solutions/comparison-features/string-comparators.md: body 1028 words; consider justified deep dive",
+    "solutions/comparison-features/string-comparators.md: keyword hint missing for failure/limitations; inspect manually, not a semantic verdict",
+    "solutions/decision-resolution/connected-components.md: body 1175 words; consider justified deep dive",
+    "solutions/decision-resolution/constrained-clustering.md: body 1195 words; consider justified deep dive",
+    "solutions/decision-resolution/declarative-decision-tables.md: body 1475 words; consider justified deep dive",
+    "solutions/decision-resolution/ordered-rule-policies.md: body 1227 words; consider justified deep dive",
+    "solutions/experimentation/controlled-comparison.md: body 1046 words; consider justified deep dive",
+    "solutions/governance/stage-monitoring.md: body 1058 words; consider justified deep dive",
+    "solutions/ground-truth/independent-reference.md: body 1187 words; consider justified deep dive",
+    "solutions/ground-truth/probability-sampled-review.md: body 1160 words; consider justified deep dive",
+    "solutions/ground-truth/targeted-active-review.md: body 1191 words; consider justified deep dive",
+    "solutions/ground-truth/weak-supervision.md: body 1229 words; consider justified deep dive",
+    "solutions/matching-scoring/fellegi-sunter.md: body 966 words; consider justified deep dive",
+    "solutions/matching-scoring/learned-neural-comparators.md: body 1066 words; consider justified deep dive",
+    "solutions/matching-scoring/source-aware-reliability.md: body 984 words; consider justified deep dive",
+    "solutions/normalization/name-representations.md: body 995 words; consider justified deep dive",
+    "solutions/scalability/skew-aware-execution.md: body 1009 words; consider justified deep dive",
+    "architectures/collective-consistency.md: keyword hint missing for failure/limitations; inspect manually, not a semantic verdict",
+    "architectures/incremental-continuous.md: body 1960 words; consider justified deep dive",
+    "evaluation/entity-resolution-quality.md: body 1027 words; consider justified deep dive",
+    "evaluation/execution-cost-replay.md: body 926 words; consider justified deep dive",
+    "evaluation/incomplete-reference-quality.md: body 903 words; consider justified deep dive",
+    "evaluation/retrieval-blind-spots.md: body 909 words; consider justified deep dive",
+    "evaluation/synthetic-metamorphic.md: body 1227 words; consider justified deep dive"
+  ],
+  "counts": {
+    "decision": 13,
+    "solution": 29,
+    "architecture": 6,
+    "hypothesis": 2,
+    "evaluation": 7
+  },
+  "immutable_inputs": 6,
+  "card_statistics": [
+    {
+      "id": "DEC-05-001",
+      "path": "decisions/candidate-strategy.md",
+      "body_words": 670
+    },
+    {
+      "id": "DEC-06-001",
+      "path": "decisions/comparison-evidence.md",
+      "body_words": 698
+    },
+    {
+      "id": "DEC-13-001",
+      "path": "decisions/execution-strategy.md",
+      "body_words": 771
+    },
+    {
+      "id": "DEC-12-001",
+      "path": "decisions/experiment-design.md",
+      "body_words": 935
+    },
+    {
+      "id": "DEC-10-001",
+      "path": "decisions/ground-truth-acquisition.md",
+      "body_words": 961
+    },
+    {
+      "id": "DEC-01-001",
+      "path": "decisions/identity-semantics.md",
+      "body_words": 782
+    },
+    {
+      "id": "DEC-09-001",
+      "path": "decisions/master-representation.md",
+      "body_words": 748
+    },
+    {
+      "id": "DEC-14-001",
+      "path": "decisions/monitoring-response.md",
+      "body_words": 739
+    },
+    {
+      "id": "DEC-04-001",
+      "path": "decisions/name-representation.md",
+      "body_words": 887
+    },
+    {
+      "id": "DEC-02-001",
+      "path": "decisions/pipeline-modularity.md",
+      "body_words": 1163
+    },
+    {
+      "id": "DEC-08-001",
+      "path": "decisions/resolution-strategy.md",
+      "body_words": 873
+    },
+    {
+      "id": "DEC-08-002",
+      "path": "decisions/rule-composition.md",
+      "body_words": 1203
+    },
+    {
+      "id": "DEC-07-001",
+      "path": "decisions/scoring-strategy.md",
+      "body_words": 799
+    },
+    {
+      "id": "SOL-02-001",
+      "path": "solutions/architecture/replaceable-stage-pipelines.md",
+      "body_words": 1067
+    },
+    {
+      "id": "SOL-02-002",
+      "path": "solutions/architecture/versioned-artifact-runs.md",
+      "body_words": 1326
+    },
+    {
+      "id": "SOL-05-003",
+      "path": "solutions/candidate-generation/approximate-blocking.md",
+      "body_words": 1154
+    },
+    {
+      "id": "SOL-05-001",
+      "path": "solutions/candidate-generation/exact-blocking.md",
+      "body_words": 681
+    },
+    {
+      "id": "SOL-05-002",
+      "path": "solutions/candidate-generation/multi-pass-blocking.md",
+      "body_words": 733
+    },
+    {
+      "id": "SOL-06-001",
+      "path": "solutions/comparison-features/evidence-states.md",
+      "body_words": 727
+    },
+    {
+      "id": "SOL-06-003",
+      "path": "solutions/comparison-features/identifier-namespaces.md",
+      "body_words": 1086
+    },
+    {
+      "id": "SOL-06-002",
+      "path": "solutions/comparison-features/string-comparators.md",
+      "body_words": 1028
+    },
+    {
+      "id": "SOL-08-003",
+      "path": "solutions/decision-resolution/connected-components.md",
+      "body_words": 1175
+    },
+    {
+      "id": "SOL-08-004",
+      "path": "solutions/decision-resolution/constrained-clustering.md",
+      "body_words": 1195
+    },
+    {
+      "id": "SOL-08-006",
+      "path": "solutions/decision-resolution/declarative-decision-tables.md",
+      "body_words": 1475
+    },
+    {
+      "id": "SOL-08-002",
+      "path": "solutions/decision-resolution/one-to-one-assignment.md",
+      "body_words": 782
+    },
+    {
+      "id": "SOL-08-005",
+      "path": "solutions/decision-resolution/ordered-rule-policies.md",
+      "body_words": 1227
+    },
+    {
+      "id": "SOL-08-001",
+      "path": "solutions/decision-resolution/thresholds-abstention.md",
+      "body_words": 814
+    },
+    {
+      "id": "SOL-12-001",
+      "path": "solutions/experimentation/controlled-comparison.md",
+      "body_words": 1046
+    },
+    {
+      "id": "SOL-14-001",
+      "path": "solutions/governance/stage-monitoring.md",
+      "body_words": 1058
+    },
+    {
+      "id": "SOL-10-001",
+      "path": "solutions/ground-truth/independent-reference.md",
+      "body_words": 1187
+    },
+    {
+      "id": "SOL-10-002",
+      "path": "solutions/ground-truth/probability-sampled-review.md",
+      "body_words": 1160
+    },
+    {
+      "id": "SOL-10-003",
+      "path": "solutions/ground-truth/targeted-active-review.md",
+      "body_words": 1191
+    },
+    {
+      "id": "SOL-10-004",
+      "path": "solutions/ground-truth/weak-supervision.md",
+      "body_words": 1229
+    },
+    {
+      "id": "SOL-01-001",
+      "path": "solutions/identity-semantics/temporal-identity.md",
+      "body_words": 848
+    },
+    {
+      "id": "SOL-09-001",
+      "path": "solutions/master-records/provenance-survivorship.md",
+      "body_words": 852
+    },
+    {
+      "id": "SOL-07-001",
+      "path": "solutions/matching-scoring/additive-soft-matching.md",
+      "body_words": 854
+    },
+    {
+      "id": "SOL-07-002",
+      "path": "solutions/matching-scoring/fellegi-sunter.md",
+      "body_words": 966
+    },
+    {
+      "id": "SOL-07-005",
+      "path": "solutions/matching-scoring/learned-neural-comparators.md",
+      "body_words": 1066
+    },
+    {
+      "id": "SOL-07-003",
+      "path": "solutions/matching-scoring/logistic-regression.md",
+      "body_words": 885
+    },
+    {
+      "id": "SOL-07-004",
+      "path": "solutions/matching-scoring/source-aware-reliability.md",
+      "body_words": 984
+    },
+    {
+      "id": "SOL-04-001",
+      "path": "solutions/normalization/name-representations.md",
+      "body_words": 995
+    },
+    {
+      "id": "SOL-13-001",
+      "path": "solutions/scalability/skew-aware-execution.md",
+      "body_words": 1009
+    },
+    {
+      "id": "AR-05",
+      "path": "architectures/collective-consistency.md",
+      "body_words": 743
+    },
+    {
+      "id": "AR-06",
+      "path": "architectures/incremental-continuous.md",
+      "body_words": 1960
+    },
+    {
+      "id": "AR-01",
+      "path": "architectures/linear-modular.md",
+      "body_words": 802
+    },
+    {
+      "id": "AR-04",
+      "path": "architectures/parallel-ensemble.md",
+      "body_words": 722
+    },
+    {
+      "id": "AR-03",
+      "path": "architectures/precision-cascade.md",
+      "body_words": 734
+    },
+    {
+      "id": "AR-02",
+      "path": "architectures/recall-multi-pass.md",
+      "body_words": 729
+    },
+    {
+      "id": "HYP-07-001",
+      "path": "research/hypotheses/contextual-reliability.md",
+      "body_words": 776
+    },
+    {
+      "id": "HYP-06-001",
+      "path": "research/hypotheses/frequency-aware-evidence.md",
+      "body_words": 706
+    },
+    {
+      "id": "EVAL-11-001",
+      "path": "evaluation/candidate-recall.md",
+      "body_words": 723
+    },
+    {
+      "id": "EVAL-11-003",
+      "path": "evaluation/entity-resolution-quality.md",
+      "body_words": 1027
+    },
+    {
+      "id": "EVAL-11-007",
+      "path": "evaluation/execution-cost-replay.md",
+      "body_words": 926
+    },
+    {
+      "id": "EVAL-11-005",
+      "path": "evaluation/incomplete-reference-quality.md",
+      "body_words": 903
+    },
+    {
+      "id": "EVAL-11-002",
+      "path": "evaluation/pairwise-calibration.md",
+      "body_words": 764
+    },
+    {
+      "id": "EVAL-11-004",
+      "path": "evaluation/retrieval-blind-spots.md",
+      "body_words": 909
+    },
+    {
+      "id": "EVAL-11-006",
+      "path": "evaluation/synthetic-metamorphic.md",
+      "body_words": 1227
+    }
+  ],
+  "graph": {
+    "components": [
+      [
+        "AR-01",
+        "AR-02",
+        "AR-03",
+        "AR-04",
+        "AR-05",
+        "AR-06",
+        "DEC-01-001",
+        "DEC-02-001",
+        "DEC-04-001",
+        "DEC-05-001",
+        "DEC-06-001",
+        "DEC-07-001",
+        "DEC-08-001",
+        "DEC-08-002",
+        "DEC-09-001",
+        "DEC-10-001",
+        "DEC-12-001",
+        "DEC-13-001",
+        "DEC-14-001",
+        "EVAL-11-001",
+        "EVAL-11-002",
+        "EVAL-11-003",
+        "EVAL-11-004",
+        "EVAL-11-005",
+        "EVAL-11-006",
+        "EVAL-11-007",
+        "HYP-06-001",
+        "HYP-07-001",
+        "SOL-01-001",
+        "SOL-02-001",
+        "SOL-02-002",
+        "SOL-04-001",
+        "SOL-05-001",
+        "SOL-05-002",
+        "SOL-05-003",
+        "SOL-06-001",
+        "SOL-06-002",
+        "SOL-06-003",
+        "SOL-07-001",
+        "SOL-07-002",
+        "SOL-07-003",
+        "SOL-07-004",
+        "SOL-07-005",
+        "SOL-08-001",
+        "SOL-08-002",
+        "SOL-08-003",
+        "SOL-08-004",
+        "SOL-08-005",
+        "SOL-08-006",
+        "SOL-09-001",
+        "SOL-10-001",
+        "SOL-10-002",
+        "SOL-10-003",
+        "SOL-10-004",
+        "SOL-12-001",
+        "SOL-13-001",
+        "SOL-14-001"
+      ]
+    ],
+    "orphans": []
+  }
+}

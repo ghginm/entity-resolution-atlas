@@ -1,0 +1,11 @@
+{
+  "kind": "protected-byte-integrity-not-authenticity",
+  "observed_at": "2026-10-15T02:58:51.754356+00:00",
+  "before_sha256": "16a7d5388668585a2c0f6f95c3a0d8763b26bcbbe80df9135eb996d2048b4ea3",
+  "files_checked": 1189,
+  "changed": [],
+  "missing": [],
+  "added": [],
+  "verified_unchanged": true,
+  "excluded": "__pycache__ files only"
+}

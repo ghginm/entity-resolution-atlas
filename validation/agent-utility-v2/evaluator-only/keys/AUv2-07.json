@@ -1,0 +1,83 @@
+{
+  "cohort": "AU-v2",
+  "scenario_id": "AUv2-07",
+  "access": "evaluator-only",
+  "credible_baseline": "Retain source-qualified accession blocking with ambiguity review, freeze its candidate set, and measure completion/end-to-end cost before making a separate quality-affecting broad-block or cap change.",
+  "findings": [
+    {
+      "finding_id": "AUv2-07-F01",
+      "dimensions": [
+        "evidence_and_scope",
+        "evaluation_design"
+      ],
+      "criterion": "A current-generator reviewed set lacks outside-candidate and no-candidate evidence; do not claim full recall or treat missing pairs as nonmatches. State what bounded operational and selected-label estimates are available."
+    },
+    {
+      "finding_id": "AUv2-07-F02",
+      "dimensions": [
+        "quality_cost_separation",
+        "mechanism_and_failure_modes"
+      ],
+      "criterion": "Differentiate partitioning/retries of the same required logical pair set from candidate caps/narrowing that alter retrieval; missing memory-failed partitions further censor physical output."
+    },
+    {
+      "finding_id": "AUv2-07-F03",
+      "dimensions": [
+        "contracts_and_reproducibility",
+        "quality_cost_separation"
+      ],
+      "criterion": "Define required and returned logical pair identities, deduplication, expected manifests and failed/missing/retried work. Reconcile complete coverage before calling a fixed-work implementation complete; report end-to-end resources."
+    },
+    {
+      "finding_id": "AUv2-07-F04",
+      "dimensions": [
+        "baseline_and_options"
+      ],
+      "criterion": "Compare conservative blocking with broader retrieval, better physical scheduling or held review/audit, including prerequisites and storage/review spending; capped retrieval can be valid as a disclosed quality-cost choice, not presumed equivalent."
+    },
+    {
+      "finding_id": "AUv2-07-F05",
+      "dimensions": [
+        "evaluation_design",
+        "lifecycle_and_safety"
+      ],
+      "criterion": "Design an affordable independent audit that reaches noncandidate/large-block cases and checks specimen versus lot identity, harmful merges and final histories; distinguish representative estimates from targeted diagnostics."
+    },
+    {
+      "finding_id": "AUv2-07-F06",
+      "dimensions": [
+        "evidence_and_scope",
+        "evaluation_design"
+      ],
+      "criterion": "Propose—not invent approved—recall/cost gates, uncertainty and conditional decisions; recommend proceeding, reverting or collecting more evidence based on quality and completion results separately."
+    }
+  ],
+  "acceptable_alternatives": [
+    "Keep the baseline and first collect a stratified audit if the quality-loss tolerance is unknown.",
+    "Partition the same logical work differently with durable retry/reconciliation for a quality-neutral physical comparison.",
+    "A cap or narrower candidate rule is defensible when presented as a separately tested policy change with explicit recall risk and approved gates."
+  ],
+  "unanticipated_alternative_policy": "Credit any defensible alternative that addresses the actual scenario facts, uncertainties and harm constraints. No preferred diagnosis, method, wording, mandatory corpus ID or unique final decision is required. Explain such credit explicitly; do not score by checklist count.",
+  "critical_failures": [
+    {
+      "failure_id": "AUv2-07-CF-01",
+      "endorsement_required": true,
+      "trigger": "Endorses a cap as a quality-neutral physical optimization or reports successful-task timing as complete equivalent-output cost despite skipped/failed work.",
+      "not_triggered_by": "A scoped throughput diagnostic or explicitly quality-affecting cap experiment.",
+      "caps": {
+        "quality_cost_separation": 0,
+        "contracts_and_reproducibility": 1
+      }
+    },
+    {
+      "failure_id": "AUv2-07-CF-02",
+      "endorsement_required": true,
+      "trigger": "Claims current-generator selected judgments establish full-population recall or treats all ungenerated pairs as known nonmatches.",
+      "not_triggered_by": "Uncertainty-aware candidate-conditional reporting or proposed independent audit.",
+      "caps": {
+        "evidence_and_scope": 0,
+        "evaluation_design": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "cohort": "AU-v2",
+  "scenario_id": "AUv2-02",
+  "access": "evaluator-only",
+  "credible_baseline": "Preserve source/issuing-authority metadata and start with authority-qualified validated tax-number agreement; abstain or review cross-source ambiguity. Compare against the existing scorer without treating its score as probability.",
+  "findings": [
+    {
+      "finding_id": "AUv2-02-F01",
+      "dimensions": [
+        "mechanism_and_failure_modes",
+        "evidence_and_scope"
+      ],
+      "criterion": "Separate identifier namespace and shared-agent evidence from source-specific missingness/transliteration and shifted score behavior; a pooled score alone is not proven calibrated probability."
+    },
+    {
+      "finding_id": "AUv2-02-F02",
+      "dimensions": [
+        "evaluation_design",
+        "evidence_and_scope"
+      ],
+      "criterion": "Detect dependence between rule-generated training labels and validation panel; targeted delivery disputes are useful diagnostics but not representative independent outcome truth."
+    },
+    {
+      "finding_id": "AUv2-02-F03",
+      "dimensions": [
+        "baseline_and_options"
+      ],
+      "criterion": "Compare a source-qualified conservative baseline with pooled recalibration, source-pair models/features, or human review; source-aware does not imply mandatory separate models."
+    },
+    {
+      "finding_id": "AUv2-02-F04",
+      "dimensions": [
+        "evaluation_design"
+      ],
+      "criterion": "Use independent appropriately sampled outcomes across old/new sources, source pairs, languages/missingness; prevent repeated organizations or time leakage and assess candidate, pair, policy and entity effects with uncertainty."
+    },
+    {
+      "finding_id": "AUv2-02-F05",
+      "dimensions": [
+        "contracts_and_reproducibility",
+        "quality_cost_separation"
+      ],
+      "criterion": "Retain issuing authority/source provenance and missingness semantics; pin snapshots, normalizers, feature/scorer/calibration versions. Separate preprocessing footprint from decision quality and review cost."
+    },
+    {
+      "finding_id": "AUv2-02-F06",
+      "dimensions": [
+        "lifecycle_and_safety",
+        "evaluation_design"
+      ],
+      "criterion": "Stage/hold onboarding, assess false-merge/order-routing harm, allocate labels/review explicitly, and condition threshold or model changes on measured slices with rollback and inconclusive pathways."
+    }
+  ],
+  "acceptable_alternatives": [
+    "A pooled model can remain if independent source-sliced evidence supports it; source features or source-qualified deterministic rules may suffice.",
+    "Do not recalibrate without independent outcomes; use abstention, separate namespaces and an evidence-gathering hold.",
+    "Either selective onboarding or a reversible review-only all-feed pilot can be sound when controlled and not presented as validated automation."
+  ],
+  "unanticipated_alternative_policy": "Credit any defensible alternative that addresses the actual scenario facts, uncertainties and harm constraints. No preferred diagnosis, method, wording, mandatory corpus ID or unique final decision is required. Explain such credit explicitly; do not score by checklist count.",
+  "critical_failures": [
+    {
+      "failure_id": "AUv2-02-CF-01",
+      "endorsement_required": true,
+      "trigger": "Affirmatively interprets the pooled score as an established correct-association probability or reports rule-panel agreement as independent verified accuracy.",
+      "not_triggered_by": "Calling this an untested hypothesis or proposing independent calibration.",
+      "caps": {
+        "evidence_and_scope": 0,
+        "evaluation_design": 1
+      }
+    },
+    {
+      "failure_id": "AUv2-02-CF-02",
+      "endorsement_required": true,
+      "trigger": "Endorses automatic merging on bare cross-authority tax numbers or shared buying-agent contacts as sufficient identity proof despite stated ambiguity.",
+      "not_triggered_by": "Using such fields as candidate evidence or explicitly reviewing ambiguous cases.",
+      "caps": {
+        "mechanism_and_failure_modes": 0,
+        "lifecycle_and_safety": 0
+      }
+    }
+  ]
+}

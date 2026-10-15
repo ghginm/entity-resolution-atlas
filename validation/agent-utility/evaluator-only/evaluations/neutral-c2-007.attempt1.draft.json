@@ -1,0 +1,105 @@
+{
+ "corpus_sha256": "4a2c25e42a90d768d6b4417c4c2f8d5060428940ac787e7347fa484a05283f3e",
+ "critical_failures": [],
+ "dimensions": {
+  "alternative_quality": {
+   "effective_score": 2,
+   "evidence_quotes": [
+    "Given sparse labels and the CPU-only constraint, expert additive scoring is a strong baseline.",
+    "Substantially more representative multilingual labeled data, computational resources (given CPU-only constraint), ML expertise.",
+    "Higher development/maintenance cost, increased complexity, greater risk of \"black box\" behavior."
+   ],
+   "omitted_findings": [],
+   "rationale": "Compares a credible script-aware, multi-pass, explicit-evidence additive baseline with embedding retrieval and a learned cascade. Gives meaningful labeling, interpretability, review and computation tradeoffs and makes learned adoption conditional. Does not reach anchor 3: the language-aware routes remain unspecified, cross-script transliteration handling is not concretely designed, and there is no clear selection test for whether embeddings, learned scoring or the cascade independently warrant their complexity.",
+   "raw_score": 2
+  },
+  "efficiency": {
+   "effective_score": 2,
+   "evidence_quotes": [
+    "Given sparse labels and the CPU-only constraint, expert additive scoring is a strong baseline.",
+    "Lifecycle: Store observations with provenance and valid-time (SOL-01-001). Master records as virtual views."
+   ],
+   "omitted_findings": [],
+   "rationale": "The eight logged reads are largely relevant and progress from the index through identity, candidates, evidence, scoring and resolution. There is no evidenced hard budget violation. However, a substantial temporal-identity read receives priority over the listed evaluation protocols and concrete multilingual mechanisms, while alternatives and configurations repeat much of the same design. This is useful reasoning with some unnecessary retrieval/detail, rather than maximally targeted decision support.",
+   "raw_score": 2
+  },
+  "evidence_discipline": {
+   "effective_score": 2,
+   "evidence_quotes": [
+    "What validated labels or runtime evidence currently justify the proposed learned alternative?",
+    "Potential for higher recall and nuanced matching of complex names.",
+    "Tradeoffs: High interpretability, lower labeling needs, reduced false-merge risk."
+   ],
+   "omitted_findings": [],
+   "rationale": "Separates provided facts and unknowns, makes learned benefits prospective, proposes rather than claims execution, and cites real identifiers present in retrieved excerpts. Does not forecast numerical accuracy or treat the existing biased labels as deployment proof. Anchor 3 is not met: the asserted reduced false-merge risk is not explicitly distinguished from an untested local hypothesis, the current blocking's insufficiency is stated categorically rather than measured, and neural matching is attributed to a decision card that only lists it as an unexpanded family. Evaluation names are supported by the index, but their full protocols were not retrieved. These are scope/qualification weaknesses, not invented citations or fabricated results.",
+   "raw_score": 2
+  },
+  "experiment_quality": {
+   "effective_score": 2,
+   "evidence_quotes": [
+    "Generate a new, representative, and entity-disjoint held-out evaluation set including: true matches/non-matches across all scripts, inconsistent transliterations, missing DOBs, shared contacts between distinct individuals, and names changing over time.",
+    "Clearly define maximum acceptable false merge rate.",
+    "Ensure adjudication workload stays within the \"two days per month\" budget."
+   ],
+   "omitted_findings": [],
+   "rationale": "Provides an informative current-pipeline control, entity-disjoint multilingual labels with difficult shared-contact negatives, candidate/pair/entity metrics, slices, review limits and positive/negative/inconclusive actions. Falls short of anchor 3 because the bundled treatment changes retrieval, representation, scoring and policy without isolating their effects; the blind-spot audit is named without an explicit outside-candidate truth sampling procedure; source slices, uncertainty estimation and CPU runtime/memory measurements are absent. The plan is informative but its coverage and operational guardrails are incomplete.",
+   "raw_score": 2
+  },
+  "problem_understanding": {
+   "effective_score": 2,
+   "evidence_quotes": [
+    "Identity: Individual applicant, not family or institution.",
+    "Constraints: Offline processing, CPU-only service, one researcher for two days/month for adjudication. Original strings and source provenance must be kept. False merges are critical due to confidential applicant histories.",
+    "How are name order, shared contacts, and missing attributes currently encoded?"
+   ],
+   "omitted_findings": [],
+   "rationale": "Accurately captures the individual-applicant target, script switching, missingness, shared contacts, biased labels, confidentiality and all principal resource/provenance constraints, and distinguishes project facts from explicit unknowns. A material output-contract gap prevents anchor 3: it selects independent pair decisions and virtual master views without establishing whether downstream history linking needs separable pair actions or consistent membership, and does not resolve source-row multiplicity/cardinality before suggesting partial assignment as a safer option.",
+   "raw_score": 2
+  },
+  "retrieval_relevance": {
+   "effective_score": 2,
+   "evidence_quotes": [
+    "Multi-pass blocking (`DEC-05-001`), combining script-specific normalization (e.g., phonetic for Latin, dedicated methods for Arabic/Devanagari) and exact matching on any reliable, consistently available identifiers.",
+    "Independent pair decisions with thresholds and abstention (`DEC-08-001`), sending uncertain pairs to human review."
+   ],
+   "omitted_findings": [],
+   "rationale": "Read logs show genuinely relevant decision-chain retrieval covering identity, candidate admission, explicit evidence, scoring and resolution, plus an applicable temporal alternative and index summaries of evaluation methods. Claims are mostly connected to actual content, satisfying anchor 2. The index exposes multi-pass, evidence-state and evaluation cards, but their detailed mechanisms/protocols are not read, and the response does not acknowledge the retrieved decisions' explicit unexpanded coverage for linguistic methods, embeddings and neural matching. There is no penalty for a genuine corpus gap; the shortfall is incomplete use and acknowledgement of the support actually visible in the logs.",
+   "raw_score": 2
+  },
+  "risk_identification": {
+   "effective_score": 2,
+   "evidence_quotes": [
+    "Shared contacts provide relationship evidence, not identity.",
+    "False merges due to model error; poor generalization from biased labels; exceeding CPU budget; difficulty in explaining decisions.",
+    "Provenance: Maintain original strings and source provenance (`SOL-01-001`) for auditability."
+   ],
+   "omitted_findings": [],
+   "rationale": "Names the central confidential-history false-merge harm, multilingual missed matches, label bias, shared-contact misuse, review bottlenecks and CPU constraints, and offers abstention, conservative evidence, retained originals and conditional adoption. Anchor 3 is not met: transliteration/normalization collisions are not explicitly diagnosed, reversible membership and downstream correction safeguards are not specified, and neither additive scoring nor constrained clustering receives a concrete reliability audit of the rules/constraints that could falsely merge or split applicants.",
+   "raw_score": 2
+  },
+  "technical_reasoning": {
+   "effective_score": 2,
+   "evidence_quotes": [
+    "Comparison Evidence: Explicit evidence states (`DEC-06-001`) for name components (script-aware string similarity), date of birth (treating missingness distinctly), and verified individual contact details.",
+    "Scoring: Expert-weighted additive scoring (`DEC-07-001`) with weights derived from domain knowledge, prioritizing false-merge prevention.",
+    "Resolution: Independent pair decisions with thresholds and abstention (`DEC-08-001`), sending uncertain pairs to human review."
+   ],
+   "omitted_findings": [],
+   "rationale": "Correctly separates identity, retrieval, comparison states, scoring, resolution and observation/master lifecycle; missing DOB is not equated with disagreement, and shared contacts are not treated as sufficient identity. The baseline and learned cascade are technically plausible conditional designs. Anchor 3 is not met because cross-script admission remains a method placeholder, dependent name representations and retrieval-conditioned score calibration are not addressed, pair decisions are not reconciled with persistent master membership, and suggested dynamic threshold adjustments lack a validation contract.",
+   "raw_score": 2
+  }
+ },
+ "evaluated_at": "2026-10-13T14:16:49.903371+00:00",
+ "evaluator": {
+  "blinded": true,
+  "conflicts": "none; fresh automated process distinct from benchmark author, tested agent and corpus authors",
+  "identity": "eval-openai-codex-default-fresh-process",
+  "independent": true,
+  "role": "fresh_model_process"
+ },
+ "manifest_sha256": "bd2e57dc2d96f40fb65a6fd4ac2d9a5e6000411b91a5dc1ca47071a8bed3104c",
+ "run_sha256": "b03a0ed77ccb75219362b5384ce3bf6c9d44fa884a27d00d24b9d0073c401d68",
+ "scenario_id": "AU-04",
+ "schema_version": "1.0",
+ "settings_sha256": "ba133047d7e3acbe9d50ac8fe8d738b24344071c61039ad7162ff05552a8ba66"
+}

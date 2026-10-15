@@ -1,0 +1,275 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://nhis.ipums.org/nhis/resources/Fellegi69.pdf",
+      "title": "A Theory for Record Linkage",
+      "accessed": "2026-10-12"
+    },
+    {
+      "id": 2,
+      "url": "https://arxiv.org/abs/1905.06167",
+      "title": "A Survey of Blocking and Filtering Techniques for Entity Resolution",
+      "accessed": "2026-10-12"
+    },
+    {
+      "id": 3,
+      "url": "https://proceedings.mlr.press/v70/guo17a.html",
+      "title": "On Calibration of Modern Neural Networks",
+      "accessed": "2026-10-12"
+    },
+    {
+      "id": 4,
+      "url": "https://arxiv.org/abs/2404.05622",
+      "title": "How to Evaluate Entity Resolution Systems: An Entity-Centric Framework with Application to Inventor Name Disambiguation",
+      "accessed": "2026-10-12"
+    },
+    {
+      "id": 5,
+      "url": "https://arxiv.org/abs/2008.04443",
+      "title": "(Almost) All of Entity Resolution",
+      "accessed": "2026-10-12"
+    },
+    {
+      "id": 6,
+      "url": "https://www.bls.gov/osmr/research-papers/2018/pdf/st180060.pdf",
+      "title": "",
+      "accessed": "2026-10-12"
+    },
+    {
+      "id": 7,
+      "url": "https://hastie.su.domains/ElemStatLearn/main.html",
+      "title": "The Elements of Statistical Learning, second edition",
+      "accessed": "2026-10-12"
+    },
+    {
+      "id": 8,
+      "url": "https://linqs.org/assets/resources/bhattacharya-tkdd07.pdf",
+      "title": "Collective Entity Resolution in Relational Data",
+      "accessed": "2026-10-12"
+    },
+    {
+      "id": 9,
+      "url": "https://dl.acm.org/doi/10.1145/1217299.1217304",
+      "title": "Collective Entity Resolution in Relational Data",
+      "accessed": "2026-10-12"
+    },
+    {
+      "id": 10,
+      "url": "https://cdn.aaai.org/AAAI/2007/AAAI07-255.pdf",
+      "title": "Online Collective Entity Resolution",
+      "accessed": "2026-10-12"
+    },
+    {
+      "id": 11,
+      "url": "https://arxiv.org/abs/1601.06630",
+      "title": "Bayesian Estimation of Bipartite Matchings for Record Linkage",
+      "accessed": "2026-10-12"
+    },
+    {
+      "id": 12,
+      "url": "https://www.vldb.org/pvldb/vol2/vldb09-1025.pdf",
+      "title": "Framework for Evaluating Clustering Algorithms in Duplicate Detection",
+      "accessed": "2026-10-12"
+    },
+    {
+      "id": 13,
+      "url": "https://www.bioinf.jku.at/teaching/ss2011/se-inf/data_fusion_a1-bleiholder.pdf",
+      "title": "Data fusion",
+      "accessed": "2026-10-12"
+    },
+    {
+      "id": 14,
+      "url": "https://arxiv.org/abs/2110.03839",
+      "title": "Multifile Partitioning for Record Linkage and Duplicate Detection",
+      "accessed": "2026-10-12"
+    },
+    {
+      "id": 15,
+      "url": "https://www150.statcan.gc.ca/n1/pub/12-587-x/12-587-x2003001-eng.pdf",
+      "title": "Survey Methods and Practices",
+      "accessed": "2026-10-13"
+    },
+    {
+      "id": 16,
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2016/file/6709e8d64a5f47269ed5cea9f625f7ab-Paper.pdf",
+      "title": "Data Programming: Creating Large Training Sets, Quickly",
+      "accessed": "2026-10-13"
+    },
+    {
+      "id": 17,
+      "url": "https://cseweb.ucsd.edu/~elkan/posonly.pdf",
+      "title": "Learning Classifiers from Only Positive and Unlabeled Data",
+      "accessed": "2026-10-13"
+    },
+    {
+      "id": 18,
+      "url": "https://arxiv.org/abs/0812.4952",
+      "title": "Importance Weighted Active Learning",
+      "accessed": "2026-10-13"
+    },
+    {
+      "id": 19,
+      "url": "https://www.cse.ust.hk/~scc/publ/CS98-01-metamorphictesting.pdf",
+      "title": "Metamorphic Testing: A New Approach for Generating Next Test Cases",
+      "accessed": "2026-10-13"
+    },
+    {
+      "id": 20,
+      "url": "https://www.itl.nist.gov/div898/handbook/pri/section3/pri3331.htm",
+      "title": "NIST/SEMATECH e-Handbook: Two-level full factorial designs",
+      "accessed": "2026-10-13"
+    },
+    {
+      "id": 21,
+      "url": "https://www.vldb.org/pvldb/vol11/p269-ratner.pdf",
+      "title": "Snorkel: Rapid Training Data Creation with Weak Supervision",
+      "accessed": "2026-10-13"
+    },
+    {
+      "id": 22,
+      "url": "https://hypothesis.readthedocs.io/en/latest/tutorial/introduction.html",
+      "title": "Hypothesis: Introduction to property-based testing",
+      "accessed": "2026-10-13"
+    },
+    {
+      "id": 23,
+      "url": "https://www.omg.org/spec/DMN/1.5/PDF",
+      "title": "Decision Model and Notation, version 1.5",
+      "accessed": "2026-10-14"
+    },
+    {
+      "id": 24,
+      "url": "https://dvc.org/doc/user-guide/pipelines/running-pipelines",
+      "title": "DVC: Running Pipelines",
+      "accessed": "2026-10-14"
+    },
+    {
+      "id": 25,
+      "url": "https://www.w3.org/TR/prov-primer",
+      "title": "PROV Model Primer",
+      "accessed": "2026-10-14"
+    },
+    {
+      "id": 26,
+      "url": "https://mlflow.org/docs/3.3.1/ml/model-registry",
+      "title": "MLflow Model Registry (3.3.1)",
+      "accessed": "2026-10-14"
+    },
+    {
+      "id": 27,
+      "url": "https://martinfowler.com/bliki/RulesEngine.html",
+      "title": "RulesEngine",
+      "accessed": "2026-10-14"
+    },
+    {
+      "id": 28,
+      "url": "https://martinfowler.com/eaaDev/EventSourcing.html",
+      "title": "Event Sourcing",
+      "accessed": "2026-10-14"
+    },
+    {
+      "id": 29,
+      "url": "https://www.stat.cmu.edu/NCRN/PUBLIC/RLClassFiles/HW/Winkler1990.pdf",
+      "title": "String Comparator Metrics and Enhanced Decision Rules in the Fellegi-Sunter Model of Record Linkage",
+      "accessed": "2026-10-14"
+    },
+    {
+      "id": 30,
+      "url": "https://www.census.gov/content/dam/Census/library/working-papers/2004/adrm/rrs2004-02.pdf",
+      "title": "An Adaptive String Comparator for Record Linkage",
+      "accessed": "2026-10-14"
+    },
+    {
+      "id": 31,
+      "url": "https://www.census.gov/content/dam/Census/library/working-papers/2005/adrm/rrs2005-05.pdf",
+      "title": "Evaluating String Comparator Performance for Record Linkage",
+      "accessed": "2026-10-14"
+    },
+    {
+      "id": 32,
+      "url": "https://www.unicode.org/reports/tr15",
+      "title": "Unicode Normalization Forms (UAX 15)",
+      "accessed": "2026-10-14"
+    },
+    {
+      "id": 33,
+      "url": "https://www.unicode.org/reports/tr24",
+      "title": "Unicode Script Extension Properties (UAX 24)",
+      "accessed": "2026-10-14"
+    },
+    {
+      "id": 34,
+      "url": "https://www.archives.gov/research/census/soundex.html",
+      "title": "NARA Soundex Coding Guide",
+      "accessed": "2026-10-14"
+    },
+    {
+      "id": 35,
+      "url": "http://www.kamalnigam.com/papers/canopy-kdd00.pdf",
+      "title": "Efficient Clustering of High-Dimensional Data Sets with Application to Reference Matching",
+      "accessed": "2026-10-14"
+    },
+    {
+      "id": 36,
+      "url": "https://arxiv.org/abs/2310.11244",
+      "title": "Entity Matching using Large Language Models",
+      "accessed": "2026-10-14"
+    },
+    {
+      "id": 37,
+      "url": "https://wkiri.com/research/papers/wagstaff-constraints-00.pdf",
+      "title": "Clustering with Instance-level Constraints",
+      "accessed": "2026-10-14"
+    },
+    {
+      "id": 38,
+      "url": "http://infolab.stanford.edu/~ullman/mmds/ch3.pdf",
+      "title": "Mining of Massive Datasets: Finding Similar Items (author-hosted chapter 3)",
+      "accessed": "2026-10-14"
+    },
+    {
+      "id": 39,
+      "url": "https://creatingfutureus.org/wp-content/uploads/2021/10/Hernandez-and-Stolfo-1998.pdf",
+      "title": "Real-world Data is Dirty: Data Cleansing and The Merge/Purge Problem",
+      "accessed": "2026-10-14"
+    },
+    {
+      "id": 40,
+      "url": "https://www.cs.princeton.edu/courses/archive/spring13/cos598C/broder97resemblance.pdf",
+      "title": "On the resemblance and containment of documents",
+      "accessed": "2026-10-14"
+    },
+    {
+      "id": 41,
+      "url": "https://spark.apache.org/docs/3.5.6/sql-performance-tuning.html",
+      "title": "Spark SQL Performance Tuning (3.5.6)",
+      "accessed": "2026-10-14"
+    },
+    {
+      "id": 42,
+      "url": "https://www.postgresql.org/docs/17/using-explain.html",
+      "title": "PostgreSQL 17: Using EXPLAIN",
+      "accessed": "2026-10-14"
+    },
+    {
+      "id": 43,
+      "url": "https://papers.nips.cc/paper_files/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf",
+      "title": "Hidden Technical Debt in Machine Learning Systems",
+      "accessed": "2026-10-14"
+    },
+    {
+      "id": 44,
+      "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf",
+      "title": "NIST AI Risk Management Framework (AI RMF 1.0, January 2023)",
+      "accessed": "2026-10-14"
+    },
+    {
+      "id": 45,
+      "url": "https://doi.org/10.6028/NIST.CSWP.01162020",
+      "title": "NIST Privacy Framework (Version 1.0, January 2020)",
+      "accessed": "2026-10-14"
+    }
+  ]
+}

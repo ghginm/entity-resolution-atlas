@@ -1,0 +1,65 @@
+{
+  "scenario_id": "AU-03",
+  "interpretation": "Semantic checklist, not a required verbatim answer or mandatory algorithm. Credit defensible alternatives and explicit corpus gaps. Do not reward card counts or invented IDs.",
+  "expected_findings": [
+    {
+      "finding_id": "AU-03-F1",
+      "finding": "Use monthly audited at-most-one cross-source semantics, not generic clustering or within-source deduplication.",
+      "dimensions": [
+        "problem_understanding",
+        "risk_identification"
+      ]
+    },
+    {
+      "finding_id": "AU-03-F2",
+      "finding": "Compare conflict-aware baseline with partial bipartite assignment; allow unmatched and do not force all rows to link.",
+      "dimensions": [
+        "technical_reasoning",
+        "risk_identification"
+      ]
+    },
+    {
+      "finding_id": "AU-03-F3",
+      "finding": "Explain competition/global objective and why independent best or greedy choices can conflict or be suboptimal; do not optimize arbitrary raw evidence as utility without justification.",
+      "dimensions": [
+        "alternative_quality",
+        "technical_reasoning"
+      ]
+    },
+    {
+      "finding_id": "AU-03-F4",
+      "finding": "Candidate omissions limit assignment; thresholds/abstention, loss/objective and audit uniqueness assumptions.",
+      "dimensions": [
+        "experiment_quality",
+        "risk_identification"
+      ]
+    },
+    {
+      "finding_id": "AU-03-F5",
+      "finding": "Assess assignment feasibility, entity/link accuracy, unmatched errors and conflict slices with independent labels, not only pair AUC.",
+      "dimensions": [
+        "evidence_discipline",
+        "experiment_quality"
+      ]
+    }
+  ],
+  "critical_failures": [
+    {
+      "failure_id": "AU-03-cardinality_violation",
+      "trigger": "Recommends independent links that permit competing matches or unconstrained clustering as the final solution to the stipulated monthly one-to-one task.",
+      "caps": {
+        "problem_understanding": 1,
+        "technical_reasoning": 1,
+        "risk_identification": 1
+      }
+    },
+    {
+      "failure_id": "AU-03-forced_assignment",
+      "trigger": "Forces every row into a match, omitting allowed unmatched outcomes.",
+      "caps": {
+        "problem_understanding": 1,
+        "risk_identification": 1
+      }
+    }
+  ]
+}

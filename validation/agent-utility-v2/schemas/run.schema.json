@@ -1,0 +1,154 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:entity-resolution-atlas:AU-v2:run",
+  "type": "object",
+  "properties": {
+    "cohort": {
+      "const": "AU-v2"
+    },
+    "scenario_id": {
+      "type": "string",
+      "pattern": "^AUv2-0[1-8]$"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "arm": {
+      "enum": [
+        "baseline-atlas",
+        "expanded-atlas",
+        "no-atlas"
+      ]
+    },
+    "status": {
+      "enum": [
+        "completed",
+        "failed",
+        "unexecuted"
+      ]
+    },
+    "registration_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "freeze_manifest_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "prompt_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "settings_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "scenario_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "inventory_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "tested_identity": {
+      "type": "string",
+      "minLength": 1
+    },
+    "runtime_identity_attested": {
+      "type": "boolean"
+    },
+    "response": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "response_sha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "read_log": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "path": {
+            "type": "string",
+            "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.?(?:/|$))[A-Za-z0-9_-]+(?:/[A-Za-z0-9_.-]+)*\\.[A-Za-z0-9]+$"
+          },
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "requested_length": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "returned_characters": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "content_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "inventory_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "required": [
+          "request_id",
+          "path",
+          "offset",
+          "requested_length",
+          "returned_characters",
+          "content_sha256",
+          "inventory_sha256"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "read_attempts": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "failure_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "cohort",
+    "scenario_id",
+    "run_id",
+    "arm",
+    "status",
+    "registration_sha256",
+    "freeze_manifest_sha256",
+    "prompt_sha256",
+    "settings_sha256",
+    "scenario_sha256",
+    "inventory_sha256",
+    "tested_identity",
+    "runtime_identity_attested",
+    "response",
+    "response_sha256",
+    "read_log",
+    "read_attempts",
+    "failure_reason"
+  ],
+  "additionalProperties": false
+}

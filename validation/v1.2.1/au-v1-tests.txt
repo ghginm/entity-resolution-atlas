@@ -1,0 +1,53 @@
+test_exhausted_success_budget_steers_to_final (test_adapter_protocol.BudgetGuard.test_exhausted_success_budget_steers_to_final) ... /home/ghgin/.hermes/tools/python-3.14.7+20260901-linux-x64/lib/python3.14/unittest/case.py:615: ResourceWarning: unclosed file <_io.TextIOWrapper name=7 encoding='utf-8'>
+  result = method()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/ghgin/.hermes/tools/python-3.14.7+20260901-linux-x64/lib/python3.14/unittest/case.py:615: ResourceWarning: unclosed file <_io.TextIOWrapper name=4 encoding='utf-8'>
+  result = method()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/ghgin/.hermes/tools/python-3.14.7+20260901-linux-x64/lib/python3.14/unittest/case.py:615: ResourceWarning: unclosed file <_io.TextIOWrapper name=5 encoding='utf-8'>
+  result = method()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_oversize_chunk_not_forwarded (test_adapter_protocol.BudgetGuard.test_oversize_chunk_not_forwarded) ... ok
+test_broker_error_returned_to_model_and_retry_works (test_adapter_protocol.DeniedReadRelay.test_broker_error_returned_to_model_and_retry_works) ... ok
+test_read_relay_and_final (test_adapter_protocol.HappyPath.test_read_relay_and_final) ... ok
+test_start_json_and_read_result_visible_to_model (test_adapter_protocol.ModelTurnContext.test_start_json_and_read_result_visible_to_model) ... ok
+test_final_over_char_budget_fails_closed (test_adapter_protocol.ProtocolErrors.test_final_over_char_budget_fails_closed) ... ok
+test_final_over_line_byte_budget_fails_closed (test_adapter_protocol.ProtocolErrors.test_final_over_line_byte_budget_fails_closed) ... ok
+test_garbage_reply_gets_one_correction_then_fails (test_adapter_protocol.ProtocolErrors.test_garbage_reply_gets_one_correction_then_fails) ... ok
+test_cli_model_substitution_against_pinned_start_is_refused (test_adapter_protocol.ReadyAttestation.test_cli_model_substitution_against_pinned_start_is_refused) ... ok
+test_ready_attestation_matches_start (test_adapter_protocol.ReadyAttestation.test_ready_attestation_matches_start) ... ok
+test_matching_model_stream_events_happy_path (test_adapter_protocol.TransportFailure.test_matching_model_stream_events_happy_path) ... ok
+test_nonzero_transport_aborts_not_fakes (test_adapter_protocol.TransportFailure.test_nonzero_transport_aborts_not_fakes) ... ok
+test_silent_model_fallback_aborts (test_adapter_protocol.TransportFailure.test_silent_model_fallback_aborts) ... ok
+test_agent_start_excludes_keys_and_version (test_harness.BrokerTests.test_agent_start_excludes_keys_and_version) ... ok
+test_broker_denies_keys_traversal_and_repeated_reads_count (test_harness.BrokerTests.test_broker_denies_keys_traversal_and_repeated_reads_count) ... ok
+test_read_budget_fails_closed (test_harness.BrokerTests.test_read_budget_fails_closed) ... ok
+test_real_process_fixture_is_fresh_and_failures_recorded (test_harness.BrokerTests.test_real_process_fixture_is_fresh_and_failures_recorded) ... ok
+test_cli_prepare_dry_run_and_unexecuted (test_harness.CliTests.test_cli_prepare_dry_run_and_unexecuted) ... ok
+test_paired_order_equivalent_settings_and_failed_runs_retained (test_harness.CliTests.test_paired_order_equivalent_settings_and_failed_runs_retained) ... ok
+test_allowlist_uses_only_supported_layers (test_harness.CorpusTests.test_allowlist_uses_only_supported_layers) ... ok
+test_prepare_verify_and_tamper (test_harness.CorpusTests.test_prepare_verify_and_tamper) ... ok
+test_frozen_manifest_verified_before_use (test_harness.FreezeTests.test_frozen_manifest_verified_before_use) ... ok
+test_baseline_corpus_manifest_cannot_bless_tampering (test_harness.HardeningTests.test_baseline_corpus_manifest_cannot_bless_tampering) ... ok
+test_chunk_attempt_and_character_budgets (test_harness.HardeningTests.test_chunk_attempt_and_character_budgets) ... ok
+test_degenerate_and_traversal_paths_are_denied (test_harness.HardeningTests.test_degenerate_and_traversal_paths_are_denied) ... ok
+test_folded_metadata_does_not_swallow_relations (test_harness.HardeningTests.test_folded_metadata_does_not_swallow_relations) ... ok
+test_freeze_rejects_changed_manifest_or_input (test_harness.HardeningTests.test_freeze_rejects_changed_manifest_or_input) ... ok
+test_initial_context_budget_is_a_recorded_failure (test_harness.HardeningTests.test_initial_context_budget_is_a_recorded_failure) ... ok
+test_layer_selection_and_symlink_rejection (test_harness.HardeningTests.test_layer_selection_and_symlink_rejection) ... ok
+test_pinned_settings_disallow_budget_tuning (test_harness.HardeningTests.test_pinned_settings_disallow_budget_tuning) ... ok
+test_timeout_also_bounds_adapter_not_reading_stdin (test_harness.HardeningTests.test_timeout_also_bounds_adapter_not_reading_stdin) ... ok
+test_timeout_kills_real_fixture_and_missing_command_fails (test_harness.HardeningTests.test_timeout_kills_real_fixture_and_missing_command_fails) ... ok
+test_all_scenarios_validate (test_harness.SchemaTests.test_all_scenarios_validate) ... ok
+test_schema_rejects_bool_as_integer_and_extra_fields (test_harness.SchemaTests.test_schema_rejects_bool_as_integer_and_extra_fields) ... ok
+test_caps_preserve_other_dimensions_no_aggregate (test_harness.ScoringTests.test_caps_preserve_other_dimensions_no_aggregate) ... ok
+test_cli_score_and_report_provenance (test_harness.ScoringTests.test_cli_score_and_report_provenance) ... ok
+test_global_cap_and_no_atlas_null_retrieval (test_harness.ScoringTests.test_global_cap_and_no_atlas_null_retrieval) ... ok
+test_invalid_scoring_rejected (test_harness.ScoringTests.test_invalid_scoring_rejected) ... ok
+test_packet_blinds_arm_and_refuses_nonresults (test_harness.ScoringTests.test_packet_blinds_arm_and_refuses_nonresults) ... ok
+
+----------------------------------------------------------------------
+Ran 39 tests in 4.764s
+
+OK

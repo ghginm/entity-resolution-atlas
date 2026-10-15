@@ -1,0 +1,14 @@
+{
+  "kind": "algebraic sanity checks, not ER experiments or proof of asymptotic coverage",
+  "recall_bound_configurations": 500,
+  "HT_mean_and_variance_configurations": 516,
+  "hypergeometric_zero_event_configurations": 328,
+  "review_regression_checks": [
+    "frozen black-box output needs evaluation, not production, inclusion",
+    "pair denominators restricted to the same semantic universe",
+    "record-average versus entity-average B-cubed",
+    "SCAR propensity and true posterior can trade off",
+    "discrete fixed-size zero-event endpoint"
+  ],
+  "passed": true
+}

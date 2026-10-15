@@ -1,0 +1,114 @@
+{
+  "observed_at": "2026-10-15T02:56:12.664030+00:00",
+  "suites": [
+    {
+      "suite": "runtime-boundary",
+      "argv": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "validation/v1.2.1/wave-4",
+        "-p",
+        "test_runtime_boundary.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "tests": 12,
+      "expected_failures": 1,
+      "log": "runtime-boundary-tests.txt"
+    },
+    {
+      "suite": "au-v1",
+      "argv": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "validation/agent-utility/tests",
+        "-v"
+      ],
+      "returncode": 0,
+      "tests": 39,
+      "expected_failures": 0,
+      "log": "au-v1-tests.txt"
+    },
+    {
+      "suite": "au-v2",
+      "argv": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "validation/agent-utility-v2/tests",
+        "-v"
+      ],
+      "returncode": 0,
+      "tests": 17,
+      "expected_failures": 0,
+      "log": "au-v2-tests.txt"
+    },
+    {
+      "suite": "integration",
+      "argv": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "validation/agent-utility-integration/tests",
+        "-v"
+      ],
+      "returncode": 0,
+      "tests": 65,
+      "expected_failures": 0,
+      "log": "integration-tests.txt"
+    },
+    {
+      "suite": "workflow",
+      "argv": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "validation/agent-workflow",
+        "-p",
+        "test_workflow.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "tests": 12,
+      "expected_failures": 0,
+      "log": "workflow-tests.txt"
+    },
+    {
+      "suite": "docs",
+      "argv": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "tests": 59,
+      "expected_failures": 0,
+      "log": "docs-tests.txt"
+    }
+  ],
+  "note": "Expected failures are unresolved requirements, not passes or runtime eligibility."
+}

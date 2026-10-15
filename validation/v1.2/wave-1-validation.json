@@ -1,0 +1,466 @@
+{
+  "status": "passed-with-advisory-warnings",
+  "scope": "Wave 0-1 documentation and integrity only",
+  "completed_at_utc": "2026-10-14T03:44:48.825749+00:00",
+  "checks": {
+    "documentation_tests": {
+      "command": "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python -m unittest discover -s tools -p 'test_*.py'",
+      "exit_code": 0,
+      "output": "..............................................\n----------------------------------------------------------------------\nRan 46 tests in 0.629s\n\nOK",
+      "tests": 46
+    },
+    "benchmark_infrastructure_tests": {
+      "command": "python3 -m unittest discover -s validation/agent-utility/tests -p 'test_*.py'",
+      "exit_code": 0,
+      "output": "/home/ghgin/.hermes/tools/python-3.14.7+202****0901-linux-x64/lib/python3.14/unittest/case.py:615: ResourceWarning: unclosed file <_io.TextIOWrapper name=7 encoding='utf-8'>\n  result = method()\nResourceWarning: Enable tracemalloc to get the object allocation traceback\n/home/ghgin/.hermes/tools/python-3.14.7+202****0901-linux-x64/lib/python3.14/unittest/case.py:615: ResourceWarning: unclosed file <_io.TextIOWrapper name=4 encoding='utf-8'>\n  result = method()\nResourceWarning: Enable tracemalloc to get the object allocation traceback\n/home/ghgin/.hermes/tools/python-3.14.7+202****0901-linux-x64/lib/python3.14/unittest/case.py:615: ResourceWarning: unclosed file <_io.TextIOWrapper name=5 encoding='utf-8'>\n  result = method()\nResourceWarning: Enable tracemalloc to get the object allocation traceback\n.......................................\n----------------------------------------------------------------------\nRan 39 tests in 4.716s\n\nOK",
+      "tests": 39
+    },
+    "freeze_verification": {
+      "command": "python3 validation/agent-utility/harness.py verify-freeze",
+      "exit_code": 0,
+      "output": "{\"benchmark_id\": \"AU-v1\", \"frozen_files\": 24, \"manifest_sha256\": \"bd2e57dc2d96f40fb65a6fd4ac2d9a5e6000411b91a5dc1ca47071a8bed3104c\"}"
+    },
+    "v1_corpus_verification": {
+      "command": "python3 validation/agent-utility/harness.py verify-corpus --corpus validation/agent-utility/corpora/v1",
+      "exit_code": 0,
+      "output": "{\"cards\": 21, \"corpus_sha256\": \"e1ade517e405ac79fa93bc700dfe098848a1517dcbecf81080e307d2b30b8772\", \"files\": 42, \"label\": \"v1\"}"
+    },
+    "v11_corpus_verification": {
+      "command": "python3 validation/agent-utility/harness.py verify-corpus --corpus validation/agent-utility/corpora/v1.1",
+      "exit_code": 0,
+      "output": "{\"cards\": 31, \"corpus_sha256\": \"4a2c25e42a90d768d6b4417c4c2f8d5060428940ac787e7347fa484a05283f3e\", \"files\": 52, \"label\": \"v1.1\"}"
+    },
+    "algebra_sanity": {
+      "command": "python3 validation/v1.2/check_reference_algebra.py",
+      "exit_code": 0,
+      "output": "{\n  \"kind\": \"algebraic sanity checks, not ER experiments or proof of asymptotic coverage\",\n  \"recall_bound_configurations\": 500,\n  \"HT_mean_and_variance_configurations\": 516,\n  \"hypergeometric_zero_event_configurations\": 328,\n  \"review_regression_checks\": [\n    \"frozen black-box output needs evaluation, not production, inclusion\",\n    \"pair denominators restricted to the same semantic universe\",\n    \"record-average versus entity-average B-cubed\",\n    \"SCAR propensity and true posterior can trade off\",\n    \"discrete fixed-size zero-event endpoint\"\n  ],\n  \"passed\": true\n}"
+    }
+  },
+  "lint": {
+    "errors": [],
+    "warnings": [
+      "decisions/experiment-design.md: body 935 words; consider justified deep dive",
+      "decisions/ground-truth-acquisition.md: body 961 words; consider justified deep dive",
+      "solutions/experimentation/controlled-comparison.md: body 1046 words; consider justified deep dive",
+      "solutions/ground-truth/independent-reference.md: body 1187 words; consider justified deep dive",
+      "solutions/ground-truth/probability-sampled-review.md: body 1160 words; consider justified deep dive",
+      "solutions/ground-truth/targeted-active-review.md: body 1191 words; consider justified deep dive",
+      "solutions/ground-truth/weak-supervision.md: body 1229 words; consider justified deep dive",
+      "architectures/collective-consistency.md: keyword hint missing for failure/limitations; inspect manually, not a semantic verdict",
+      "evaluation/incomplete-reference-quality.md: body 903 words; consider justified deep dive",
+      "evaluation/retrieval-blind-spots.md: body 909 words; consider justified deep dive",
+      "evaluation/synthetic-metamorphic.md: body 962 words; consider justified deep dive"
+    ],
+    "counts": {
+      "decision": 8,
+      "solution": 17,
+      "architecture": 6,
+      "hypothesis": 2,
+      "evaluation": 6
+    },
+    "immutable_inputs": 6,
+    "card_statistics": [
+      {
+        "id": "DEC-05-001",
+        "path": "decisions/candidate-strategy.md",
+        "body_words": 684
+      },
+      {
+        "id": "DEC-06-001",
+        "path": "decisions/comparison-evidence.md",
+        "body_words": 673
+      },
+      {
+        "id": "DEC-12-001",
+        "path": "decisions/experiment-design.md",
+        "body_words": 935
+      },
+      {
+        "id": "DEC-10-001",
+        "path": "decisions/ground-truth-acquisition.md",
+        "body_words": 961
+      },
+      {
+        "id": "DEC-01-001",
+        "path": "decisions/identity-semantics.md",
+        "body_words": 782
+      },
+      {
+        "id": "DEC-09-001",
+        "path": "decisions/master-representation.md",
+        "body_words": 748
+      },
+      {
+        "id": "DEC-08-001",
+        "path": "decisions/resolution-strategy.md",
+        "body_words": 790
+      },
+      {
+        "id": "DEC-07-001",
+        "path": "decisions/scoring-strategy.md",
+        "body_words": 744
+      },
+      {
+        "id": "SOL-05-001",
+        "path": "solutions/candidate-generation/exact-blocking.md",
+        "body_words": 681
+      },
+      {
+        "id": "SOL-05-002",
+        "path": "solutions/candidate-generation/multi-pass-blocking.md",
+        "body_words": 729
+      },
+      {
+        "id": "SOL-06-001",
+        "path": "solutions/comparison-features/evidence-states.md",
+        "body_words": 708
+      },
+      {
+        "id": "SOL-08-003",
+        "path": "solutions/decision-resolution/connected-components.md",
+        "body_words": 830
+      },
+      {
+        "id": "SOL-08-004",
+        "path": "solutions/decision-resolution/constrained-clustering.md",
+        "body_words": 897
+      },
+      {
+        "id": "SOL-08-002",
+        "path": "solutions/decision-resolution/one-to-one-assignment.md",
+        "body_words": 782
+      },
+      {
+        "id": "SOL-08-001",
+        "path": "solutions/decision-resolution/thresholds-abstention.md",
+        "body_words": 790
+      },
+      {
+        "id": "SOL-12-001",
+        "path": "solutions/experimentation/controlled-comparison.md",
+        "body_words": 1046
+      },
+      {
+        "id": "SOL-10-001",
+        "path": "solutions/ground-truth/independent-reference.md",
+        "body_words": 1187
+      },
+      {
+        "id": "SOL-10-002",
+        "path": "solutions/ground-truth/probability-sampled-review.md",
+        "body_words": 1160
+      },
+      {
+        "id": "SOL-10-003",
+        "path": "solutions/ground-truth/targeted-active-review.md",
+        "body_words": 1191
+      },
+      {
+        "id": "SOL-10-004",
+        "path": "solutions/ground-truth/weak-supervision.md",
+        "body_words": 1229
+      },
+      {
+        "id": "SOL-01-001",
+        "path": "solutions/identity-semantics/temporal-identity.md",
+        "body_words": 848
+      },
+      {
+        "id": "SOL-09-001",
+        "path": "solutions/master-records/provenance-survivorship.md",
+        "body_words": 852
+      },
+      {
+        "id": "SOL-07-001",
+        "path": "solutions/matching-scoring/additive-soft-matching.md",
+        "body_words": 795
+      },
+      {
+        "id": "SOL-07-002",
+        "path": "solutions/matching-scoring/fellegi-sunter.md",
+        "body_words": 716
+      },
+      {
+        "id": "SOL-07-003",
+        "path": "solutions/matching-scoring/logistic-regression.md",
+        "body_words": 791
+      },
+      {
+        "id": "AR-05",
+        "path": "architectures/collective-consistency.md",
+        "body_words": 743
+      },
+      {
+        "id": "AR-06",
+        "path": "architectures/incremental-continuous.md",
+        "body_words": 729
+      },
+      {
+        "id": "AR-01",
+        "path": "architectures/linear-modular.md",
+        "body_words": 755
+      },
+      {
+        "id": "AR-04",
+        "path": "architectures/parallel-ensemble.md",
+        "body_words": 722
+      },
+      {
+        "id": "AR-03",
+        "path": "architectures/precision-cascade.md",
+        "body_words": 734
+      },
+      {
+        "id": "AR-02",
+        "path": "architectures/recall-multi-pass.md",
+        "body_words": 729
+      },
+      {
+        "id": "HYP-07-001",
+        "path": "research/hypotheses/contextual-reliability.md",
+        "body_words": 744
+      },
+      {
+        "id": "HYP-06-001",
+        "path": "research/hypotheses/frequency-aware-evidence.md",
+        "body_words": 706
+      },
+      {
+        "id": "EVAL-11-001",
+        "path": "evaluation/candidate-recall.md",
+        "body_words": 723
+      },
+      {
+        "id": "EVAL-11-003",
+        "path": "evaluation/entity-resolution-quality.md",
+        "body_words": 895
+      },
+      {
+        "id": "EVAL-11-005",
+        "path": "evaluation/incomplete-reference-quality.md",
+        "body_words": 903
+      },
+      {
+        "id": "EVAL-11-002",
+        "path": "evaluation/pairwise-calibration.md",
+        "body_words": 764
+      },
+      {
+        "id": "EVAL-11-004",
+        "path": "evaluation/retrieval-blind-spots.md",
+        "body_words": 909
+      },
+      {
+        "id": "EVAL-11-006",
+        "path": "evaluation/synthetic-metamorphic.md",
+        "body_words": 962
+      }
+    ],
+    "graph": {
+      "components": [
+        [
+          "AR-01",
+          "AR-02",
+          "AR-03",
+          "AR-04",
+          "AR-05",
+          "AR-06",
+          "DEC-01-001",
+          "DEC-05-001",
+          "DEC-06-001",
+          "DEC-07-001",
+          "DEC-08-001",
+          "DEC-09-001",
+          "DEC-10-001",
+          "DEC-12-001",
+          "EVAL-11-001",
+          "EVAL-11-002",
+          "EVAL-11-003",
+          "EVAL-11-004",
+          "EVAL-11-005",
+          "EVAL-11-006",
+          "HYP-06-001",
+          "HYP-07-001",
+          "SOL-01-001",
+          "SOL-05-001",
+          "SOL-05-002",
+          "SOL-06-001",
+          "SOL-07-001",
+          "SOL-07-002",
+          "SOL-07-003",
+          "SOL-08-001",
+          "SOL-08-002",
+          "SOL-08-003",
+          "SOL-08-004",
+          "SOL-09-001",
+          "SOL-10-001",
+          "SOL-10-002",
+          "SOL-10-003",
+          "SOL-10-004",
+          "SOL-12-001"
+        ]
+      ],
+      "orphans": []
+    }
+  },
+  "citations": {
+    "documents_checked": 19,
+    "mode": "document-specific default; unused shared-ledger entries are not errors",
+    "results": [
+      {
+        "path": "evaluation/candidate-recall.md",
+        "exit_code": 0,
+        "diagnostic": ""
+      },
+      {
+        "path": "evaluation/entity-resolution-quality.md",
+        "exit_code": 0,
+        "diagnostic": ""
+      },
+      {
+        "path": "evaluation/pairwise-calibration.md",
+        "exit_code": 0,
+        "diagnostic": ""
+      },
+      {
+        "path": "evaluation/retrieval-blind-spots.md",
+        "exit_code": 0,
+        "diagnostic": ""
+      },
+      {
+        "path": "references/bibliography.md",
+        "exit_code": 0,
+        "diagnostic": ""
+      },
+      {
+        "path": "solutions/ground-truth/independent-reference.md",
+        "exit_code": 0,
+        "diagnostic": ""
+      },
+      {
+        "path": "decisions/experiment-design.md",
+        "exit_code": 0,
+        "diagnostic": ""
+      },
+      {
+        "path": "decisions/ground-truth-acquisition.md",
+        "exit_code": 0,
+        "diagnostic": ""
+      },
+      {
+        "path": "deep-dives/incomplete-reference-estimation.md",
+        "exit_code": 0,
+        "diagnostic": ""
+      },
+      {
+        "path": "evaluation/incomplete-reference-quality.md",
+        "exit_code": 0,
+        "diagnostic": ""
+      },
+      {
+        "path": "evaluation/synthetic-metamorphic.md",
+        "exit_code": 0,
+        "diagnostic": ""
+      },
+      {
+        "path": "guides/er-behavioral-testing.md",
+        "exit_code": 0,
+        "diagnostic": ""
+      },
+      {
+        "path": "references/wave-1-evidence-notes.md",
+        "exit_code": 0,
+        "diagnostic": ""
+      },
+      {
+        "path": "solutions/experimentation/controlled-comparison.md",
+        "exit_code": 0,
+        "diagnostic": ""
+      },
+      {
+        "path": "solutions/ground-truth/probability-sampled-review.md",
+        "exit_code": 0,
+        "diagnostic": ""
+      },
+      {
+        "path": "solutions/ground-truth/targeted-active-review.md",
+        "exit_code": 0,
+        "diagnostic": ""
+      },
+      {
+        "path": "solutions/ground-truth/weak-supervision.md",
+        "exit_code": 0,
+        "diagnostic": ""
+      },
+      {
+        "path": "validation/v1.2/critique-acquisition-experiments.md",
+        "exit_code": 0,
+        "diagnostic": ""
+      },
+      {
+        "path": "validation/v1.2/critique-estimation.md",
+        "exit_code": 0,
+        "diagnostic": ""
+      }
+    ]
+  },
+  "inventory": {
+    "version": "1.2-wave-1",
+    "cards": 39,
+    "new_cards": [
+      "DEC-10-001",
+      "DEC-12-001",
+      "EVAL-11-005",
+      "EVAL-11-006",
+      "SOL-10-002",
+      "SOL-10-003",
+      "SOL-10-004",
+      "SOL-12-001"
+    ],
+    "counts": {
+      "architecture": 6,
+      "decision": 8,
+      "evaluation": 6,
+      "hypothesis": 2,
+      "solution": 17
+    }
+  },
+  "integrity": {
+    "baseline": "validation/v1.2/wave-0-baseline.json",
+    "scope": "all non-git/non-bytecode files; generated validation and this change report excluded from self-hashing",
+    "excluded_self_reports": [
+      "validation/v1.2/wave-1-changed-files.json",
+      "validation/v1.2/wave-1-validation.json"
+    ],
+    "protected_files_checked": 442,
+    "protected_changes": [],
+    "protected_additions": [],
+    "original_card_paths_preserved": 31,
+    "original_ledger_entries_preserved": 14,
+    "pre_wave_archive_sha256": "865f6efbd0f807b38d4a092bc08170d5b4dd308076c92548024174213d3ad8bb"
+  },
+  "change_counts": {
+    "modified": 29,
+    "added_including_baseline_artifacts": 22,
+    "deleted": 0
+  },
+  "git_and_clock_output": "?? .gitignore\n?? AGENTS.md\n?? CATALOG.md\n?? README.md\n?? SCHEMA.md\n?? SCOPE.md\n?? architectures/\n?? decisions/\n?? deep-dives/\n?? evaluation/\n?? guides/\n?? indexes/\n?? references/\n?? research/\n?? solutions/\n?? taxonomy/\n?? templates/\n?? tools/\n?? validation/\nmain\n2026-10-14T03:44:48Z",
+  "content_review": {
+    "reports": [
+      "validation/v1.2/critique-estimation.md",
+      "validation/v1.2/critique-acquisition-experiments.md"
+    ],
+    "dispositions": "guides/v1.2-wave-1-content-review.md",
+    "blocking_findings_found": 1,
+    "open_blocking_findings_after_author_remediation": 0,
+    "independently_attested_model_identities": false
+  },
+  "evidence_boundary": {
+    "ER_experiments": false,
+    "new_agent_utility_execution": false,
+    "production_changes": false,
+    "commit_or_push": false,
+    "algebra_is_not_statistical_coverage_or_ER_validation": true
+  },
+  "warning_disposition": "Advisory body lengths retained for necessary assumptions/counterexamples; baseline AR-05 keyword hint retained. No validation rules relaxed."
+}

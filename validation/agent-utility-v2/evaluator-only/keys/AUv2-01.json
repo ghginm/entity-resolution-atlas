@@ -1,0 +1,81 @@
+{
+  "cohort": "AU-v2",
+  "scenario_id": "AUv2-01",
+  "access": "evaluator-only",
+  "credible_baseline": "Keep source-qualified verified sticker/manufacturer exact links only when identifier validity is established; otherwise preserve separate records or a bounded review lane. Retain the existing process as a measured comparator, not as presumed truth.",
+  "findings": [
+    {
+      "finding_id": "AUv2-01-F01",
+      "dimensions": [
+        "evidence_and_scope",
+        "evaluation_design"
+      ],
+      "criterion": "The truth set covers complaints, not the whole population; demonstrate why candidate-only and returned-task-only agreement cannot identify end-to-end recall, entity correctness or overall error rates. With no independent labels, report bounded operational/coverage facts, not invented precision or recall."
+    },
+    {
+      "finding_id": "AUv2-01-F02",
+      "dimensions": [
+        "mechanism_and_failure_modes",
+        "lifecycle_and_safety"
+      ],
+      "criterion": "Trace sticker reuse, missing namespaces, depot transcription and retrieval omissions as competing causes. Distinguish candidate loss from scorer/policy and final entity errors."
+    },
+    {
+      "finding_id": "AUv2-01-F03",
+      "dimensions": [
+        "baseline_and_options"
+      ],
+      "criterion": "Compare current conservative process with broader retrieval/scoring or review-only augmentation; identify validity, representative evidence, asymmetric costs and feasibility. A justified hold receives full credit."
+    },
+    {
+      "finding_id": "AUv2-01-F04",
+      "dimensions": [
+        "evaluation_design"
+      ],
+      "criterion": "Propose an authorized independent audit that can sample non-candidates and remote depots as well as accepted/reviewed pairs; explain labels, sampling units/weights if relevant, uncertainty and separately observed component versus final-entity outcomes."
+    },
+    {
+      "finding_id": "AUv2-01-F05",
+      "dimensions": [
+        "quality_cost_separation",
+        "contracts_and_reproducibility"
+      ],
+      "criterion": "Define required logical work and reconcile expected/returned/failed/retried units using stable IDs and a frozen snapshot/configuration. Measure end-to-end cost including retries and missing work separately from a candidate expansion."
+    },
+    {
+      "finding_id": "AUv2-01-F06",
+      "dimensions": [
+        "lifecycle_and_safety",
+        "evaluation_design"
+      ],
+      "criterion": "Use a bounded shadow comparison with review/abstention, contingent quality and completion gates, reversible rollout and explicit positive, negative and inconclusive decisions; do not invent approved targets."
+    }
+  ],
+  "acceptable_alternatives": [
+    "Independent sampling can be modest and stratified or a small census of an authorized slice; bounds are valid if the population remains unknown.",
+    "Stay with the current conservative workflow while adding completeness accounting and independent adjudication.",
+    "Use broader candidates only for a review queue, or a rule-based alternative instead of a learned scorer, if cost/evidence support it."
+  ],
+  "unanticipated_alternative_policy": "Credit any defensible alternative that addresses the actual scenario facts, uncertainties and harm constraints. No preferred diagnosis, method, wording, mandatory corpus ID or unique final decision is required. Explain such credit explicitly; do not score by checklist count.",
+  "critical_failures": [
+    {
+      "failure_id": "AUv2-01-CF-01",
+      "endorsement_required": true,
+      "trigger": "Endorses selected returned-candidate agreement as established full-population precision/recall or sufficient proof of deployment safety.",
+      "not_triggered_by": "Quoting the sponsor or explicitly rejecting the dashboard inference; reporting honestly scoped candidate agreement.",
+      "caps": {
+        "evidence_and_scope": 0,
+        "evaluation_design": 0
+      }
+    },
+    {
+      "failure_id": "AUv2-01-CF-02",
+      "endorsement_required": true,
+      "trigger": "Recommends switching automatic identity decisions despite unresolved identity validity and harmful merge risks, with no bounded review/evidence safeguard.",
+      "not_triggered_by": "A controlled shadow comparison, conservative baseline, or explicitly conditional future rollout.",
+      "caps": {
+        "lifecycle_and_safety": 0
+      }
+    }
+  ]
+}

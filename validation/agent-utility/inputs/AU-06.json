@@ -1,0 +1,18 @@
+{
+  "scenario_id": "AU-06",
+  "title": "A master with disagreeing branch attributes",
+  "fictional": true,
+  "known_project_facts": {
+    "project": "A logistics consortium constructs customer organization master views from invoicing, audited registration, and delivery systems.",
+    "identity": "Legal organization identity; branch addresses and delivery contacts are related records, not necessarily conflicting legal-office facts.",
+    "observations": "Two high-confidence matched rows disagree on legal name and address. The audited registration has an older legal name but an authoritative registration namespace. Delivery has a newer branch address. Invoicing has a copied headquarters address and a recent ingestion timestamp but no observation date.",
+    "current_pipeline": "Once linked, pick all fields from the most recently ingested row; delete losing values. One universal source-quality rank is proposed.",
+    "constraints": "Consumers need provenance and as-of views; unavailable dates must remain unknown. Entity matching is not fully adjudicated. Humans can arbitrate a few contested legal-office fields. No permission to discard raw observations."
+  },
+  "explicitly_unknown": [
+    "Are disputed fields semantically aligned and dated?",
+    "What per-attribute source authority and use-case rules are defensible?",
+    "How do incorrect membership and incorrect master values get audited separately?"
+  ],
+  "task": "Produce a defensible project-specific ER experiment/design recommendation using selectively retrieved Atlas knowledge if available. Do not implement ER or change production. Separate facts, assumptions, uncertainties, mechanisms and proposed evidence."
+}

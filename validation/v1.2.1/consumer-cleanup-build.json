@@ -1,0 +1,33 @@
+{
+  "first": {
+    "cards": 57,
+    "files": 130,
+    "bytes": 1013884,
+    "manifest_sha256": "5462892dd6a250afda86df17b25f80159b782826c0a326a601a78472939b2485",
+    "source_verified": true
+  },
+  "second": {
+    "cards": 57,
+    "files": 130,
+    "bytes": 1013884,
+    "manifest_sha256": "5462892dd6a250afda86df17b25f80159b782826c0a326a601a78472939b2485",
+    "source_verified": true
+  },
+  "release": {
+    "cards": 57,
+    "files": 130,
+    "bytes": 1013884,
+    "manifest_sha256": "5462892dd6a250afda86df17b25f80159b782826c0a326a601a78472939b2485",
+    "source_verified": true
+  },
+  "archive_sha256": "2030c296c1be3a246495c39729ab11b0aa7c9d433aaab5085d39c5d303f550f3",
+  "archives_equal": true,
+  "historical_wave5_archive": "validation/v1.2.1/consumer-cleanup-wave5-before.tar.gz",
+  "legacy": {
+    "cards": 57,
+    "files": 130,
+    "bytes": 1019689,
+    "manifest_sha256": "fc6078f5243355ab19947d1c649ee80aa04ba8c3266dee16200f5d7a7f440bd3",
+    "source_verified": false
+  }
+}

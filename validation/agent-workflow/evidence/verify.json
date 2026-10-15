@@ -1,0 +1,12 @@
+{
+  "freeze_manifest_sha256": "132fef9b963a68c87faae045f1e2ef96201827f1f70a445616464fdb728011e8",
+  "frozen_files": 14,
+  "preparation_manifest_sha256": "bb8cd3f9d29283eed65b0a5c32d23c635cfdd766a85217711bf827b073994f83",
+  "prepared_files": 278,
+  "sources_verified": {
+    "A": 0,
+    "B": 52,
+    "C": 79,
+    "D": 130
+  }
+}

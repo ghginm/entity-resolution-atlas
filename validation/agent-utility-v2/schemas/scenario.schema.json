@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:entity-resolution-atlas:AU-v2:scenario",
+  "type": "object",
+  "properties": {
+    "cohort": {
+      "const": "AU-v2"
+    },
+    "scenario_id": {
+      "type": "string",
+      "pattern": "^AUv2-0[1-8]$"
+    },
+    "fictional": {
+      "const": true
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "background": {
+      "type": "string",
+      "minLength": 1
+    },
+    "observations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 4,
+      "maxItems": 4
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "request": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "cohort",
+    "scenario_id",
+    "fictional",
+    "title",
+    "background",
+    "observations",
+    "constraints",
+    "request"
+  ],
+  "additionalProperties": false
+}

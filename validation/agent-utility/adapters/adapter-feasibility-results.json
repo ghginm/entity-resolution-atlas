@@ -1,0 +1,63 @@
+{
+  "artifact": "AU-v1 adapter feasibility and transport-probe record",
+  "author_role": "adapter engineer (NOT evaluator, NOT tested agent); benchmark author identity atlas-v11-author-hermes",
+  "generated_utc": "2026-10-13T03:16:25Z",
+  "verdict": "FEASIBLE_WITH_DISCLOSED_LIMITATION",
+  "summary": "Genuine independent model runs through the frozen JSONL broker are feasible today via the authorized Hermes CLI (hermes chat --oneshot --format stream-json, --safe-mode, zero tool schemas). A real model completed the full adapter protocol end-to-end twice. One frozen setting cannot be enforced on the wire: temperature/seed/max_output_tokens have no CLI transport knob and request_overrides require user config that --safe-mode ignores; the adapter attests this honestly in every ready message instead of faking it.",
+  "real_evidence": {
+    "transport_probe_1": {"utc": "2026-10-13T03:03:21Z", "exit": 0, "wall_seconds": 17.7, "model": "google/gemini-2.5-flash", "provider": "openrouter", "turns": 3, "reads": [{"path": "index/L0.json", "chars": 124}, {"path": "runbook/merge-rule.md", "chars": 350}], "tokens": {"input": 4914, "output": 921}, "marker_quoted_in_final": true, "result_file": "/home/ghgin/.hermes/cache/scratch/au-e2e-probe-_l6e9aau/probe-result.json"},
+    "transport_probe_2_shipped_copy": {"utc": "2026-10-13T03:08:45Z", "exit": 0, "wall_seconds": 16.0, "model": "google/gemini-2.5-flash", "provider": "openrouter", "turns": 3, "marker_quoted_in_final": true, "tokens": {"input": 4936, "output": 681}, "result_file": "/home/ghgin/.hermes/cache/scratch/au-transport-probe/shipped_probe_result.json"},
+    "note": "Probes are NON-BENCHMARK: synthetic mini-corpus, fictional station-log task, never an AU scenario, never scored, never in a cohort results directory.",
+    "zero_tools_verification": "Runtime-environment registry probe (python -I, plugins discovered): get_tool_definitions(enabled_toolsets=['bot_room']) -> 0 schemas; ['context_engine'] -> 0; ['terminal'] -> 4; None -> 25. Live corroboration: 245-byte query through the transport used 849 input tokens (a 25-schema prompt would be thousands more), and probe turns show exactly 3 API calls with no tool round-trips. Model self-reports of 'tools' were confabulated generic names (mkdir/list_files/run_sql_query do not exist) and were treated as evidence of nothing.",
+    "provider_status_observed": "openai-codex (default configured provider) returned live HTTP 429 usage-limit on 3 attempts (reset announced ~2026-10-13T02:08+... 'in 3h19m' at probe time); one -z invocation silently fell back to openrouter/qwen3.8-flash at credential-resolution time. This motivated the adapter's hard guard: transport-reported model != pinned model aborts the run with nonzero exit rather than attesting the wrong model.",
+    "real_start_shape": "AU-01/AU-08 starts against the frozen v1 corpus canonicalize to 7612/7339 bytes (char budget 24000, line byte budget 65536): comfortable headroom; worst-case transcript per selection call is ~24k start + 64k broker chars + replies ≈ 90k chars."
+  },
+  "protocol_compliance": {
+    "fresh_context": "New adapter process AND new hermes process per model decision; no --resume/--continue anywhere; --source tool tags sessions; stateless full-transcript selection means nothing from other scenarios or prior author conversations can be present. Attested fresh_context=true.",
+    "broker_only": "Model wire carries zero tool schemas; the adapter relays only broker read_result JSON back into the transcript. Attested broker_only=true.",
+    "settings_sha256": "Ready line copies start.settings_sha256; harness verifies.",
+    "stdout_discipline": "Adapter stdout carries ONLY ready/read_file/final canonical JSONL; all logging on stderr (harness-DEVNULL); outgoing lines pre-checked against max_message_bytes; final pre-checked against max_final_chars with NO truncation (over-budget fails closed nonzero).",
+    "budgets": "Chunk bounds validated before forwarding (oversize length never reaches the broker's fatal branch); remaining-budget counters from broker steer the model to final before a fatal budget attempt; per-turn --run-budget and a subprocess timeout enforce the 240s wall; transport wall timeout kills the child process group.",
+    "graceful_errors": "Missing pinned model, conflicting --model substitution, transport failure twice, silent model fallback, broker pipe loss, malformed model JSON after 2 corrections -> nonzero exits 3-7 with stderr reason; never a simulated final.",
+    "identity": "au-hermes-cli-jsonl/<provider>/<model>/pid<pid>-<uuid8>: always distinct from atlas-v11-author-hermes; harness run_batch additionally fails any identity equal to author identity."
+  },
+  "disclosed_limitations_and_blockers": [
+    {
+      "id": "temp-seed-enforcement",
+      "status": "INCOMPATIBLE_AT_TRANSPORT — operator decision required before cohort counts as fully frozen",
+      "detail": "settings.json pins temperature=0, seed=1729, max_output_tokens=4500. The authorized Hermes CLI exposes no flags for these, and per-request request_overrides live in config.yaml which --safe-mode ignores by design (and no profile/config changes are permitted). Model pinning IS enforced (-m + init-event guard). For the intended openai-codex gpt-5-family models, sampling parameters are provider-side fixed anyway, but the adapter cannot prove wire values, so every ready attestation embeds settings_enforcement honesty.",
+      "remediation_options": [
+        "A) Operator pre-freezes execution-settings.json, runs the cohort via this adapter, and records temp/seed/cap as 'frozen-but-not-wire-attested' in the cohort report (honest, no re-freeze needed).",
+        "B) For hard wire enforcement, write an external OS-sandboxed raw-API adapter (e.g. OpenAI-compatible HTTP with operator-held credentials outside the harness) that passes temperature/seed/max_output_tokens directly; the frozen harness command interface is identical: argv list, stdin start, stdout protocol. This package deliberately ships no such adapter (no credential capture here)."
+      ]
+    },
+    {
+      "id": "openai-codex-cooldown",
+      "status": "TRANSIENT",
+      "detail": "openai-codex credential pool showed live 429 during probing; rerun after reset or pin another authorized provider via a single execution-settings file applied to both arms."
+    },
+    {
+      "id": "not-an-os-sandbox",
+      "status": "AS DESIGNED (frozen protocol)",
+      "detail": "The adapter is trusted operator-reviewed code; its child hermes process could in principle access the host filesystem, but receives zero tool schemas and only protocol text. An independent evaluator must treat adapter source hash as part of provenance."
+    }
+  ],
+  "files_added": {
+    "validation/agent-utility/adapters/hermes_cli_jsonl_adapter.py": "51bd3a2cb62a208b5329e0b9c78366a707daae17443d2e8295caa29b9d9f8f6e",
+    "validation/agent-utility/adapters/transport_probe.py": "568921b12af557c3de38a6bb92da389378df1b353c32d3f35ca81c3b36bb0a4f",
+    "validation/agent-utility/tests/test_adapter_protocol.py": "42b226bb67683faa129dbdf982f867413c6d34362a4c81b7b60ed897c49436f3",
+    "validation/agent-utility/tests/transport_stub.py": "69a7349b75e6d4670dc60fd7ed667c1f2edad7a974f95ab64424033b28d930bc"
+  },
+  "frozen_artifacts_touched": "none — verify-freeze and verify-corpus pass unchanged (24 frozen files, corpus v1 sha e1ade517...b8772)",
+  "test_status": "39 unittests pass: 26 pre-existing frozen harness tests + 13 new adapter protocol tests (attestation, read relay, broker-error relay, budget steer, oversize-chunk local rejection, char/byte final guards, garbage-correction abort, transport-failure abort, model-fallback abort, substitution refusal).",
+  "operator_cohort_command": {
+    "preconditions": "v1.1 corpus prepared after content changes finish; parent selects the real model and freezes execution settings externally; provider cooldown cleared.",
+    "steps": [
+      "python3 validation/agent-utility/harness.py prepare --source /home/ghgin/projects/entity-resolution-atlas --label v1.1 --out validation/agent-utility/corpora/v1.1",
+      "python3 validation/agent-utility/harness.py pin-settings --model <ACTUAL_MODEL_ID> --out validation/agent-utility/execution-settings.json && sha256sum validation/agent-utility/execution-settings.json   # record hash externally BEFORE runs",
+      "python3 validation/agent-utility/harness.py run-paired --v1 validation/agent-utility/corpora/v1 --v11 validation/agent-utility/corpora/v1.1 --settings validation/agent-utility/execution-settings.json --adapter '[\"/usr/bin/python3\",\"/home/ghgin/projects/entity-resolution-atlas/validation/agent-utility/adapters/hermes_cli_jsonl_adapter.py\",\"--provider\",\"<openai-codex|openrouter|copilot>\",\"--hermes-bin\",\"/home/ghgin/.local/bin/hermes\",\"--hermes-home\",\"/home/ghgin/.hermes\"]' --author-identity atlas-v11-author-hermes --out validation/agent-utility/results/model-cohort-01"
+    ],
+    "no_secrets_in_argv": true,
+    "note": "Do not pass --model to the adapter for real cohorts: the pinned model must come from the frozen execution-settings file so settings_sha256 provenance matches. The adapter refuses conflicting substitution anyway."
+  }
+}

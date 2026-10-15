@@ -1,0 +1,18 @@
+{
+  "cohort": "AU-v2",
+  "scenario_id": "AUv2-08",
+  "fictional": true,
+  "title": "Apprenticeship credential exchange",
+  "background": "A fictional federation links credential records to people while preserving separate employers and training episodes. Person identifiers are local to issuing bodies; two people may share an employer address or contact agent.",
+  "observations": [
+    "A pooled scorer was developed on long-standing issuers. A newly joining issuer changed its person-ID allocation policy, but the transition date is not supplied. Its feed includes corrections and revocations that can arrive after newer messages.",
+    "An acceptance rule for equal bare person IDs runs before a contradictory verified credential-holder date rule. Monthly reference labels are produced by that acceptance policy and reviewed only when an employer disputes them.",
+    "Entity membership is persisted, while published credential status is cached separately. Engineers propose swapping in the new scorer and reusing both stores because input record IDs have not changed.",
+    "A dashboard combines accepted-link agreement and successful-task throughput. Staff can instead keep issuers separate and use only confirmed issuer-qualified identities while investigating ambiguous records."
+  ],
+  "constraints": [
+    "False person associations can disclose qualifications to the wrong employer. Revoked credentials must not silently reappear.",
+    "No production edits or private-data access are authorized. The decision committee needs reversible options and separately stated evidence and operational gates."
+  ],
+  "request": "Prepare the committee decision: compare the available approaches, define a controlled onboarding/change study, and state when to proceed, hold, or gather more information."
+}

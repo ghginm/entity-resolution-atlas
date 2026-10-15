@@ -1,0 +1,103 @@
+{
+  "scope": "structural/author-conceptual routes, not solver performance",
+  "routes": [
+    {
+      "question": "matching without labels",
+      "section": "Matching improvement without reliable labels",
+      "checks": {
+        "../decisions/ground-truth-acquisition.md": true,
+        "../evaluation/incomplete-reference-quality.md": true,
+        "Minimum retrieval": true,
+        "Essential facts": true,
+        "Choices/checks": true,
+        "Output": true,
+        "Stop": true
+      },
+      "passed": true
+    },
+    {
+      "question": "rule-heavy refactor",
+      "section": "Rule-heavy refactoring and conflicts",
+      "checks": {
+        "../decisions/rule-composition.md": true,
+        "rule-policy-refactoring.md": true,
+        "Minimum retrieval": true,
+        "Essential facts": true,
+        "Choices/checks": true,
+        "Output": true,
+        "Stop": true
+      },
+      "passed": true
+    },
+    {
+      "question": "large components",
+      "section": "Large components and graph-level identity errors",
+      "checks": {
+        "../decisions/resolution-strategy.md": true,
+        "../solutions/decision-resolution/connected-components.md": true,
+        "Minimum retrieval": true,
+        "Essential facts": true,
+        "Choices/checks": true,
+        "Output": true,
+        "Stop": true
+      },
+      "passed": true
+    },
+    {
+      "question": "learned or explicit scoring",
+      "section": "New method or feature selection",
+      "checks": {
+        "../decisions/scoring-strategy.md": true,
+        "Minimum retrieval": true,
+        "Essential facts": true,
+        "Choices/checks": true,
+        "Output": true,
+        "Stop": true
+      },
+      "passed": true
+    },
+    {
+      "question": "add another source",
+      "section": "New source onboarding and operational monitoring",
+      "checks": {
+        "../solutions/comparison-features/identifier-namespaces.md": true,
+        "../decisions/monitoring-response.md": true,
+        "Minimum retrieval": true,
+        "Essential facts": true,
+        "Choices/checks": true,
+        "Output": true,
+        "Stop": true
+      },
+      "passed": true
+    },
+    {
+      "question": "compare blocking",
+      "section": "Blocking comparison and performance investigation",
+      "checks": {
+        "../decisions/candidate-strategy.md": true,
+        "../decisions/execution-strategy.md": true,
+        "Minimum retrieval": true,
+        "Essential facts": true,
+        "Choices/checks": true,
+        "Output": true,
+        "Stop": true
+      },
+      "passed": true
+    },
+    {
+      "question": "reproducible experiments",
+      "section": "ML or statistical experimentation",
+      "checks": {
+        "../solutions/architecture/versioned-artifact-runs.md": true,
+        "run-manifest-template.md": true,
+        "Minimum retrieval": true,
+        "Essential facts": true,
+        "Choices/checks": true,
+        "Output": true,
+        "Stop": true
+      },
+      "passed": true
+    }
+  ],
+  "passed": true
+}

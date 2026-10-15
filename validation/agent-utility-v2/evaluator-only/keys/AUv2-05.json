@@ -1,0 +1,82 @@
+{
+  "cohort": "AU-v2",
+  "scenario_id": "AUv2-05",
+  "access": "evaluator-only",
+  "credible_baseline": "Consider a deterministic rebuild from currently valid, source-qualified active observations with separately versioned public-ID mappings; use it as a reference against any incremental maintenance design after retention approval.",
+  "findings": [
+    {
+      "finding_id": "AUv2-05-F01",
+      "dimensions": [
+        "mechanism_and_failure_modes",
+        "lifecycle_and_safety"
+      ],
+      "criterion": "Separate ingestion order, event/valid time, corrections, revocations and deletion semantics; duplicate events and delete-before-original replay must not resurrect withdrawn evidence."
+    },
+    {
+      "finding_id": "AUv2-05-F02",
+      "dimensions": [
+        "contracts_and_reproducibility",
+        "lifecycle_and_safety"
+      ],
+      "criterion": "Define authorized event identity, ordering/conflict/tombstone and dependency lineage contracts. Propagate evidence withdrawal through pair links, membership, summaries and downstream notices, not only row removal."
+    },
+    {
+      "finding_id": "AUv2-05-F03",
+      "dimensions": [
+        "baseline_and_options"
+      ],
+      "criterion": "Compare periodic active-state rebuild to affected-region recomputation or event-sourced reversible maintenance; union-only state cannot generally undo a bridge. Batch rebuilds can be valid if latency/cost and deletion requirements permit."
+    },
+    {
+      "finding_id": "AUv2-05-F04",
+      "dimensions": [
+        "evaluation_design"
+      ],
+      "criterion": "Specify replay permutations, duplicate and late corrections, delete-before-add, merged-then-split states, summary/notification correctness, idempotence and convergence where intended. Use approved active-state reference semantics, not unexplained arrival order."
+    },
+    {
+      "finding_id": "AUv2-05-F05",
+      "dimensions": [
+        "evidence_and_scope",
+        "lifecycle_and_safety"
+      ],
+      "criterion": "Stable public ID behavior requires an explicit merge/split/tombstone policy; distinguish deletion of identity evidence from authorized retention purge, and seek owner approval for retained audit data without asserting a legal interpretation."
+    },
+    {
+      "finding_id": "AUv2-05-F06",
+      "dimensions": [
+        "quality_cost_separation",
+        "contracts_and_reproducibility"
+      ],
+      "criterion": "Measure dependency scope, replay/completion cost, recovery latency and correctness separately; version data/events, policy and derived artifacts with bounded staging and rollback that never restores purged content."
+    }
+  ],
+  "acceptable_alternatives": [
+    "Full rebuild is acceptable and may be simpler if it meets approved latency and retention constraints.",
+    "Affected-component recomputation, retractable evidence graphs or event logs are defensible with explicit deletion and downstream contracts.",
+    "Public IDs may be retired, redirected or split into new IDs under an approved policy; do not demand one universal ID convention."
+  ],
+  "unanticipated_alternative_policy": "Credit any defensible alternative that addresses the actual scenario facts, uncertainties and harm constraints. No preferred diagnosis, method, wording, mandatory corpus ID or unique final decision is required. Explain such credit explicitly; do not score by checklist count.",
+  "critical_failures": [
+    {
+      "failure_id": "AUv2-05-CF-01",
+      "endorsement_required": true,
+      "trigger": "Endorses deleting only a source row while retaining unsupported membership/summaries as correct completed deletion.",
+      "not_triggered_by": "Keeping an audit marker only if authorized or explicitly identifying stale derived state as unresolved.",
+      "caps": {
+        "mechanism_and_failure_modes": 0,
+        "lifecycle_and_safety": 0
+      }
+    },
+    {
+      "failure_id": "AUv2-05-CF-02",
+      "endorsement_required": true,
+      "trigger": "Recommends unconditionally last-arrival-wins or replay-based resurrection of withdrawn/purged evidence despite the stated event and retention requirements.",
+      "not_triggered_by": "A well-defined domain-authorized ordering policy or testing the failure for rejection.",
+      "caps": {
+        "lifecycle_and_safety": 0,
+        "contracts_and_reproducibility": 1
+      }
+    }
+  ]
+}

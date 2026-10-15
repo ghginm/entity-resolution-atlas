@@ -1,0 +1,24 @@
+{
+  "version": "1.2.1-consumer-2",
+  "include_canonical_manifest": "references/atlas-manifest.json",
+  "include_domain_registry": "taxonomy/domain-registry.json",
+  "include_generated_navigation": true,
+  "files": [
+    "AGENTS.md", "START_HERE.md", "SCOPE.md", "SCHEMA.md",
+    "taxonomy/overview.md", "taxonomy/architecture-dimensions.md", "taxonomy/module-contracts.md",
+    "deep-dives/incomplete-reference-estimation.md", "deep-dives/selection-and-calibration.md",
+    "guides/agent-task-patterns.md", "guides/task-routes.json",
+    "guides/compare-and-experiment.md", "guides/decision-provenance.md",
+    "guides/er-behavioral-testing.md", "guides/er-governance.md",
+    "guides/experiment-plan-template.md", "guides/incremental-operations.md",
+    "guides/project-atlas-integration.md", "guides/project-intake.md",
+    "guides/rule-policy-refactoring.md", "guides/run-manifest-template.md",
+    "references/atlas-manifest.json", "references/source-ledger.json",
+    "references/evidence-policy.md", "references/bibliography.md",
+    "references/research-notes.md", "references/retrieval-status.json",
+    "references/retrieval-provenance.json",
+    "references/wave-1-evidence-notes.md", "references/wave-2-evidence-notes.md",
+    "references/wave-3-evidence-notes.md", "references/wave-4-evidence-notes.md"
+  ],
+  "unbundled_link_targets": []
+}

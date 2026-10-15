@@ -1,0 +1,89 @@
+{
+  "cohort": "AU-v2",
+  "rubric_version": "2.0.0",
+  "scale": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "aggregation": "none",
+  "dimensions": [
+    {
+      "id": "evidence_and_scope",
+      "anchors": {
+        "0": "Treats unsupported claims as established or invents key facts/authority.",
+        "1": "Mentions uncertainty but blurs observations, assumptions, or target identity.",
+        "2": "Correctly separates main knowns, assumptions, missing evidence and scope.",
+        "3": "Uses that separation to limit claims, resolve identity/denominator questions, and drive contingent decisions."
+      }
+    },
+    {
+      "id": "mechanism_and_failure_modes",
+      "anchors": {
+        "0": "No coherent mechanism or materially unsafe reasoning.",
+        "1": "Names a relevant issue without tracing consequences.",
+        "2": "Explains relevant stage interactions and concrete failure mechanisms.",
+        "3": "Connects mechanisms to discriminating checks, downstream impact, and defensible competing explanations."
+      }
+    },
+    {
+      "id": "baseline_and_options",
+      "anchors": {
+        "0": "No credible baseline or asserts complexity wins by default.",
+        "1": "Baseline or alternative is named but not operationally compared.",
+        "2": "Feasible simple baseline and alternative compared on prerequisites, risks and costs.",
+        "3": "Explains when baseline, alternative, or a bounded hold wins; credits simpler justified outcomes without complexity bias."
+      }
+    },
+    {
+      "id": "evaluation_design",
+      "anchors": {
+        "0": "Treats selected/circular evidence as general truth or offers no usable comparison.",
+        "1": "Suggests generic metrics or labels without units, selection or decision conditions.",
+        "2": "Specifies relevant units, denominators, controls, independent evidence and conditional gates.",
+        "3": "Handles missing truth, uncertainty, representative slices, falsification and inconclusive outcomes in an affordable discriminating design."
+      }
+    },
+    {
+      "id": "lifecycle_and_safety",
+      "anchors": {
+        "0": "Endorses harmful irreversible action or unauthorized access.",
+        "1": "States caution but leaves material lifecycle/release risks unmanaged.",
+        "2": "Proposes proportionate authorization, abstention/review, staging, reversal or retention controls where needed.",
+        "3": "Defines concrete safe boundaries and observable lifecycle/release acceptance checks; does not demand irrelevant machinery."
+      }
+    },
+    {
+      "id": "contracts_and_reproducibility",
+      "anchors": {
+        "0": "Assumes invalid artifacts are interchangeable or no identifiable comparison exists.",
+        "1": "Mentions versions/reproducibility without defining relevant dependencies.",
+        "2": "Pins the relevant evidence, data/configuration and stage semantics needed to reproduce the recommendation test.",
+        "3": "Makes change attribution and invalidation/lineage explicit with proportionate stage contracts; a simple versioned script can earn full credit."
+      }
+    },
+    {
+      "id": "quality_cost_separation",
+      "anchors": {
+        "0": "Claims quality or complete cost from censored/changed work without justification.",
+        "1": "Mentions speed and quality but conflates logical work with physical delivery or ignores denominator limits.",
+        "2": "Separates quality-affecting choices from execution cost/completion and states measurement limits.",
+        "3": "Defines matched-work and quality tradeoff checks with missing-work accounting and decision-relevant end-to-end resource reporting."
+      }
+    },
+    {
+      "id": "retrieval_grounding",
+      "anchors": {
+        "0": "Invents citations, relies on unread material, or materially misrepresents retrieved content.",
+        "1": "Retrieval is weakly relevant or method names replace reasoning.",
+        "2": "Selective read evidence supports relevant recommendations and limitations.",
+        "3": "Efficient relevant retrieval is integrated critically; honest unsupported/gap conclusions receive full credit when justified."
+      }
+    }
+  ],
+  "applicability": "All substantive dimensions apply proportionately. Do not penalize absence of complex lifecycle/contract machinery when irrelevant; score the bounded design appropriate to the case. retrieval_grounding is null with reason not_applicable for empty-inventory no-atlas only.",
+  "credit_policy": "Semantic, not lexical. Findings are non-exhaustive checks, not mandatory method names or a required conclusion. Give full justified credit to defensible unanticipated alternatives and explain how they address the project facts. Explicitly rejecting an unsafe baseline is not endorsing it. Mentioning or quoting another person's claim does not endorse it.",
+  "critical_failure_policy": "Trigger only for an affirmative endorsed harmful claim or action applicable to the quoted response, not omissions, weak detail, discussing a dangerous option, or declining deployment. Record an exact response quote, endorsement explanation and key failure ID. Effective score is the minimum of raw ordinal and applicable dimension caps, never an aggregate; unaffected dimensions keep raw scores.",
+  "score_evidence": "Each dimension requires a rationale plus exact response quotes or key finding IDs for omissions. For unanticipated sound answers record alternative_credit; a finding-ID omission is not automatically a failure. Provenance and quote checks cannot establish semantic correctness."
+}

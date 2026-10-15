@@ -1,0 +1,30 @@
+{
+  "artifacts": {
+    "evidence/offline-probe.json": "cb5b30f850a9fe45b9978ba4a1a5d5735082c2db4c6d1520104b4405cf6c2ee9",
+    "evidence/report-final.json": "f1067b32b7e25bba4b27124eb04b9956a74549dd8134a2018b8b674f4b4c5dfb",
+    "prepared/initial/preparation-manifest.json": "bb8cd3f9d29283eed65b0a5c32d23c635cfdd766a85217711bf827b073994f83",
+    "test_workflow.py": "1fe553dc72fa801ba81f1e3a42be799d991d575e1b5a20b8122bc19cf4e68146",
+    "workflow.py": "76a64f8e242ab100d8576a409927922e4728c8980fa58893a0a7331f4acf0260"
+  },
+  "blockers": [
+    "No compatible existing trusted executor bound to AW snapshots/protocol is attested. Legacy bridge Session/contract bind AU-v2 arms/settings and exclude guides; do not patch globals or copy executor.",
+    "Independent evaluator actual identity/version, non-authorship/conflict declaration, settings and external operator trust not attested; current author/subagent cannot independently score own package.",
+    "No provider/subprocess runner or score admission API in this package. Real runs unavailable; 0 genuine runs and 0 scores."
+  ],
+  "execution_eligibility": "unavailable",
+  "freeze_manifest_sha256": "132fef9b963a68c87faae045f1e2ef96201827f1f70a445616464fdb728011e8",
+  "genuine_runs": 0,
+  "genuine_scores": 0,
+  "kind": "offline-readiness-status-not-results",
+  "resume_commands": [
+    "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python -B validation/agent-workflow/workflow.py verify --prepared validation/agent-workflow/prepared/initial",
+    "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python -B validation/agent-workflow/workflow.py plan --prepared validation/agent-workflow/prepared/initial",
+    "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python -B validation/agent-workflow/workflow.py report --prepared validation/agent-workflow/prepared/initial"
+  ],
+  "runtime_resume": "No run command. Attest compatible existing executor and genuinely independent evaluator/settings before separate supplemental binding; do not change frozen inputs.",
+  "tests": {
+    "failed": 0,
+    "passed": 12,
+    "transcript": "evidence/tests-final.txt"
+  }
+}

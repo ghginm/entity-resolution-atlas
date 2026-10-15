@@ -1,0 +1,3 @@
+# This repository anchors frozen evidence to exact SHA-256 bytes.
+# Never normalize line endings or apply text filters to tracked content.
+* -text

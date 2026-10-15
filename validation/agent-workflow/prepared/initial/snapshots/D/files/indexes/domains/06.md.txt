@@ -1,0 +1,173 @@
+# 06 — Comparison Features & Evidence Engineering
+
+[L0 catalog](../../CATALOG.md)
+
+[Domain map](../../taxonomy/domains/06-comparison-evidence.md)
+
+## DEC-06-001 — Design comparison evidence before choosing a scorer
+
+decision · domain 06 · [DEC-06-001 — Design comparison evidence before choosing a scorer](../../decisions/comparison-evidence.md)
+
+Choose how two records become interpretable comparison evidence, keeping value agreement, absence, validity, contradiction, and contextual reliability distinct. Requires aligned attribute semantics, observation provenance, and declared comparison scope. Compare a compact state-based baseline with richer attribute, frequency, temporal, and representation features. More features can expose useful variation but also duplicate the same observation or encode source shortcuts; weighting and final action remain separate downstream decisions.
+
+Tags: `entity-agnostic`, `evidence-engineering`, `frequency-aware`, `interpretable`, `missingness`, `source-aware`, `uncertainty`.
+
+**Alternatives and differences**
+
+Declared alternatives: none in metadata; do not infer substitutability from shared tags.
+
+Read differences and conditions in: [Alternatives and solution links](../../decisions/comparison-evidence.md#alternatives-and-solution-links), [Choice criteria and trade-offs](../../decisions/comparison-evidence.md#choice-criteria-and-trade-offs), [Baseline and related evaluations](../../decisions/comparison-evidence.md#baseline-and-related-evaluations).
+
+complements: [DEC-07-001](../../decisions/scoring-strategy.md), [SOL-06-002](../../solutions/comparison-features/string-comparators.md), [SOL-06-003](../../solutions/comparison-features/identifier-namespaces.md).
+
+evaluated_by: [EVAL-11-002](../../evaluation/pairwise-calibration.md).
+
+## HYP-06-001 — Frequency-aware agreement evidence under population shift
+
+hypothesis · domain 06 · [HYP-06-001 — Frequency-aware agreement evidence under population shift](../../research/hypotheses/frequency-aware-evidence.md)
+
+Test whether population-aware agreement evidence improves held-out matching recall at a fixed precision requirement compared with the same scorer using frequency-blind comparisons. The mechanism is established likelihood-ratio reasoning, not a novelty claim or observed Atlas result. A valid experiment needs independently labeled entities, leakage-safe frequency estimation, unchanged candidates and policies, and predeclared practical effect and cost limits. Rare errors, copied values, sparse estimates, and population shifts may erase gains or increase false merges.
+
+Tags: `entity-agnostic`, `evidence-engineering`, `experimentation`, `frequency-aware`, `high-precision`, `pairwise`, `uncertainty`.
+
+**Alternatives and differences**
+
+Declared alternatives: none in metadata; do not infer substitutability from shared tags.
+
+Read differences and conditions in: [Baseline, intervention, and controlled variables](../../research/hypotheses/frequency-aware-evidence.md#baseline-intervention-and-controlled-variables).
+
+complements: [HYP-07-001](../../research/hypotheses/contextual-reliability.md), [SOL-06-001](../../solutions/comparison-features/evidence-states.md).
+
+evaluated_by: [EVAL-11-002](../../evaluation/pairwise-calibration.md), [EVAL-11-003](../../evaluation/entity-resolution-quality.md).
+
+tests: [SOL-07-002](../../solutions/matching-scoring/fellegi-sunter.md), [SOL-07-003](../../solutions/matching-scoring/logistic-regression.md).
+
+## SOL-06-001 — Explicit comparison evidence states
+
+solution · domain 06 · [SOL-06-001 — Explicit comparison evidence states](../../solutions/comparison-features/evidence-states.md)
+
+Represent field comparisons with explicit states and supporting context instead of treating all non-agreement as the same numeric value. Separate observed agreement, partial agreement, disagreement, missingness, invalidity, and semantic incomparability. Requires attribute-specific comparison rules and provenance; strong contradictions additionally require credible incompatible observations. The representation supports interpretable scoring and review, but does not prescribe evidence weights, guarantee independence, or make missing values identity evidence.
+
+Tags: `conflicting`, `evidence-engineering`, `interpretable`, `missingness`, `provenance`, `source-aware`, `uncertainty`.
+
+**Alternatives and differences**
+
+Declared alternatives: none in metadata; do not infer substitutability from shared tags.
+
+Read differences and conditions in: [Variants, prerequisites, and applicability](../../solutions/comparison-features/evidence-states.md#variants-prerequisites-and-applicability), [Advantages, trade-offs, and failure modes](../../solutions/comparison-features/evidence-states.md#advantages-trade-offs-and-failure-modes), [Relationships and evaluation](../../solutions/comparison-features/evidence-states.md#relationships-and-evaluation).
+
+addresses: [DEC-06-001](../../decisions/comparison-evidence.md).
+
+complements: [SOL-07-001](../../solutions/matching-scoring/additive-soft-matching.md), [SOL-07-002](../../solutions/matching-scoring/fellegi-sunter.md), [SOL-07-003](../../solutions/matching-scoring/logistic-regression.md).
+
+evaluated_by: [EVAL-11-002](../../evaluation/pairwise-calibration.md).
+
+## SOL-06-002 — Choose character, token and phonetic string comparisons
+
+solution · domain 06 · [SOL-06-002 — Choose character, token and phonetic string comparisons](../../solutions/comparison-features/string-comparators.md)
+
+Compare name strings with mechanisms matched to observed error patterns: exact agreement, edit costs, Jaro-style character alignment, token overlap, frequency weighting or phonetic codes. Requires declared representations and explicit missing-value behavior. More tolerant comparators can recover variations but also inflate similarity between distinct names, discard order or confuse shared prefixes. Treat similarity as evidence rather than match probability, preserve dependency lineage, and test changes on fixed candidates before changing retrieval or decision thresholds.
+
+Tags: `evidence-engineering`, `frequency-aware`, `interpretable`, `noisy`, `organization`, `pairwise`, `person`.
+
+**Alternatives and differences**
+
+Declared alternatives: none in metadata; do not infer substitutability from shared tags.
+
+Read differences and conditions in: [Core mechanisms, theoretical explanation and variants](../../solutions/comparison-features/string-comparators.md#core-mechanisms-theoretical-explanation-and-variants), [Trade-offs, failure modes and relationships](../../solutions/comparison-features/string-comparators.md#trade-offs-failure-modes-and-relationships).
+
+addresses: [DEC-06-001](../../decisions/comparison-evidence.md).
+
+complements: [HYP-06-001](../../research/hypotheses/frequency-aware-evidence.md), [SOL-04-001](../../solutions/normalization/name-representations.md), [SOL-06-001](../../solutions/comparison-features/evidence-states.md).
+
+evaluated_by: [EVAL-11-002](../../evaluation/pairwise-calibration.md), [EVAL-11-006](../../evaluation/synthetic-metamorphic.md).
+
+## SOL-06-003 — Namespace-qualified identifier evidence
+
+solution · domain 06 · [SOL-06-003 — Namespace-qualified identifier evidence](../../solutions/comparison-features/identifier-namespaces.md)
+
+Compare identifiers only after establishing namespace, entity meaning, normalization, issuing scope and relevant validity or reuse semantics. Distinguish syntactic validity, authoritative assignment and uniqueness; equality alone can reflect a shared placeholder or an unrelated local number. Requires project-specific authority and identity assumptions. A trustworthy identifier can support a simple exact baseline, but disagreement is a hard contradiction only under justified uniqueness and temporal conditions; otherwise retain soft evidence or escalate unresolved admissibility.
+
+Tags: `constraints`, `evidence-engineering`, `high-precision`, `identifiers`, `provenance`, `source-aware`, `uncertainty`.
+
+**Alternatives and differences**
+
+Declared alternatives: none in metadata; do not infer substitutability from shared tags.
+
+Read differences and conditions in: [Worked examples and important variants](../../solutions/comparison-features/identifier-namespaces.md#worked-examples-and-important-variants), [Applicability, advantages, baseline and policy alternatives](../../solutions/comparison-features/identifier-namespaces.md#applicability-advantages-baseline-and-policy-alternatives), [Trade-offs, failure modes and relationships](../../solutions/comparison-features/identifier-namespaces.md#trade-offs-failure-modes-and-relationships).
+
+addresses: [DEC-06-001](../../decisions/comparison-evidence.md).
+
+complements: [DEC-01-001](../../decisions/identity-semantics.md), [SOL-06-001](../../solutions/comparison-features/evidence-states.md), [SOL-08-005](../../solutions/decision-resolution/ordered-rule-policies.md).
+
+evaluated_by: [EVAL-11-002](../../evaluation/pairwise-calibration.md), [EVAL-11-006](../../evaluation/synthetic-metamorphic.md).
+
+## Tag conflicting
+
+[SOL-06-001](../../solutions/comparison-features/evidence-states.md).
+
+## Tag constraints
+
+[SOL-06-003](../../solutions/comparison-features/identifier-namespaces.md).
+
+## Tag entity-agnostic
+
+[DEC-06-001](../../decisions/comparison-evidence.md), [HYP-06-001](../../research/hypotheses/frequency-aware-evidence.md).
+
+## Tag evidence-engineering
+
+[DEC-06-001](../../decisions/comparison-evidence.md), [HYP-06-001](../../research/hypotheses/frequency-aware-evidence.md), [SOL-06-001](../../solutions/comparison-features/evidence-states.md), [SOL-06-002](../../solutions/comparison-features/string-comparators.md), [SOL-06-003](../../solutions/comparison-features/identifier-namespaces.md).
+
+## Tag experimentation
+
+[HYP-06-001](../../research/hypotheses/frequency-aware-evidence.md).
+
+## Tag frequency-aware
+
+[DEC-06-001](../../decisions/comparison-evidence.md), [HYP-06-001](../../research/hypotheses/frequency-aware-evidence.md), [SOL-06-002](../../solutions/comparison-features/string-comparators.md).
+
+## Tag high-precision
+
+[HYP-06-001](../../research/hypotheses/frequency-aware-evidence.md), [SOL-06-003](../../solutions/comparison-features/identifier-namespaces.md).
+
+## Tag identifiers
+
+[SOL-06-003](../../solutions/comparison-features/identifier-namespaces.md).
+
+## Tag interpretable
+
+[DEC-06-001](../../decisions/comparison-evidence.md), [SOL-06-001](../../solutions/comparison-features/evidence-states.md), [SOL-06-002](../../solutions/comparison-features/string-comparators.md).
+
+## Tag missingness
+
+[DEC-06-001](../../decisions/comparison-evidence.md), [SOL-06-001](../../solutions/comparison-features/evidence-states.md).
+
+## Tag noisy
+
+[SOL-06-002](../../solutions/comparison-features/string-comparators.md).
+
+## Tag organization
+
+[SOL-06-002](../../solutions/comparison-features/string-comparators.md).
+
+## Tag pairwise
+
+[HYP-06-001](../../research/hypotheses/frequency-aware-evidence.md), [SOL-06-002](../../solutions/comparison-features/string-comparators.md).
+
+## Tag person
+
+[SOL-06-002](../../solutions/comparison-features/string-comparators.md).
+
+## Tag provenance
+
+[SOL-06-001](../../solutions/comparison-features/evidence-states.md), [SOL-06-003](../../solutions/comparison-features/identifier-namespaces.md).
+
+## Tag source-aware
+
+[DEC-06-001](../../decisions/comparison-evidence.md), [SOL-06-001](../../solutions/comparison-features/evidence-states.md), [SOL-06-003](../../solutions/comparison-features/identifier-namespaces.md).
+
+## Tag uncertainty
+
+[DEC-06-001](../../decisions/comparison-evidence.md), [HYP-06-001](../../research/hypotheses/frequency-aware-evidence.md), [SOL-06-001](../../solutions/comparison-features/evidence-states.md), [SOL-06-003](../../solutions/comparison-features/identifier-namespaces.md).
+
+Generated from card summaries, tags, typed relations and section links. No compatibility or performance conclusion is generated.

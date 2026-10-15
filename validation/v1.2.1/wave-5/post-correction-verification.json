@@ -1,0 +1,182 @@
+{
+  "observed_at": "2026-10-15T20:05:33.458391+00:00",
+  "checks": [
+    {
+      "check": "au-v2-freeze",
+      "argv": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "validation/agent-utility-v2/verify.py",
+        "--expected-manifest-sha256",
+        "22d2527c35b39e1f22a0ac5815c833924815b63cbd1704a958989f124c798f49"
+      ],
+      "returncode": 0,
+      "stdout": "{\"actual_runs\": 0, \"actual_scores\": 0, \"benchmark_id\": \"AU-v2\", \"critical_failure_rules\": 17, \"dimensions\": 8, \"frozen_files\": 36, \"integrity\": \"verified\", \"json_files_excluding_manifest\": 30, \"keys\": 8, \"planned_cells\": 24, \"preparation_status\": \"prepared_data_only\", \"runtime_integration\": \"unimplemented\", \"scenarios\": 8, \"schemas\": 10, \"semantic_findings\": 48}\n",
+      "stderr": ""
+    },
+    {
+      "check": "workflow-verify",
+      "argv": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "validation/agent-workflow/workflow.py",
+        "verify",
+        "--prepared",
+        "validation/agent-workflow/prepared/initial"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"freeze_manifest_sha256\": \"132fef9b963a68c87faae045f1e2ef96201827f1f70a445616464fdb728011e8\",\n  \"frozen_files\": 14,\n  \"preparation_manifest_sha256\": \"bb8cd3f9d29283eed65b0a5c32d23c635cfdd766a85217711bf827b073994f83\",\n  \"prepared_files\": 278,\n  \"sources_verified\": {\n    \"A\": 0,\n    \"B\": 52,\n    \"C\": 79,\n    \"D\": 130\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "check": "corrected-consumer-source-bound",
+      "argv": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "tools/atlas_consumer.py",
+        "verify",
+        "--output",
+        "dist/atlas-consumer-wave5"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"cards\": 57,\n  \"files\": 130,\n  \"bytes\": 1020240,\n  \"manifest_sha256\": \"be999130f3444e9a539d458287e34f7087440bd55c9cb9dc0cd3ad31b96ac592\",\n  \"source_verified\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "check": "snapshot-baseline",
+      "argv": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "validation/agent-utility-integration/bridge.py",
+        "verify",
+        "--snapshot",
+        "validation/agent-utility-integration/corpora/2026-10-14-02/baseline",
+        "--expected-sha256",
+        "cb0b01f42b3559290d6d03b1aa20645c5f3afd569ec49f32ca8f8a3bff549b88"
+      ],
+      "returncode": 0,
+      "stdout": "{\"cards\": 31, \"files\": 52, \"integrity\": \"verified\"}\n",
+      "stderr": ""
+    },
+    {
+      "check": "snapshot-expanded",
+      "argv": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "validation/agent-utility-integration/bridge.py",
+        "verify",
+        "--snapshot",
+        "validation/agent-utility-integration/corpora/2026-10-14-02/expanded",
+        "--expected-sha256",
+        "3c69f5e66bfb4a3b517df20611505563dd343fe3164139dd1770596890d889c7"
+      ],
+      "returncode": 0,
+      "stdout": "{\"cards\": 57, \"files\": 79, \"integrity\": \"verified\"}\n",
+      "stderr": ""
+    },
+    {
+      "check": "snapshot-empty",
+      "argv": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "validation/agent-utility-integration/bridge.py",
+        "verify",
+        "--snapshot",
+        "validation/agent-utility-integration/corpora/2026-10-14-02/empty",
+        "--expected-sha256",
+        "c6c12f9277aed75cf41e9727a2cbf042be041d503e189be9f068d8d1d5083542"
+      ],
+      "returncode": 0,
+      "stdout": "{\"cards\": 0, \"files\": 0, \"integrity\": \"verified\"}\n",
+      "stderr": ""
+    },
+    {
+      "check": "preserved-consumer-internal",
+      "argv": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "-c",
+        "import sys,json;from pathlib import Path;sys.path.insert(0,'tools');import atlas_consumer;print(json.dumps(atlas_consumer.verify(Path('dist/atlas-consumer')),sort_keys=True))"
+      ],
+      "returncode": 0,
+      "stdout": "{\"bytes\": 1019689, \"cards\": 57, \"files\": 130, \"manifest_sha256\": \"fc6078f5243355ab19947d1c649ee80aa04ba8c3266dee16200f5d7a7f440bd3\", \"source_verified\": false}\n",
+      "stderr": ""
+    },
+    {
+      "check": "lint",
+      "argv": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "tools/atlas_docs.py",
+        "lint"
+      ],
+      "returncode": 1,
+      "log": "post-correction-lint.json",
+      "stderr": ""
+    },
+    {
+      "check": "citations-review-incomplete-calibration.md",
+      "argv": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "/home/ghgin/.hermes/skills/research/grounded-citations/scripts/sources.py",
+        "--ledger",
+        "/home/ghgin/projects/entity-resolution-atlas/references/source-ledger.json",
+        "verify",
+        "/home/ghgin/projects/entity-resolution-atlas/validation/v1.2.1/wave-5/review-incomplete-calibration.md",
+        "--strict"
+      ],
+      "returncode": 1,
+      "stdout": "info: stats: 99 prose sentence(s), 6 with declared provenance (6%) \u2014 6 cited, 0 marked [unverified] (a sentence may be both); 8 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [2], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [19], [20], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\nverification failed\n",
+      "stderr": ""
+    },
+    {
+      "check": "citations-review-graph-lifecycle.md",
+      "argv": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "/home/ghgin/.hermes/skills/research/grounded-citations/scripts/sources.py",
+        "--ledger",
+        "/home/ghgin/projects/entity-resolution-atlas/references/source-ledger.json",
+        "verify",
+        "/home/ghgin/projects/entity-resolution-atlas/validation/v1.2.1/wave-5/review-graph-lifecycle.md",
+        "--strict"
+      ],
+      "returncode": 1,
+      "stdout": "info: stats: 54 prose sentence(s), 11 with declared provenance (20%) \u2014 11 cited, 0 marked [unverified] (a sentence may be both); 5 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [11], [13], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [29], [30], [31], [32], [33], [34], [35], [36], [38], [39], [40], [41], [42], [43], [44], [45]\nverification failed\n",
+      "stderr": ""
+    },
+    {
+      "check": "citations-review-advisories.md",
+      "argv": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "/home/ghgin/.hermes/skills/research/grounded-citations/scripts/sources.py",
+        "--ledger",
+        "/home/ghgin/projects/entity-resolution-atlas/references/source-ledger.json",
+        "verify",
+        "/home/ghgin/projects/entity-resolution-atlas/validation/v1.2.1/wave-5/review-advisories.md",
+        "--strict"
+      ],
+      "returncode": 1,
+      "stdout": "info: stats: 15 prose sentence(s), 1 with declared provenance (7%) \u2014 1 cited, 0 marked [unverified] (a sentence may be both); 1 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\nverification failed\n",
+      "stderr": ""
+    },
+    {
+      "check": "citations-review-experiments.md",
+      "argv": [
+        "/home/ghgin/.hermes/cache/scratch/atlas-v11-qa/bin/python",
+        "-B",
+        "/home/ghgin/.hermes/skills/research/grounded-citations/scripts/sources.py",
+        "--ledger",
+        "/home/ghgin/projects/entity-resolution-atlas/references/source-ledger.json",
+        "verify",
+        "/home/ghgin/projects/entity-resolution-atlas/validation/v1.2.1/wave-5/review-experiments.md",
+        "--strict"
+      ],
+      "returncode": 1,
+      "stdout": "info: stats: 45 prose sentence(s), 4 with declared provenance (9%) \u2014 4 cited, 0 marked [unverified] (a sentence may be both); 4 distinct source(s) cited, 45 in ledger (0 with evidence quotes)\nwarn: registered in the ledger but not cited in this draft: [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [21], [22], [23], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45]\nverification failed\n",
+      "stderr": ""
+    }
+  ]
+}

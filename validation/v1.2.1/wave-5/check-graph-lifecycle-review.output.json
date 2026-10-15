@@ -1,0 +1,138 @@
+{
+  "scope": "adversarial finite mathematical witnesses only; not canonical implementation or empirical utility validation",
+  "checks": [
+    {
+      "name": "fixed_graph_order_and_deletion",
+      "status": "passed",
+      "graphs": 64,
+      "edge_deletions": 192
+    },
+    {
+      "name": "bridge_amplification",
+      "status": "passed",
+      "sizes": [
+        3,
+        3
+      ],
+      "false_pairs": 9,
+      "beyond_false_edge": 8
+    },
+    {
+      "name": "bridge_amplification",
+      "status": "passed",
+      "sizes": [
+        20,
+        30
+      ],
+      "false_pairs": 600,
+      "beyond_false_edge": 599
+    },
+    {
+      "name": "alternate_path_and_actual_split",
+      "status": "passed",
+      "triangle_after_one_deletion": 1,
+      "chain_after_one_deletion": 2
+    },
+    {
+      "name": "bridge_count_not_accuracy",
+      "status": "passed",
+      "true_chain_bridges": 2,
+      "wrong_dense_union_bridges": 0
+    },
+    {
+      "name": "constraint_logic",
+      "status": "passed",
+      "partitions_enumerated": 5,
+      "inconsistent_must_cannot_feasible": 0,
+      "cannot_link_transitive": false
+    },
+    {
+      "name": "whole_union_not_endpoint_check",
+      "status": "passed",
+      "endpoint_allowed": true,
+      "union_allowed": false
+    },
+    {
+      "name": "feasible_greedy_not_optimal",
+      "status": "passed",
+      "greedy_value": 10,
+      "optimum": 18
+    },
+    {
+      "name": "soft_labels_not_hard_admissibility",
+      "status": "passed",
+      "minimum_disagreements": 1
+    },
+    {
+      "name": "edge_marginals_not_cluster_probability",
+      "status": "passed",
+      "edge_marginals": [
+        "9/10",
+        "9/10"
+      ],
+      "all_same_probabilities": [
+        "4/5",
+        "9/10"
+      ],
+      "independent_product": "81/100"
+    },
+    {
+      "name": "disjoint_validity_single_occupancy_countermodel",
+      "status": "passed",
+      "intervals": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "single_occupancy": true,
+      "same_enduring_entity": true
+    },
+    {
+      "name": "delete_top_k_requires_new_retrieval",
+      "status": "passed",
+      "stored_only": [],
+      "full_eligible": [
+        [
+          "c",
+          8
+        ]
+      ]
+    },
+    {
+      "name": "stale_update_not_resurrection",
+      "status": "passed",
+      "last_arrival": "live",
+      "revision_order": "tombstone"
+    },
+    {
+      "name": "valid_time_not_ingestion",
+      "status": "passed",
+      "valid_current": [
+        "new-address"
+      ],
+      "last_arrival": "old-address"
+    },
+    {
+      "name": "check_then_write_race",
+      "status": "passed",
+      "prior_check_passed": true,
+      "atomic_compare_would_reject": true
+    },
+    {
+      "name": "split_not_single_target_redirect",
+      "status": "passed",
+      "historical_members": [
+        "a",
+        "b"
+      ],
+      "possible_children": 2
+    }
+  ],
+  "check_count": 16,
+  "failed": 0
+}

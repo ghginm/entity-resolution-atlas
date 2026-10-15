@@ -1,0 +1,489 @@
+{
+  "arms": {
+    "A": {
+      "accounting": {
+        "cost_usd": null,
+        "documents": 0,
+        "failed": false,
+        "irrelevant_reads": null,
+        "provider_input_tokens": null,
+        "provider_output_tokens": null,
+        "quality_status": "unscored",
+        "read_attempts": 3,
+        "relevant_reads": null,
+        "retrieved_bytes": 0,
+        "retrieved_characters": 0,
+        "retrieved_text_tokens": 0,
+        "scope": "returned text only; repeated excerpts counted; no provider evidence",
+        "successful_reads": 0,
+        "tokenizer": {
+          "asset_sha256": "223921b76ee99bde995b7ff738513eef100fb51d18c93597a113bcffe865b2a7",
+          "counting": "sum per returned excerpt; encode_ordinary; special spellings treated as text",
+          "encoding": "cl100k_base",
+          "library": "tiktoken",
+          "version": "0.12.0"
+        },
+        "uncertain_reads": null,
+        "wall_seconds": null
+      },
+      "inventory_bytes_not_retrieved": 3,
+      "reads": [
+        {
+          "content": "",
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "counters": {
+            "characters": 0,
+            "read_attempts": 1,
+            "reads": 0
+          },
+          "error": "path not in allowlisted inventory",
+          "evaluator_relevance": null,
+          "evaluator_relevance_reason": null,
+          "freeze_manifest_sha256": "132fef9b963a68c87faae045f1e2ef96201827f1f70a445616464fdb728011e8",
+          "layer": "denied",
+          "offset": 0,
+          "offset_unit": "unicode-code-points",
+          "path": "index/L0.json",
+          "request": {
+            "length": 500,
+            "offset": 0,
+            "path": "index/L0.json",
+            "request_id": "repeat-0",
+            "type": "read_file"
+          },
+          "request_id": "repeat-0",
+          "requested_length": 500,
+          "returned_bytes": 0,
+          "returned_chars": 0,
+          "returned_text_tokens": 0,
+          "text_tokens_status": "measured-offline-cl100k_base"
+        },
+        {
+          "content": "",
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "counters": {
+            "characters": 0,
+            "read_attempts": 2,
+            "reads": 0
+          },
+          "error": "path not in allowlisted inventory",
+          "evaluator_relevance": null,
+          "evaluator_relevance_reason": null,
+          "freeze_manifest_sha256": "132fef9b963a68c87faae045f1e2ef96201827f1f70a445616464fdb728011e8",
+          "layer": "denied",
+          "offset": 0,
+          "offset_unit": "unicode-code-points",
+          "path": "index/L0.json",
+          "request": {
+            "length": 500,
+            "offset": 0,
+            "path": "index/L0.json",
+            "request_id": "repeat-1",
+            "type": "read_file"
+          },
+          "request_id": "repeat-1",
+          "requested_length": 500,
+          "returned_bytes": 0,
+          "returned_chars": 0,
+          "returned_text_tokens": 0,
+          "text_tokens_status": "measured-offline-cl100k_base"
+        },
+        {
+          "content": "",
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "counters": {
+            "characters": 0,
+            "read_attempts": 3,
+            "reads": 0
+          },
+          "error": "path not in allowlisted inventory",
+          "evaluator_relevance": null,
+          "evaluator_relevance_reason": null,
+          "freeze_manifest_sha256": "132fef9b963a68c87faae045f1e2ef96201827f1f70a445616464fdb728011e8",
+          "layer": "denied",
+          "offset": 0,
+          "offset_unit": "unicode-code-points",
+          "path": "../../frozen/evaluator/checklists.json",
+          "request": {
+            "length": 1,
+            "offset": 0,
+            "path": "../../frozen/evaluator/checklists.json",
+            "request_id": "denied",
+            "type": "read_file"
+          },
+          "request_id": "denied",
+          "requested_length": 1,
+          "returned_bytes": 0,
+          "returned_chars": 0,
+          "returned_text_tokens": 0,
+          "text_tokens_status": "measured-offline-cl100k_base"
+        }
+      ]
+    },
+    "B": {
+      "accounting": {
+        "cost_usd": null,
+        "documents": 1,
+        "failed": false,
+        "irrelevant_reads": null,
+        "provider_input_tokens": null,
+        "provider_output_tokens": null,
+        "quality_status": "unscored",
+        "read_attempts": 3,
+        "relevant_reads": null,
+        "retrieved_bytes": 1000,
+        "retrieved_characters": 1000,
+        "retrieved_text_tokens": 192,
+        "scope": "returned text only; repeated excerpts counted; no provider evidence",
+        "successful_reads": 2,
+        "tokenizer": {
+          "asset_sha256": "223921b76ee99bde995b7ff738513eef100fb51d18c93597a113bcffe865b2a7",
+          "counting": "sum per returned excerpt; encode_ordinary; special spellings treated as text",
+          "encoding": "cl100k_base",
+          "library": "tiktoken",
+          "version": "0.12.0"
+        },
+        "uncertain_reads": null,
+        "wall_seconds": null
+      },
+      "inventory_bytes_not_retrieved": 5495,
+      "reads": [
+        {
+          "content": "{\"cards\":[{\"applicability\":\"A sequential reference composition separates normalization, candidate generation, comparison evidence, scoring, decision policy, and entity construction through explicit artifacts.\",\"domain\":\"02\",\"id\":\"AR-01\",\"path\":\"architectures/linear-modular.md.txt\",\"title\":\"Linear/Modular Baseline\",\"type\":\"architecture\"},{\"applicability\":\"Multiple retrieval passes propose overlapping candidate pairs, which are unioned, deduplicated, and scored under a declared downstream policy. ",
+          "content_sha256": "b09c050bebfc508fc51e74a6c7f68b1734b73a6f791e45f595ea14f1b8de1924",
+          "counters": {
+            "characters": 500,
+            "read_attempts": 1,
+            "reads": 1
+          },
+          "error": null,
+          "evaluator_relevance": null,
+          "evaluator_relevance_reason": null,
+          "freeze_manifest_sha256": "132fef9b963a68c87faae045f1e2ef96201827f1f70a445616464fdb728011e8",
+          "layer": "L0",
+          "offset": 0,
+          "offset_unit": "unicode-code-points",
+          "path": "index/L0.json",
+          "request": {
+            "length": 500,
+            "offset": 0,
+            "path": "index/L0.json",
+            "request_id": "repeat-0",
+            "type": "read_file"
+          },
+          "request_id": "repeat-0",
+          "requested_length": 500,
+          "returned_bytes": 500,
+          "returned_chars": 500,
+          "returned_text_tokens": 96,
+          "text_tokens_status": "measured-offline-cl100k_base"
+        },
+        {
+          "content": "{\"cards\":[{\"applicability\":\"A sequential reference composition separates normalization, candidate generation, comparison evidence, scoring, decision policy, and entity construction through explicit artifacts.\",\"domain\":\"02\",\"id\":\"AR-01\",\"path\":\"architectures/linear-modular.md.txt\",\"title\":\"Linear/Modular Baseline\",\"type\":\"architecture\"},{\"applicability\":\"Multiple retrieval passes propose overlapping candidate pairs, which are unioned, deduplicated, and scored under a declared downstream policy. ",
+          "content_sha256": "b09c050bebfc508fc51e74a6c7f68b1734b73a6f791e45f595ea14f1b8de1924",
+          "counters": {
+            "characters": 1000,
+            "read_attempts": 2,
+            "reads": 2
+          },
+          "error": null,
+          "evaluator_relevance": null,
+          "evaluator_relevance_reason": null,
+          "freeze_manifest_sha256": "132fef9b963a68c87faae045f1e2ef96201827f1f70a445616464fdb728011e8",
+          "layer": "L0",
+          "offset": 0,
+          "offset_unit": "unicode-code-points",
+          "path": "index/L0.json",
+          "request": {
+            "length": 500,
+            "offset": 0,
+            "path": "index/L0.json",
+            "request_id": "repeat-1",
+            "type": "read_file"
+          },
+          "request_id": "repeat-1",
+          "requested_length": 500,
+          "returned_bytes": 500,
+          "returned_chars": 500,
+          "returned_text_tokens": 96,
+          "text_tokens_status": "measured-offline-cl100k_base"
+        },
+        {
+          "content": "",
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "counters": {
+            "characters": 1000,
+            "read_attempts": 3,
+            "reads": 2
+          },
+          "error": "path not in allowlisted inventory",
+          "evaluator_relevance": null,
+          "evaluator_relevance_reason": null,
+          "freeze_manifest_sha256": "132fef9b963a68c87faae045f1e2ef96201827f1f70a445616464fdb728011e8",
+          "layer": "denied",
+          "offset": 0,
+          "offset_unit": "unicode-code-points",
+          "path": "../../frozen/evaluator/checklists.json",
+          "request": {
+            "length": 1,
+            "offset": 0,
+            "path": "../../frozen/evaluator/checklists.json",
+            "request_id": "denied",
+            "type": "read_file"
+          },
+          "request_id": "denied",
+          "requested_length": 1,
+          "returned_bytes": 0,
+          "returned_chars": 0,
+          "returned_text_tokens": 0,
+          "text_tokens_status": "measured-offline-cl100k_base"
+        }
+      ]
+    },
+    "C": {
+      "accounting": {
+        "cost_usd": null,
+        "documents": 1,
+        "failed": false,
+        "irrelevant_reads": null,
+        "provider_input_tokens": null,
+        "provider_output_tokens": null,
+        "quality_status": "unscored",
+        "read_attempts": 3,
+        "relevant_reads": null,
+        "retrieved_bytes": 1000,
+        "retrieved_characters": 1000,
+        "retrieved_text_tokens": 192,
+        "scope": "returned text only; repeated excerpts counted; no provider evidence",
+        "successful_reads": 2,
+        "tokenizer": {
+          "asset_sha256": "223921b76ee99bde995b7ff738513eef100fb51d18c93597a113bcffe865b2a7",
+          "counting": "sum per returned excerpt; encode_ordinary; special spellings treated as text",
+          "encoding": "cl100k_base",
+          "library": "tiktoken",
+          "version": "0.12.0"
+        },
+        "uncertain_reads": null,
+        "wall_seconds": null
+      },
+      "inventory_bytes_not_retrieved": 8485,
+      "reads": [
+        {
+          "content": "{\"cards\":[{\"applicability\":\"A sequential reference composition separates normalization, candidate generation, comparison evidence, scoring, decision policy, and entity construction through explicit artifacts.\",\"domain\":\"02\",\"id\":\"AR-01\",\"path\":\"architectures/linear-modular.md.txt\",\"title\":\"Linear/Modular Baseline\",\"type\":\"architecture\"},{\"applicability\":\"Multiple retrieval passes propose overlapping candidate pairs, which are unioned, deduplicated, and scored under a declared downstream policy. ",
+          "content_sha256": "b09c050bebfc508fc51e74a6c7f68b1734b73a6f791e45f595ea14f1b8de1924",
+          "counters": {
+            "characters": 500,
+            "read_attempts": 1,
+            "reads": 1
+          },
+          "error": null,
+          "evaluator_relevance": null,
+          "evaluator_relevance_reason": null,
+          "freeze_manifest_sha256": "132fef9b963a68c87faae045f1e2ef96201827f1f70a445616464fdb728011e8",
+          "layer": "L0",
+          "offset": 0,
+          "offset_unit": "unicode-code-points",
+          "path": "index/L0.json",
+          "request": {
+            "length": 500,
+            "offset": 0,
+            "path": "index/L0.json",
+            "request_id": "repeat-0",
+            "type": "read_file"
+          },
+          "request_id": "repeat-0",
+          "requested_length": 500,
+          "returned_bytes": 500,
+          "returned_chars": 500,
+          "returned_text_tokens": 96,
+          "text_tokens_status": "measured-offline-cl100k_base"
+        },
+        {
+          "content": "{\"cards\":[{\"applicability\":\"A sequential reference composition separates normalization, candidate generation, comparison evidence, scoring, decision policy, and entity construction through explicit artifacts.\",\"domain\":\"02\",\"id\":\"AR-01\",\"path\":\"architectures/linear-modular.md.txt\",\"title\":\"Linear/Modular Baseline\",\"type\":\"architecture\"},{\"applicability\":\"Multiple retrieval passes propose overlapping candidate pairs, which are unioned, deduplicated, and scored under a declared downstream policy. ",
+          "content_sha256": "b09c050bebfc508fc51e74a6c7f68b1734b73a6f791e45f595ea14f1b8de1924",
+          "counters": {
+            "characters": 1000,
+            "read_attempts": 2,
+            "reads": 2
+          },
+          "error": null,
+          "evaluator_relevance": null,
+          "evaluator_relevance_reason": null,
+          "freeze_manifest_sha256": "132fef9b963a68c87faae045f1e2ef96201827f1f70a445616464fdb728011e8",
+          "layer": "L0",
+          "offset": 0,
+          "offset_unit": "unicode-code-points",
+          "path": "index/L0.json",
+          "request": {
+            "length": 500,
+            "offset": 0,
+            "path": "index/L0.json",
+            "request_id": "repeat-1",
+            "type": "read_file"
+          },
+          "request_id": "repeat-1",
+          "requested_length": 500,
+          "returned_bytes": 500,
+          "returned_chars": 500,
+          "returned_text_tokens": 96,
+          "text_tokens_status": "measured-offline-cl100k_base"
+        },
+        {
+          "content": "",
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "counters": {
+            "characters": 1000,
+            "read_attempts": 3,
+            "reads": 2
+          },
+          "error": "path not in allowlisted inventory",
+          "evaluator_relevance": null,
+          "evaluator_relevance_reason": null,
+          "freeze_manifest_sha256": "132fef9b963a68c87faae045f1e2ef96201827f1f70a445616464fdb728011e8",
+          "layer": "denied",
+          "offset": 0,
+          "offset_unit": "unicode-code-points",
+          "path": "../../frozen/evaluator/checklists.json",
+          "request": {
+            "length": 1,
+            "offset": 0,
+            "path": "../../frozen/evaluator/checklists.json",
+            "request_id": "denied",
+            "type": "read_file"
+          },
+          "request_id": "denied",
+          "requested_length": 1,
+          "returned_bytes": 0,
+          "returned_chars": 0,
+          "returned_text_tokens": 0,
+          "text_tokens_status": "measured-offline-cl100k_base"
+        }
+      ]
+    },
+    "D": {
+      "accounting": {
+        "cost_usd": null,
+        "documents": 1,
+        "failed": false,
+        "irrelevant_reads": null,
+        "provider_input_tokens": null,
+        "provider_output_tokens": null,
+        "quality_status": "unscored",
+        "read_attempts": 3,
+        "relevant_reads": null,
+        "retrieved_bytes": 1000,
+        "retrieved_characters": 1000,
+        "retrieved_text_tokens": 224,
+        "scope": "returned text only; repeated excerpts counted; no provider evidence",
+        "successful_reads": 2,
+        "tokenizer": {
+          "asset_sha256": "223921b76ee99bde995b7ff738513eef100fb51d18c93597a113bcffe865b2a7",
+          "counting": "sum per returned excerpt; encode_ordinary; special spellings treated as text",
+          "encoding": "cl100k_base",
+          "library": "tiktoken",
+          "version": "0.12.0"
+        },
+        "uncertain_reads": null,
+        "wall_seconds": null
+      },
+      "inventory_bytes_not_retrieved": 13416,
+      "reads": [
+        {
+          "content": "# Start here: one project question\n\nThe Atlas is project-agnostic ER knowledge, not an implementation or production authorization. Project facts and user permissions govern action. [Scope](SCOPE.md), [agent instructions](AGENTS.md), [schema](SCHEMA.md) and [evidence policy](references/evidence-policy.md) remain normative; historical drafts add no requirements.\n\n## Choose one task\n\n- [Improve scoring](indexes/tasks/scoring.md)\n- [Diagnose graph merges](indexes/tasks/graph.md)\n- [Improve blocking]",
+          "content_sha256": "b6072d3767c2e13d2cdf97f5a7db1a4f64719a3d41301046f483a873200fd000",
+          "counters": {
+            "characters": 500,
+            "read_attempts": 1,
+            "reads": 1
+          },
+          "error": null,
+          "evaluator_relevance": null,
+          "evaluator_relevance_reason": null,
+          "freeze_manifest_sha256": "132fef9b963a68c87faae045f1e2ef96201827f1f70a445616464fdb728011e8",
+          "layer": "workflow",
+          "offset": 0,
+          "offset_unit": "unicode-code-points",
+          "path": "START_HERE.md.txt",
+          "request": {
+            "length": 500,
+            "offset": 0,
+            "path": "START_HERE.md.txt",
+            "request_id": "repeat-0",
+            "type": "read_file"
+          },
+          "request_id": "repeat-0",
+          "requested_length": 500,
+          "returned_bytes": 500,
+          "returned_chars": 500,
+          "returned_text_tokens": 112,
+          "text_tokens_status": "measured-offline-cl100k_base"
+        },
+        {
+          "content": "# Start here: one project question\n\nThe Atlas is project-agnostic ER knowledge, not an implementation or production authorization. Project facts and user permissions govern action. [Scope](SCOPE.md), [agent instructions](AGENTS.md), [schema](SCHEMA.md) and [evidence policy](references/evidence-policy.md) remain normative; historical drafts add no requirements.\n\n## Choose one task\n\n- [Improve scoring](indexes/tasks/scoring.md)\n- [Diagnose graph merges](indexes/tasks/graph.md)\n- [Improve blocking]",
+          "content_sha256": "b6072d3767c2e13d2cdf97f5a7db1a4f64719a3d41301046f483a873200fd000",
+          "counters": {
+            "characters": 1000,
+            "read_attempts": 2,
+            "reads": 2
+          },
+          "error": null,
+          "evaluator_relevance": null,
+          "evaluator_relevance_reason": null,
+          "freeze_manifest_sha256": "132fef9b963a68c87faae045f1e2ef96201827f1f70a445616464fdb728011e8",
+          "layer": "workflow",
+          "offset": 0,
+          "offset_unit": "unicode-code-points",
+          "path": "START_HERE.md.txt",
+          "request": {
+            "length": 500,
+            "offset": 0,
+            "path": "START_HERE.md.txt",
+            "request_id": "repeat-1",
+            "type": "read_file"
+          },
+          "request_id": "repeat-1",
+          "requested_length": 500,
+          "returned_bytes": 500,
+          "returned_chars": 500,
+          "returned_text_tokens": 112,
+          "text_tokens_status": "measured-offline-cl100k_base"
+        },
+        {
+          "content": "",
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "counters": {
+            "characters": 1000,
+            "read_attempts": 3,
+            "reads": 2
+          },
+          "error": "path not in allowlisted inventory",
+          "evaluator_relevance": null,
+          "evaluator_relevance_reason": null,
+          "freeze_manifest_sha256": "132fef9b963a68c87faae045f1e2ef96201827f1f70a445616464fdb728011e8",
+          "layer": "denied",
+          "offset": 0,
+          "offset_unit": "unicode-code-points",
+          "path": "../../frozen/evaluator/checklists.json",
+          "request": {
+            "length": 1,
+            "offset": 0,
+            "path": "../../frozen/evaluator/checklists.json",
+            "request_id": "denied",
+            "type": "read_file"
+          },
+          "request_id": "denied",
+          "requested_length": 1,
+          "returned_bytes": 0,
+          "returned_chars": 0,
+          "returned_text_tokens": 0,
+          "text_tokens_status": "measured-offline-cl100k_base"
+        }
+      ]
+    }
+  },
+  "freeze_manifest_sha256": "132fef9b963a68c87faae045f1e2ef96201827f1f70a445616464fdb728011e8",
+  "genuine_runs": 0,
+  "genuine_scores": 0,
+  "kind": "prescribed-seam-probe-not-agent-run",
+  "limitation": "Different prescribed paths exercise the seam only; no task quality, navigation savings or model comparison."
+}

@@ -1,0 +1,60 @@
+{
+  "record": "AU-v1 real cohort execution status",
+  "recorded_utc": "2026-10-13T04:50:00Z",
+  "recorded_by": "atlas-v11-author-hermes (orchestration; NOT an evaluator judgment)",
+  "benchmark_frozen_manifest_sha256": "bd2e57dc2d96f40fb65a6fd4ac2d9a5e6000411b91a5dc1ca47071a8bed3104c",
+  "execution_settings_sha256": "ba133047d7e3acbe9d50ac8fe8d738b24344071c61039ad7162ff05552a8ba66",
+  "tested_model": "google/gemini-2.5-flash via authorized Hermes CLI, provider openrouter, zero tool schemas, --safe-mode, fresh process+conversation per scenario and arm (trusted adapter validation/agent-utility/adapters/hermes_cli_jsonl_adapter.py, sha 51bd3a2c... recorded in adapter-feasibility-results.json)",
+  "settings_limitation": "temperature/seed/max_output_tokens frozen in settings and hashed, but not wire-attestable through the CLI transport; adapter attests this honestly per run (disclosed option A).",
+  "corpora": {
+    "v1": {
+      "manifest_sha256": "e1ade517e405ac79fa93bc700dfe098848a1517dcbecf81080e307d2b30b8772",
+      "files": 42,
+      "cards": 21
+    },
+    "v1.1": {
+      "manifest_sha256": "4a2c25e42a90d768d6b4417c4c2f8d5060428940ac787e7347fa484a05283f3e",
+      "files": 52,
+      "cards": 31
+    }
+  },
+  "cohorts": {
+    "model-cohort-01": {
+      "registered_settings_sha256": "ba133047d7e3acbe9d50ac8fe8d738b24344071c61039ad7162ff05552a8ba66",
+      "runs": 16,
+      "completed": 13,
+      "failed": {
+        "AU-04-v1": "adapter exit 1 (transport child timeout)",
+        "AU-04-v1.1": "adapter exit 1 (transport child timeout)",
+        "AU-05-v1": "adapter exit 6 (transport failed twice)"
+      }
+    },
+    "model-cohort-02": {
+      "note": "full second cohort run later the same night to repair AU-04/AU-05 gaps without selective retry; every attempt retained",
+      "runs": 16,
+      "completed": 12,
+      "failed": {
+        "AU-01-v1": "adapter exit 4 (model produced no valid action JSON after 2 corrections)",
+        "AU-02-v1.1": "adapter exit 4",
+        "AU-05-v1.1": "adapter exit 4",
+        "AU-08-v1": "adapter exit 5 (240s wall budget exhausted before final)"
+      }
+    },
+    "arm_coverage": "every scenario x arm cell has >=1 completed run: AU-01/02/03/06/07/08 from cohort-01; AU-04 both arms and AU-05-v1 from cohort-02; AU-05-v1.1 from cohort-01. Cohort-02 duplicates remain as second samples."
+  },
+  "independent_scoring_status": "EXECUTED: 13 cohort-01, 12 cohort-02 and eight no-Atlas completed responses scored (33 total); seven paired failed runs remain unscored. Chain finished 2026-10-13T15:05:57Z. Fresh openai-codex provider-default evaluator processes declared independent and blinded. No simulated or author-assigned scores. Original zero-score reports are retained as history; current reports have -v2 suffix for paired cohorts.",
+  "initial_scoring_blocker_history": "Initial anthropic/claude-sonnet-4.5 attempts refused by OpenRouter HTTP 402 credit exhaustion while openai-codex was rate-limited. Later openai-codex availability enabled scoring; this is no longer an active blocker.",
+  "evaluator_identity_limitation": "Scoring used --provider openai-codex --model -; exact model/version was not pinned or wire-attested. Independence/blinding are process declarations, not proof of identity or isolation. One evaluator per response; no human adjudication.",
+  "scoring_completed_at_utc": "2026-10-13T15:05:57Z",
+  "no_atlas_cohort": {"runs": 8, "completed": 8, "failed": 0, "scored": 8, "directory": "validation/agent-utility/results/no-atlas-cohort-01", "note": "Later noninterleaved optional control, same declared tested model and settings; not a timing-controlled comparison."},
+  "comparison_json": "validation/agent-utility/results/comparison-2026-10-13.json",
+  "comparison_report": "validation/agent-utility/results/COMPARISON-2026-10-13.md",
+  "comparison_reproduce_command": "python3 validation/agent-utility/summarize_results.py --out validation/agent-utility/results/comparison-repeat.json (new output path required)",
+  "results_summary": "Mixed exploratory ordinal judgments, no overall winner or significance claim. Selected comparison: v1.1 understanding higher/equal/lower on 4/3/1 scenarios; retrieval tied throughout. Selected-only recall certification failure in AU-02 v1 cohort-01 and no-Atlas; no v1.1 critical-failure flags across either cohort. AU-03 v1.1 regressed despite relevant retrieval.",
+  "integrity_at_recording": "dev_docs/ byte-identical to baseline manifest; 21 original card files byte-identical (diff against snapshot verified); 31-card corpus lint 0 errors / 1 informational keyword warning; 45 tooling + 26 harness + 13 adapter tests pass; freeze manifest verifies.",
+  "v1_snapshot_archive": {
+    "path": "validation/agent-utility/baseline/atlas-v1-snapshot.tar.gz",
+    "sha256": "356a61b6680468371b99d02dbaaee21c06103e30b1e4c6bc1df99d5d05563062",
+    "note": "complete v1 tree (minus .git/__pycache__) packaged before scratch retention expiry; validate/agent-utility/baseline/atlas-v1-baseline-hashes.json hashes correspond to paths under the extracted atlas-v1-baseline/ directory"
+  }
+}

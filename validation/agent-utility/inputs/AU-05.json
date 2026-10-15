@@ -1,0 +1,37 @@
+{
+  "scenario_id": "AU-05",
+  "title": "The reused registration number",
+  "fictional": true,
+  "known_project_facts": {
+    "project": "A trade archive assembles organization histories from annual filings and supplier records; users need stable identities and dated views.",
+    "observations": [
+      {
+        "year": 2017,
+        "registration": "Q-41",
+        "name": "Marlow Instruments Ltd",
+        "address": "Dock Road"
+      },
+      {
+        "year": 2021,
+        "registration": "Q-41",
+        "name": "Marlow Instruments Ltd",
+        "address": "Hill Lane"
+      },
+      {
+        "year": 2024,
+        "registration": "Q-41",
+        "name": "Cedar Medical Supply",
+        "address": "Dock Road"
+      }
+    ],
+    "data_notes": "The source says Q-41 was released after dissolution and later reused. A separate acquisition event names Marlow as a predecessor of another registered firm; some supplier rows lack event and observation dates.",
+    "current_pipeline": "Exact registration equality accumulates permanent unions; latest name/address replaces previous values. Deletions are ignored.",
+    "constraints": "Identity continuity across ordinary address/name changes is useful. Successorship and acquisition relationships must remain navigable without assuming sameness. Corrections must support replay and stable references."
+  },
+  "explicitly_unknown": [
+    "What defines legal entity continuity versus business continuity?",
+    "Which namespace, validity intervals, reuse and event dates are authoritative?",
+    "What should happen to stable IDs after correction, split, merge or deletion?"
+  ],
+  "task": "Produce a defensible project-specific ER experiment/design recommendation using selectively retrieved Atlas knowledge if available. Do not implement ER or change production. Separate facts, assumptions, uncertainties, mechanisms and proposed evidence."
+}
