@@ -11,11 +11,46 @@ Start at [START_HERE.md](START_HERE.md): choose one task route, retrieve only wh
 
 ## v1.2.1 consumer release and validation
 
-Use `dist/atlas-consumer-wave5/START_HERE.md` for the corrected consumer release;
-build/verification commands are in [tools](tools/README.md#consumer-package).
-Distribute only `dist/atlas-consumer-wave5/` (or its matching archive), not this
-development repository. Its README contains the copy-paste external-agent prompt
-and filesystem-access instructions; no harness-specific discovery or tools are required.
+This is a **source release**: the current `dist/atlas-consumer-wave5/` directory
+and archive are generated locally, not included in a fresh clone. Build the
+corrected consumer package with Python 3.10+ (including `venv` and `pip`) and Git:
+
+```sh
+git clone https://github.com/ghginm/entity-resolution-atlas.git
+cd entity-resolution-atlas
+python3 -m venv .venv-qa
+.venv-qa/bin/python -m pip install -r tools/requirements.txt
+.venv-qa/bin/python tools/atlas_docs.py catalog
+.venv-qa/bin/python tools/atlas_consumer.py build --output dist/atlas-consumer-wave5 --archive dist/atlas-consumer-wave5.tar.gz
+.venv-qa/bin/python tools/atlas_consumer.py verify --output dist/atlas-consumer-wave5
+.venv-qa/bin/python tools/atlas_docs.py lint
+.venv-qa/bin/python -m unittest discover -s tools -p 'test_*.py'
+printf '%s\n' "$PWD/dist/atlas-consumer-wave5/START_HERE.md"
+```
+
+Verification must report `source_verified: true` and 57 cards. Lint does not need
+the unpublished historical `dev_docs/` inputs; it reports their absence as an
+explicit warning, while still validating tracked source. No Hermes installation,
+API keys or optional benchmark runtime is needed for these commands.
+
+Give the external agent filesystem access to **only** the generated consumer
+directory (copy or mount it into its accessible workspace), then paste:
+
+```text
+Read <absolute-consumer-directory>/START_HERE.md. For the current Entity Resolution
+question, choose one relevant task route and follow its selective retrieval and
+decision-note instructions. Cite selected card IDs and paths. Treat the consumer
+directory as read-only reference knowledge; project facts and user authorization
+govern changes. Do not scan the whole Atlas or access its development/evaluation files.
+```
+
+Replace the placeholder with the path printed above, without the final
+`/START_HERE.md`, or the consumer directory's new location after copying it.
+The [consumer README source](tools/atlas_consumer.py) also supplies a reusable
+agent-instructions block. No harness-specific discovery or tools are required
+to read the Markdown. Distribute only `dist/atlas-consumer-wave5/` (or its matching
+archive), not this development repository. See [tools](tools/README.md#consumer-package)
+for deterministic archive details and existing-output safeguards.
 `dist/atlas-consumer/` remains the unchanged Wave 3 evaluation input, not the latest
 source-bound release. The [Wave 5 final handoff](validation/v1.2.1/wave-5/README.md)
 records the temporal cannot-link correction, bounded scientific reviews, actual
@@ -38,7 +73,7 @@ checks do not establish real-world ER accuracy or measured agent improvement.
 | `templates/` | The five primary card formats |
 | [References](references/bibliography.md) | Verified sources, evidence scope and immutable-input hashes |
 | [Agent-utility benchmark](validation/agent-utility/) | Frozen scenarios, rubric, brokered harness and adapter; results are evaluation artifacts, not retrieval knowledge |
-| `dev_docs/` | Six historical design discussions, unchanged |
+| `dev_docs/` | Optional unpublished historical inputs; hash-checked when present, not required after clone |
 | `tools/` | Optional documentation lint/catalog tooling, not ER code |
 
 ## Pilot scope and retrieval layers

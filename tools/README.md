@@ -50,17 +50,51 @@ The example counts describe the approved 31-card expansion; the real `cards` map
 - Ordinary relative Markdown paths and heading anchors; prose IDs; repository-contained navigation.
 - Frozen, allowlisted retrieval snapshots under `validation/agent-utility/corpora/` are not part of the live documentation graph: their historical links can refer to deliberately unbundled files. Only those snapshot copies are excluded; live harness protocol/documentation links are still checked, and the harness owns its snapshot integrity checks.
 - Citation IDs against the ledger and verified retrieval status; citation/Source-block agreement.
-- Original `dev_docs/` byte hashes and exact input inventory.
+- Original `dev_docs/` byte hashes and exact input inventory **when that optional,
+  unpublished directory is present**. A fresh clone omits it: lint emits an explicit
+  warning and reports `immutable_inputs: 0`. If present, even a partial/empty
+  directory must match the entire original baseline; changed, missing or extra
+  inputs fail. The tracked hash manifest itself remains required in all cases.
 - Expanded shape: fourteen domains, exactly the six original architectures, five templates, current manifest counts/paths and historical pilot subset preservation.
 - Exact freshness of L0 and every L1 index, including tag and relation-derived navigation.
 - Body/discovery-summary lengths and type-specific content keyword hints are **warnings only**, not semantic completeness or scientific validity proofs. Body targets are 400–900 words excluding Sources; discovery summaries target 50–100. Keywords are checked outside headings/code fences.
 
-`lint --no-pilot` is for minimal legacy fixtures or deliberately inventory-independent checks. It skips only the expanded manifest/exact repository-shape gate, **not** metadata/schema, required sections, graph, citation, immutable-input or generated-index freshness checks. If a historical manifest is present, its original cards/paths still must exist. Fixtures without a domain registry infer their represented domains and need no added template/manifest/registry fixture files; they must still generate and maintain fresh L0/L1 output. Approved expansions should update `atlas-manifest.json`, not use this flag to hide missing cards.
+`lint --no-pilot` is for minimal legacy fixtures or deliberately inventory-independent checks. It skips only the expanded manifest/exact repository-shape gate, **not** metadata/schema, required sections, graph, citation, applicable historical-input or generated-index freshness checks. If a historical manifest is present, its original cards/paths still must exist. Fixtures without a domain registry infer their represented domains and need no added template/manifest/registry fixture files; they must still generate and maintain fresh L0/L1 output. Approved expansions should update `atlas-manifest.json`, not use this flag to hide missing cards.
 
 ## What is not proved
 A passing lint cannot establish scientific truth, adequate citations for every claim, meaningful mechanisms, valid sampling assumptions, experiment power, composability or useful recommendations. It does not fetch external URLs and cannot prove them permanently available. A human/agent must review conceptual requirements, source scope and the [scenario routes](../guides/scenario-stress-tests.md). [Quality review](../guides/quality-review.md) records that separate assessment.
 
 Citation rendering uses the source-ledger helper available to the initial agent; the resulting Markdown Sources blocks and JSON ledger are portable. A future editor can preserve the same ledger numbering and generate equivalent blocks without requiring Hermes.
+
+## Optional historical evaluation tests
+
+The README's build, verification, lint and `tools/test_*.py` checks need only
+`requirements.txt`. They do not need an agent runtime, provider credentials or
+tokenizer assets. Historical evaluation infrastructure is separate from consumer
+acceptance; its tests are not measurements of ER accuracy or agent utility.
+
+For the broader offline suites, use a POSIX environment (verified with Python 3.12),
+set a writable `TMPDIR` for the process-boundary fixtures, and install the existing
+optional tokenizer requirements:
+
+```sh
+.venv-qa/bin/python -m pip install -r tools/retrieval-requirements.txt
+mkdir -p .scratch
+export TMPDIR="$PWD/.scratch"
+.venv-qa/bin/python -B -m unittest discover -s validation/agent-utility/tests -v
+.venv-qa/bin/python -B -m unittest discover -s validation/agent-utility-v2/tests -v
+.venv-qa/bin/python -B -m unittest discover -s validation/agent-utility-integration/tests -v
+.venv-qa/bin/python -B -m unittest discover -s validation/agent-workflow -p 'test_workflow.py' -v
+.venv-qa/bin/python -B -m unittest discover -s validation/v1.2.1/wave-4 -p 'test_runtime_boundary.py' -v
+```
+
+The historical workflow tokenizer test uses a pre-existing, hash-pinned local
+asset at its original author-cache location. Its positive check skips when that
+asset is absent; when present, it requires `tiktoken==0.12.0` from the optional
+requirements above (otherwise it fails with `PackageNotFoundError`). The asset is
+not shipped or downloaded by the test. This is a disclosed historical test
+prerequisite, not a consumer-build dependency; do not change frozen inputs or
+expected outcomes to bypass it.
 
 ## Consumer package
 

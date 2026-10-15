@@ -90,6 +90,15 @@ class RepositoryTests(unittest.TestCase):
         self.fixture()
         self.assertEqual(atlas_docs.lint(self.root,pilot=False)['errors'],[])
 
+    def test_absent_optional_historical_inputs(self):
+        self.fixture()
+        (self.root/'dev_docs/original.txt').unlink()
+        (self.root/'dev_docs').rmdir()
+        result = atlas_docs.lint(self.root, pilot=False)
+        self.assertEqual(result['errors'], [])
+        self.assertEqual(result['immutable_inputs'], 0)
+        self.assertIn('dev_docs/ absent: optional historical input checks skipped', result['warnings'])
+
     def test_missing_evaluation_route_rejected_even_when_connected(self):
         self.fixture()
         path = self.root/'solutions/method.md'
@@ -111,6 +120,35 @@ class RepositoryTests(unittest.TestCase):
         self.fixture()
         (self.root/'dev_docs/original.txt').write_bytes(b'Changed\n')
         self.assertTrue(any('immutable input' in error for error in atlas_docs.lint(self.root,pilot=False)['errors']))
+
+    def test_present_historical_directory_requires_complete_inventory(self):
+        self.fixture()
+        (self.root/'dev_docs/original.txt').unlink()
+        errors = atlas_docs.lint(self.root, pilot=False)['errors']
+        self.assertIn('dev_docs/original.txt: immutable input missing or changed', errors)
+        self.assertIn('immutable input inventory differs from original baseline', errors)
+
+    def test_extra_historical_input_rejected(self):
+        self.fixture()
+        (self.root/'dev_docs/extra.txt').write_text('Unexpected input\n')
+        self.assertIn('immutable input inventory differs from original baseline',
+                      atlas_docs.lint(self.root, pilot=False)['errors'])
+
+    def test_absent_historical_directory_does_not_hide_missing_tracked_manifest(self):
+        self.fixture()
+        (self.root/'dev_docs/original.txt').unlink()
+        (self.root/'dev_docs').rmdir()
+        (self.root/'references/dev-docs-sha256.json').unlink()
+        errors = atlas_docs.lint(self.root, pilot=False)['errors']
+        self.assertTrue(any('dev-docs-sha256.json' in error for error in errors), errors)
+
+    def test_absent_historical_directory_does_not_hide_missing_card(self):
+        self.fixture()
+        (self.root/'dev_docs/original.txt').unlink()
+        (self.root/'dev_docs').rmdir()
+        (self.root/'solutions/method.md').unlink()
+        errors = atlas_docs.lint(self.root, pilot=False)['errors']
+        self.assertIn('DEC-07-001: unresolved relation complements → SOL-07-001', errors)
 
     def test_invalid_relation_rejected(self):
         self.fixture()

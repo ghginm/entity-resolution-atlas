@@ -650,13 +650,18 @@ def _lint(root, pilot=True):
             if prose_ids != rendered_ids and rel != 'references/bibliography.md':
                 errors.append(f'{rel}: cited/source-block IDs differ {sorted(prose_ids)} vs {sorted(rendered_ids)}')
     hashes = load_json(root, 'references/dev-docs-sha256.json')
-    for name, expected_hash in hashes.items():
-        path = root / name
-        if not path.exists() or hashlib.sha256(path.read_bytes()).hexdigest() != expected_hash:
-            errors.append(f'{name}: immutable input missing or changed')
-    actual_inputs = {p.relative_to(root).as_posix() for p in (root/'dev_docs').iterdir() if p.is_file()}
-    if actual_inputs != set(hashes):
-        errors.append('immutable input inventory differs from original baseline')
+    immutable_inputs = 0
+    if (root/'dev_docs').exists():
+        for name, expected_hash in hashes.items():
+            path = root / name
+            if not path.exists() or hashlib.sha256(path.read_bytes()).hexdigest() != expected_hash:
+                errors.append(f'{name}: immutable input missing or changed')
+        actual_inputs = {p.relative_to(root).as_posix() for p in (root/'dev_docs').iterdir() if p.is_file()}
+        if actual_inputs != set(hashes):
+            errors.append('immutable input inventory differs from original baseline')
+        immutable_inputs = len(hashes)
+    else:
+        warnings.append('dev_docs/ absent: optional historical input checks skipped')
     counts = Counter(data['type'] for _, data, _ in objects if isinstance(data.get('type'), str))
     errors.extend(manifest_checks(root, by_id, counts, pilot))
     if pilot:
@@ -684,7 +689,7 @@ def _lint(root, pilot=True):
             errors.append(f'{name}: unexpected generated domain index')
     except (ValueError, KeyError, TypeError, OSError) as exc:
         errors.append(f'cannot check index freshness: {exc}')
-    return {'errors':errors,'warnings':warnings,'counts':dict(counts),'immutable_inputs':len(hashes),'card_statistics':stats,'graph':graph}
+    return {'errors':errors,'warnings':warnings,'counts':dict(counts),'immutable_inputs':immutable_inputs,'card_statistics':stats,'graph':graph}
 
 
 def main():
